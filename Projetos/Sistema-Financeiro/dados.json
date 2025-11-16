@@ -1,0 +1,32 @@
+[
+  {
+    "descricao": "450",
+    "valor": 450,
+    "tipo": "entrada",
+    "data": "2025-11-11"
+  },
+  {
+    "descricao": "30.00",
+    "valor": 0,
+    "tipo": "entrada",
+    "data": "2025-11-16"
+  },
+  {
+    "descricao": "99.00",
+    "valor": 0,
+    "tipo": "entrada",
+    "data": "2025-11-16"
+  },
+  {
+    "descricao": "7000.00",
+    "valor": 7000,
+    "tipo": "entrada",
+    "data": "2025-10-28"
+  },
+  {
+    "descricao": "44.99",
+    "valor": 49,
+    "tipo": "entrada",
+    "data": "2025-11-16"
+  }
+]
