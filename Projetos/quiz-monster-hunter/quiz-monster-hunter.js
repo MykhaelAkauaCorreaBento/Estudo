@@ -103,7 +103,7 @@ const questoes = [
     {id:98,  pergunta:"Em qual geração foi a primeira aparição do Ashen Lao-Shan Lung?", resposta:"1"},
     {id:99,  pergunta:"Em qual geração foi a primeira aparição do Diablos?", resposta:"1"},
     {id:100,  pergunta:"Em qual geração foi a primeira aparição do BlackDiablos?", resposta:"1"},
-    {id:101,  pergunta:"Em qual geração foi a primeira aparição do Camaleus?", resposta:"2"},
+    {id:101,  pergunta:"Em qual geração foi a primeira aparição do Chameleos ?", resposta:"2"},
     {id:102,  pergunta:"Em qual geração foi a primeira aparição do Yama Tsukami?", resposta:"2"},
     {id:103,  pergunta:"Em qual geração foi a primeira aparição do White Fatalis?", resposta:"2"},
     {id:104,  pergunta:"Em qual geração foi a primeira aparição do Vespoid Queen?", resposta:"2"},
