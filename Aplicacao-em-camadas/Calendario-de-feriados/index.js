@@ -1,5 +1,5 @@
-import retornaProximosFeriados from "./funcoes/retornaFeriados.js";
-import imprimeFeriados from "./funcoes/imprimeFeriados.js";
+import retornaProximosFeriados from "./servico/retornaFeriados.js";
+import imprimeFeriados from "./exibicao/imprimeFeriados.js";
 
 console.log("\nOs próximos feriados serão:\n")
 
