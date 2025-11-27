@@ -1,0 +1,24 @@
+Back-end
+
+//Por exemplo, um fogão tem a parte onde o usuário interage, existe o botijão
+//que armazena o gás e fornece para o fogão.
+
+//Fogão = front-end
+//Botijão = back-end
+
+//Sistema de um fogão
+
+//1º O usuário interage com o front-end acionando o botão.
+
+//2º O fogão(front-end) interage com o botijão de gás(back-end) pedindo o gás.
+
+//º O botijão de gás(back-end) encia o gás para o fogão.
+
+//4º O fogão(front-end) acende a chama para o usuário.
+
+//Da mesma forma acontece com um aplicativo ou site.
+
+//Obs.:Em um software o usuário não tem acesso a camada back-end.
+//Back-end é a camada responsável por manipular e armazenar os dados 
+//do sistema, por exemplo, os dados de uma compra. Essa camada
+//o usuário não tem acesso a ela.

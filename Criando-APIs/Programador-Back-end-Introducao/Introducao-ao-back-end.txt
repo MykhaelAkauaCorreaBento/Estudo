@@ -1,0 +1,46 @@
+//O que é um software?
+
+//Software é um conjunto de códigos escritos para executar
+//uma determinada tarefa seja no computador, celular ou internet.
+//Pode ser um programa de computador, um aplicativo de dispositivos
+//móveis ou um web site.
+
+//O Front-end é executado no navegador ou celular do usuário e o Back-end
+//é executado no servidor na internet.
+
+//Existem dois tipos de software:
+
+//*Os que possuem apenas front-end.
+
+//*Os que possuem apenas back-end.
+
+//Nem todo software precisa de um servidor de banco de dados e por isso não
+//precisa de um back-end.
+
+//Exemplo: o site da banda Queen é uma estática, ou seja, ela tem sempre as
+//mesmas informações. Por isso, ela não precisa de um banco de dados no servidor 
+//para guardar informações dinâmicas.
+
+//O mesmo acontece com o aplicativo calculadora.
+//Ele não precisa de um servidor de bancos de dados, e portando não precisa
+//de um back-end.
+
+//Já outros softwares não tem como funcionar sem um banco de dados. Exemplo:
+//Um site dinâmico(front-end), Um aplicativo client-side(front-end mobile).
+
+//Um site de reserva de hotéis precisa buscar um hotel e efetuar a reserva
+//em tempo real, por isso precisa de um banco de dados na internet.
+
+//O mesmo acontece no aplicativo client-side do Mercado_livre.
+//Ele precisa de um back-end na internet para armazenar, buscar e compartilhar
+//os produtos que estão disponíveis para venda. 
+
+
+//O programador back-end trabalha com os sistemas que precisam de um banco de
+dados, ou seja, os sistemas que precisam manipular informações dinâmicas e compartilhadas.
+
+//Alguns exemmplos: preço de produto, quartos de hotéis disponíveis, notícias,
+//dados de usuário, saldo na conta, etc.
+
+//É o programador back-end quem vai criar os códigos para manipular- salvar,
+//editar, buscar e remover, os dados no banco de dados.
