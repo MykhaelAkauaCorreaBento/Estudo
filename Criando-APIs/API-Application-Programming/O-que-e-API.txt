@@ -1,0 +1,30 @@
+//O que é API?
+
+//Vimos anteriormente que a API serve para fazer sistemas diferentes
+//se comunicarem.
+
+//A comunicação é feita assim: imagine que um site(front-end) precise exibir uma lista de produtos.
+//Para obter esses dados o front-end faz uma requisição, ou seja, ele traduz
+//o pedido para a linguagem padrão da API e o envia formatando para o back-end.
+
+//No back-end quem recebe esse pedido é a camada API.
+
+//A API recebe a requisição do front-end, traduz e envia para a camada interna
+//que processa os dados numa linguagem que o back-end entenda.
+
+//A camada que processa os dados por sua vez executa o pedido, busca os produtos
+//no banco de dados e envia de volta para a API.
+
+/A API por sua vez traduz esses dados para o idioma padrão e envia para o front-end
+//que exibi os produtos na página.
+
+//Em resumo, a API é uma camada no back-end que serve como uma ponte de acesso entre
+// a parte que guarda os dados do sistema.
+
+//Obs.:A sigla API refere-se ao termo "Application Programming Interface"
+//que em português significa "Interface de Programação de Aplicação".
+
+//Obs.:Atualmente a maioria dos sistemas utilizam API. Isso acontece porque
+//ela facilita a integração entre diversos softwares diferentes,
+//independentemente do código desenvolvido. A API é o meio para
+//fazer aplicações distintas se comunicarem.

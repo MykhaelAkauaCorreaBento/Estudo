@@ -1,0 +1,188 @@
+//Endpoint
+
+Como o programador front-end vai saber encontrar as funções da API
+do back-end na internet?
+
+A solução é simples: as funções da API do back-end são
+disponibilizadas na internet na forma de URLs.Por exemplo:
+
+
+URL para função converte-milhas
+
+https ://dominio-backend.com.br/converte-milhas/?qtdMi1has=1&converterPara=met ros
+
+O programador back-end disponibiliza a URL de cada função para o programador
+front-end.
+
+No REST essas URLs são chamadas de endpoints.
+O que o programador front-end precisa ter em mãos são os endpoints(URLs)
+fornecidos pelo programador back-end.
+
+
+Endpoint sintaxe:
+
+Existem 2 motivos para se consumir uma API e dependendo da situação, a sintaxe 
+do endpoint pode mudar.
+
+Enviar valores e obter resultado             Manipular dados
+
+exemplos                                     exemplos   
+converter milhas                             cadastrar cliente   
+________________                             __________________________
+converter temperatura em celsius             consultar preço de produto
+
+
+Isso porque a API Usada para enviar valores e obter resultado lida com uma função, enqunato a relacionada a manipulação de dados lida com uma coleção de dados.
+
+
+
+Abaixo temos dois casos de endpoints diferentes.
+
+
+Endpoint para enviar valores e obter resultado:
+https://api.com.br/converte-milhas/?qtdMilhas=1&converterPara=metros
+
+Endpoint para fazer manipulação de dados:
+https://api.com.br/cIiente/2
+
+
+
+Sintaxe Endpoint para funções
+
+Quando o front-end precisa enviar valores para serem processados pela API, o que estamos fazendo e consumindo uma função no back-end.
+O endpoint para funções pode ser dividido em partes.
+
+
+
+        Domínio           Função       Valor
+(https://dominio.com.br) /(funcao)/ (parametro)
+
+
+A 1ª parte do endpoint é formada com o nome do domínio, que é o local onde a API está hospedada.
+
+         Domínio
+(https://dominio.com.br) funcao/parametro
+
+
+Após o nome do domínio temos o nome que representa a função. É essa função que será executada no back-end.
+
+                        Função            
+https://dominio.com.br/(funcao)/parametro
+
+
+Por fim, temos o parâmetro que é o valor a ser usado na função que será executada no back-end.
+
+                               Valor                 
+https://dominio.com.br/funcao/(parametro)
+
+Obs.: Há casos em que o endpoint tem mais de um parâmetro
+
+Veja um exemplo real de endpoint para funções que converte uma quantidade de milhas para metros.
+
+
+https://api.com.br/converte-milhas/?qtdMilhas=1&converterPara=metros
+
+
+
+Veja como as partes do endpoint são separadas nesse exemplo.
+
+Nome do domínio: https://api.com.br
+
+Função: converte-milhas
+
+Parâmetros: qtdMilhas=1&converterPara=metros
+
+Para passar o parâmetro no endpoint é necessário colocar o ponto de interrogação (?).
+
+Exemplo: ?nome_parametro=valor
+
+Como nesse caso há mais de um parâmetro, deve-se usar & para separar os parâmetros.
+
+Exemplo: ?qtdMilhas=1&converterPara=metros
+
+https://api.com.br/converte-milhas/?qtdMilhas=1&converterPara=metros
+
+
+________________________________________________________________________________
+
+Sintaxe Endpoint que manipula dados
+
+O 2ª cenário ocorre quando o front-end precisa manipular dados. Isso significa que podem ser realizadas as quatro operações de dados:
+
+Cadastrar
+Alterar
+Consultar
+Excluir
+
+O endpoint que manipula dados pode ser dividido em partes.
+
+https://dominio.com.br/dados/parametro
+
+Site:https://dominio.com.br
+
+Dados:dados
+
+Valor:parametro
+
+A 1ª parte do endpoint é formada com o nome do domínio, que é o local onde a API está hospedada. 
+Obs.: Domínio
+
+Após o nome do domínio, temos o nome que representa a coleção de dados que será manipulada no back-end.
+
+Dados:dados
+
+Por fim, parâmetro que é o valor temos o a ser usado na coleção de dados no back-end.
+
+Valor: parametro
+
+
+Observe que não indicamos no endpoint qual a ação será realizada (cadastrar, consultar, alterar,excluir). Isso é feito com o uso de um verbo HTTP, que veremos mais a frente.
+
+https://dominio.com.br/dados/parametro
+
+
+Veja um exemplo real de endpoint que manipula dados onde o front-end solicita para a API dados do cliente com id = 2.
+
+https://api.com.br/cliente/2
+
+Além do endpoint, a ação de buscar dados também é indicada com o uso de
+verbos HTTP. Mas não se preocupe, veremos sobre isso nas próximas aulas.
+
+Por enquanto basta entender que é no endpoint que indicamos qual a coleção
+de dados que queremos acessar.
+
+https://api.com.br/cliente/2
+
+A coleção de dados é indicada aqui: cliente
+
+Nome do domínio: https://api.com.br
+
+Dados: cliente
+
+Parâmetro: 2
+
+
+A API desse exemplo está hospedada no domínio https://api.com.br/cliente/2
+
+Exemplo: https://api.com.br
+
+A coleção de dados que será usada no back-end é representada pelo nome cliente.
+
+Exemplo: cliente
+
+https://api.com.br/cliente/2
+
+Nesse caso não é necessário utilizar o ponto de interrogação(?) para passar o parâmetro.
+
+Exemplo: 2
+
+https://api.com.br/cliente/2
+
+
+Se o front-end precisar obter todos os dados da coleção (por exemplo, buscar todos os produtos), então nenhum parâmetro é necessário.
+
+https://dominio.com.br/dados/
+
+O uso de parâmetro é normalmente para manipular dados de um registro específico. Já a ausência de um parâmetro é quando se deseja retornar todos os registros de uma determinada coleção.
+
+Existem APIs para as mais diversas finalidades, como buscar dados de CEP, converter unidades de medidas, criar e atualizar dados cadastrais etc. Para que a utilização dessas APIs é necessário o uso de endpoints.

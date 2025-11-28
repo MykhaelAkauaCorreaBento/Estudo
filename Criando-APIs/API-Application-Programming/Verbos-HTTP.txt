@@ -1,0 +1,188 @@
+Verbos HTTP
+
+Além de acessar a API através do endpoint, o front-end também envia algumas informações
+para a API.
+
+
+Dentre essas informações enviadas pelo front-end temos:
+
+Verbos HTTP.
+Conteúdo JSON.
+
+
+Para consumir uma API podemos utilizar os seguintes verbos HTTP:
+
+Get: Obter dados;
+
+Post: Inserir dados;
+
+PUT/PATCH: Atualizar dados;
+
+DELETE: Excluir dados;
+
+________________________________________________________________________________
+
+Verbo HTTP GET
+
+O verbo HTTP GET é utilizado quando se deseja obter dados de uma API.
+Por se tratar de uma API que vai processar dados e retornar resultados,
+o verbo HTTP utilizado foi o GET.
+
+Em todos os casos que queremos obter dados da API utilizamos o método GET.
+
+________________________________________________________________________________
+
+Verbo HTTP POST
+
+Os valores textuais são inseridos entre aspas, enquanto os valores numéricos
+booleanos não.
+
+{
+    "nome" : "Mykhael",
+    "idade": 27,
+    "ativo" : true
+}
+
+O verbo HTTP POST é usado quando queremos inserir ou cadastrar dados no back-end.
+
+Para fazer isso, o front-end precisa de um endpoint e utilizar um verbo HTTP.
+
+________________________________________________________________________________
+
+Verbo HTTP PUT
+
+O verbo HTTP PUT é usado quando queremos atualizar todos os dados no back-end.
+
+Essa resposta possui uma mensagem e o id do produto cadastrado que são enviados no farmato JSON.
+
+Exemplo:
+
+{
+    "mensagem" : "Protudo cadastrado com sucesso",
+    "id" : 2
+}
+
+Para fazer isso, o front-end precisa de um endpoint e utilizar um verbo HTTP.
+Neste caso o endpoint será o  mesmo usado para obter dados de um produto específico.
+
+front-end -->  endpoint --> back-end
+                   |
+                   | 
+    https://api.com.br/produtos/2
+
+
+Como queremos atualizar um produto específico, é necessário inserir o seu id no endpoint.
+
+Exemplo:
+No caso seria 2.
+
+https://api.com.br/produtos/2
+                   
+
+Porém, como agora o propósito é atualizar dados no banco de dados, o verbo a ser utilizado é o PUT.
+
+Sempre que o objetivo for atualizar todos os dados de uma coleção no banco de dados o verbo deve ser PUT.
+
+________________________________________________________________________________
+
+Verbo HTTP PATCH
+
+No verbo GET, o JSON é utilizado apenas para retornar a coleção de produtos para o front-end.
+
+Verbo:GET
+
+Endpoint: https://api.com.br/produtos/
+
+JSON de envio: nenhum
+
+JSON de retorno: coleção de produtos
+
+
+
+Já nesse caso do verbo GET, o JSON é utilizado apenas para retornar dados de um produto específico para o front-end.
+
+
+Verbo:GET
+
+Endpoint: https://api.com.br/produtos/2
+
+JSON de envio: nenhum
+
+JSON de retorno:dados de um produto
+
+
+Mas há casos em que vamos precisar alterar apenas alguns dados do produto como, por exemplo, só o nome.
+
+
+Como o propósito é atualizar apenas um dado do produto, o verbo a ser utilizado é o PATCH.
+
+Veja que o endpoint é o mesmo usado para o verbo PUT.
+
+https://api.com.br/produtos/2
+
+
+Por meio do endpoint e utilizando o verbo PATCH, o front-end manda um pacote com o dado do produto para a API.
+
+Para especificar qual o produto que será atualizado, é preciso passar o
+no endpoint.
+
+A API recebe o dado do produto e envia para a camada de processamento que atualiza o produto no banco de dados.
+
+API ---> Smartphone Samsung Galaxy S20 - Edição Especial ---> banco de dados.
+
+Sempre que o objetivo for atualizar apenas alguns dados (e não todos) de uma coleção no banco de dados o verbo deve ser o PATCH.
+
+
+________________________________________________________________________________
+
+Verbo HTTP DELETE
+
+O verbo HTTP DELETE é usado quando queremos excluir dados no back-end.
+
+Para fazer isso, o front-end precisa de um endpoint e utilizar um verbo HTTP.
+
+Neste caso o endpoint será o mesmo usado para obter/atualizar dados de um produto específico.
+
+
+front-end -->  endpoint --> back-end
+                   |
+                   | 
+    https://api.com.br/produtos/2
+
+Como queremos excluir um produto específico, é necessário inserir o seu id no endpoint.
+
+
+https://api.com.br/produtos/2
+
+O id seria o número 2.
+
+
+Para especificar qual o produto que será excluído, é preciso passar o id no endpoint.
+
+A API recebe o id do produto e envia para a camada de processamento que exclui o produto do banco de dados.
+
+Exemplo:
+
+API ---> 2 ---> banco de dados
+
+Sempre que o objetivo for excluir dados do banco de dados, o verbo deve ser o DELETE.
+________________________________________________________________________________
+
+Toda API possui esse tipo de documentação que descreve como ela deve ser consumida.
+
+O programador back-end deve criar essa documentação para que o programador front-end saiba como consumir a API.
+
+O programador front-end precisa seguir essa documentação para saber qual endpoint e verbo ele precisa utilizar em cada finalidade.
+
+
+Tabela 
+
+Verbo	URL	                            Finalidade
+GET  	https://api.com.br/produtos/2	Obter um produto
+GET	    https://api.com.br/produtos/	Obter todos os produtos
+POST	https://api.com.br/produtos/	Cadastrar um produto
+PUT  	https://api.com.br/produtos/2	Atualizar todos os dados de um produto
+PATCH	https://api.com.br/produtos/2	Atualizar alguns dados de um produto
+DELETE	https://api.com.br/produtos/2	Excluir um produto
+
+OBS.: É muito importante definir o verbo HTTP correto na hora de consumir uma API RESTful. Isso porque o endpoint sozinho não é capaz de indicar qual a ação que deve acontecer no back-end.

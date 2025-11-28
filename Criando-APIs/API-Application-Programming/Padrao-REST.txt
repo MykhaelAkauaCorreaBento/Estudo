@@ -1,0 +1,24 @@
+//Padrão REST
+
+//API RESTful
+
+//Vimos anteriormente que a API funciona como uma ponte para o front-end
+//e o back-end se comuniquem.
+
+//Para fazer essa comunicação existem muitos tipo de API que são usadas no desenvolvimento.
+//O mercado adota atualemte a API do tipo RESTful, ou seja, ela é utilizada na maior
+//parte dos projetos.
+
+//O REST (Representational State Transfer) define regras e padrões para a 
+//comunicação entre o front-end e a API RESTful.
+
+//AS regras do padrão REST são divididas em 4 categorias:
+
+//1)Endpoint;
+//2)Verbos HTTP;
+//3)JSON;
+//4)Códigos de status;
+
+//Obs.:Toda API RESTful, site ou aplicativo mobile que precisa se comunicar
+//deve falar o mesmo idioma, ou seja, utilizar o REST seguindo as suas regras
+//e padrões.
