@@ -1,0 +1,173 @@
+Códigos de status
+
+Até aqui conhecemos três categorias do padrão REST: endpoint, verbos HTTP
+e JSON. Aprenda nesta aula mais uma categoria que são os códigos de status
+e entenda para que servem no padrão REST
+
+Vimos que o front-end utiliza o endpoint para acessar a API.
+Neste processo o front-end envia o verbo HTTP e JSON quando necessário.
+O back-end por sua vez retorna uma resposta com dados em JSON ao front-end.
+Junto com a resposta ele retorna um código, que indica o status da requisição,
+se foi concluída com sucesso ou não.
+
+front-end ---> endpoint ---> back-end
+                    |
+                    |
+                   201  //código de status
+
+Códigos de status estão presentes em todas as respostas de uma requisição,
+seja ela bem sucedida ou não.
+
+
+REST tipos de códigos de status
+
+Os códigos de status servem para indicar se a requisição a uma API foi bem
+sucedida ou não.
+
+Eles são separados em categorias como demonstrado na tabela abaixo.
+
+Categoria do código         Nº do código
+Respostas de informação       100 a 199
+Respostas de sucesso          200 a 299
+Redirecionamento              300 a 399
+Erros do cliente              400 a 499
+Erros do servidor             500 a 599
+
+
+O que significa cada uma dessas categorias de códigos de status.
+
+(-----------------------------------------------------------------------------)
+Respostas de informação
+
+100 a 199
+
+Quando o código é dessa categoria a API informa ao front-end que
+a solicitação está em andamento.
+
+(-----------------------------------------------------------------------------)
+Respostas de sucesso
+
+200 a 299
+
+Quando o código é dessa categoria significa que a operação foi bem sucedida.
+A solicitação feita pelo front-end é recebida e executada corretamente.
+
+(-----------------------------------------------------------------------------)
+Redirecionamento
+
+300 a 399
+
+Quando o código é dessa categoria significa que a solicitação foi recebida
+e que para ser processada com êxito é necessária mais alguma ação do lado
+do front-end.
+
+(-----------------------------------------------------------------------------)
+
+Erro do cliente
+
+400 a 499
+
+Quando o código é dessa categoria significa que há um erro vindo do front-end.
+A API recebe a solicitação do front-end porém não pode executá-la.
+
+(-----------------------------------------------------------------------------)
+
+Erro do servidor
+
+500 a 599
+
+Quando o código é dessa categoria significa que há um erro no back-end.
+A solicita vinda do front-end não pode ser executada.
+
+(-----------------------------------------------------------------------------)
+
+REST Exemplos de códigos de status
+
+Existem diversos códigos de status que uma API pode retornar para o front-end.
+A tabela seguinte mostra os mais utilizados:
+
+Código          Significado
+
+  200           Solicitação feita com sucesso
+  201           Recurso criado com sucesso
+  403           Acesso proibido
+  404           Não encontrado
+  500           Erro interno do servidor
+
+(-----------------------------------------------------------------------------)
+  O que cada um desses códigos significa.
+
+
+
+ (----------- Código de status 200 ----------- )
+
+200
+
+Esse código indica que uma requisição foi bem sucedida, O código 200 indica
+que tudo ocorreu da forma esperada.
+
+Um exemplo com o código 200 é quando uma API retorna os dados solicitados pelo
+front-end. Nesse caso tudo funcionou de forma correta.
+
+ (----------- Código de status 201 ----------- )
+
+ 201
+
+ Esse código indica que uma requisição foi bem sucedida e que um recurso foi
+ criado no servidor.
+
+Um exemplo com o código 201 é quando uma API recebe os dados e efetua o
+cadastro com sucesso.
+
+(----------- Código de status 400 ----------- )
+
+400
+
+Esse código indica que o front-end enviou a requisição com dados
+ausentes ou errados.
+
+Um exemplo desse caso é quando o front-end não envia os dados obrigatórios para
+cadastrar um produto.
+
+(----------- Código de status 403 ----------- )
+
+403
+
+Esse código indica que o front-end não tem autorização para acessar um endpoint
+específico.
+
+Um exemplo desse caso é quando o front-end tenta acessar uma url que
+precisa de login para ser acessada.
+
+(----------- Código de status 404 ----------- )
+
+404
+
+Esse código indica que a url acessada não foi encontrada.
+
+Um exemplo com o código 404 é quando o front-end acessa uma url que não
+está disponível. Isso pode acontecer caso a url não exista ou tenha
+sido tirada do ar.
+
+Neste caso o problema precisa ser resolvido pelo programador front-end
+que precisa verificar se a API está sendo consumida corretamente.
+
+(----------- Código de status 500 ----------- )
+
+500
+
+Esse código indica que ocorreu erro um interno no servidor que
+está sendo acessado.
+
+Um exemplo com o código 500 é quando há um arquivo de configuração
+com problemas, o que impede a comunicação correta com o back-end.
+
+Neste caso o problema precisa ser resolvido pelo programador back-end 
+que deve verificar o que está acontecendo no servidor.
+
+(-----------------------------------------------------------------------------)
+
+OBS.: Os códigos de status são essenciais para que o front-end entenda
+se a sua requisição foi bem sucedida ou não.
+
+Codigos-de-status

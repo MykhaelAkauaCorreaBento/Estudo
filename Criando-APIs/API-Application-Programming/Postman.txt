@@ -1,0 +1,31 @@
+ Postman
+
+ Tanto o programador back-end quanto o programador front-end
+ costumam testar uma API.
+
+ Depois que o programador back-end cria uma API, ele precisa testá-la
+ enviando requisições para ela.
+ Isso pode ser feito criando um front-end, porém além de ser trabalhoso,
+ será necessário que ele tenha conhecimentos web ou mobile.
+
+ Já o programador front-end possui a aplicação criada, porém muitas vezes ele quer testar a API antes mesmo de utilizá-la.
+
+ Existe uma forma simples de enviar requisições e receber um retorno que é
+ através de uma ferramenta de API.
+ Existem diversas ferramentas no mercado - neste curso você aprenderá sobre o Postman.
+ Através do Postman é possível utilizar o padrão REST para, por exemplo, solicitar dados de um produto. E receber os dados além do código de retorno.
+
+O Postman é uma ferramenta para testar uma API sem precisar criar códigos para isso.
+
+Além de estar presente no retorno, sabemos que o JSON pode ser enviado em uma requisição à API.
+
+Postman enviando um JSON
+
+Para enviarmos um JSON para a API como quando utilizamos os verbos POST, PUT ou PATCH, fazemos da seguinte forma:
+
+Clicamos em body.
+Na sequência none e depois em raw
+Ao fazer isso, clique no campo em destaque e depois em JSON.
+Por fim, basta digitar o JSON que deseja enviar no campo abaixo.
+
+OBS.:Utilizar o Postman para fazer requisições facilita para o programador back-end testar se seu código está funcionando corretamente e também para que o programador front-end teste a API antes de utilizá-la em sua aplicação.
