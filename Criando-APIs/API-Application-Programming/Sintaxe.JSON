@@ -1,0 +1,162 @@
+//JSON
+
+Sintaxe:
+
+{
+    "chave" : valor
+}
+
+O conteúdo JSON é envolvido por um par de chaves.
+
+Dentro do par de chaves, temos a chave e o valor do dado em JSON.
+
+A chave é o identificador do valor.Ela sempre fica entre aspas no formato JSON.
+
+Após a chave, temos o sinal de dois pontos(:) que separa a chave do valor.
+
+Depois, vem o valor que é o dado a ser utilizado para alguma finalidade.
+
+Há casos em que  o conteúdo JSON pode conter múltiplos dados.
+
+{
+    "chave1" : valor,
+    "chave2" : valor,
+    "chave3" : valor
+}
+
+Neste caso separamos os dados utilizzando vírgula(,).
+
+
+Exemplo de dados no formato JSON. 
+
+{
+    "nome" : "Mykhael",
+    "idade" : 27,
+    "ativo" : true
+}
+
+
+Abertura e fechamento do JSON : {}.
+Chaves : "".
+Sinal de dois pontos :.
+Valores : ficam depois do dois pontos, pode ser texto, número ou booleano.
+
+Os valores textuais são inseridos entre aspas enquanto os valores númericos e booleanos não.
+
+
+Exemplo de dados no formato JSON.
+
+{
+    "titulo" : "Titanic",
+    "ano" : 1997,
+    "Bilheteria" : 2.201.647.264
+}
+
+Enquanto o valor do título do filme está entre aspas, os valores do ano e da
+bilheteria estão sem as aspas.
+
+_______________________________________________________________________________
+
+
+Utilizando JSON em API que cadastra dados
+
+Vimos que para o front-end se comunicar com a API é necessário utilizar um endpoint
+e um verbo HTTP.
+Nessa comunicação, alguns dados estão sendo enviados do front-end para a API e vice-versa.
+Esses dados estão no formato JSON como vemos no exemplo abaixo:
+
+
+{
+    "Nome" : "Smartphone Samsung Galaxy S20",
+    "preco" : 2500.00,
+    "imagem" : "novo-smartphone.jpg"
+}
+Dados enviados do front-end para a API
+
+{
+    "mensagem" : "Produto cadastrado com sucesso",
+    "id" : 2
+}
+Dados enviados da API para o front-end
+
+
+Todos os dados que o front-end e a API trocam entre si estão no formato
+JSON dentro do padrão REST.
+
+No padrão REST, quando o verbo é GET ou DELETE o front-end não envia dados no
+formato JSON, apenas recebe dados em JSON da API.
+
+_______________________________________________________________________________
+
+DOCUMENTAÇÃO
+Uso de JSON na API
+
+Vimos que dependendo do verbo HTTP a ser utilizado, a utilização do formato JSON
+pode variar.
+
+
+//(------Verbo GET------)
+No verbo GET, o JSON é utilizado apenas para retornar a coleção de produtos
+para o front-end.
+
+
+Verbo: GET
+Endpoint:https://api.com.br/produtos/
+JSON de envio: nenhum
+JSON de retorno: coleção de produtos
+OBS.:Nesse caso do verbo GET, o JSON é utilizado apenas para retornar dados de
+um produto específico para o front-end.
+
+//(------Verbo POST------)
+No verbo POST, o JSON é utilizado tanto para enviar os dados de um produto como
+para retornar uma mensagem e um id para o front-end.
+
+Verbo:POST
+Endpoint: https://api.com.br/produtos/
+JSON de envio: dados de um produto
+JSON de retorno: mensagem, id do produto
+
+//(------Verbo PUT------)
+Com o verbo PUT, o JSON é utilizado tanto para enviar todos os dados de um
+produto como para retornar uma mensagem para o front-end.
+
+Verbo:PUT
+Endpoint: https://api.com.br/produtos/2
+JSON de envio: todos os dados de um produto
+JSON de retorno: mensagem
+
+//(------Verbo PATCH------)
+Com o verbo PATCH, o JSON é utilizado tanto para enviar alguns dados de um
+produto como para retornar uma mensagem para o front-end.
+
+Verbo:PATCH
+Endpoint: https://api.com.br/produtos/2
+JSON de envio: alguns dos dados de um produto
+JSON de retorno:mensagem
+
+//(------Verbo DELETE------)
+Por fim, no verbo DELETE o JSON é utilizado apenas para retornar uma
+mensagem para o front-end.
+
+Verbo:DELETE
+Endpoint: https://api.com.br/produtos/2
+JSON de envio: nenhum
+JSON de retorno:mensagem
+
+
+
+ Tabela representação de uma documentação da API.
+
+Finalidade	                            Verbo	Endpoint	                    JSON de envio	                 JSON de retorno
+Obter todos os produtos	                GET	    https://api.com.br/produtos/	nenhum	                         coleção de produtos
+Obter produto específico	            GET  	https://api.com.br/produtos/2	nenhum	                         dados de um produto
+Cadastrar um produto	                POST	https://api.com.br/produtos/	dados de um produto	             mensagem, id do produto
+Atualizar todos os dados de um produto	PUT	    https://api.com.br/produtos/2	todos os dados de um produto	 mensagem
+Atualizar alguns dados de um produto	PATCH	https://api.com.br/produtos/2	alguns dados de um produto	     mensagem
+Excluir um produto	                    DELETE	https://api.com.br/produtos/2	nenhum	                         mensagem
+
+
+JSON (JavaScript Object Notation) é o formato para troca de informações
+entre sistemas mais utilizado na atualidade e obrigatório no padrão REST.
+É fundamental para um programador saber utilizar esse formato, pois toda API
+REST utiliza-o.
