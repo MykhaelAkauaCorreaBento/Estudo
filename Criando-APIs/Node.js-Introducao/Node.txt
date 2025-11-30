@@ -1,0 +1,61 @@
+Node
+
+O NPM (Node Package Manager) é um gerenciador de dependências.
+O NPM é instalado automaticamente durante a instalação do Node.
+
+Para entender melhor o papel de um gerenciador de dependências (NPM),
+vamos compreender o que são dependências.
+
+(---------O que são dependências?---------)
+
+O Node possui vários recursos que nos auxiliam no desenvolvimento, 
+mas ao concluirmos sua instalação ele vem com seus recursos básicos.
+Com o tempo nossa aplicação vai crescendo e os recursos básicos passam
+a não ser suficientes - vamos precisar instalar novos recursos.
+Estes novos recursos que serão instalados no futuro são dependências.
+Por exemplo: a instalação básica do Node não inclui ferramentas para
+conexão com banco de dados.
+Quando nossa aplicação precisar acessar algum banco de dados, vamos precisa
+instalar um módulo para isso, ou seja, uma dependência.
+Dependências são bibliotecas externas necessárias para o funcionamento
+da aplicação.
+
+
+Node ---> Dependência ---> Banco de dados
+
+
+(---------O que é gerenciador de dependências---------)
+
+Um gerenciador de dependências (no nosso caso, o NPM) automatiza a
+instalação de novas dependências na aplicação.
+O processo manualde instalação de dependências daria bastante
+trabalho - principalmente quando o número de dependências da
+aplicação vai crescendo.
+O NPM nos poupa desse trabalho, pois com apenas um comando ele instala
+automaticamente a dependência solicitada no nosso projeto.
+
+A seguir veremos um exemplo, onde está sendo feita a instalação da
+dependência mongoose, ela permite que a nossa aplicação
+acesse um banco de dados.
+ 
+Exemplo de uso do NPM:
+
+C:\Users\Albert\Desktop\app>npm install mongoose
+
+C:\Users\Mykhael Bento> npm install mongoose
+
+
+
+O Node e o npm são como unha e carne - você vai precisar do NPM o tempo todo durante sua carreira como programador Node.
+
+(---------Verificando a instalação do NPM---------)
+
+Assim como verificamos a instalação do Node.js, podemos fazer o mesmo para o NPM, basta digitarmos o comando abaixo no prompt:
+
+npm -v
+
+C:\Users\Mykhael Bento> npm -v
+10.8.2
+
+
+Obs.:Nesta aula conhecemos e instalamos as ferramentas para o nosso ambiente de desenvolvimento, aprendemos o que é um gerenciador de dependências e vimos como verificar a instalação do Node e do NPM

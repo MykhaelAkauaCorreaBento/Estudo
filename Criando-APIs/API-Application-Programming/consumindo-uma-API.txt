@@ -1,1 +1,108 @@
 Consumindo uma API
+
+Go Tour Conhecendo a API pertence a uma agência de turismo fictícia
+e através dela é possível cadastrar, atualizar, deletar e 
+listar pacotes de viagem.
+
+Essa API pode ser consumida por qualquer front-end, seja ele web ou mobile,
+desde que utilizem o padrão REST para se comunicarem com ela.
+
+
+http://devup.com.br/gotour/api/pacotes/
+
+Abaixo seguem os endpoints para serem consumidos pelo front-end.
+
+POST/pacotes Adiciona um novo pacotes
+
+PUT/pacotes/{id} Altera os dados do pacotes
+
+PATCH/pacotes/{id} Altera um ou mais dados do pacotes
+
+GET/pacotes Retorna todos os pacotes
+
+GET/pacotes/{id} Retorna um pacote específico
+
+DELETE/pacotes/{id} Deleta um pacote
+
+
+OBS.:Através da documentação de uma API o programador front-end consegue
+entender como utilizá-la.
+(-----------------------------------------------------------------------------)
+
+Sempre que consumimos uma API precisamos encontrar na documentação três coisas:
+
+* O endpoint para a finalidade desejada.
+
+* O verbo HTTP que deve ser utilizado.
+
+* O conteúdo que precisa ser enviado.
+
+
+Como queremos criar um novo pacote precisamos olhar a parte da documentação que
+contém informações sobre essa tarefa.
+
+POST/pacotes Adiciona um novo pacotes
+
+Abra o Postman e selecione o verbo POST no campo em destaque.
+
+Em seguida digite no campo em destaque o endpoint de cadastro de um pacote
+
+http://devup.com.br/gotour/api/pacotes/
+
+Na sequência clique em Body e selecione raw entre as opções indicadas.
+
+Depois selecione JSON na caixa ao lado de raw e adicione os dados que
+serão cadastrados.
+
+{
+    "nome" : "Teste pacote",
+    "descricao" :"Descrição de teste2",
+    "valor" : 200,
+    "dataInicio" : "2025-11-11",
+    "dataFim" : "2025-11-29"
+}
+
+Após clicar em Send, na parte inferior da tela vai aparecer o código de status
+e o JSON de retorno com os dados do pacote cadastrado.
+
+
+
+JSON de retorno com os dados do pacote cadastrado
+
+{
+    "nome": "Teste pacote",
+    "descricao": "Descrição de teste2",
+    "valor": 200,
+    "dataInicio": 1762819200,
+    "dataFim": 1764374400,
+    "id": 8792
+}
+
+201 Created Código de status
+
+Lembrando que a documentacão diz que todos os dados são obrigatórios
+
+
+
+____________________________________________________________________________
+Postman
+
+Alterado os dados de um pacote
+
+Na tela do Postman, selecione o verbo PUT no campo em destaque.
+
+Ao digitar o endpoint não esqueça de inserir o id do pacote que será alterado.
+http://devup.com.br/gotour/api/pacotes/104
+
+Utilize o id do pacote que você cadastrou anteriormente.
+
+{
+    "nome" : "Teste pacote",
+    "descricao" :"Descrição de teste2",
+    "valor" : 200,
+    "dataInicio" : "2025-11-11",
+    "dataFim" : "2025-11-29",
+    "id" : 104 
+}
+
+Na sequência, insira o JSON com os novos dados do pacote.

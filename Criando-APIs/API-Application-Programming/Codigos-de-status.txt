@@ -37,6 +37,7 @@ Erros do servidor             500 a 599
 O que significa cada uma dessas categorias de códigos de status.
 
 (-----------------------------------------------------------------------------)
+
 Respostas de informação
 
 100 a 199
@@ -45,6 +46,7 @@ Quando o código é dessa categoria a API informa ao front-end que
 a solicitação está em andamento.
 
 (-----------------------------------------------------------------------------)
+
 Respostas de sucesso
 
 200 a 299
@@ -53,6 +55,7 @@ Quando o código é dessa categoria significa que a operação foi bem sucedida.
 A solicitação feita pelo front-end é recebida e executada corretamente.
 
 (-----------------------------------------------------------------------------)
+
 Redirecionamento
 
 300 a 399
@@ -77,7 +80,7 @@ Erro do servidor
 500 a 599
 
 Quando o código é dessa categoria significa que há um erro no back-end.
-A solicita vinda do front-end não pode ser executada.
+A solicitação vinda do front-end não pode ser executada.
 
 (-----------------------------------------------------------------------------)
 

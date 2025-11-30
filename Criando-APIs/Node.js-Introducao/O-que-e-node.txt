@@ -1,0 +1,29 @@
+(-------------------O que é Node.js-------------------)
+
+O Node.js é uma plataforma server-side e com ele é possível criar aplicações
+JavaScript standalone, ou seja, que não dependem de um navegador para a execução,
+como estamos acostumados.
+
+É um ambiente que executa códigos javascript no lado do servidor da aplicação.
+
+Com o Node.js podemos utilizar javascript para construir o back-end da aplicação.
+
+
+
+
+(-------------------Relação entre Node.js e Back-end-------------------)
+
+Ser um programador Node.js significa ser um programador back-end, ou seja,
+você vai implementar o código da estrutura que forma a base de um site ou
+aplicativo.
+
+Programar em Node.js pode te levar a duas carreiras:
+
+1ºProgramador back-end
+Profissional que cuida da inteligência do software, ou seja, do motor da aplicação. Se preocupa com os dados e não com a aparência.
+
+2ºProgramador full-stack
+Profissional que domina o Node.js e também alguma tecnologia front-end como Angular, React Native ou Vue.js.
+
+Obs.:Node.js forma a base de muitos frameworks populares atualmente. Nesta aula tivemos uma visão geral desta tecnologia e vimos sua relação com o back-end.
+

@@ -1,0 +1,3 @@
+Primeiro projeto: Mensagem de saudação
+
+Nesta aula criaremos uma aplicação simples, que retorna uma saudação de acordo com a hora do dia. Vale ressaltar que este não é um exemplo de uma aplicação back-end, é apenas uma introdução ao Node.js.
