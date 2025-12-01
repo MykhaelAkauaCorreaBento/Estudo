@@ -1,0 +1,84 @@
+O que são APIs?
+
+Nesta aula conheceremos o papel de uma API.
+
+
+(--------------------O que são APIs?--------------------)
+
+O termo API significa Application Programming Interface. Basicamente é um 
+conjunto de padrões usados para a comunicação entre sistemas.
+Por exemplo, se uma aplicação A se comunica com uma aplicação B, essa integração
+seguirá um padrão. Esse padrão é definido por APIs.
+
+
+Exemplo prático
+
+
+                     requisição
+                   --------------->
+
+Front-end          Protocolo HTTP            Back-end
+
+                   <---------------
+                       resposta
+
+O front-end faz uma requisição ao back-end
+
+Vamos imaginar que o front-end seja uma aplicação construída em Angular.
+A requisição deve ser enviada de uma forma que o back-end compreenda.
+
+
+O back-end devolve uma resposta ao front-end
+
+E digamos que o back-end seja um aplicação construída em Node.js.
+A resposta deve ser retornada de modo que o front-end também entenda.
+
+Ou seja, front-end e back-end precisam de um padrão para se comunicar. Esse padrão se estabelece através de Interfaces chamadas APis.
+
+Em poucas palavras: back-end e front-end se comunicam através de APIs.
+
+Quando falamos de integração entre aplicações back-end e front-end, há um padrão de mercado que se chama APIs REST.
+
+Não se preocupe agora com os detalhes de uma API REST - ao longo dos cursos você vai aprender passo a passo como ela funciona.
+O importante agora é apenas você entender que front-end e back-end se conectam através do padrão de APIs REST.
+
+
+(--------------------O que é Consumo de APIs?--------------------)
+
+As aplicações front-end interagem com o back-end através de APIs, ou seja, o front-end consome a API - isto é feito através das requisições.
+
+
+Exemplo prático calculadora:
+
+
+                                  Requisição
+
+                  O front-end consome a API(envia os números)
+                --------------------------------------------->
+
+Front-end                      Protocolo HTTP                   API  Back-end
+
+                <---------------------------------------------
+                    A API devolve a soma para o front-end
+
+                                   Resposta
+
+Temos uma aplicação front-end em Angular que envia dois números para uma API e aguarda a soma desses valores.
+Ou seja, a aplicação está consumindo um recurso da API - funcionalidade de soma.
+
+A API é uma interface que padroniza a comunicação entre as aplicações front-end e back-end.
+Ela recebe os dados da requisição do front-end e envia para o back-end, em resumo, seu papel é fazer o intermédio entre estas camadas.
+
+Como cada aplicação manipula os dados da sua maneira, há a necessidade de padronizar a comunicação entre elas e esta é a função da API.
+
+Temos uma aplicação back-end em Node que recebe dois números, através da API.
+Realiza a operação e retorna o resultado da soma para a API.
+
+Quando criamos uma aplicação back-end baseada nos padrões de comunicação entre sistemas, criamos uma API no padrão REST.
+
+Esta API REST servirá de condumo para outras aplicações front-end.
+
+Neste curso vamos implementar uma API no padrão REST que retorna a mensagem "Hello, World!".
+
+Obs.:A comunicação entre tecnologias de diferentes linguagens se dá através
+de uma API REST, que é simplesmente um conjunto de padrões usados para a comunicação entre sistemas

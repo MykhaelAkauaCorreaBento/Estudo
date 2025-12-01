@@ -1,0 +1,147 @@
+(------------------------------API REST: O que é------------------------------)
+
+Na última aula criamos um aplicação back-end que ainda não atendia a todos os
+padrões REST, foi um degrau necessário para a evolução do nosso estudo sobre
+APIs REST.
+
+Como vimos, front-end e back-end se comunicam por intermédio das APIs.
+
+REST é um conjunto de padrões estabelecidos para a comunicação entre sistemas -
+determina como deve ser feita a comunicação entre aplicações.
+
+API REST é simplemente uma API que segue os padrões REST.
+UMa API REST permite que nossa aplicação back-end seja consumida por
+aplicações front-end de tecnologias diferentes.
+
+
+O exemplo está no foto 7.
+
+Os padrões REST permitem que uma aplicação back-end seja consumida por
+outras aplicações front-end.
+
+O conceito de API REST determina que a comunicação entre as aplicações
+deve seguir algumas diretrizes
+
+(------------------Quais são as diretrizes do padrão REST------------------)
+
+
+O conveito de API REST determina que a comunicação entre as aplicações deve
+seguir algumas diretrizes. Agora veremos as diretrizes básicas que são
+necessárias para que o nosso "Hello, World!" se torne uma API REST.
+
+
+As diretrizes:
+
+1ª - Protocolo HTTP;
+2ª - Verbos HTTP;
+3ª - Formato JSON;
+
+1ª Diretriz: Protocolo HTTP
+
+A primeira diretriz do padrão REST é que front-end e back-end se comuniquem
+através do protocolo HTTP (nossa aplicação já cumpre esta diretriz).
+Quando acessamos a url da nossa aplicação através do navegador, uma
+requisição HTTP é enviada.
+
+http:/localhost:8080/
+
+Como vimos, nossa aplicação fica aguardando requisiçõe em uma porta 
+HTTP através do comando listen.
+
+app.listen(8080, () =>{
+    console.log("Servidor rodando na porta: 8080");
+});
+
+Logo, nossa aplicação já atende a primeira diretriz.
+
+
+
+
+
+
+2ª Diretriz: Verbos HTTP
+
+A segunda diretriz são os verbos HTTP, basicamente, eles servem para
+a API back-end identificar qual ação está sendo solicitada pela
+aplicação front-end.
+No padrão REST, o front-end envia uma requisição que contém, além dos dados,
+um verbo a API saberá qual ação será realizada.
+
+O exemplo está no foto 18.
+
+Confira os verbos HTTP
+
+Get: retorno dados
+POST: insere dados
+PUT: atualizar dadosDELETE: exclui dados
+
+
+No nosso exemplo, ao consumirmos a API, por padrão o front-end envia o verbo
+GET, pois nenhum verbo foi definido.
+
+O exemplo está no foto 20.
+
+Quando o front-end envia uma requisição HTTP com o verbo GET, ele espera que
+a retorne dados.
+O verbo GET atende a necessidade da nossa aplicação, que é retornar 
+o texto "Hello, World!"
+
+Nossa API atende a esta diretriz pois responde o verbo GET para retornar 
+o texto "Hello, World!".
+
+app.get("/", (req, res) =>{
+    res.send("Hello, World!");
+});
+
+
+
+
+
+3ª Diretriz: Formato JSON
+
+As aplicações se comunicam enviando e recebendo dados em formato JSON.
+JSON (JavaScript Object Notation) é um formato de dados universal que
+é interpretado por qualquer tecnologia, seja front-end ou back-end.
+
+
+Veja um exemplo que representa os dados de um aluno no formato JSON.
+
+
+{
+    "id" : 1,
+    "matriculo" : 123456789,
+    "nome" : "Mykhael",
+    "idade" : 27
+}
+
+O JSON apresenta informações através de um par chave/valor.
+
+Um par chave/valor é representado pela chave entre aspas, 
+seguido de dois pontos, seguido do valor.
+
+{
+     "id"   :    1,
+    chave       valor
+
+}
+
+Cada par chave/valor é separado por vírgula.
+
+
+Observe que os valores do tipo string devem ser representados entre aspas.
+
+{
+    "nome" : "Mykhael",
+
+}
+
+
+Nossa aplicação não segue esta diretriz porque não retornamos JSON,
+retornamos simplesmente o texto "Hello, World!" para o navegador.
+
+exemplo foto 29.
+
+
+Obs.: Uma API REST permite a integração da nossa aplicação back-end 
+com diferentes aplicações front-end, pois utiliza a estrutura JSON
+para transferência de dados.

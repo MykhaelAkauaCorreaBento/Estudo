@@ -1,0 +1,57 @@
+(-----------------------O que é o Express.js-----------------------)
+
+Antes de falarmos sobre o Express.js, precisamos entender o que é um framework.
+Um framework é simplesmente um pacote de funcionalidades prontas para uso,
+que agilizam o processo de desenvolvimento.
+Voltando ao Express.js, ele é um framework minimalista para Node.js e o seu
+objetivo é simples - trabalhar com APIs REST. Para criarmos uma API REST em Node puro, seria necessário implementar manualmente muitas funcionalidades já disponíveis no Express.js.
+
+Em poucas palavras o Express.js aumenta a produtividade oferecendo recursos e funcionalidades já prontas para implementarmos uma API REST.
+
+(-----------------------Instalação do Express.js-----------------------)
+
+O Express é uma dependência do Node e como toda dependência, ele é instalado através do NPM. Porém, antes de instalarmos qualquer dependência devemos criar o arquivo package.json.
+
+O package.json irá registrar todas as dependências instaladas no projeto. Na ausência dele, o NPM exibirá mensagens de alerta sugerindo que você crie-o.
+
+Primeiro, criamos uma pasta para o projeto, nome da pasta que crie API.
+
+Abrimos esta pasta através do Visual Studio Code.
+Acessamos o terminal.
+
+No terminal, executamos o comando npm init -y para criar o arquivo package.json.
+(Comando npm init -y)
+
+A instrução -y é adicionada ao final do comando npm init para pular uma série de perguntas que o NPM normalmente faz.
+
+O package.json armazena, além das dependências, informações do projeto como nome, versão e etc.
+
+Agora vamos executar o comando npm install express para instalar o Express.js e todas as suas dependências.
+
+Instalação do express.js  (comando npm install express --save)
+
+Após a execução do comando, foi criada a pasta node_modules e o arquivo package-lock.json.
+
+A pasta node_modules contém as dependências instaladas no projeto.
+
+Dentro dela (node_modules) temos o Express e outros arquivos necessários para o seu funcionamento.
+
+O arquivo package-lock.json contém informações das dependências usadas no projeto.
+
+O package-lock.json relaciona as dependências, suas versões baixadas e outros detalhes sobre elas. Não precisamos nos preocupar com ele pois é para o uso próprio do NPM.
+
+Dessa forma concluímos a instalação do Express.js e já podemos utilizar seus recursos.
+
+(-----------------------Reinstalando dependências-----------------------)
+
+Vale destacar que precisamos nos atentar ao transferir o projeto do ambiente local - nosso computador - para qualquer outro ambiente, como hospedagem, GitHub ou outro computador, ignoramos a pasta node node_modules.
+
+Ou seja, nos preocupamos somente com os arquivos referentes à implementação do projeto.
+
+A pasta node_modules deve ser ignorada porque contém milhares de arquivos, o que gera um longo tempo de espera para realizar a operação desejada.
+
+Para instalarmos novamente as dependências basta executarmos o comando npm install.
+E então o NPM criará novamente a pasta node_modules e instalará as dependências contidas no package.json
+Portanto, o arquivo package.json se torna essencial pois nele ficam registradas todas as dependências do projeto.
+
+Obs.: O Express é um framework utilizado com o Node e é instalado como dependência, através do NPM. Através deste framework poderemos construir APIs back-end com o Node.js

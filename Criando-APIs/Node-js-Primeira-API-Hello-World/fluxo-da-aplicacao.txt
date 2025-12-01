@@ -1,0 +1,79 @@
+(---------------------Fluxo da aplicação---------------------)
+
+Normalmente quando executamos uma aplicação, seu fluxo segue um início, meio
+e fim - ou seja, sabemos que a aplicação será encerrada logo após a
+última linha de código.
+
+Normalmente quando executamos uma aplicação, seu fluxo segue um início, meio
+e fim.
+
+Isto é, sabemos que a aplicação será encerrada logo após a última linha de
+código.
+
+Ao iniciarmos a aplica ão desenvolvida nesta aula, ela não encerrará seu fluxo
+ao final do código.
+
+Isso acontece devido estarmos utilizando a função listen, esta função mantém
+a execução da aplicação.
+
+Listen significa ouvir, ou seja, a aplicação ficará ouvindo as requisições
+através de uma porta HTTP.
+
+A aplicação só será encerrada através de um comando enviado por nós, ou seja,
+ela se mantém em execução até a encerrarmos.
+
+Ao executarmos a aplicação, será exiba no console a mensagem da função listen.
+
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd! Mykhael está aprendendo programação back-end.");
+});
+
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+
+
+
+
+
+"Servidor node iniciado em: Mon Dec 01 2025 11:44:28 GMT-0300 (Horário Padrão de Brasília)"
+
+Além disso, o terminal ficará "travado" para novos comandos. Indicando que
+a aplicação ainda está sendo executada.
+
+
+Quando removemos a função listen, a aplicação é encerrada após a execução.
+
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd! Mykhael está aprendendo programação back-end.");
+});
+
+
+//app.listen(8080, () =>{
+//    let data = new Date();
+//    console.log("Servidor node iniciado em: " + data);
+//});
+
+console.log("A aplicação será encerrada após esta linha);
+
+
+Agora o terminal está aceitando novos comandos, indicando que a aplicação
+não está em execucão.
+
+Portanto, a função listen faz da nossa aplicação um servidor back-end que
+sempre aguardadndo requisições.

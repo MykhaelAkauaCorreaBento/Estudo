@@ -1,0 +1,51 @@
+(---------------------Reiniciando a aplicação---------------------)
+
+Sempre que fizermos alguma alteração de código é necessário reiniciar
+a aplicação.
+
+Para reiniciar a aplicação, primeiro devemos pausá-la e depois
+executá-la novamente.
+
+Primeiro vamos alterar a mensagem retornada para o front-end.
+
+Exemplo: arquivo index.js
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Eu adoro jogar Monster Hunter");
+});
+
+app.listen(8080,()=>{
+    console.log("Servidor rodando na porta: 8080");
+});
+
+Note que a aplicação ainda exibirá a mensagem antiga.
+
+
+"Hello, Wolrd! Mykhael está aprendendo programação back-end."
+
+
+Para pausarmos a aplicação devemos ir ao terminal do Visual
+Studio Code e acionar as teclas "Ctrl + c".
+
+Para que o comando funcione, o cursor não deve estar no código.
+
+Clique na opção terminal e veja se o cursor está totalmente
+branco - assim o comando funcionará.
+
+Pressione as teclas "Ctrl + c" e note que dois caracteres
+serão exibidos, indicando que a aplicação foi pausada.
+
+Atualize o navegador e observe que não é possível acessar a aplicação.
+
+
+Como o servidor back-end parou de executar, nada é exibido no front-end,
+ou seja, back-end não pode ser consumido caso a aplicação não esteja rodando.
+
+
+OBS.: Usamos o Express para criar uma aplicação back-end em nosso ambiente
+de testes, que fica aguardando requisições através de uma porta HTTP

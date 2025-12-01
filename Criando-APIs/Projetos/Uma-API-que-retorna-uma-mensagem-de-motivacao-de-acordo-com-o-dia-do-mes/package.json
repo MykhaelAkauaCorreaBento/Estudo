@@ -1,0 +1,12 @@
+{
+  "name": "uma-api-que-retorna-uma-mensagem-de-motivacao-de-acordo-com-o-dia-do-mes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

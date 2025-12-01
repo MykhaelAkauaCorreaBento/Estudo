@@ -1,0 +1,51 @@
+Consumindo nossa API REST pelo Postman
+
+Durante o desenvolvimento da nossa API, utilizaremos o Postman que é uma
+ferramenta que tem como objetivo testar APIs REST por meio do envio de
+requisições HTTP.
+
+Utilizando o Postman
+
+Agora vamos utilizar o Postman para consumir nossa API REST.
+
+Certifique-se de que a aplicação esteja em execução
+
+Abra o Postman e clique no sinal de mais (+)
+
+exemplo foto 9.
+
+
+Insira a URL em que a aplicação está sendo executada
+
+Ao lado da URL, selecione o verbo GET. Pressione o botão Send e 
+observe o resultado.
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.json({mensagem: "Olá, mundo"});
+});
+
+
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+//http://localhost:8080/
+
+
+//Resultado da aplicação no Postman
+
+//{
+//    "mensagem": "Olá, mundo"
+//}
+
+
+
+O Postman é uma ferramenta indispensável durante o desenvolvimento de
+APIs REST e possui uma interface bastante simples e intuitiva que auxilia
+na execução dos testes de APIs e requisições em geral

@@ -1,0 +1,68 @@
+Introdução
+
+uma aplicação é composta pelas camadas front-end e back-end e que elas se 
+comunicam: esta comunicação é feita através de requisições e respostas.
+
+
+
+(------------------O que são requisições e respostas?------------------)
+
+Front-end
+
+Formulário web
+
+Quando clicamos no botão, o front-end envia uma requisição para o back-end.
+Requisição é o envio de um pacote de dados para o back-end. Nesse caso é o
+nome e o email.
+
+
+
+Back-end
+
+Servidor
+
+O back-end, ao receber a requislção, irá processar os dados e devolver uma
+resposta para o front-end.
+A resposta também é um pacote de dados, neste caso, uma mensagem de sucesso ou
+falha no cadastro.
+
+Este é o funcionamento de uma aplicação - front-end e back-end se comunicam
+através de requisições e respostas.
+
+
+As requisições e respostas trafegam dados. Um dado transferido do front-end
+para o back-end e vice-versa, percorre um caminho - o protocolo HTTP
+
+(------------------O que é Protocolo HTTP?------------------)
+
+As requisições e respostas trafegam os dados pelo protocolo HTTP. Ele é
+o meio de comunicação, envio e recebimento de dados, entre front-end
+e back-end.
+HTTP é o protocolo padrão para navegarmos na internet.
+
+Exemplo prático
+
+O protocolo HTTP é a base para a transferência de dados
+
+
+https://www.youtube.com/
+
+
+
+
+                     requisição
+                   --------------->
+
+Front-end          Protocolo HTTP            Back-end
+
+                   <---------------
+                       resposta
+
+O endereço url do site do youtube.com precede pelo protocolo http.
+Quando acessamos o site do youtube.com no nosso navegador, estamos fazendo
+uma requisição ao back-end.
+O back-end do youtube.com devolve uma resposta contendo as informações a serem
+exibidas no front-end.
+
+Portanto, front-end e back-end se comunicam através de requisições e respostas,
+que trafegam pelo protocolo HTTP, que é o meio de transferência de dados.

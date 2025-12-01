@@ -1,0 +1,288 @@
+(-------------------Primeiro projeto: Hello World-------------------)
+
+Para chegarmos ao nível de construímos uma API REST completa, precisamos
+progredir gradativamente e para isso vamos implementar uma aplicação
+simples que retorna a mensagem Hello world!.
+
+O nosso primeiro projeto utilizando o Express não é uma API REST, ou seja,
+não é uma aplica ão back-end que atende aos padrões REST.
+
+Nosso projeto é uma aplicação back-end simples que retorna para o navegador
+a mensagem: "Hello, World!"
+Temos um back-end que é consumido pelo navegador através do protocolo HTTP
+(ainda não usa o padrão REST).
+
+Ao acessarmos a url da nossa aplicação, o front-end envia uma requisição
+ao back-end.
+
+                                  
+http://localhost:8080/
+                  
+                --------------------------------------------->
+
+Front-end                      Protocolo HTTP                   API  Back-end
+
+                <---------------------------------------------
+                    
+
+                                   
+
+O back-end retorna o texto "Hello, World!" que será exibido pelo front-end.
+
+Observe o endereço url no navegador http://localhost:8080/.
+
+O endereço url "http://localhost" é usado para acessarmos uma aplicação
+hospedada na nossa máquina.
+
+Back-end e front-end estão no mesmo computador, porque estamos em um ambiente
+de testes.
+
+Portanto, sempre que acessamos uma aplicação hospedada no nosso computador
+usamos o endereço http://localhost.
+
+
+(-------------------Implementando o projeto-------------------)
+
+Para iniciarmos o nosso projeto é necessário que você instale o Express,
+assim como vimos na aula anterior. 
+
+Arquivo index.js
+
+Este é o código da nossa aplicação
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd!");
+});
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+Digite cada linha de código em seu arquivo index.js
+
+
+
+
+
+Nossa aplicação é dividida em 3 seções.
+
+1ª)A primeira seção é responsável por preparar o express - o tornar utilizável 
+dentro da nossa aplicação.
+
+const express = require("express");
+const app = express();
+
+Primeiro importamos os módulos do express. "const express = require("express");"
+Em seguida criamos a variável app, ela contém as funcionalidades do express.
+"const app = express();"
+
+2ª)Na segunda seção utilizamos a função get contida na variável app, que
+pertence ao express.
+
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd!");
+});
+
+A função get recebe uma requisição do front-end e devolve uma resposta
+para o mesmo.
+O back-end se conecta com o front-end através do método get.
+
+A função get recebe dois parâmetros
+
+O primeiro se refere à url requisitada pelo front-end, neste caso
+será: http://localhost/
+
+app.get("/",
+
+
+
+O segundo é uma função com dois sub parâmetros: req (requisição) e res (resposta).
+
+(req, res)
+
+
+Por convenção os nomeamos como req e res
+
+Contém os dados enviados na requisição, neste caso nada foi enviado.
+
+Trata a resposta para o front-end. Na linha 57, usamos o método send para enviar
+o texto: "Hello, World!".
+
+
+
+
+3ª) Na última seção utilizamos a função listen do express, através da variável
+app.
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+A função listen faz a nossa aplicação monitorar as requisições através de
+uma porta HTTP.
+
+Em nosso exemplo, optamos pela porta 8080 por ser muito utilizada em 
+ambientes de teste.
+
+A função listen recebe dois parâmetros
+
+O primeiro é a porta que o servidor ficará monitorando requisições.
+
+app.listen(8080,
+
+O segundo é uma função que será executada quando iniciarmos a aplicação.
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+Agora basta iniciar a aplicação.
+Para vermos o resultado acessamos o localhost na porta que estárodando
+a aplicação
+
+
+http://localhost:8080/
+
+
+Dessa forma concluímos a nossa primeira aplicação utilizando o framework Express.
+
+
+(---------------------Fluxo da aplicação---------------------)
+
+Normalmente quando executamos uma aplicação, seu fluxo segue um início, meio
+e fim - ou seja, sabemos que a aplicação será encerrada logo após a
+última linha de código.
+
+Normalmente quando executamos uma aplicação, seu fluxo segue um início, meio
+e fim.
+
+Isto é, sabemos que a aplicação será encerrada logo após a última linha de
+código.
+
+Ao iniciarmos a aplica ão desenvolvida nesta aula, ela não encerrará seu fluxo
+ao final do código.
+
+Isso acontece devido estarmos utilizando a função listen, esta função mantém
+a execução da aplicação.
+
+Listen significa ouvir, ou seja, a aplicação ficará ouvindo as requisições
+através de uma porta HTTP.
+
+A aplicação só será encerrada através de um comando enviado por nós, ou seja,
+ela se mantém em execução até a encerrarmos.
+
+Ao executarmos a aplicação, será exiba no console a mensagem da função listen.
+
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd! Mykhael está aprendendo programação back-end.");
+});
+
+
+app.listen(8080, () =>{
+    let data = new Date();
+    console.log("Servidor node iniciado em: " + data);
+});
+
+
+
+
+
+
+"Servidor node iniciado em: Mon Dec 01 2025 11:44:28 GMT-0300 (Horário Padrão de Brasília)"
+
+Além disso, o terminal ficará "travado" para novos comandos. Indicando que
+a aplicação ainda está sendo executada.
+
+
+Quando removemos a função listen, a aplicação é encerrada após a execução.
+
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Hello, Wolrd! Mykhael está aprendendo programação back-end.");
+});
+
+
+//app.listen(8080, () =>{
+//    let data = new Date();
+//    console.log("Servidor node iniciado em: " + data);
+//});
+
+console.log("A aplicação será encerrada após esta linha);
+
+
+Agora o terminal está aceitando novos comandos, indicando que a aplicação
+não está em execucão.
+
+Portanto, a função listen faz da nossa aplicação um servidor back-end que
+sempre aguardadndo requisições.
+
+
+(---------------------Reiniciando a aplicação---------------------)
+
+Sempre que fizermos alguma alteração de código é necessário reiniciar
+a aplicação.
+
+Para reiniciar a aplicação, primeiro devemos pausá-la e depois
+executá-la novamente.
+
+Primeiro vamos alterar a mensagem retornada para o front-end.
+
+Exemplo: arquivo index.js
+
+
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) =>{
+    res.send("Eu adoro jogar Monster Hunter");
+});
+
+app.listen(8080,()=>{
+    console.log("Servidor rodando na porta: 8080");
+});
+
+Note que a aplicação ainda exibirá a mensagem antiga.
+
+
+"Hello, Wolrd! Mykhael está aprendendo programação back-end."
+
+
+Para pausarmos a aplicação devemos ir ao terminal do Visual
+Studio Code e acionar as teclas "Ctrl + c".
+
+Para que o comando funcione, o cursor não deve estar no código.
+
+Clique na opção terminal e veja se o cursor está totalmente
+branco - assim o comando funcionará.
+
+Pressione as teclas "Ctrl + c" e note que dois caracteres
+serão exibidos, indicando que a aplicação foi pausada.
+
+Atualize o navegador e observe que não é possível acessar a aplicação.
+
+
+Como o servidor back-end parou de executar, nada é exibido no front-end,
+ou seja, back-end não pode ser consumido caso a aplicação não esteja rodando.
+
+
+OBS.: Usamos o Express para criar uma aplicação back-end em nosso ambiente
+de testes, que fica aguardando requisições através de uma porta HTTP

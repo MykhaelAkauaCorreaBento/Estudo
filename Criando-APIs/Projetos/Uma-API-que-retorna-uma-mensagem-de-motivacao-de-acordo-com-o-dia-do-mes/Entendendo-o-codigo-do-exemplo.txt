@@ -1,0 +1,41 @@
+Entendendo o código do exemplo
+Para retornarmos a frase de acordo com o dia, precisamos seguir alguns passos:
+
+
+Identificar o dia atual
+Selecionar a frase pelo índice, que será o dia atual menos 1, pois a primeira
+posição do array é 0.
+
+Nossa aplicação está dividida em camadas e cada uma delas é representada 
+por um arquivo.
+
+O arquivo dados.js é a camada de dados. Ele possui um array com 31 frases.
+
+Exportamos o array que será consumido pela camada de serviço.
+
+O arquivo mensagemDoDia.js é a camada de serviço, ela é responsável por
+consumir os dados.
+
+Neste arquivo temos a fun ão que recebe como parâmetro o dia do mês,
+consome o array e devolve a frase.
+
+
+Importamos o arquivo dados.js e exportamos a função que retorna uma
+frase de motivação.
+
+O arquivo index.js é a chamada REST, ela recebe as requisições HTTP
+e consome a camada de serviço.
+
+Este trecho de código torna o Express utilizável dentro da aplicação.
+
+Obtemos o dia atual.
+
+Executamos a função que irá retornar a mensagem do dia.
+
+Devolvemos a resposta ao front-end com a mensagem do dia no formato
+JSON.
+
+Configuramos a porta que irá monitorar a aplicação
+
+Obs.: Neste curso utilizamos o Postman para consumir nossa API REST, mas na
+prática este consumo será feito por aplicações front-end. 
