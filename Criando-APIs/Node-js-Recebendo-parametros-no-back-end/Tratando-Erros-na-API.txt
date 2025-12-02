@@ -1,0 +1,87 @@
+Tratando Erros na API
+
+Na aula anterior vimos como retornar um json com múltiplas chaves, porém,
+ falta ainda um passo importante, a validação.
+
+Veremos como utilizar o Node JS e o Express juntamente com o JavaScript para
+tratar erros na API com retorno de código de status para o front-end.
+
+Por quê validar parâmetros?
+
+O principal objetivo da validação é evitar que dados inválidos cheguem até a API.
+
+Dados inválidos podem causar erros na API, e no piior dos casos, oferecer
+risco de segurança do sistema.
+
+Códigos de Status
+
+Os códigos de Status são utilizados em APIs para indicar o status de uma requisição.
+Através desses códigos, o front-end consegue saber, por exemplo, se a requisição foi
+ou não bem sucedida.
+
+
+
+Código de Status 200
+
+O código de status 200, ocorre quando uma requisição feira pelo front-end é
+retornado com sucesso pelo back-end, nesse caso, a API.
+Perceba que o código só será 200 se a requisição for bem sucedida, ou seja, se
+a API retornar um conteúdo em resposta a requisição.
+Note que como uma resposta foi retornada temos uma ocorrência de Status 200 OK.
+O Status 200 é padrão - você não precisa escrever código adicinal no Node para
+retorná-lo para o front-end.
+
+
+Códigos de Status 500
+
+O código 500 indica para o front-end que houve erro no servidor ao tenta executar
+a requisição.
+Esse código geralmete ocorre em uma API quando não tratamos os parâmetros
+recebidos.
+Por exemplo, se enviarmos um parâmetro incorreto para uma API, ela retornará um
+erro e juntamente o código 500. Códigos 500 podem e devem ser evitador através
+do tratamento de erros na API.
+
+
+Códigos de Status 404
+
+O Código 404 é muito comum na Web e é exibido quando uma página não é encontrada.
+Em uma API o código 404 está ligado ao endpoint. Se o front-end enviar uma requisição
+para um endpoint inexistente, o retorno será  404 NOT FOUND.
+O Node / Express retorna 404 NOT FOUND por padrão quando o endpoint requisitado é
+inexistente.
+
+
+Códigos de Status 400
+
+O Código 400 Bad Request é um código de status que retornamos quando recebemos
+uma requisição invalida do front-end.
+Por exemplo, se em uma API, um parâmetro que deve ter valor numérico for
+enviado com letras, é possível que um status SOO seja retornado.
+Porém, como já vimos, o erro 500 não é ideal, pois ocorre pela falta de validação
+dos parâmetros recebidos na requisição.
+A ideia é que o programador valide os parâmetros recebidos no código da API,
+e caso eles sejam inválidos retorne o status 400,
+Desse modo, a API retornará um status mais adequado, e o programador
+poderá mostrar uma mensagem de erro mais amigável.
+
+Em resumo, sempre que uma API receber parâmetros inválidos, o status 400 deve ser retornado.
+
+
+
+
+Retornando um código de status
+
+Para retornar um código de status para o front-end através do Node e Express
+utilizamos a função status, nativa do Express.
+
+res.status(400).json({'Erro':'Peso ou altura inválidos.'});
+
+
+exemplo:
+
+app.get('/', (req, res) => {
+        res.status(400).json({'Erro':'Parâmetro inválido'});
+});
+
+

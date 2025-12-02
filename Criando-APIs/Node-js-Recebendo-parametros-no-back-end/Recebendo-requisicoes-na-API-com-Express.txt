@@ -1,0 +1,129 @@
+Recebendo requisições na API com Express
+
+Nesta aula veremos de forma prática como receber parâmetros na nossa API 
+através de requisições utilizando o Express
+
+Como foi estudado anteriormente, a função get recebe uma requisição do front-end
+
+app.get("/", (req, res) =>{
+    console.log(req, query);
+    res.json({mensagem: "parâmetro recebido pelo servidor})
+});
+
+Também vimos que para enviar uma resposta utilizamos o método json contido no res
+
+req = requisição
+res = resposta
+
+app.get("/", (req, res) =>{
+    console.log(req, query);
+    res.json({mensagem: "parâmetro recebido pelo servidor})
+});
+
+
+Para receber as requisições vamos precisar utilizar req
+
+req = requisição
+res = resposta
+
+app.get("/", (req, res) =>{
+    console.log(req, query);
+    res.json({mensagem: "parâmetro recebido pelo servidor})
+});
+
+
+E como vamos receber os parâmetros via get utilizando a propriedade query
+para acessar esses parâmetros
+
+
+
+
+
+(---------------------Estrutura da requisição---------------------)
+
+            
+req contém todos os dados enviados na requisição.
+               |
+               |
+app.get("/", (req, res) =>{
+    console.log(req, query);---> query acessa apenas os parâmetros enviados pelo front-end via get.
+    res.json({mensagem: "parâmetro recebido pelo servidor})
+});
+
+
+Query vai conter todos os parâmetros enviados pelo front-end eles estarão no
+formato JSON.
+
+É desse modo que podemos receber parâmetros através do express.
+
+
+(--------Parâmetros Testando o envio de parâmetros com Postman--------)
+
+Para enviar dados ara nossa API vamos utilizar a ferramenta de testes que
+vimos no curso anterior, o Postman
+
+
+Primeiro vamos definir como enviaremos a requisição. No nosso caso utilizaremos
+o verbo HTTP GET.
+
+exemplo foto 34
+
+Aqui definimos a url completa do servidor e a porta
+
+exemplo foto 35
+
+Na guia params vamos definir os parâmetros que queremos enviar para a API.
+
+exemplo foto 36
+
+Os parâmetros são formados por uma chave e um valor e são definidos pelo 
+próprio desenvolvedor de acordo com a necessidade da aplicação.
+
+exemplo 37
+
+Uma aplicação simples de login, por exemplo, poderia ter os parâmetros login
+e senha já uma calculadora de IMC teria peso e altura.
+
+OS parâmetros são enviados via URL e internamente são convertidos para JSON
+
+exemplos foto 39b
+
+O campo key é onde definimos a chave. É recomendado que a chave utilize
+um texto falcimente identificável.
+
+Em value, você define o valor correspontende a chave. Esse valor pode
+ser numérico ou textual.
+
+É possível enviar um ou mais parâmetros para a API em uma única requisição.
+
+exemplo foto 41
+exemplo foto 42
+
+É importante saber que qualquer chave ou valor informados, mesmo valores numéricos,
+serão convertidos e recebidos pela API com string.
+
+Com os parâmetros definidos, utilizamos o botão Send que fica à direita do campo
+destinado a url para enviá-los à API.
+
+Fazendo isso, enviamos a requisição pelo Postman e esse resultado vai ser 
+mostrado no console do servidor.
+
+exemplo foto 45
+
+Veja que a chave e o valor do JSON são os mesmos definidos no Postman
+
+O resultado é exibido no console pois definimos isso no código que mostramos
+anteriormente
+
+exemplo foto 46
+
+Desta forma conseguimos testar rapidamente o envio de parâmetros
+para nossa API back-end.
+
+
+Obs.:A troca de informações entre front-end e back-end é parte essencial na construção de uma aplicação inteligente e saber como tratar uma requisição é parte importante desse processo:
+
+app.get('/', (req, res) => {
+console.log(req.query);
+res.json({mensagem: 'parâmetro recebido pelo servidor'});
+});

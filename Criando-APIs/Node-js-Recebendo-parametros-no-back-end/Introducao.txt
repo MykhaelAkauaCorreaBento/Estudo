@@ -1,0 +1,40 @@
+Introdução
+
+Parâmetros 
+Recebendo dados enviados pelo front-end
+
+
+Exemplo
+
+
+
+Conversor de temperatura
+Informe a temperatura em ºC
+
+                Front-end envia a temperatura ºC
+
+                ------------------------------->
+
+front-end                                                 (API) back-end
+
+                <-------------------------------
+
+                A API retorna o valor convertido em ºF
+
+
+Parâmetros para que servem?
+
+O principal objetivo do envio de parâmetros através das requisições e resposta 
+é permitir a comunicação entre front-end e back-end.
+É através desse processo que vamos enviar para nossa API os dados que precisamos
+
+Os dados da requisição podem ser processados e validados pela API, que vai
+retornar a informação tratada de volta para o front-end.
+
+Transmitir parâmetros através de requisições respostas é essencial na 
+construção de aplicações que necessitam de interação entre as duas camadas
+
+Obs.:Conhecer o processo de recebimento de parâmetros na API é essencial na
+construção de aplicações que necessitam de interação entre back-end e front-end
+e através de requisições e respostas podemos construir aplicações
+mais complexas e inteligentes
