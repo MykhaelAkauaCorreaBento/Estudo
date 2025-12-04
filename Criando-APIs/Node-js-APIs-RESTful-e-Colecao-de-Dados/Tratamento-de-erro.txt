@@ -1,0 +1,175 @@
+Nesta aula iremos aplicar o tratamento de erros na nossa API de UFs. 
+Por exemplo, se o cliente consumir:
+
+https://localhost:8080/ufs/99
+
+A API deveria retornar o código de status 404 (elemento não encontrado)
+- visto que não existe uma UF com ID = 99.
+
+
+Ou seja, se o cliente consumir:
+
+localhost:8080/ufs/99
+
+UF com ID=99 não existe na coleção, logo, o código de status deve ser
+404 (elemento não encontrado).
+
+O mesmo acontece para um endpoint inválido:
+
+localhost:8080/ufs/xyz
+
+Código de retorno =404, pois nenhuma UF equivale a essa requisição.
+
+Lembrando as principais classes de código de retorno do REST:
+
+
+200 - Resposta OK
+
+400 - Erro: o recurso não foi encontrado
+
+500 - Houve algum outro tipo de erro
+
+Codificando o tratamento de erros
+
+
+import express from 'express';
+ import colecaoUf from './dados/dados.js';
+
+ const app = express();
+
+ app.get('/ufs', (req, res) => {
+   res.json(colecaoUf);
+ });
+
+ app.get('/ufs/:iduf', (req, res) => {
+   const idUF = parseInt(req.params.iduf);
+   let uf;
+
+   if (!(isNaN(idUF))) {
+     uf = colecaoUf.find(u => u.id === idUF);
+   }
+
+   if (uf) {
+     res.json(uf);
+   } else {
+     res.status(404).send();
+   }
+ });
+
+ app.listen(8080, () => {
+   console.log('Servidor iniciado na porta 8080');
+ });
+
+
+ O objetivo é fazer com que a API retorne o código de status 404
+ caso uma UF inválida seja enviada no endpoint.
+
+
+ A sintaxe para retorno de um código de status é:
+
+ res. status (código de retorno) . send() ;
+
+ res.status(404).send();
+
+
+
+ Vamos realizar uma melhoria no código para o caso
+ de parâmetros inválidos (alfanuméricos). Utilizamos a função isNaN (is Not a Number).
+
+
+ if (!(isNaN(idUF))) {
+     uf = colecaoUf.find(u => u.id === idUF);
+   }
+
+
+Agora o método find só vai ser consumido caso idUF seja um número.
+
+
+Cenário: cliente consumiu um endpoint inexistente:
+
+
+localhost:8080/ufs/99
+
+Objetivo é fazer com que a API retorne, além do código 404, uma 
+mensagem de erro amigável no corpo da mensagem.
+
+
+
+if (!(isNaN(idUF))) {
+     uf = colecaoUf.find(u => u.id === idUF);
+   }
+
+   if (uf) {
+     res.json(uf);
+   } else {
+     res.status(404).send({"erro" : "UF não encontrada"});
+   }
+ });
+
+ No método res . status ( ) . send, podemos enviar um json como parâmetro.
+
+
+
+
+ Também podemos utilizar o método .json para enviar mensagens de erro:
+
+
+
+ if (!(isNaN(idUF))) {
+     uf = colecaoUf.find(u => u.id === idUF);
+   }
+
+   if (uf) {
+     res.json(uf);
+   } else {
+     res.status(404).json({erro : "UF não encontrada"});
+   }
+ });
+
+
+
+Vamos aplicar uma última evolução na nossa API. Agora, vamos retornar 
+uma mensagem de erro diferente para cada cenário de erro:
+
+
+Basicamente, setamos um valor personalizado à variável mensagemErro
+dependendo do tipo de erro.
+
+
+
+
+const buscarUfsPorNome = (nomeUf) => {
+  return colecaoUf.filter(uf => uf.nome.toLowerCase().includes(nomeUf.toLowerCase()));
+  
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+  if (resultado.length > 0) {
+    res.json(resultado);
+  } else {
+    res.status(404).send({ "erro": "Nenhuma UF encontrada" });
+  }
+});
+
+app.get('/ufs/:iduf', (req, res) => {
+  const idUF = parseInt(req.params.iduf);
+  let mensagemErro = '';
+  let uf;
+
+  if (!(isNaN(idUF))) {
+    uf = colecaoUf.find(u => u.id === idUF);
+    if (!uf) {
+      mensagemErro = 'UF não encontrada';
+    }
+  } else {
+    mensagemErro = 'Requisição inválida';
+  }
+
+  if (uf) {
+    res.json(uf);
+  } else {
+    res.status(404).send({ "erro": mensagemErro });
+  }
+});
+
+ 

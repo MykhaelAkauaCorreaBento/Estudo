@@ -1,0 +1,117 @@
+APIs e coleção de dados
+
+Nesta aula vamos iniciar a parte prática, criando a primeira versão de uma API
+que manipula coleções de dados.
+
+Nesta versão inicial teremos uma API que retorna uma coleção de UFs.
+
+Essa API pode ser usada, por exemplo, por um front-end que solicite ao
+usuário o preenchimento de seu endereço. A API pode ser consumida
+para preencher um listbox com todas as UFs existentes.
+
+
+
+API que retorna dados de uma coleção
+O que será feito?
+
+A ideia agora é criar uma API que retorne os dados de uma coleção. Nosso 
+exemplo será uma coleção de UFs.
+
+O cliente vai consumir o endpoint /dominio/ufs com o verbo CET.
+A API vai retornar a coleção no formato JSON
+
+
+
+
+
+(---------Endpoint---------)
+
+Padrão de endpoints
+
+Definindo o endpoint
+
+Neste exemplo, temos uma API que retorna uma lista de UFs
+
+
+
+localhost:8080/ufs
+
+
+
+
+Note que o nome do endpoint (/ufs) é o mesmo nome do contexto da coleção de dados
+(UFs).
+
+Outro exemplo: digamos que você vai construir uma API que retorna uma lista
+de times de futebol.
+
+Seguindo a mesma lógica, o endpoint usaria o nome do contexto da coleção:
+
+localhost:8080/times
+
+Essa lógica faz parte do padrão REST. Ou seja, uma API que retorna dados de uma
+coleção, deve usar um endpoint que represente o contexto dos dados.
+
+
+Coleção de produtos --> localhost:8080/produtos/
+
+Coleção de jogos --> Alguns sistemas possuem mais de um contexto deAlguns sistemas possuem mais de um contexto dejogos/
+
+
+Alguns sistemas possuem mais de um contexto de dados. Por exemplo, em uma mesma
+API, podemos ter os contexos cursos, usuários e vendas.
+
+localhost:8080/cursos
+
+localhost:8080/usuarios
+
+localhost:8080/vendas
+
+
+
+Os contextos também podem ter uma relação de hierarquia. por exemplo, cursos e aulas.
+Nesse caso, os endpoints seguem a hierarquia:
+
+
+localhost:8080/cursos/80/aulas
+
+
+
+(--------------Domínio--------------)
+
+Podemos dizer que um domínio é o contexto da sua coleção de dados. Por exemplo,
+se temos uma coleção de UFs, nosso domínio é UFs.
+
+Prosseguindo alógica setemos uma coleção de times, nosso domínio é "times de futebol".
+
+Um sistema pode ter mais de um domínio. Por exemplo, podemos ter um domínio de
+Ufs e outro de capitais.
+
+Ou então, um domínio de clientes e outro de produtos.
+
+Exemplos:
+
+
+Coleção UFs - Domínio UFs
+
+Coleção Clientes - Domínio Clientes
+
+Coleção Cursos - Domínio Cursos
+
+
+Nossa API de exemplo possui apenas um domínio: UFS
+
+Dessa forma, o mesmo domínio será utilizado em todos os endpoints de consumo:
+
+localhost:8080/ufs
+
+localhost:8080/ufs/1
+
+localhost:8080/ufs/busca?=rio
+
+
+
+
+
+
+
