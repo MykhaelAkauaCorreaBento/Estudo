@@ -1,0 +1,11 @@
+Refatorando o código
+
+Nossa API já está completamente funcional, com diferentes rotas de consumo.
+ Antes de finalizar a missão, falta apenas organizar o código.
+
+Como foi visto no módulo de JavaScript, é importante separar o código em 
+camadas, a fim de manter o código mais limpo e organizado.
+
+Veremos nesta aula como aplicar este conceito na nossa API de UFs, através
+da criação da camada de serviço, a qual chamaremos de servico.js, que terá
+a lógica principal do sistema.

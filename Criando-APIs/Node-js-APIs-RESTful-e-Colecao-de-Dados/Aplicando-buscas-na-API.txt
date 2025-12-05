@@ -1,1 +1,294 @@
 Aplicando buscas na API
+
+
+Nesta aula aplicaremos a funcionalidade de busca na nossa API de UFs. Por 
+exemplo, se o cliente consumir:
+
+
+            Requisição com filtro
+
+            Localhost:8080/ufs?busca=rio
+
+            ---------------------------->
+
+Cliente                                       API  Coleção de dados
+
+             <----------------------------         
+
+             Resposta com elementos que possuem "rio" no nome
+
+
+Até aqui criamos duas rotas de consumo na API:
+
+
+
+Localhost:8080/ufs --->Resposta com coleção completa de UFs
+
+Localhost:8080/ufs/ID do elemento ---> Reposta com UF especíifica
+
+
+O objetivo desta aula é criar uma nova rota, que realiza uma busca na coleção:
+
+
+Localhost:8080/ufs?parametro=valor ---> Resposta com resultado da busca.
+
+
+No padrão REST, a sintaxe para uma rota que realiza buscas na coleção de dados
+pode ser vista abaixo:
+
+
+
+Localhost:8080/ufs?parametro=valor
+
+
+Localhost:8080: url.
+/ufs: Domínio.
+?: Indica qu é uma busca.
+parametro: Parâmetro.
+valor: Valor buscado.
+ 
+Uma rota para buscar dados na coleção não é obrigatória no REST. Você vai 
+implementar apenas se o sistema precisar ter uma busca.
+Por exemplo, sistemas e-commerce normalmente possuem buscas.
+
+
+
+Revisando o método .filter
+Nesse momento nossa API possui duas rotas de consumo:
+
+https://localhost:8080/ufs - Retorna todas as UFs da coleção;
+https://localhost:8080/ufs/id do elemento - Retorna uma UF específica.
+Nosso objetivo agora é evoluir a API, para que ela retorne o resultado de
+uma busca na coleção. Dessa forma, teremos a rota /domínio/?parametro=valor:
+
+https://localhost:8080/ufs?busca=rio
+
+Para essa alteração, vamos precisar utilizar o método filter do JavaScript
+- ele permite buscar um ou mais elementos na coleção de dados. 
+
+
+Exemplo:
+
+
+const filmes = [
+{ id: 1, titulo: 'A Origem', diretor: 'Christopher Nolan', ano: 2010 },
+{ id: 2, titulo: 'O Poderoso Chefão', diretor: 'Francis Ford Coppola', ano: 1972 },
+{ id: 3, titulo: 'Interestelar', diretor: 'Christopher Nolan', ano: 2014 },
+{ id: 4, titulo: 'Pulp Fiction', diretor: 'Quentin Tarantino', ano: 1994 },
+{ id: 5, titulo: 'O Senhor dos Anéis: O Retorno do Rei', diretor: 'Peter Jackson', ano: 2003 },
+{ id: 6, titulo: 'Clube da Luta', diretor: 'David Fincher', ano: 1999 },
+{ id: 7, titulo: 'Kill Bill: Volume 1', diretor: 'Quentin Tarantino', ano: 2003 },
+{ id: 8, titulo: 'Star Wars: Episódio VI - O Retorno de Jedi', diretor: 'Richard Marquand', ano: 1983 }
+];
+
+const filmesDoMesmoDiretor = filmes.filter(filme => filme.diretor === 'Quentin Tarantino');
+console.log(filmesDoMesmoDiretor);
+
+const filmesBuscaPorNome = filmes.filter(filme => filme.titulo.toLowerCase().includes('retorno'));
+console.log(filmesBuscaPorNome);
+
+
+
+Com o método .filter podemos buscar itens na coleção de dados.
+
+
+Dentro do filter passamos a função que será executada. Você pode passar o nome
+da código função ou seu código diretamente:
+
+function filtrosfilmes(filmes){
+    return filme.difetor === 'Quentin Tarantino'
+}
+
+const filmesDoMesmoDiretor = filmes.filter(filme => filtrofilmes(filme));
+console.log(filmesDoMesmoDiretor);
+
+
+ou
+
+
+const filmesDoMesmoDiretor = filmes.filter(filme => filme.diretor === 'Quentin Tarantino');
+console.log(filmesDoMesmoDiretor);
+
+
+O parâmetro passado na função representa cada elemento da coleção.
+
+Chamamos o parâmetro de filme, mas pode ter qulquer nome.
+
+
+A função vai retornar os elementos  que atenderem a condição indicada.
+Neste caso, diretor 'Quentin Tarantino'.
+
+
+Resposta:
+
+{ id: 4, titulo: 'Pulp Fiction', diretor: 'Quentin Tarantino', ano: 1994 }
+{ id: 7, titulo: 'Kill Bill: Volume 1', diretor: 'Quentin Tarantino', ano: 2003 }
+
+
+O método .includes também permite uma busca parcial.
+
+const filmesBuscarPorNome = filmes.filter(filme => filme.titulo.includes('Retorno'));
+console.log(filmesBuscarPorNome);
+
+Resposta:
+
+
+{ id: 5, titulo: 'O Senhor dos Anéis: O Retorno do Rei', diretor: 'Peter Jackson', ano: 2003 }
+{ id: 8, titulo: 'Star Wars: Episódio VI - O Retorno de Jedi', diretor: 'Richard Marquand', ano: 1983 }
+
+
+Podemos usar o método .toLowerCase() para que a busca não seja case sensitive:
+
+const filmesBuscarPorNome = filmes.filter(filme => filme.titulo.toLowerCase().includes('Retorno'));
+console.log(filmesBuscarPorNome);
+
+Resposta:
+
+
+{ id: 5, titulo: 'O Senhor dos Anéis: O Retorno do Rei', diretor: 'Peter Jackson', ano: 2003 }
+{ id: 8, titulo: 'Star Wars: Episódio VI - O Retorno de Jedi', diretor: 'Richard Marquand', ano: 1983 }
+
+Evoluindo o código
+Vamos atualizar o arquivo index.js, para que seja possível consumir a API para
+buscar dados.
+
+Nesta versão, vamos implementar um método filter na primeira rota da API,
+através do endpoint: http://localhost:8080/ufs?busca=rio.
+
+A API vai retornar para o cliente uma lista com o resultado da busca. 
+
+
+
+import express from 'express';
+import colecaoUf from './dados/dados.js';
+
+const app = express();
+
+const buscarUfsPorNome = (nomeUf) => {
+  return colecaoUf.filter(uf => uf.nome.toLowerCase().includes(nomeUf.toLowerCase()));
+};
+
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+  if (resultado.length > 0) {
+    res.json(resultado);
+  } else {
+    res.status(404).send({ "erro": "Nenhuma UF encontrada" });
+  }
+});
+
+app.get('/ufs/:iduf', (req, res) => {
+  const idUF = parseInt(req.params.iduf);
+  let mensagemErro = '';
+  let uf;
+
+  if (!(isNaN(idUF))) {
+    uf = colecaoUf.find(u => u.id === idUF);
+    if (!uf) {
+      mensagemErro = 'UF não encontrada';
+    }
+  } else {
+    mensagemErro = 'Requisição inválida';
+  }
+
+  if (uf) {
+    res.json(uf);
+  } else {
+    res.status(404).send({ "erro": mensagemErro });
+  }
+});
+
+app.listen(8080, () => {
+  console.log('Servidor iniciado na porta 8080');
+});
+
+
+Há uma limitação no framework Express: não é possível criar um método app.get
+apenas para o consumo de buscas. Por este motivo, aplicamos a busca
+no código da primeira rota (/ufs):
+
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const ufsFiltradas = colecaoUF.filter(uf => uf.nome.includes(nomeUF));
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+
+  res.json(resultado);
+});
+
+req.query armazena o valor do parâmetro enviado pelo cliente. Sintaxe:
+
+req.query.nome_do_parametro
+
+https://localhost:8080/ufs?busca=rio
+
+Neste exemplo, a constante nomeUf terá o valor 'Rio'
+
+
+Em seguida, aplicamos o método .filter para criar uma nova lista de elementos
+
+filtrados (ufsFiltradas).
+
+Usamos uma condicional para definir o retorno. Se a constante nomeUf tiver
+algum valor, o retorno será ufsFiItradas. Senão, o retorno será colecaoUf.
+Note que nomeUf só terá valor caso o cliente esteja realizando uma busca.
+
+Vamos melhorar o código. O método .toLowerCase() foi usado para que a busca
+não seja case sensitive:
+
+
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const ufsFiltradas = colecaoUF.filter(uf => uf.nome.toLowerCase().includes(nomeUF.toLowerCase()));
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+
+  res.json(resultado);
+});
+
+
+Vamos aplicar uma nova melhoria. Vamos deixar o código mais organizado, 
+criando uma função para buscar a UF na coleção:
+
+const buscarUfsPorNome = (nomeUf) => {
+  return colecaoUf.filter(uf => uf.nome.toLowerCase().includes(nomeUf.toLowerCase()));
+};
+
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+
+  Note como o código ficou mais limpo e fácil de entender.
+
+
+
+Por fim, vamos aplicar o tratamento de erro na rota: A API vai retornar o
+código 404 caso nenhuma UF seja encontrada na busca.
+
+
+
+const buscarUfsPorNome = (nomeUf) => {
+  return colecaoUf.filter(uf => uf.nome.toLowerCase().includes(nomeUf.toLowerCase()));
+};
+
+app.get('/ufs', (req, res) => {
+  const nomeUf = req.query.busca;
+  const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : colecaoUf;
+  if (resultado.length > 0) {
+    res.json(resultado);
+  } else {
+    res.status(404).send({ "erro": "Nenhuma UF encontrada" });
+  }
+});
+
+
+Um detalhe sobre o uso de espaços na busca:
+
+localhost:8080/ufs?Rio Grande do Sul
+
+A forma correta para o cliente enviar os dados é:
+
+localhost:8080/ufs?Rio%20Grande%20do%20Sul
+
+
+Ou seja, espaços devem ser substituídos por %20.
+Essa sintaxe é uma preocupação do sistema Front-end.

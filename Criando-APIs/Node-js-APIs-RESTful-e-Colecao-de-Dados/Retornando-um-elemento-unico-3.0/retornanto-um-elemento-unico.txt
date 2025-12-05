@@ -1,0 +1,130 @@
+4. Retornando um elemento único - Parte 1
+
+
+Vamos evoluir nossa API, para que ela possa retornar também uma UF específica
+(ao invés de toda a coleção). Isso será feito através de um novo endpoint:
+
+local host: 8080/ ufs/ [ID da UF]
+
+
+Exemplo de consumo dessa nova endpoint:
+
+localhost:8080/ufs/23
+
+Ou seja, nossa API vai passar a ter duas rotas de consumo.
+
+Rota completa:
+localhost:8080/ufs
+
+Rota com elemento único:
+localhost: 8080/ufs/23
+
+
+
+Faremos isso por dois motivos.
+
+ Motivo 1:
+
+
+No padrão REST, sempre que a API manipula uma coleção, devemos
+oferecer duas rotas:
+
+Uma para retornar toda a coleção:
+localhost:8080/ufs
+
+E outra para retornar um item único da coleção:
+localhost: 8080/ufs/23
+
+
+
+ Motivo 2:
+
+O contexto do sistema.Normalmente, um sistema front-end vai ter uma
+página de "lista" e outra de "detalhe".
+
+
+
+Por exemplo, imagine um sistema ecommerce:
+
+Neste exemplo a página lista as ofertas (a API retorna toda
+a coleção de ofertas).
+
+Quando o usuário clica em um produto, o front-end exibe os detalhes
+daquele item.
+
+Ou seja, a API retornou os dados de apenas um item da coleção (Geladeira).
+
+
+Nesse momento nossa API possui duas rotas de consumo:
+
+https://localhost:8080/ufs - Retorna todas as UFs da coleção;
+https://localhost:8080/ufs/teste - Retorna uma mensagem de teste 
+para o cliente.
+Nosso objetivo agora é evoluir a segunda rota, para que ela
+retorne uma UF específica da coleção. Dessa forma, a rota vai
+passar a ser /domínio/ID do elemento:
+
+https://localhost:8080/ufs/ID do elemento
+
+Para essa alteração, vamos precisar utilizar o método find
+do JavaScript - ele permite buscar um elemento específico
+dentro de uma coleção de dados.
+
+
+Exemplo const colecao = [{ id: 1, nome: 'Item 1' },
+                 { id: 2, nome: 'Item 2' },
+                 { id: 3, nome: 'Item 3' }];
+
+const elementoEncontrado = colecao.find(item => item.id === 2);
+console.log(elementoEncontrado); // { id: 2, nome: 'Item 2' }
+
+
+
+Evoluindo o código
+Agora vamos fazer a nova rota retornar um elemento específico da
+coleção de dados, aplicando o método .find.
+
+import express from 'express';
+ import colecaoUf from './dados/dados.js';
+
+ const app = express();
+
+ app.get('/ufs', (req, res) => {
+   res.json(colecaoUf)
+ });
+
+
+ app.get('/ufs/:iduf', (req, res) => {
+      const idUF = parseInt(req.params.iduf);
+      const uf = colecaoUf.find(u => u.id === idUF);
+
+ res.json(uf);
+   }
+ );
+
+ app.listen(8080, () => {
+   console.log('Servidor iniciado na porta 8080');
+ });
+
+
+ Perceba a nova sintaxe no endpoint:
+
+ app.get('/ufs/:iduf', (req, res)
+
+"+" nome do parâmetro (iduf), indica um valor dinâmico recebido em
+app.get.
+
+:iduf
+
+
+O nome do parâmetro pode ser qualquer valor, Neste exemplo chamamos
+de iduf.
+
+Dessa forma, quando o cliente consumir:
+
+
+https://localhost:8080/ufs/14
+
+O parâmetro "iduf"" terá o valor 14.
+
+O valor do parâmetro é lido através de req.params
