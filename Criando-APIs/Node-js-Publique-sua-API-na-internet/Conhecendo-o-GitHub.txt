@@ -1,0 +1,39 @@
+Conhecendo o GitHub
+
+
+Agora aprenderemos sobre uma ferramenta que facilita o processo de publicação
+de uma API na internet: o GitHub, que utilizaremos como um passo intermediário
+no processo de publicar a API online. A ideia é enviar o código primeiro para
+o GitHub, e em seguida para o provedor de hospedagem.
+
+
+Vamos usar o GitHub pois ele facilita o upload do nosso código nosprovedores
+de hospedagem.
+
+
+Código --> Repositório Github --> Provedores de hospedagem.
+
+
+O GitHub é o que chamamos de repositório de códigos. Basicamente, é uma
+plataforma que permite armazenar códigos na internet.
+
+
+O GitHub é muito usado para compartilhar códigos, Neste curso vamos usar o
+GitHub como apoio para publicar a API no provedor.
+
+Código --> Repositório Github --> Provedores de hospedagem.
+
+O GitHub será usado apenas para armazenar O código na internet. Ele não vai colocar
+a API online - isso será feito pelo provedor de hospedagem.
+
+
+    Código      --> Repositório Github             -->  Provedores de hospedagem.
+(máquina local)     (Código armazenado na internet)     (API online)
+
+
+O GitHub possui diversos recursos para compartilhamento e armazenamento do código.
+Não vamos entrar nestes detalhes, pois nosso foco publicação da API na internet.
+
+A ideia é enviar o código primeiro para o GitHub, e a partir dele para os provedores.
+Esse processo vai facilitar a publicação da API na internet.
+

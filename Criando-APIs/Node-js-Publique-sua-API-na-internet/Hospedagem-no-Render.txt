@@ -1,0 +1,68 @@
+Hospedagem no Render
+
+Vimos que para publicar nossas APIs na internet precisamos de
+um provedor de hospedagem. Nesta aula veremos como hospedar as nossas APIs
+gratuitamente no provedor de hospedagem Render.
+
+
+Publicando a API na internet pelo Render - Parte 1
+Chegou a hora de publicarmos nossa API HistoricoIPCA na internet, através
+do Render.
+
+APIs também são chamadas de Web Services. Portanto, clique em
+para iniciar.
+
+
+Em seguida, clique em configure account para conectar sua conta do Render
+com a do GitHub.
+
+Você será redirecionado para o GitHub. Selecione a opção All repositories.
+
+Ainda na mesma tela Clique em install para terminar a conexão entre
+contas.
+
+De volta ao Render, você verá seus repositórios disponíveis (públicos ou privados).
+Aqui é só selecionar um clicando em connect.
+
+Na próxima tela você deve configurar as informações da API (nomeada aqui como Web
+Service). O primeiro passo é escolher um nome.
+
+O nome será usado na URL da API. A estrutura é:
+
+https://nome-webservice.onrender.com
+
+exemplo:
+
+https://projetohistoricoipca.onrender.com
+
+
+As opções Region, Branch e Root Directory são padronizadas pelo Render e não
+necessitam de alteração.
+
+Seguindo com a configuração, em Runtime, selecione
+"Node", que é o framework usado na codificação da API.
+
+Na opção Build Command o valor yarn é padrão e não precisa ser alterado.
+
+Em Start command coloque "node index.js".
+
+Assim como fizemos na máquina local, este será o comando utilizado para
+iniciar a API.
+
+Ainda nas configurações, selecione o plano gratuito para o serviço.
+
+Para finalizar, clique em Create Web Service
+
+Com isso, basta aguardar a finalização da publicação.
+
+A mensagem "Your service is livell indica que o processo foi concluido com êxito.
+
+Pronto, a API agora está online.
+
+Link: 
+
+https://construa-uma-api-de-dados-historicos-do.onrender.com
+
+https://construa-uma-api-de-dados-historicos-do.onrender.com/historicoipca
+
+

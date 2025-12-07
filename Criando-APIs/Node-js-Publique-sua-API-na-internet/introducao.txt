@@ -1,0 +1,135 @@
+APIs públicas e privadas
+Antes de prosseguir, precisamos entender a diferença entre APIs públicas
+e privadas.
+
+Em resumo, APIs públicas estão acessíveis para qualquer front-end. Já APIs
+privadas necessitam de autenticação para serem consumidas.
+
+O conceito é simples: por exemplo, uma API de um sistema bancário não será
+pública, pois possui informações sensíveis.
+
+
+Publicando sua API na internet:
+
+API pública x API privada
+
+
+APIs podem ser de dois tipos de visibilidade:
+
+APIs públicas ou APIs privadas.
+
+
+API pública (Pokemon API)           API privada (Itaú API)
+
+
+O nome diz tudo:
+
+
+APIs públicas podem ser consumidas por qualquer front-end.
+
+
+
+APIs privadas precisam de autenticação para serem consumidas.
+
+Até aqui criamos apenas APIs públicas.
+
+
+O que define o tipo de uma API é o sistema que ela atende. Por exemplo:
+API de sistema bancário.
+
+
+Uma API de sistema bancário será privada, ou seja, apenas sistemas autenticados
+poderão consumi-la.
+
+
+Caso a API do Itaú não precisasse de autenticação, qualquer sistema poderia 
+consumir seus dados.
+Isso seria inviável para um sistema de banco.
+
+
+APIs que criamos nos cursos anteriores são todas públicas:
+
+
+            ----> API de UFS
+
+front-end   ----> API de histórico IPCA
+
+            ----> API de conversor de temperatura
+
+
+
+Veja mais alguns exemplos de APIs públicas:
+
+Google Maps API
+
+PokeAPI: https://pokeapi.co/
+
+Github API
+
+
+Todas essas APIs estão disponíveis para consumo sem a necessidade de 
+autenticação.
+
+
+
+Agora veja alguns exemplos de API privadas:
+
+PayPal API
+
+Mercado Pago API
+
+Itaú API
+
+
+Nesse caso, as APIs requerem autenticação para serem consumidas.
+
+
+
+(--------Provedores de hospedagem online--------)
+
+Quando a API estiver pronta, você precisará de um provedor de hospedagem para
+publicá-la na internet.
+
+A ideia é publicar o código da API nos servidores do provedor. Dessa forma, 
+a API vai ficar disponível para consumo através da internet.
+
+
+Para publicar uma API na internet é necessário hospedar o seu código em um servidor.
+Para isso utilizamos um provedor de hospedagem.
+
+
+Um provedor de hospedagem é um serviço que disponibiliza um servidor onde podemos
+hospedar uma API.
+
+Nossas APIs foram escritas em JavaScript. Dessa forma, o provedor de hospedagem
+precisa disponibilizar o Node.js.
+
+Veja exemplos de provedores de hospedagem que oferecem Node.js.
+
+Azure;
+
+AWS;
+
+Railway;
+
+Render;
+
+Google Cloud;
+
+Heroku.
+
+Com o objetivo de publicar o código da API nos provedores com maior facilidade,
+utilizaremos também a plataforma Github.
+
+
+Código --> Repositório Github --> Provedores de hospedagem.
+
+
+Independente do provedor, o processo para hospedar uma API segue passos similares:
+
+• Fazer o cadastro no provedor;
+
+• Publicar o código da API.
+
+Veremos nas próximas aulas mais detalhes sobre o processo de hospedagem.
+

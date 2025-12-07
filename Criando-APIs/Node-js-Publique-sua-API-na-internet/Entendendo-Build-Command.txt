@@ -1,0 +1,38 @@
+(----------Entendendo Build Command----------)
+
+
+Entenda um pouco mais sobre a configuração Build Command
+
+
+A opção "Build Command" define o comando que o servidor usará para instalar as
+dependências do projeto, especificadas no arquivo package.json.
+
+Como vimos, o package.json indica as ferramentas que devem ser instaladas
+automaticamente. Podemos ver, por exemplo, que em nosso projeto o
+Express precisa ser instalado.
+
+{
+  "name": "construa-uma-api-de-dados-historicos-do-ipca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type" :"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1" //Aqui
+  }
+}
+
+
+Na máquina local a instalação das dependências descritas em package.json foi
+feita com o comando npm install.
+
+O Render utiliza, por padrão, uma alternativa chamada yarn. Ele faz a mesma
+coissa que o npm install, então você não precisa alterar esse valor.
+Em resumo, o Build Command indica o aplicativo que será usado para instalar
+automaticamente as dependênciass do projeto (yarn ou npm),

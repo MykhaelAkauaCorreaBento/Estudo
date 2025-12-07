@@ -1,0 +1,19 @@
+Criando o arquivo .gitignore
+Como vimos na aula anterior, alguns arquivos e/ou pastas não devem ser enviados 
+para o repositório GitHub, pois são criados automaticamente pelo provedor de 
+hospedagem.
+
+No exemplo da API historicoIPCA não enviaremos o arquivo package-lock.json e
+a pasta node_modules/.
+
+Para indicar, via terminal, quais arquivos não devem ser enviados, usamos o
+arquivo .gitignore. Ele especifica os itens a serem ignorados pelo Git durante
+o processo de envio.
+
+
+
+comandos.
+
+
+node_modules/
+package-lock.json
