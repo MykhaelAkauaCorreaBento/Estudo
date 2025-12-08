@@ -1,0 +1,30 @@
+(--------------------Introdução--------------------)
+
+O MySQL é um dos SGBDs mais utilizados atualmente, e por esse motivo adotamos
+o mesmo para criarmos o nosso primeiro banco de dados. Veremos como criar um
+banco de dados, tabelas, campos, chave primária, chave estrangeira, index,
+auto incremento e relacionamento entre tabelas. Utilizaremos para manipulação
+do nosso banco a ferramenta MySQL Workbench.
+
+
+
+
+
+(--------------------Documentação--------------------)
+O banco de dados é uma das principais recursos para desenvolvermos uma aplicação,
+pois você guardará suas informações para consultas futuras, por exemplo,
+clientes, contatos, vendas e produtos e sua aplicação irá interagir com esses
+dados através de instruções SQL.
+
+O MySQL é um banco de dados relacional muito adotado pela comunidade de
+programadores, pois é um SGBD leve e de fácil instalação e utilização também.
+Caso você conheça outro SGBD não terá muitas dificuldades em iniciar seus
+estudos com o MySQL, pois utilizamos a linguagem SQL como interface de
+comunicação.
+
+O MySQL é o SGBD e para manipulá-lo precisamos de uma interface visual ou não
+(neste curso veremos como utilizar uma ferramenta de interface visual).
+Escolhemos a ferramenta MySQL Workbench para manipularmos o MySQL, existem
+outras ferramentas como o MySQL Query Browser, por exemplo. Ao utilizarmos
+o MySQL Workbench poderemos administrar os nossos bancos de dados, desenvolver
+scripts com a linguagem SQL e modelar bancos de dados.
