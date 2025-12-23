@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Vendas" id="9904411E-926E-57EA-C9A2-8EF0FB40C754" version="3.5">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 10:47:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9904411E-926E-57EA-C9A2-8EF0FB40C754</designId>
+</OSDM_Design>

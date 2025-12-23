@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="75DA58E7-0302-DB76-84AA-01F6F5A46B86" name="Fornecedor">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:02:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CGC" id="4BD3A322-E77B-6B47-A62D-E4291867933C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:52:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="A836913D-652A-DCF7-1A72-DB1C400AEDD8">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:53:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Endereço*" id="08235DEA-9CF9-D44D-4FDF-B20639B1E16C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:54:03 UTC</createdTime>
+<comment>Trata-se de um atributo composto: logradouro, número, CEP, complemento, bairro, cidade</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Inscrição Estadual" id="FF63B566-AAFE-7F00-B300-A7176F264BA0">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:56:18 UTC</createdTime>
+<comment>Este atributo seria uma chave candidata</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Telefones*" id="FFAE8F20-E490-0302-C8C9-4085EE5566C4">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:57:42 UTC</createdTime>
+<comment>Trata-se de um conjunto de telefones</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8A8CAD22-63A1-2464-5A9B-E00963D42831" name="Fornecedor PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 15:06:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4BD3A322-E77B-6B47-A62D-E4291867933C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

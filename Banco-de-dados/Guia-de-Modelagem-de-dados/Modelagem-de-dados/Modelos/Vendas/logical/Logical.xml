@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="C65A49C9-0270-EC58-0005-20E9256DD23F" mainViewID="2140D4F2-7D5A-5D50-E3BD-D0118CF33BE4">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 10:47:44 UTC</createdTime>
+<comment>Este é o nosso primeiro modelo conceitual</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

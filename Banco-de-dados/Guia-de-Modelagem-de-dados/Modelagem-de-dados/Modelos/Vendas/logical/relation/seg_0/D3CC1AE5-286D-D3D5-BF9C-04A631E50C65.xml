@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Fornece" directorySegmentName="seg_0" id="D3CC1AE5-286D-D3D5-BF9C-04A631E50C65">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:39:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>75DA58E7-0302-DB76-84AA-01F6F5A46B86</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>184C06B7-EEDB-B116-94B1-E2D04F2098E3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Data Início" id="5580A420-B65F-F5BA-69FD-5E29DE64FDB9">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:41:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+<attribute name="Condição" id="4DAA3C9D-41A2-3DE8-773E-0486BB897433">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:41:38 UTC</createdTime>
+<comment>Este atributo seria composto: prazo, preço, quantidade</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</attribute>
+<attribute name="Tipo" id="92632577-6A14-908B-6337-0FE9D1616178">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:42:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+<attribute name="Forma de Pagamento" id="A60E622D-0DEF-47BD-C2CB-3C678BE1FDC3">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:42:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</attribute>
+<attribute name="Termor de Garantia" id="EF82B815-C670-C5EE-DB30-91A6FDEF3FA1">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:43:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</attribute>
+</attributes>
+</Relation>

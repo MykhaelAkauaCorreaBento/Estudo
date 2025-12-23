@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BC87352D-C393-7C02-CB7B-BCCF600CC958" name="Projeto">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 11:03:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nome" id="D7BE5708-DF4E-4C94-B9C5-606FADF06B20">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:13:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="Data Início" id="8B2F517B-B28C-930F-8773-8E20F06CAEB6">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:13:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="Gerente" id="59FF663D-02EB-9414-7895-6D80FDE4BBAB">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 12:13:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="661F7A20-C4F1-98F2-7074-5A7922BE09DC" name="Projeto PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-23 15:08:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Vendas</ownerDesignName>
+<engineerTo>
+<item key="D4195530-ACE7-36EC-108F-6637C732A211" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D7BE5708-DF4E-4C94-B9C5-606FADF06B20</attributeRef>
+<attributeRef>8B2F517B-B28C-930F-8773-8E20F06CAEB6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
