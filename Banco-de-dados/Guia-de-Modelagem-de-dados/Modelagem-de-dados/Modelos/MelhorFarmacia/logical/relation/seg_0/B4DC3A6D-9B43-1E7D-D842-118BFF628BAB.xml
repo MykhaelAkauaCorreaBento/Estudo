@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Possui" directorySegmentName="seg_0" id="B4DC3A6D-9B43-1E7D-D842-118BFF628BAB">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 13:48:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BE535B25-C89B-D6FC-9B5A-92FD08C0E6E8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B544139D-F82A-24AB-E066-7ED2EF694814</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

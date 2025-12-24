@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="036CCB4E-505E-7ECC-3E65-D7B650F590A5" name="Cliente">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 11:21:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CPF" id="D69E2E16-8BAA-A25C-A8B1-70BFA9DE08C4">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 12:23:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="159224CE-6EF1-0F51-674C-E1F6D94ACE1F">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 12:24:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="NumCelular" id="D2237346-1AD8-043A-8B7D-CA7A39BB3098">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 12:24:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="30687B5B-56DF-6247-3ED1-A4B32823340C" name="Cliente PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 12:23:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D69E2E16-8BAA-A25C-A8B1-70BFA9DE08C4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

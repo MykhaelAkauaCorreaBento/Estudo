@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D06A4AC-2FAA-E6FD-6CAE-074050E886BF" name="Projeto">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Descrição" id="238EE465-AD50-E224-AE88-4EA4C543F2A9">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Resumo" id="54BD6D8A-F4B5-69AF-6F02-470AE55052F0">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="DtIníccio" id="5F90C5E5-5C46-344D-03A4-796E514CAD5E">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="DtFim" id="1C14BDDC-9B2F-1639-608B-8AEA6130373E">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="CustoEstimado" id="9AB9AE49-F440-6013-9650-1ECEE62E72FF">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:37:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+</Entity>

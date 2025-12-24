@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="3707DFDF-F28A-6514-5481-9090722D48CB" name="Departamento" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EFBF049B-0ACF-D15D-DB56-0D9DEF8E5512" name="Documento" seqName="seg_0"/>
+   <object objectType="Entity" objectID="32F9E148-6ABD-9744-E8F0-9A9D2021E67A" name="Funcionário" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D8EF4322-5BC9-8156-9892-1B6336D67016" name="Gerente" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0EFFC658-B50A-4FA7-5A23-CDEDF30EB496" name="Lota" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1927F093-C3DF-13CE-1A03-C71B2A3C4E03" name="Pessoa" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8D06A4AC-2FAA-E6FD-6CAE-074050E886BF" name="Projeto" seqName="seg_0"/>
+   <object objectType="Relation" objectID="061F29AC-4350-F87E-407D-235193761E89" name="Alota" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1597805F-08CD-4D5D-B8F2-05B0C489DC9F" name="Gerencia" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0A4516CC-76D8-BF39-7580-6F212CAA9B0C" name="Lota" seqName="seg_0"/>
+   <object objectType="Relation" objectID="06F0469B-BCFD-637A-E4EE-84462FDBFDA4" name="Registra" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="3B083D6D-9576-2A94-073B-A0AA6AA2B85F" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="1C3CBB91-943D-AF11-AD07-3C453229D2EB" name="Hierarchy_2" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="F52B6AFB-AD4A-CEDC-6AD4-C18B07ED79AF" name="Hierarchy_3" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="7B125306-4DFF-E4E2-EEA6-DB3FED2E7871" name="Hierarchy_4" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

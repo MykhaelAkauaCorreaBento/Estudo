@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3707DFDF-F28A-6514-5481-9090722D48CB" name="Departamento">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:33:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>0EFFC658-B50A-4FA7-5A23-CDEDF30EB496</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nome" id="4B580FF1-C4E6-7C79-A090-7A1FD465B0E3">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="Locall" id="39870A66-6658-52A0-642B-2C53AC0978C3">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Missão" id="D1AC5D3F-6DB0-04EA-CE1B-BCD0FFCB8BFE">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="PoliticaGratificação" id="090ECFC1-B6DB-36C1-82C9-1F7910CE11D5">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Matricula" id="EB0587BF-A082-C473-1D2D-93FE4193F90E">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 11:08:58 UTC</createdTime>
+<generatorID>1597805F-08CD-4D5D-B8F2-05B0C489DC9F</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<referedAttribute>BB022DD1-2FC6-7AFF-ECF2-4C2FFA31ECFD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CB4DC2C4-2784-13EB-C6F5-04816B1E8829" name="Departamento PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4B580FF1-C4E6-7C79-A090-7A1FD465B0E3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

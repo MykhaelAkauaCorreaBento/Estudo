@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Alota" directorySegmentName="seg_0" id="061F29AC-4350-F87E-407D-235193761E89">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:45:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1927F093-C3DF-13CE-1A03-C71B2A3C4E03</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8D06A4AC-2FAA-E6FD-6CAE-074050E886BF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

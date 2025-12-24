@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0EFFC658-B50A-4FA7-5A23-CDEDF30EB496" name="Lota">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:47:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Título" id="9B258F59-62A1-49D9-6F86-47CC1CC82FBA">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:50:43 UTC</createdTime>
+<generatorID>06F0469B-BCFD-637A-E4EE-84462FDBFDA4</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9CE41DB2-4ED4-C220-0CF7-56A6CC250602</referedAttribute>
+<use>0</use>
+</Attribute>
+</attributes>
+</Entity>

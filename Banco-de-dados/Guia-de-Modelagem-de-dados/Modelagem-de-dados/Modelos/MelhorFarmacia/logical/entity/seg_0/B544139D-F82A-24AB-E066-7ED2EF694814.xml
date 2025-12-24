@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B544139D-F82A-24AB-E066-7ED2EF694814" name="Filial">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 13:47:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>6EB08A0E-7A2B-6FE5-93EA-39AD8A926066</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IdFilial" id="2EA73594-4EC1-7BA9-E088-010776E265B5">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 13:47:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Endereço" id="51CB84AF-F0DF-D0E4-73E4-90739BE9D7E6">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 13:48:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="95EE131D-1735-669E-8A50-C813D5409AA7" name="Filial PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 13:47:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="0BCF9B21-2D02-7CD0-0D28-B7207F0F3641" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2EA73594-4EC1-7BA9-E088-010776E265B5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

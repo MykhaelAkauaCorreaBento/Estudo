@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="036CCB4E-505E-7ECC-3E65-D7B650F590A5" name="Cliente" seqName="seg_0"/>
+   <object objectType="Entity" objectID="6EB08A0E-7A2B-6FE5-93EA-39AD8A926066" name="FarmaciaFilial" seqName="seg_0"/>
+   <object objectType="Entity" objectID="BE535B25-C89B-D6FC-9B5A-92FD08C0E6E8" name="Farmácia" seqName="seg_0"/>
+   <object objectType="Entity" objectID="B544139D-F82A-24AB-E066-7ED2EF694814" name="Filial" seqName="seg_0"/>
+   <object objectType="Entity" objectID="51451AD3-92B8-B3BA-1F83-6E027F795550" name="Produto" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BE87AFF9-0B7A-3250-0869-A47039FB8D2C" name="Busca" seqName="seg_0"/>
+   <object objectType="Relation" objectID="4E05E3C3-D8D3-2992-5E9C-910FC8B41D92" name="Fornece" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B4DC3A6D-9B43-1E7D-D842-118BFF628BAB" name="Possui" seqName="seg_0"/>
+   <object objectType="Relation" objectID="2C2341D2-8DB8-4CD4-FC4B-D4B45A7EFC96" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="410B0E92-25B4-01E5-84ED-6BD5F2AD5C76" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="B2391D28-23A3-81DC-4858-708919A176A4" name="Hierarchy_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

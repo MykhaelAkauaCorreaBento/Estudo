@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Lota" directorySegmentName="seg_0" id="0A4516CC-76D8-BF39-7580-6F212CAA9B0C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:40:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>CB4DC2C4-2784-13EB-C6F5-04816B1E8829</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3707DFDF-F28A-6514-5481-9090722D48CB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1927F093-C3DF-13CE-1A03-C71B2A3C4E03</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

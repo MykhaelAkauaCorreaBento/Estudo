@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="RH" id="5E5AC556-5898-87F7-915E-395AC9383A72" version="3.5">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:22:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5E5AC556-5898-87F7-915E-395AC9383A72</designId>
+</OSDM_Design>

@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1927F093-C3DF-13CE-1A03-C71B2A3C4E03" name="Pessoa">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:34:58 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>0EFFC658-B50A-4FA7-5A23-CDEDF30EB496</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Matricula" id="BB022DD1-2FC6-7AFF-ECF2-4C2FFA31ECFD">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="E1310EFD-4DBC-7829-0738-1C8200D397E7">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="DtAdmissão" id="12A305A1-631F-840E-8BB8-CB94BDF794FA">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Salário" id="E4AF6ECD-D4C4-F37F-BB84-D8716056DF07">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Dependentes" id="03457F75-DD3C-8803-9019-0F062ECBE965">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Nome1" id="FA96BDB7-802D-B963-CACB-ACEC1BD66F10">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:40:03 UTC</createdTime>
+<generatorID>0A4516CC-76D8-BF39-7580-6F212CAA9B0C</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<referedAttribute>4B580FF1-C4E6-7C79-A090-7A1FD465B0E3</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="Nome2" id="1BFBFB95-EBB3-3955-BA2D-242AC32202A8">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:41:45 UTC</createdTime>
+<generatorID>83FA6B1C-63D6-1A97-DD4A-DC36FC22EC67</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<referedAttribute>4B580FF1-C4E6-7C79-A090-7A1FD465B0E3</referedAttribute>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8F260720-25A2-D2EB-E8D1-AAE887F96963" name="Funcionario PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-24 10:35:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>RH</ownerDesignName>
+<engineerTo>
+<item key="488F5345-4285-1E29-48E9-956981077817" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BB022DD1-2FC6-7AFF-ECF2-4C2FFA31ECFD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
