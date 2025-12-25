@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04BA3A48-C6B5-F21D-EC1E-45C90876AC82" name="Cliente">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>5221B893-93B9-1FA3-CDCE-3460950DC457</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CPF" id="EEAF3C91-64F3-0EBB-C9FA-DFCBE49D894E">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>3E85BA1D-1EC1-6F96-7A2B-52A0F4078770</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="09926558-C225-7153-176E-982B92D0594C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>FEC03965-6368-F9C6-B571-77D0C8BEA854</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NumCelular" id="E4C0EA0A-B544-C7A6-2C87-6F4F12AB4678">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>66A68569-FAA7-4A6A-E3CC-D8D68C56DBC5</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Logradouro" id="AA8C3F75-F1FA-817D-B101-84F987518653">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:01:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Número" id="7EA5B979-6F6A-BAA7-AC80-C7DE3DFA19D8">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:01:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Complemento" id="3388D403-ECE0-E464-0EA0-AC59BC20622E">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:02:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bairro" id="5234035E-53CC-572F-BCB2-15C1779CBA99">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:02:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CEP" id="F605A5C1-10A2-BD93-6555-98842175C9BC">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:03:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cidade" id="31F9E4D8-F7D6-073E-C613-C440406AC843">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:03:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Município " id="7D91EBAB-B5D1-E933-D8EE-0F854730E678">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:04:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF" id="3AEC96E2-C30D-D5BB-4582-E140B2530E0B">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:04:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D1925923-AD98-F772-801C-7A3ED612BE2B" name="Cliente_PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>4A4CADC0-3725-4A1A-55BC-F673BCEBDAA8</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEAF3C91-64F3-0EBB-C9FA-DFCBE49D894E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

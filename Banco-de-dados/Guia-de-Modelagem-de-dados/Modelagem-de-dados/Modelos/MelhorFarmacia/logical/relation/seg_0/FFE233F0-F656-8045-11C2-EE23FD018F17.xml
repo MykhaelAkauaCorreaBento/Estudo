@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Fornece" directorySegmentName="seg_0" id="FFE233F0-F656-8045-11C2-EE23FD018F17">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 20:03:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F8DEF14E-2BED-A9E5-6EB4-5ECC7E18898D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>028580C0-8A6D-BCB4-D67C-58A3A4238605</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

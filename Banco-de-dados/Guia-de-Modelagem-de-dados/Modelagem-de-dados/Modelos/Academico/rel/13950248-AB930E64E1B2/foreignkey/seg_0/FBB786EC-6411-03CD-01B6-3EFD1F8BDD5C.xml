@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FBB786EC-6411-03CD-01B6-3EFD1F8BDD5C" name="Matricula_Turma_FK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:56:32 UTC</createdTime>
+<generatorID>45D778EF-86DD-C891-44D3-E2DDFE2AE2FC</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<containerWithKeyObject>BB49BDDD-0E98-4D8D-05EE-04C6BB63D0FE</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>8211E60C-C5EA-05F3-CCFB-D3E2233F0F04</localFKIndex>
+<keyObject>84FDA5E9-7890-B0E6-D6A8-CB61AB7CCCC3</keyObject>
+<mandatory>false</mandatory>
+<transferable>false</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

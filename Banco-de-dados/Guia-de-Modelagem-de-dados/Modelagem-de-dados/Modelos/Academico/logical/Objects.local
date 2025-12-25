@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="0F7BD544-CECF-D96E-A7FE-46CDF361FF12" name="Matricula" seqName="seg_0"/>
+   <object objectType="Entity" objectID="63B8E7C4-4B47-B1A0-9164-3108A6ABF172" name="Turma" seqName="seg_0"/>
+   <object objectType="Relation" objectID="45D778EF-86DD-C891-44D3-E2DDFE2AE2FC" name="Relation_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

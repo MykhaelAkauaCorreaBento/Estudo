@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Promove" directorySegmentName="seg_0" id="9AF85B51-AC9E-87FB-1B8E-6D0A8A53B596">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 20:04:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>5DE6E017-BB78-85DD-B8CD-7D83661B4335</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F8DEF14E-2BED-A9E5-6EB4-5ECC7E18898D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

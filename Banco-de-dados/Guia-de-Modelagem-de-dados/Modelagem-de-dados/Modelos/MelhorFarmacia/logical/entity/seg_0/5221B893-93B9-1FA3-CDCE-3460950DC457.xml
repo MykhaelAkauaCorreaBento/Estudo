@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5221B893-93B9-1FA3-CDCE-3460950DC457" name="Cliente">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 18:01:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CPF" id="3E85BA1D-1EC1-6F96-7A2B-52A0F4078770">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 18:12:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="FEC03965-6368-F9C6-B571-77D0C8BEA854">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 18:12:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="NumCelular" id="66A68569-FAA7-4A6A-E3CC-D8D68C56DBC5">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 18:12:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Endereço*" id="4306460B-9A5D-C44C-47FD-CEB1DD814C0D">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-10 12:34:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Telefones*" id="D1081CDC-3D1C-FFDF-1270-25F336D1EEDE">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-10 12:34:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4A4CADC0-3725-4A1A-55BC-F673BCEBDAA8" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 18:12:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3E85BA1D-1EC1-6F96-7A2B-52A0F4078770</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="12BBE2B0-1776-E7B7-21CB-77661B609BF0" name="Produto">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>F8DEF14E-2BED-A9E5-6EB4-5ECC7E18898D</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IdProduto" id="C217483A-667B-D7AE-A65A-9D788E636FA9">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>16F0610A-F787-5389-8136-7D96D3BF8F51</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="2401F9F7-588A-892B-33E7-05C930A2921C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>BF2581A5-A68A-8DC4-F1D1-3F5901322999</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="345C6EA5-462E-2FA5-E48E-95A58DA21F82">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<comment>higiene pessoal, medicamento, beleza, infantil</comment>
+<generatorID>AFF1A13F-2E25-8D44-FCBF-B6E7605205EA</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descrição" id="A5DF4A16-3971-54BB-32FF-28F204A8BDD9">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>DF6215F1-26D9-7EA2-A071-416E738AD4F4</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Preco" id="46352012-4698-C9CB-2EFF-1EB88ECDB3BB">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>7FDA318A-3866-40F0-6CE5-A364CC935A32</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E045A91B-E606-69AC-9F7E-31D4F9A67940" name="Produto_PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>520EA783-E2FB-3605-0C6E-0330C6E9122C</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C217483A-667B-D7AE-A65A-9D788E636FA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

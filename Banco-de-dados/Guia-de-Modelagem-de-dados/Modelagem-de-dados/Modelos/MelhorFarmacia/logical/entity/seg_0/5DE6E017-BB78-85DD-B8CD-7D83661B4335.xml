@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5DE6E017-BB78-85DD-B8CD-7D83661B4335" name="Filial">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 19:58:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>028580C0-8A6D-BCB4-D67C-58A3A4238605</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idFilial" id="4D8008CF-5EE5-E030-684E-F20323BCFE5F">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 19:58:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Endereco" id="426D6CB5-845D-F0AD-830E-EC84772B3B4B">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 19:58:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1068E17B-8082-6D39-5586-BBB5DEC5D1C8" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-01-14 19:58:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4D8008CF-5EE5-E030-684E-F20323BCFE5F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

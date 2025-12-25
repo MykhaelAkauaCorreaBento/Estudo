@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22ACE913-E651-CFCC-E70D-60D26A67EA95" name="Telefone">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:10:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DDD" id="025F1FDB-8711-1F51-F1B0-FB543E5113BC">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:11:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="E912AE8E-EE36-0734-9076-D6EE5CAC2A00">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:12:21 UTC</createdTime>
+<comment>C:Celular, F:Fixo</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Número" id="AA18C0CD-6EB4-F182-2BF6-C0B2018B6E22">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:12:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cliente_CPF" id="B93309E1-8DB5-A000-C6B0-68F5531BAFED">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:13:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>EEAF3C91-64F3-0EBB-C9FA-DFCBE49D894E</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F5D411DE-16AA-8F47-301E-E12C072601D2" referredColumn="EEAF3C91-64F3-0EBB-C9FA-DFCBE49D894E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E9C22EB-91FB-5FDF-4EA3-16ED0B5DB8C8" name="Telefone_PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:15:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B93309E1-8DB5-A000-C6B0-68F5531BAFED"/>
+<colUsage columnID="AA18C0CD-6EB4-F182-2BF6-C0B2018B6E22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="514D31FF-0130-8C28-884F-7BF60336033B" name="Telefone_Cliente_FK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:13:36 UTC</createdTime>
+<generatorID>4A4CADC0-3725-4A1A-55BC-F673BCEBDAA8</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B93309E1-8DB5-A000-C6B0-68F5531BAFED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BB49BDDD-0E98-4D8D-05EE-04C6BB63D0FE" name="Matricula">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>0F7BD544-CECF-D96E-A7FE-46CDF361FF12</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Matricula" id="456F2FC0-CEA0-016C-7CF4-9F8B30CE7A07">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>F60B78E5-5189-54AF-37D4-95791E4CC00D</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nota" id="8C8217C6-4321-CD4D-62F1-C5FBE29D7756">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>F7558F94-6A49-08F1-108B-D7A10FE464FC</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Turma_Cod_Turma" id="9D43E1C9-3553-4804-7625-393D4E3F2743">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:56:32 UTC</createdTime>
+<generatorID>0DFB38A3-6A37-5B62-457B-742D13494720</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>6AFE0004-74B2-CED3-4DD4-F6C6D4D74C73</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FBB786EC-6411-03CD-01B6-3EFD1F8BDD5C" referredColumn="6AFE0004-74B2-CED3-4DD4-F6C6D4D74C73"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FF9342B-19E5-4696-F6CE-BF7ABDD49654" name="Matriculas_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>9819F682-FA42-0D13-09B1-980840C7BA01</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="456F2FC0-CEA0-016C-7CF4-9F8B30CE7A07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8211E60C-C5EA-05F3-CCFB-D3E2233F0F04" name="Matricula_Turma_FK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 12:56:32 UTC</createdTime>
+<generatorID>45D778EF-86DD-C891-44D3-E2DDFE2AE2FC</generatorID>
+<ownerDesignName>Academico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D43E1C9-3553-4804-7625-393D4E3F2743"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

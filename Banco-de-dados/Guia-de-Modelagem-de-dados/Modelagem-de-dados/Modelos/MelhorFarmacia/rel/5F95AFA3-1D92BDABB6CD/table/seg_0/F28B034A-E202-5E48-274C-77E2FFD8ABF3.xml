@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F28B034A-E202-5E48-274C-77E2FFD8ABF3" name="Fornece">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Produto_IdProduto" id="1297AD7E-5E56-520D-F354-0E495768FE13">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>C217483A-667B-D7AE-A65A-9D788E636FA9</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A05AC120-6E03-32FA-CFEF-91DF088352F7" referredColumn="C217483A-667B-D7AE-A65A-9D788E636FA9"/>
+</associations>
+</Column>
+<Column name="Filial_idFilial" id="61237685-2949-B74E-DDEB-AAB31EAAA396">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>9D865F5D-F407-1E9F-3B73-E9D5F80AD12A</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2ADF313C-77D1-F6AC-ED0C-90822E6B3D09" referredColumn="9D865F5D-F407-1E9F-3B73-E9D5F80AD12A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84996D01-DC31-83AB-0F16-C741884EA233" name="Fornece">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1297AD7E-5E56-520D-F354-0E495768FE13"/>
+<colUsage columnID="61237685-2949-B74E-DDEB-AAB31EAAA396"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34C82407-8B2E-2313-910C-5315113DB34E" name="FK_ASS_9">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>FFE233F0-F656-8045-11C2-EE23FD018F17</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1297AD7E-5E56-520D-F354-0E495768FE13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47C2E14B-694D-EE75-2353-B994881C8971" name="FK_ASS_10">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-25 10:54:42 UTC</createdTime>
+<generatorID>FFE233F0-F656-8045-11C2-EE23FD018F17</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61237685-2949-B74E-DDEB-AAB31EAAA396"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

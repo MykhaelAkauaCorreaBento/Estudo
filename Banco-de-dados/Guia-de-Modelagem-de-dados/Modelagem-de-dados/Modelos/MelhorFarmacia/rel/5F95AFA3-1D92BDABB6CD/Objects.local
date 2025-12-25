@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="62D4639F-3012-0CCA-E380-2EDA3312BDE2" name="Anuncia" seqName="seg_0"/>
+   <object objectType="Table" objectID="66F2A795-18EB-A553-5FAC-321152CB58DF" name="Busca" seqName="seg_0"/>
+   <object objectType="Table" objectID="04BA3A48-C6B5-F21D-EC1E-45C90876AC82" name="Cliente" seqName="seg_0"/>
+   <object objectType="Table" objectID="406C5ECC-1983-DA94-A3E5-F73D965F8152" name="Farmacia" seqName="seg_0"/>
+   <object objectType="Table" objectID="17910C36-475C-14E4-F2AA-EB6EEF6BB41D" name="Filial" seqName="seg_0"/>
+   <object objectType="Table" objectID="F28B034A-E202-5E48-274C-77E2FFD8ABF3" name="Fornece" seqName="seg_0"/>
+   <object objectType="Table" objectID="12BBE2B0-1776-E7B7-21CB-77661B609BF0" name="Produto" seqName="seg_0"/>
+   <object objectType="Table" objectID="52EEEC1F-1957-0B96-A583-C3F08B894D33" name="Promove" seqName="seg_0"/>
+   <object objectType="Table" objectID="22ACE913-E651-CFCC-E70D-60D26A67EA95" name="Telefone" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2ADF313C-77D1-F6AC-ED0C-90822E6B3D09" name="FK_ASS_10" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="6C7C53E0-75F3-C5B3-95BE-4525623DCC49" name="FK_ASS_12" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E3BEBDDC-D57F-E55D-2F85-BA9BA8E3A979" name="FK_ASS_13" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="F5D411DE-16AA-8F47-301E-E12C072601D2" name="Telefone_Cliente_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="6EEE01EC-CE96-0ACB-B48F-FF5D9CFD9274" name="FK_ASS_3" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="667EAEC8-2D4A-6B5D-0EC7-FA7CDBC6E62C" name="FK_ASS_4" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DB3C9D1C-F9B2-03DF-0E83-ED506F8AC603" name="FK_ASS_5" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="FA14A63E-044C-C5F2-2AAC-56C0B1737DEE" name="FK_ASS_6" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A05AC120-6E03-32FA-CFEF-91DF088352F7" name="FK_ASS_9" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DD19282E-84FC-9182-C108-4AC44669294F" name="Filial_Farmacia_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

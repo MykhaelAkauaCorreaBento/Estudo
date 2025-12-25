@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Anuncia" directorySegmentName="seg_0" id="8AB80E9E-872F-7570-2295-4F4DB5873DF4">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-04 20:54:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F8DEF14E-2BED-A9E5-6EB4-5ECC7E18898D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>028580C0-8A6D-BCB4-D67C-58A3A4238605</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="DataInicio" id="30020311-45FE-173E-1168-DA5912C291A7">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-04 20:56:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+<attribute name="DataFim" id="801DCFEF-EB67-1F4B-25A5-66D9AD760C96">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-04 20:56:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+<attribute name="Desconto" id="AAD5EC13-4DBA-7449-855F-9776528CFC64">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-02-04 20:56:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>MelhorFarmacia</ownerDesignName>
+<engineerTo>
+<item key="5F95AFA3-73C2-9722-5177-1D92BDABB6CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</attribute>
+</attributes>
+</Relation>
