@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VendaPF" directorySegmentName="seg_0" id="7CAF562D-76B5-CC5A-5484-9CF4B9772517">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:19:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>4F0E08E6-4815-A726-7181-6310DFBCFB8E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>87A6FDFE-6D82-1078-C141-D42175C58A00</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D2A95227-7790-F4E5-8A34-EE3BB769EE21</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9F5C0E63-6881-5D05-A10B-91088E082979" name="CartaoCredito">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:24:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_CartaoCredito" id="B1B81262-60CD-F0F0-273B-E0A70D75F429">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:24:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Num_CartaoCredito" id="AF643D81-CFCD-8A1C-210C-FFA8B387F2B0">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:25:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Data_Validade" id="57532542-E040-3D31-3CC3-032D3B2E2221">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:25:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="id_CCorrente" id="F8C3B347-2CA8-B884-97E9-1601BD83B326">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:27:02 UTC</createdTime>
+<generatorID>73B867D9-F882-94BE-3FE4-46E62950AD74</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<referedAttribute>8452880E-8D2C-BA3E-DA2F-D6C6AACA8D7E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B4195494-F8CA-E102-3A58-73E0BFCE329D" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:25:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B1B81262-60CD-F0F0-273B-E0A70D75F429</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

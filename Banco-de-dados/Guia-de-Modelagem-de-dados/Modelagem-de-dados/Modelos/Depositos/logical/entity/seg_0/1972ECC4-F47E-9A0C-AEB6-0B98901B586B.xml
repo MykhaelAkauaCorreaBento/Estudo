@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1972ECC4-F47E-9A0C-AEB6-0B98901B586B" name="Deposito_ContaCorrente">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:09:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>4E0168CB-B201-7C38-EA71-FFEF2BAD96A6</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_CCorrente" id="D8953D97-24B2-BC6B-CD05-698F292F4BBD">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:12:08 UTC</createdTime>
+<generatorID>416B13BD-EA81-2BFE-06F4-EB1D67ACA36D</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<referedAttribute>8452880E-8D2C-BA3E-DA2F-D6C6AACA8D7E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+</Entity>

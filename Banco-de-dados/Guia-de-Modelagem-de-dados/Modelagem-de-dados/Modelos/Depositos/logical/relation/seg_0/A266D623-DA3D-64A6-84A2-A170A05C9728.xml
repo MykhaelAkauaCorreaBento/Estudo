@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_5" directorySegmentName="seg_0" id="A266D623-DA3D-64A6-84A2-A170A05C9728">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:12:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>B4195494-F8CA-E102-3A58-73E0BFCE329D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9F5C0E63-6881-5D05-A10B-91088E082979</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5A7174A9-D521-A7F5-C04F-0747C73F7130</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

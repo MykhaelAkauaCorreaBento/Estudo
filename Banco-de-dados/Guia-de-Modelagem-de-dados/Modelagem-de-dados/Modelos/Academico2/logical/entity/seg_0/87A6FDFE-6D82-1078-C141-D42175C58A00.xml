@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="87A6FDFE-6D82-1078-C141-D42175C58A00" name="PessoaFisica">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:14:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_PessoaFisica" id="6269E3A7-87DC-A568-CAE0-ED610F0DC08F">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:14:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="9AD9E174-64AB-5B7E-E6C8-83857B30A51E">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:15:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Endereço" id="00A6157C-6027-585A-3688-FE50E51B3193">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:15:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Cidade" id="D9C51B5C-1022-11EE-DD65-87C62D71F0B9">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:15:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="UF" id="2FE52328-DD88-685F-C97D-6AC34B013274">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:15:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Região" id="A637E519-BA07-1AC7-0597-F743988AB7CB">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:15:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Pais" id="FF723A02-C824-6FD3-9BD4-C959040C170A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:16:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4F0E08E6-4815-A726-7181-6310DFBCFB8E" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:14:58 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6269E3A7-87DC-A568-CAE0-ED610F0DC08F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

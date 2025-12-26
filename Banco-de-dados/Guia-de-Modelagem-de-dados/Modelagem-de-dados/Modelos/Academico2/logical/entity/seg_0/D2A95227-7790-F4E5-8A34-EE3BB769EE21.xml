@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D2A95227-7790-F4E5-8A34-EE3BB769EE21" name="VendaBalcao">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:16:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_VendaBalcao" id="A26B7706-CA3B-D383-2A14-193A7E37C936">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:16:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="Total_Venda" id="782235F7-CECA-10D9-1C9A-D1FE8F13F432">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:16:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Data_Venda" id="075B3EB8-D6BE-C412-3CFE-D7AF75531A86">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:17:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="id_PessoaFisica" id="05BF7560-DFF4-BC0E-B317-5B067C7A974A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:19:18 UTC</createdTime>
+<generatorID>7CAF562D-76B5-CC5A-5484-9CF4B9772517</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<referedAttribute>6269E3A7-87DC-A568-CAE0-ED610F0DC08F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F0FA1A3F-946F-066B-A327-B7AE5DB990F3" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:16:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A26B7706-CA3B-D383-2A14-193A7E37C936</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

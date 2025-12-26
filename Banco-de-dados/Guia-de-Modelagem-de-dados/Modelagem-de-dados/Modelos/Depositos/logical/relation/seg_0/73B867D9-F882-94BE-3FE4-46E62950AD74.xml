@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CCorrente_Cartaocredito" directorySegmentName="seg_0" id="73B867D9-F882-94BE-3FE4-46E62950AD74">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:27:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<engineerTo>
+<item key="807038A9-80D4-149C-BBC4-487B3F4D6248" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>27978027-192F-71FA-1666-377B78D8D0A8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3C611CA0-CA56-28C3-3B8F-838A6BB9DDDF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9F5C0E63-6881-5D05-A10B-91088E082979</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

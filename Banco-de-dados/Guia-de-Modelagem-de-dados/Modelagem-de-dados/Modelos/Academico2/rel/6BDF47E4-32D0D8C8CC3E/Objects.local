@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="471092E8-67AB-3D13-FD89-4456404C0751" name="Matricula" seqName="seg_0"/>
+   <object objectType="Table" objectID="529FC45A-2590-A62B-CF9C-9F2989ADFB3A" name="PessoaFisica" seqName="seg_0"/>
+   <object objectType="Table" objectID="4031D1FA-61F1-5CF0-6CE1-1F4013863144" name="Turma" seqName="seg_0"/>
+   <object objectType="Table" objectID="6A818B86-15CE-E457-4034-4C57A7EED0D6" name="VendaBalcao" seqName="seg_0"/>
+   <object objectType="Table" objectID="ED340F27-9644-CCBA-BF87-5573F54D497E" name="Venda_Turma" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D7FC9B08-8A97-CD47-6993-450E65A4A066" name="FK_ASS_1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="C34704C5-D9B0-5736-7E68-679596EA2803" name="FK_ASS_2" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="882EAE2C-782A-3DBA-51D5-6291A295697C" name="FK_ASS_7" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0757B5D7-4069-9417-E0C0-17C872EC7FA1" name="FK_ASS_8" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0E9CC961-9C06-642A-1516-8C97EE255AC4" name="VendaBalcao_PessoaFisica_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

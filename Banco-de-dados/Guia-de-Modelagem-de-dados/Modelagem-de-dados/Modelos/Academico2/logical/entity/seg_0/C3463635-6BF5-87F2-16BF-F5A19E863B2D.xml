@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C3463635-6BF5-87F2-16BF-F5A19E863B2D" name="Turma">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:24:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_Turma" id="897AC859-E1F4-5D97-F45B-B04465D95BDB">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:24:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Data_Inicio" id="B820206D-8558-1561-5421-DEF9BCAC5025">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:24:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Data_Fim" id="FE9428E6-5677-F67F-C2C7-A8D9E5F1D8AB">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:26:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Local" id="3B6E31A6-3D8C-4AA0-639A-B731AD42C637">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:26:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E05CABFA-3A6A-40FB-F65B-D8550B2A8FDA" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:24:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>897AC859-E1F4-5D97-F45B-B04465D95BDB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

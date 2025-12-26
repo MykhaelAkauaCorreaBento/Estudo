@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="0F7BD544-CECF-D96E-A7FE-46CDF361FF12" name="Aluno" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

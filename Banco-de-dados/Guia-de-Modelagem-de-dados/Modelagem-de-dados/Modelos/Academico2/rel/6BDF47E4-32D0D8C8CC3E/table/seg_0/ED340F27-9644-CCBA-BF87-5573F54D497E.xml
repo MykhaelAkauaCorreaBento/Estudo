@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED340F27-9644-CCBA-BF87-5573F54D497E" name="Venda_Turma">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Turma_id_Turma" id="AF58B082-89AA-4C38-C216-66855264BFCC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>F805D8E2-62EE-179B-CF39-5A9DF7C1BFE2</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="882EAE2C-782A-3DBA-51D5-6291A295697C" referredColumn="F805D8E2-62EE-179B-CF39-5A9DF7C1BFE2"/>
+</associations>
+</Column>
+<Column name="VendaBalcao_id_VendaBalcao" id="78DB7AA8-EFCB-529E-E6D3-92F1CCB70325">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<use>0</use>
+<delegate>A04D2481-0579-EB0E-52E4-386905F59280</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0757B5D7-4069-9417-E0C0-17C872EC7FA1" referredColumn="A04D2481-0579-EB0E-52E4-386905F59280"/>
+</associations>
+</Column>
+<Column name="Valor" id="2E107918-D7C2-9930-6BB9-D327BE909559">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:32:04 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFBE98FE-5AB4-413B-E7FF-E4F0407F61AF" name="Venda_Turma_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF58B082-89AA-4C38-C216-66855264BFCC"/>
+<colUsage columnID="78DB7AA8-EFCB-529E-E6D3-92F1CCB70325"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7CB02959-AA5C-61AB-FA4E-4C826830EB22" name="FK_ASS_7">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>DBC05D15-32C1-E53C-F6DE-D3A239D121BE</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF58B082-89AA-4C38-C216-66855264BFCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="889699A6-A9AE-563C-8658-0255366CAD3A" name="FK_ASS_8">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-15 16:25:07 UTC</createdTime>
+<generatorID>DBC05D15-32C1-E53C-F6DE-D3A239D121BE</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78DB7AA8-EFCB-529E-E6D3-92F1CCB70325"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

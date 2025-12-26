@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4315E2B5-DEBF-E9FE-BA0A-3EFA009FA9B4" name="VendaBalcaoCurso">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:17:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Num_Recibo" id="B38F478C-C7B1-5DCE-7387-8EE0004E52BF">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:18:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Valor" id="A9171B10-A4C4-0FE9-7A8D-7FAFC2BFF08E">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:18:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="id_PessoaFisica" id="098B24F8-3418-BEDE-724F-C0CB24F37EEC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:28:57 UTC</createdTime>
+<generatorID>6C82982C-EC15-236C-9B6C-DAA76710C33D</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6269E3A7-87DC-A568-CAE0-ED610F0DC08F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="id_VendaBalcao" id="A5E37D1D-E0ED-1EA1-9003-8DA803D65EFC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:33:23 UTC</createdTime>
+<generatorID>12922E8D-BD69-8B48-214E-72207BCE481F</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>A26B7706-CA3B-D383-2A14-193A7E37C936</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="id_Turma" id="E4104494-DDC6-B9C4-C1DD-E69DF95694C6">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:34:11 UTC</createdTime>
+<generatorID>C594CCAC-F0B5-9672-D641-0798FE39EE15</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>897AC859-E1F4-5D97-F45B-B04465D95BDB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="03370040-FB0B-8FF0-3BA9-19A51C6A1B9C" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:18:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B38F478C-C7B1-5DCE-7387-8EE0004E52BF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

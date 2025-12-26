@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0F7BD544-CECF-D96E-A7FE-46CDF361FF12" name="Aluno">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:28:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Matricula" id="F60B78E5-5189-54AF-37D4-95791E4CC00D">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:29:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="AD5359C4-5FA1-6229-C13E-73040B50D3F8">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:29:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="RG" id="F7558F94-6A49-08F1-108B-D7A10FE464FC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:29:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Logradouro" id="537E1252-3CA2-32E5-1342-31D016728AD4">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:16:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Numero" id="5ECAC1B5-E1E6-E060-9C02-553B1C24AF44">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:16:58 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Complemento" id="07BCD050-B0DB-8051-2E7B-D05C30131C28">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:17:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Bairro" id="E849C6A4-162F-F9EC-EFB8-9611575A4B79">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:17:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="Cidade" id="CFC5F930-18DD-0121-04CE-76393D46E42B">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:15:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="UF" id="8E7873B9-C94D-1AE0-0075-A52E7D233D85">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:15:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9819F682-FA42-0D13-09B1-980840C7BA01" name="{entity} PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:29:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<engineerTo>
+<item key="13950248-D4D3-2623-11D0-AB930E64E1B2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F60B78E5-5189-54AF-37D4-95791E4CC00D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

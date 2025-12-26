@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B9A7FA7-A014-0F63-8C88-6331ED14CF02" name="Deposito_ContaCorrente">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>1972ECC4-F47E-9A0C-AEB6-0B98901B586B</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDeposito" id="AC04A761-6AA2-43B7-957F-C29D4096208C">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>6506E4A4-94DF-0B19-DBEE-69F36CF80969</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<use>0</use>
+<delegate>9092632C-80CA-D45F-04F0-6D2A2CF90394</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="935BC0CA-B68F-7C7A-0D6C-12E168DB6788" referredColumn="9092632C-80CA-D45F-04F0-6D2A2CF90394"/>
+</associations>
+</Column>
+<Column name="ContaCorrente_id_CCorrente" id="061F0163-B85C-69AD-1872-21BED268C7B1">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>D8953D97-24B2-BC6B-CD05-698F292F4BBD</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>B0DA1E5A-3600-0F2B-85D4-C49DAD7E0765</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="99FE68DE-77B6-587C-0629-DF1D90478AEA" referredColumn="B0DA1E5A-3600-0F2B-85D4-C49DAD7E0765"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DC178C6F-3A44-009F-C644-A9BBF84A53C7" name="Deposito_ContaCorrente_PK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>C0893A6F-E296-A9CD-07D1-FF5C020E12CF</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC04A761-6AA2-43B7-957F-C29D4096208C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="266BD749-F6D6-3B9C-6A67-4C2868C11490" name="FK_ASS_1">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>1271F248-9C25-8BA6-7031-326CB794B71D</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC04A761-6AA2-43B7-957F-C29D4096208C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD9F027B-2C31-993D-1E4E-582F602AFEF3" name="Deposito_ContaCorrente_ContaCorrente_FK">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>416B13BD-EA81-2BFE-06F4-EB1D67ACA36D</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="061F0163-B85C-69AD-1872-21BED268C7B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

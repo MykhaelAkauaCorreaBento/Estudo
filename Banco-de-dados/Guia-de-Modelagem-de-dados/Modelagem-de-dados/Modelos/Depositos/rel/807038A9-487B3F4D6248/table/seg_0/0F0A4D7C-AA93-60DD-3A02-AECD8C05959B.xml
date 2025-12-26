@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0F0A4D7C-AA93-60DD-3A02-AECD8C05959B" name="Deposito">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>4E0168CB-B201-7C38-EA71-FFEF2BAD96A6</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDeposito" id="9092632C-80CA-D45F-04F0-6D2A2CF90394">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>6506E4A4-94DF-0B19-DBEE-69F36CF80969</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_Deposito" id="821494F0-8AE0-D0E4-929A-4074D59EDE63">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>311F2D25-7AB6-802D-2897-22D42BC283CA</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor" id="42537012-02EA-A258-4322-88B468D22780">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>C26030E3-68E4-2ACA-E477-5056AC5F85D7</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Conciliado" id="8C83086F-5865-BEA7-A354-A5722A564F32">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>02D44BC4-6327-FE3B-9BFE-657D15DA84A4</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E37AD00D-DE08-378E-7425-3B4C453D41B8" name="Deposito">
+<createdBy>Mykhael Bento</createdBy>
+<createdTime>2025-12-26 10:13:12 UTC</createdTime>
+<generatorID>C0893A6F-E296-A9CD-07D1-FF5C020E12CF</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9092632C-80CA-D45F-04F0-6D2A2CF90394"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

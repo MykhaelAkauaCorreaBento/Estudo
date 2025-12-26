@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="9F5C0E63-6881-5D05-A10B-91088E082979" name="CartaoCredito" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3C611CA0-CA56-28C3-3B8F-838A6BB9DDDF" name="ContaCorrente" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4E0168CB-B201-7C38-EA71-FFEF2BAD96A6" name="Deposito" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5A7174A9-D521-A7F5-C04F-0747C73F7130" name="Deposito_CArtãoCrédito" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1972ECC4-F47E-9A0C-AEB6-0B98901B586B" name="Deposito_ContaCorrente" seqName="seg_0"/>
+   <object objectType="Relation" objectID="73B867D9-F882-94BE-3FE4-46E62950AD74" name="CCorrente_Cartaocredito" seqName="seg_0"/>
+   <object objectType="Relation" objectID="416B13BD-EA81-2BFE-06F4-EB1D67ACA36D" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="A266D623-DA3D-64A6-84A2-A170A05C9728" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="1271F248-9C25-8BA6-7031-326CB794B71D" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="41592FDD-B4AE-C3B3-BFE6-EFFE01B066C3" name="Hierarchy_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

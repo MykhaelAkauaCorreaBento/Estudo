@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BB49BDDD-0E98-4D8D-05EE-04C6BB63D0FE" name="Aluno">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>0F7BD544-CECF-D96E-A7FE-46CDF361FF12</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Cod_Turma" id="D1FE8533-FBCB-499C-FD7D-C517E944E7FC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>980769E9-026F-53B9-F2CF-8FCAFD4A5F54</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Matricula" id="456F2FC0-CEA0-016C-7CF4-9F8B30CE7A07">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>F60B78E5-5189-54AF-37D4-95791E4CC00D</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="A58699A9-1FF0-3F08-FBD4-2D2724CC173F">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>AD5359C4-5FA1-6229-C13E-73040B50D3F8</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RG" id="8C8217C6-4321-CD4D-62F1-C5FBE29D7756">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>F7558F94-6A49-08F1-108B-D7A10FE464FC</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Logradouro" id="2E78075F-5B47-79ED-D5A5-9C55CE641D87">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:45:53 UTC</createdTime>
+<generatorID>537E1252-3CA2-32E5-1342-31D016728AD4</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Numero" id="94EBC158-A2BE-66EB-7830-41E7AA09EAD2">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:45:53 UTC</createdTime>
+<generatorID>5ECAC1B5-E1E6-E060-9C02-553B1C24AF44</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Complemento" id="45599992-0396-F126-71D6-1CE31B0A8E4C">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:45:53 UTC</createdTime>
+<generatorID>07BCD050-B0DB-8051-2E7B-D05C30131C28</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bairro" id="59C69E5B-EC4F-A4F2-0F6B-B7E6826519B3">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:45:53 UTC</createdTime>
+<generatorID>E849C6A4-162F-F9EC-EFB8-9611575A4B79</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Locais_idLocal" id="F997711E-4989-C2DE-EADE-90CEF5777E5F">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:48:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<use>0</use>
+<delegate>774A4264-7581-D079-93F0-B80D74019024</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D15D6BA2-7E62-BC5F-0525-4930C3B1EFF8" referredColumn="774A4264-7581-D079-93F0-B80D74019024"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FF9342B-19E5-4696-F6CE-BF7ABDD49654" name="Matriculas_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-04 19:30:08 UTC</createdTime>
+<generatorID>9819F682-FA42-0D13-09B1-980840C7BA01</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="456F2FC0-CEA0-016C-7CF4-9F8B30CE7A07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="97C14B63-C7C6-3AD0-D4AC-E64CEF3EC329" name="Aluno_Locais_FK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-03-25 12:48:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academicoplus</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F997711E-4989-C2DE-EADE-90CEF5777E5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

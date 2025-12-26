@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="1313BC11-1BF4-CE32-7846-2CF614854C52" name="CartaoCredito" seqName="seg_0"/>
+   <object objectType="Table" objectID="EAD46E29-D964-4229-5A56-F31BC302EB82" name="ContaCorrente" seqName="seg_0"/>
+   <object objectType="Table" objectID="0F0A4D7C-AA93-60DD-3A02-AECD8C05959B" name="Deposito" seqName="seg_0"/>
+   <object objectType="Table" objectID="9E772661-5BB0-9FEA-8D03-AB29F08EB6C5" name="Deposito_CArtãoCrédito" seqName="seg_0"/>
+   <object objectType="Table" objectID="7B9A7FA7-A014-0F63-8C88-6331ED14CF02" name="Deposito_ContaCorrente" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B17669FF-25F7-3A9D-13B9-5CF0C2EA1D38" name="CartaoCredito_ContaCorrente_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="71550A54-221E-04FC-0E88-05E11DF4A7FD" name="Deposito_CArtãoCrédito_CartaoCredito_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="99FE68DE-77B6-587C-0629-DF1D90478AEA" name="Deposito_ContaCorrente_ContaCorrente_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="935BC0CA-B68F-7C7A-0D6C-12E168DB6788" name="FK_ASS_1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="852869D7-A534-23B6-6B98-610D89E9DE32" name="FK_ASS_2" seqName="seg_0"/>
+   <object objectType="FKArc" objectID="15A2BE0A-30BE-75F1-9C79-8F081D3EB2AA" name="FKArc_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

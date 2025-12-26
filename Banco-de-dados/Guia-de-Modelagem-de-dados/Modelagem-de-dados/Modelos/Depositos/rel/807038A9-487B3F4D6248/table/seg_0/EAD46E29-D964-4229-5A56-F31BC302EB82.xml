@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EAD46E29-D964-4229-5A56-F31BC302EB82" name="ContaCorrente">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>3C611CA0-CA56-28C3-3B8F-838A6BB9DDDF</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_CCorrente" id="B0DA1E5A-3600-0F2B-85D4-C49DAD7E0765">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>8452880E-8D2C-BA3E-DA2F-D6C6AACA8D7E</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Num_Banco" id="169781ED-48AC-41BA-7ADF-869983CF6933">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>434B37BD-5E11-47F4-0AE6-EED2C46A0BE7</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Num_Agencia" id="669126FF-DA72-2B53-5375-DC16E9DAF04A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>DE67A423-945B-EAA4-3167-EE739441CF46</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Num_Conta" id="137FC0CD-6447-F891-758D-EBD9F31FE222">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>4F1C39BE-3F60-70D2-ED25-F468CC912FFF</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F66B83D-A7CB-9445-D9EF-A70F9E9D13F9" name="ContaCorrente_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 16:37:16 UTC</createdTime>
+<generatorID>27978027-192F-71FA-1666-377B78D8D0A8</generatorID>
+<ownerDesignName>Depositos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0DA1E5A-3600-0F2B-85D4-C49DAD7E0765"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

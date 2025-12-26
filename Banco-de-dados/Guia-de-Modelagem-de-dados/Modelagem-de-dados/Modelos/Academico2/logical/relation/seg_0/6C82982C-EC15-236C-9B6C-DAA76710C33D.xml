@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PessoaFisica_VendaBalcaoCurso" directorySegmentName="seg_0" id="6C82982C-EC15-236C-9B6C-DAA76710C33D">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:28:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>4F0E08E6-4815-A726-7181-6310DFBCFB8E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>87A6FDFE-6D82-1078-C141-D42175C58A00</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4315E2B5-DEBF-E9FE-BA0A-3EFA009FA9B4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

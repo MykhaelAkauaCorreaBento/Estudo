@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Matricula" directorySegmentName="seg_0" id="C732D2EA-FDEE-84B5-4264-AD0BFD5D874A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-04-08 19:35:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Academico2</ownerDesignName>
+<engineerTo>
+<item key="6BDF47E4-4D5C-B596-EFA5-32D0D8C8CC3E" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>C3463635-6BF5-87F2-16BF-F5A19E863B2D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>87A6FDFE-6D82-1078-C141-D42175C58A00</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

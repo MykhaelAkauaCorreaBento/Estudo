@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="87A6FDFE-6D82-1078-C141-D42175C58A00" name="PessoaFisica" seqName="seg_0"/>
+   <object objectType="Entity" objectID="C3463635-6BF5-87F2-16BF-F5A19E863B2D" name="Turma" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D2A95227-7790-F4E5-8A34-EE3BB769EE21" name="VendaBalcao" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4315E2B5-DEBF-E9FE-BA0A-3EFA009FA9B4" name="VendaBalcaoCurso" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C732D2EA-FDEE-84B5-4264-AD0BFD5D874A" name="Matricula" seqName="seg_0"/>
+   <object objectType="Relation" objectID="6C82982C-EC15-236C-9B6C-DAA76710C33D" name="PessoaFisica_VendaBalcaoCurso" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C594CCAC-F0B5-9672-D641-0798FE39EE15" name="TurmaVendaBalcaoCurso" seqName="seg_0"/>
+   <object objectType="Relation" objectID="12922E8D-BD69-8B48-214E-72207BCE481F" name="VendaBalcao_VendaBalcaoCurso" seqName="seg_0"/>
+   <object objectType="Relation" objectID="7CAF562D-76B5-CC5A-5484-9CF4B9772517" name="VendaPF" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DBC05D15-32C1-E53C-F6DE-D3A239D121BE" name="Venda_Turma" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
