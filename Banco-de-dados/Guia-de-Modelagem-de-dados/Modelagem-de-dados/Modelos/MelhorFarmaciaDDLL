@@ -1,0 +1,165 @@
+-- Gerado por Oracle SQL Developer Data Modeler 4.0.2.840
+--   em:        2025-12-27 09:23:38 BRST
+--   site:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+
+CREATE TABLE Anuncia
+  (
+    Produto_IdProduto INTEGER NOT NULL ,
+    Filial_idFilial   INTEGER NOT NULL ,
+    DataInicio        DATE ,
+    DataFim           DATE ,
+    Desconto          NUMBER (4,2)
+  ) ;
+ALTER TABLE Anuncia ADD CONSTRAINT Anuncia PRIMARY KEY ( Produto_IdProduto, Filial_idFilial ) ;
+
+CREATE TABLE Busca
+  (
+    Cliente_CPF       VARCHAR2 (14 CHAR) NOT NULL ,
+    Produto_IdProduto INTEGER NOT NULL
+  ) ;
+ALTER TABLE Busca ADD CONSTRAINT Busca_PK PRIMARY KEY ( Cliente_CPF, Produto_IdProduto ) ;
+
+CREATE TABLE Cliente
+  (
+    CPF          VARCHAR2 (14 CHAR) NOT NULL ,
+    Nome         VARCHAR2 (100 CHAR) ,
+    NumCelular   VARCHAR2 (15 CHAR) ,
+    "Endereço*"  VARCHAR2 (100 CHAR) ,
+    "Telefones*" VARCHAR2 (15 CHAR)
+  ) ;
+ALTER TABLE Cliente ADD CONSTRAINT Cliente_PK PRIMARY KEY ( CPF ) ;
+
+CREATE TABLE Farmacia
+  (
+    Farmacia_ID INTEGER NOT NULL ,
+    CGC         VARCHAR2 (17 CHAR) NOT NULL ,
+    RazaoSocial VARCHAR2 (100 CHAR)
+  ) ;
+ALTER TABLE Farmacia ADD CONSTRAINT Farmacia_PK PRIMARY KEY ( Farmacia_ID ) ;
+
+CREATE TABLE Filial
+  (
+    idFilial             INTEGER NOT NULL ,
+    Endereco             VARCHAR2 (100 CHAR) ,
+    Farmacia_Farmacia_ID INTEGER NOT NULL
+  ) ;
+ALTER TABLE Filial ADD CONSTRAINT Filial_PK PRIMARY KEY ( idFilial ) ;
+
+CREATE TABLE Fornece
+  (
+    Produto_IdProduto INTEGER NOT NULL ,
+    Filial_idFilial   INTEGER NOT NULL
+  ) ;
+ALTER TABLE Fornece ADD CONSTRAINT Fornece PRIMARY KEY ( Produto_IdProduto, Filial_idFilial ) ;
+
+CREATE TABLE Produto
+  (
+    IdProduto INTEGER NOT NULL ,
+    Nome      VARCHAR2 ,
+    Tipo      CHAR (1 CHAR) ,
+    Descrição VARCHAR2 (100 CHAR) ,
+    Preco     NUMBER (7,2)
+  ) ;
+ALTER TABLE Produto ADD CONSTRAINT Produto_PK PRIMARY KEY ( IdProduto ) ;
+
+CREATE TABLE Promove
+  (
+    Filial_idFilial   INTEGER NOT NULL ,
+    Produto_IdProduto INTEGER NOT NULL
+  ) ;
+ALTER TABLE Promove ADD CONSTRAINT Promove_PK PRIMARY KEY ( Filial_idFilial, Produto_IdProduto ) ;
+
+ALTER TABLE Fornece ADD CONSTRAINT FK_ASS_10 FOREIGN KEY ( Filial_idFilial ) REFERENCES Filial ( idFilial ) ;
+
+ALTER TABLE Promove ADD CONSTRAINT FK_ASS_12 FOREIGN KEY ( Filial_idFilial ) REFERENCES Filial ( idFilial ) ;
+
+ALTER TABLE Promove ADD CONSTRAINT FK_ASS_13 FOREIGN KEY ( Produto_IdProduto ) REFERENCES Produto ( IdProduto ) ;
+
+ALTER TABLE Anuncia ADD CONSTRAINT FK_ASS_3 FOREIGN KEY ( Produto_IdProduto ) REFERENCES Produto ( IdProduto ) ;
+
+ALTER TABLE Anuncia ADD CONSTRAINT FK_ASS_4 FOREIGN KEY ( Filial_idFilial ) REFERENCES Filial ( idFilial ) ;
+
+ALTER TABLE Busca ADD CONSTRAINT FK_ASS_5 FOREIGN KEY ( Cliente_CPF ) REFERENCES Cliente ( CPF ) ;
+
+ALTER TABLE Busca ADD CONSTRAINT FK_ASS_6 FOREIGN KEY ( Produto_IdProduto ) REFERENCES Produto ( IdProduto ) ;
+
+ALTER TABLE Fornece ADD CONSTRAINT FK_ASS_9 FOREIGN KEY ( Produto_IdProduto ) REFERENCES Produto ( IdProduto ) ;
+
+ALTER TABLE Filial ADD CONSTRAINT Filial_Farmacia_FK FOREIGN KEY ( Farmacia_Farmacia_ID ) REFERENCES Farmacia ( Farmacia_ID ) ;
+
+CREATE OR REPLACE TRIGGER FKNTM_Anuncia BEFORE
+  UPDATE OF Filial_idFilial,
+    Produto_IdProduto ON Anuncia BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table Anuncia is violated');
+END;
+/
+
+CREATE OR REPLACE TRIGGER FKNTM_Busca BEFORE
+  UPDATE OF Cliente_CPF,
+    Produto_IdProduto ON Busca BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table Busca is violated');
+END;
+/
+
+CREATE OR REPLACE TRIGGER FKNTM_Filial BEFORE
+  UPDATE OF Farmacia_Farmacia_ID ON Filial BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table Filial is violated');
+END;
+/
+
+CREATE OR REPLACE TRIGGER FKNTM_Fornece BEFORE
+  UPDATE OF Produto_IdProduto,
+    Filial_idFilial ON Fornece BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table Fornece is violated');
+END;
+/
+
+CREATE OR REPLACE TRIGGER FKNTM_Promove BEFORE
+  UPDATE OF Produto_IdProduto,
+    Filial_idFilial ON Promove BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table Promove is violated');
+END;
+/
+
+CREATE SEQUENCE Farmacia_Farmacia_ID_SEQ START WITH 1 NOCACHE ORDER ;
+CREATE OR REPLACE TRIGGER Farmacia_Farmacia_ID_TRG BEFORE
+  INSERT ON Farmacia FOR EACH ROW WHEN (NEW.Farmacia_ID IS NULL) BEGIN :NEW.Farmacia_ID := Farmacia_Farmacia_ID_SEQ.NEXTVAL;
+END;
+/
+
+
+-- Relatório do Resumo do Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             8
+-- CREATE INDEX                             0
+-- ALTER TABLE                             17
+-- CREATE VIEW                              0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           6
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          1
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
