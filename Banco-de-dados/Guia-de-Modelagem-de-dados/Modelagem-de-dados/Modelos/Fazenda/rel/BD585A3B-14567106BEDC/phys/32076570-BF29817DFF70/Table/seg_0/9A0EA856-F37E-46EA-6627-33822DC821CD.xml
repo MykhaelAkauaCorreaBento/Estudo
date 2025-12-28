@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Insumo" directorySegmentName="seg_0" id="9A0EA856-F37E-46EA-6627-33822DC821CD">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Preço" id="41144A4B-5643-8C20-C473-E113C2B7591A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Codigo" id="44C59C38-1D30-FFB3-D2D6-7AFF2F15D331">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Qtde_Disponivel" id="529C0DE2-BA4B-21C7-B6DB-96695EB72400">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Tipo" id="AF29F03C-5827-3161-2E06-3621BC6D8A97">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nome" id="B144870D-9BEE-E866-83F2-1C5924AF0E25">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Insumo_PK" id="0F9413FF-F086-93FE-7F58-AC090653CFCF">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

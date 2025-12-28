@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="7E30250C-A2F7-CEB2-2872-8BF22947F952" name="Aplica" seqName="seg_0"/>
+   <object objectType="Table" objectID="B0470AFD-BFBD-81F0-FD77-C2299C62032A" name="Bovino" seqName="seg_0"/>
+   <object objectType="Table" objectID="9A0EA856-F37E-46EA-6627-33822DC821CD" name="Insumo" seqName="seg_0"/>
+   <object objectType="Table" objectID="F819E450-5454-7494-0D90-795165947B3D" name="Produção_Leite" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="563FC23A-3217-A979-A62C-28E5A117E3D0" name="FK_ASS_1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="FE2AEBF4-962E-85AC-919A-B73D4513E571" name="FK_ASS_2" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0979E56C-6F2C-F7C9-FD02-6C2F6ADAF78D" name="Produção_Leite_Bovino_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

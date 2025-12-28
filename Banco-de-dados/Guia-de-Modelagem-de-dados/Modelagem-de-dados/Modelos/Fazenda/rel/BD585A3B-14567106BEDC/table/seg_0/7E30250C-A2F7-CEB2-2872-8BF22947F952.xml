@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E30250C-A2F7-CEB2-2872-8BF22947F952" name="Aplica">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Bovino_Numero" id="0DC9A8B5-D0EA-CF56-9EDA-807C5DB05566">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<delegate>32B63FA0-F4D5-9320-4057-5D322CA3FEC9</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="563FC23A-3217-A979-A62C-28E5A117E3D0" referredColumn="32B63FA0-F4D5-9320-4057-5D322CA3FEC9"/>
+</associations>
+</Column>
+<Column name="Insumo_Codigo" id="27DBAC95-0A6D-1DBE-6BEB-18FBFCA148E3">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<delegate>44C59C38-1D30-FFB3-D2D6-7AFF2F15D331</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE2AEBF4-962E-85AC-919A-B73D4513E571" referredColumn="44C59C38-1D30-FFB3-D2D6-7AFF2F15D331"/>
+</associations>
+</Column>
+<Column name="Dt_Aplicação" id="F8F3D614-1D54-1B6C-7113-3CA7018B67F2">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>9498457C-6766-65F6-9833-FB20689722AA</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+<Column name="Dosagem" id="FA586A8C-B979-64A4-DE14-FAD539CFF874">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>95291EB8-7614-7A78-6527-B2C6D7DB0DA9</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="181454EF-42CB-C68B-0992-23ACA5038752" name="Aplica_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DC9A8B5-D0EA-CF56-9EDA-807C5DB05566"/>
+<colUsage columnID="27DBAC95-0A6D-1DBE-6BEB-18FBFCA148E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="882189E7-5245-DCB6-7E0A-EFE152CC5B46" name="FK_ASS_1">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>DFF35B59-072E-05B1-B45D-B7FFA5599DC5</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DC9A8B5-D0EA-CF56-9EDA-807C5DB05566"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4EDE808E-69EA-C0EA-6811-5B9298310974" name="FK_ASS_2">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>DFF35B59-072E-05B1-B45D-B7FFA5599DC5</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27DBAC95-0A6D-1DBE-6BEB-18FBFCA148E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

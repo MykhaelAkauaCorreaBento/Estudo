@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Bovino" directorySegmentName="seg_0" id="B0470AFD-BFBD-81F0-FD77-C2299C62032A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Dt_Nascimento" id="14ADE916-5AF4-AC72-5FAA-20EBC51FE0D6">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Numero" id="32B63FA0-F4D5-9320-4057-5D322CA3FEC9">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nome" id="D3CBBA3C-0BF9-04F0-812E-7A9944804230">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Bovino_PK" id="93E0F7B7-FC40-2736-5237-E62774C5F8DD">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

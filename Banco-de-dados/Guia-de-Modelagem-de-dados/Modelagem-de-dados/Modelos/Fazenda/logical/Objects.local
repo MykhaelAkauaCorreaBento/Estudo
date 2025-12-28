@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="4A366EEC-CB0A-8252-F37C-9AC6CDEFCCCB" name="Bovino" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A6AC6534-82D7-62E3-9600-75F7960E0C1B" name="Insumo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="05D5F0B6-FF09-4EB6-DC3E-92FD6E67551A" name="Produção Leite" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DFF35B59-072E-05B1-B45D-B7FFA5599DC5" name="Aplica" seqName="seg_0"/>
+   <object objectType="Relation" objectID="81D2A352-8AC5-BA7D-809C-2D80D3C537DA" name="Produção_Leite_Bovino_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

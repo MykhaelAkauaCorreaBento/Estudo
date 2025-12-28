@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Aplica" directorySegmentName="seg_0" id="DFF35B59-072E-05B1-B45D-B7FFA5599DC5">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 13:02:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4A366EEC-CB0A-8252-F37C-9AC6CDEFCCCB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A6AC6534-82D7-62E3-9600-75F7960E0C1B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Dt Aplicação" id="9498457C-6766-65F6-9833-FB20689722AA">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 13:04:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+<attribute name="Dosagem" id="95291EB8-7614-7A78-6527-B2C6D7DB0DA9">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 13:04:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</attribute>
+</attributes>
+</Relation>

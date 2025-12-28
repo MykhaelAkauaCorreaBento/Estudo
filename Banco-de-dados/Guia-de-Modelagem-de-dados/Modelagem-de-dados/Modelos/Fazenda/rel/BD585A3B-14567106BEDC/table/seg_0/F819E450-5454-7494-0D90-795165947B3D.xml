@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F819E450-5454-7494-0D90-795165947B3D" name="Produção_Leite">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:58:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Dt_Produção" id="01A03451-01A3-1E99-2BB1-81410A5B0180">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Volume" id="A0ABBFDE-FF44-F2F6-6783-62412DF10957">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bovino_Numero" id="8D5F54A2-99F2-0A6A-BB65-A717BAF36E4B">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<delegate>32B63FA0-F4D5-9320-4057-5D322CA3FEC9</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0979E56C-6F2C-F7C9-FD02-6C2F6ADAF78D" referredColumn="32B63FA0-F4D5-9320-4057-5D322CA3FEC9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE04D603-4F8B-DED1-CA4F-6599535387DC" name="Produção_Leite_Bovino_FK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>08136133-9109-C046-7251-28C4F8CDA961</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D5F54A2-99F2-0A6A-BB65-A717BAF36E4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

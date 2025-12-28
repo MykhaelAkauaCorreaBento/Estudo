@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A366EEC-CB0A-8252-F37C-9AC6CDEFCCCB" name="Bovino">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 12:56:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numero" id="F959A854-6887-3685-49D3-A2C92B5833CA">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 12:58:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Nome" id="5610867E-EDBD-0CB9-E624-B390CD733E9D">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 12:59:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Dt Nascimento" id="C0DDE006-3B61-CE01-AF35-8E38F7D843BC">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 12:59:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Prod_Diaria" id="C75A3D9F-A5A8-5EA1-F4E3-55FFB66C7E28">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 16:32:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="08136133-9109-C046-7251-28C4F8CDA961" name="Bovino_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 12:59:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F959A854-6887-3685-49D3-A2C92B5833CA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

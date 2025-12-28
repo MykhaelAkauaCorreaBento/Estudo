@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0979E56C-6F2C-F7C9-FD02-6C2F6ADAF78D" name="Produção_Leite_Bovino_FK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:59:37 UTC</createdTime>
+<generatorID>08136133-9109-C046-7251-28C4F8CDA961</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<containerWithKeyObject>F819E450-5454-7494-0D90-795165947B3D</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>AE04D603-4F8B-DED1-CA4F-6599535387DC</localFKIndex>
+<keyObject>93E0F7B7-FC40-2736-5237-E62774C5F8DD</keyObject>
+<mandatory>true</mandatory>
+<transferable>false</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

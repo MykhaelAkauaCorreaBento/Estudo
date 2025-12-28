@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="05D5F0B6-FF09-4EB6-DC3E-92FD6E67551A" name="Produção Leite">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:28 UTC</createdTime>
+<generatorID>F819E450-5454-7494-0D90-795165947B3D</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Dt Produção" id="138626EF-83CB-71AE-A3AA-D14A3BD1BF34">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:28 UTC</createdTime>
+<generatorID>01A03451-01A3-1E99-2BB1-81410A5B0180</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Volume" id="12DE272E-BB10-8030-1054-E23118F7BD62">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:28 UTC</createdTime>
+<generatorID>A0ABBFDE-FF44-F2F6-6783-62412DF10957</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+<Attribute name="Bovino Numero" id="143E9841-C714-3DC9-232B-9F614A02C92D">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:28 UTC</createdTime>
+<generatorID>81D2A352-8AC5-BA7D-809C-2D80D3C537DA</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<referedAttribute>F959A854-6887-3685-49D3-A2C92B5833CA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0470AFD-BFBD-81F0-FD77-C2299C62032A" name="Bovino">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>4A366EEC-CB0A-8252-F37C-9AC6CDEFCCCB</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Numero" id="32B63FA0-F4D5-9320-4057-5D322CA3FEC9">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>F959A854-6887-3685-49D3-A2C92B5833CA</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="D3CBBA3C-0BF9-04F0-812E-7A9944804230">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>5610867E-EDBD-0CB9-E624-B390CD733E9D</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dt_Nascimento" id="14ADE916-5AF4-AC72-5FAA-20EBC51FE0D6">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>C0DDE006-3B61-CE01-AF35-8E38F7D843BC</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93E0F7B7-FC40-2736-5237-E62774C5F8DD" name="Bovino_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>08136133-9109-C046-7251-28C4F8CDA961</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32B63FA0-F4D5-9320-4057-5D322CA3FEC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

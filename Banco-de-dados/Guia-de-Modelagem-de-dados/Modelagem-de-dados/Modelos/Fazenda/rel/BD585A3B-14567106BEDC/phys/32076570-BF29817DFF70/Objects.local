@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>
+   <object objectType="User" objectID="MDSYS" name="MDSYS" seqName="seg_0"/>
+   <object objectType="User" objectID="PUBLIC" name="PUBLIC" seqName="seg_0"/>
+   <object objectType="SType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0"/>
+   <object objectType="SType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0"/>
+   <object objectType="Table" objectID="7E30250C-A2F7-CEB2-2872-8BF22947F952" name="Aplica" seqName="seg_0"/>
+   <object objectType="Table" objectID="9A0EA856-F37E-46EA-6627-33822DC821CD" name="Insumo" seqName="seg_0"/>
+   <object objectType="Table" objectID="B0470AFD-BFBD-81F0-FD77-C2299C62032A" name="Bovino" seqName="seg_0"/>
+   <object objectType="Table" objectID="F819E450-5454-7494-0D90-795165947B3D" name="Produção_Leite" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>

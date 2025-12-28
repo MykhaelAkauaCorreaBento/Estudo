@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Produção_Leite_Bovino_FK" directorySegmentName="seg_0" id="81D2A352-8AC5-BA7D-809C-2D80D3C537DA">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:28 UTC</createdTime>
+<generatorID>0979E56C-6F2C-F7C9-FD02-6C2F6ADAF78D</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<engineerTo>
+<item key="BD585A3B-C135-56D9-2275-14567106BEDC" value="true"/>
+</engineerTo>
+<targetTransferable>false</targetTransferable>
+<sourcePk>08136133-9109-C046-7251-28C4F8CDA961</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4A366EEC-CB0A-8252-F37C-9AC6CDEFCCCB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>05D5F0B6-FF09-4EB6-DC3E-92FD6E67551A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9A0EA856-F37E-46EA-6627-33822DC821CD" name="Insumo">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>A6AC6534-82D7-62E3-9600-75F7960E0C1B</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Codigo" id="44C59C38-1D30-FFB3-D2D6-7AFF2F15D331">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>CE0AAA84-1D76-CB05-0C3D-7CEBA3F138A6</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="B144870D-9BEE-E866-83F2-1C5924AF0E25">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>DB220B4D-D343-2CEF-A6C4-856AEC7757A4</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Preço" id="41144A4B-5643-8C20-C473-E113C2B7591A">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>CD374805-DF99-1808-6477-ABB26782F378</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Qtde_Disponivel" id="529C0DE2-BA4B-21C7-B6DB-96695EB72400">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>34B72D71-1B93-D243-63FE-26F193BCA0A0</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="AF29F03C-5827-3161-2E06-3621BC6D8A97">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 21:01:14 UTC</createdTime>
+<comment>1 - medicamento; 2 -  nutriente; 3 - outro</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0F9413FF-F086-93FE-7F58-AC090653CFCF" name="Insumo_PK">
+<createdBy>Eduardo</createdBy>
+<createdTime>2015-06-10 20:57:34 UTC</createdTime>
+<generatorID>A0A6BC78-09A7-3556-FFCC-84E6E399C121</generatorID>
+<ownerDesignName>Fazenda</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44C59C38-1D30-FFB3-D2D6-7AFF2F15D331"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
