@@ -1,0 +1,113 @@
+Um bate papo sobre modelagem
+
+
+
+
+O que é um sistema?
+
+A representação digital de um processo físico.
+
+Todo processo representa um fluxo de dados.
+
+
+
+
+
+
+O que é Modelagem?
+
+Entender como o processo físico será traduzido para o digital.
+
+Entender como os dados vão trafegar no sistema e como eles vão ser salvos.
+
+
+
+
+Qual a importância da modelagem?
+
+O maior valor de um Dev ou de um profissional Tech está na sua
+capacidade de modelar, e não na codificação.
+
+
+
+
+
+Modelar é a sua missão
+
+O papel de um Profissional Tech é traduzir as necessidades do
+cliente para o digital.
+
+
+
+Vamos modelar um sistema para captura de Leads Passo a passo:
+
+
+
+Passo 1: Diálogo com o cliente. Essa fase se chama 'Levantamento de requisitos'.
+
+Passo 2: Criar rascunhos e uma versão do modelo no "papel".
+
+Passo 3: Validar com o cliente. Se não validar, prototipar o rascunho.
+
+Repetir o processo.
+
+
+Versão 1:
+
+Versão 1.0	
+					
+Entidade Leads
+	ID	Nome	     Email	                    Telefone (Whatsapp)		
+	1	Tone	     emailtone@teste.com	    (21) 99222-8899		
+	2	Fernando 	 emailfernando@teste.com	(21) 99111-0077		
+	3	Daiane	     emaildaiane@teste.com	    (21) 99122-0088		
+
+------------------------------------------------------------------------------				
+
+Versão 2.0	
+
+Entidade Leads
+
+	ID	Nome	    Email	                  Telefone (Whatsapp)	Data_cadastro	
+	1	Tone	    emailtone@teste.com	      (21) 99222-8899	     4/2/2025	
+	2	Fernando 	emailfernando@teste.com	  (21) 99111-0077	     4/3/2025	
+	3	Daiane	    emaildaiane@teste.com	  (21) 99122-0088	     4/3/2025	
+
+------------------------------------------------------------------------------				
+
+Versão 3.0		
+
+Entidade Leads
+	ID	Nome	    Email	                 Telefone (Whatsapp)	Data_cadastro	
+	1	Tone	    emailtone@teste.com	     (21) 99222-8899	     4/2/2025	
+	2	Fernando 	emailfernando@teste.com	 (21) 99111-0077	     4/3/2025	
+	3	Daiane	    emaildaiane@teste.com	 (21) 99122-0088	     4/3/2025	
+
+
+Entidade  Usuario_sistema	
+    ID	   Nome 	Login	Senha		
+	1	   Taisy	taisy	admin@123		
+	2	   Carlos	carlos	ceo@123		
+
+------------------------------------------------------------------------------				
+
+Versão 4.0	
+
+Entidade Leads
+	ID	Nome	      Email	                    Telefone (Whatsapp)	  Data_cadastro	  ativo
+	1	Tone	      emailtone@teste.com	    (21) 99222-8899	         4/2/2025	  SIM
+	2	Fernando 	  emailfernando@teste.com	(21) 99111-0077	         4/3/2025	  SIM
+	3	Daiane	      emaildaiane@teste.com	    (21) 99122-0088	         4/3/2025	  NÃO
+
+
+Entidade  Usuario_sistema
+
+	ID	Nome 	Login	Senha		
+	1	Taisy	taisy	admin@123		
+	2	Carlos	carlos	ceo@123		
+
+
+Entidade  Log_leads
+
+	ID 	ID_Lead	 ID_Usuario_Sistema	  Operação	Data	    Descrição
+	1	3	     1	                  1	        4/4/2025	Usuário não quer mais receber informativos
