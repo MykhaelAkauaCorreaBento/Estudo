@@ -1,0 +1,19 @@
+Windows + R
+
+
+services.msc
+
+
+
+Path:
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+
+
+No PowerShell ou CMD, digite:
+
+mysql --version
+
+
+mysql -u root -p
