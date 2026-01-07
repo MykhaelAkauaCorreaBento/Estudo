@@ -1,0 +1,11 @@
+Comados MySQL
+
+Ctrl + Espaço = para completar um elemento.
+
+
+Ctrl + Entrer = para executar
+
+Ctrl + Shift + Entrer = para executar mais de um select
+
+
+Verificar o Toggle automactc contexto help 
