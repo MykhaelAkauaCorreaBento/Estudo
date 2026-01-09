@@ -1,0 +1,1 @@
+SELECT * FROM dbfinanceiro.range_date_time;
