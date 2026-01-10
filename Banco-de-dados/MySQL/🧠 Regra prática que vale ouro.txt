@@ -1,0 +1,54 @@
+🧠 Regra prática que vale ouro
+
+Guarde isso:
+
+💰 dinheiro → DECIMAL
+
+📏 contagem → INT (o menor possível)
+
+🧾 texto variável → VARCHAR
+
+🕒 data com hora → DATETIME ou TIMESTAMP
+
+⚠️ nunca usar FLOAT para dinheiro
+
+Se você seguir isso, já evita 80% dos erros de modelagem.
+
+
+🧠 Regra prática (validada no mercado)
+
+💰 dinheiro → DECIMAL(p, s)
+
+Ex: DECIMAL(10,2)
+✔ precisão exata
+❌ nunca FLOAT ou DOUBLE
+
+📏 contagem → INT (o menor possível)
+
+TINYINT, SMALLINT, INT, BIGINT
+✔ economiza espaço
+✔ melhora índice
+
+🧾 texto variável → VARCHAR(n)
+✔ controle de tamanho
+✔ melhor performance que TEXT quando possível
+
+🕒 data com hora → DATETIME ou TIMESTAMP
+
+DATETIME: não depende de fuso (mais previsível)
+
+TIMESTAMP: depende de fuso e pode ser automático
+👉 escolha consciente, não no chute
+
+⚠️ nunca usar FLOAT para dinheiro
+Isso evita:
+
+erro de arredondamento
+
+bugs invisíveis
+
+dor de cabeça em produção
+
+📌 Em uma frase
+
+Se você aplicar essas regras sempre, já modela melhor que muita gente experiente.
