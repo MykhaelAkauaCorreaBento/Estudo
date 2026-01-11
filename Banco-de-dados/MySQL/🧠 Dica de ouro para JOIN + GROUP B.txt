@@ -1,0 +1,37 @@
+🧠 Dica de ouro para JOIN + GROUP BY
+
+Sempre pense:
+
+JOIN multiplica linhas
+
+GROUP BY condensa linhas
+
+
+🧠 JOIN × GROUP BY (modelo mental)
+🔁 JOIN multiplica linhas
+
+1 cliente × 5 pedidos → 5 linhas
+
+1 cliente × 5 pedidos × 3 itens → 15 linhas
+
+Isso é esperado, não é erro
+
+👉 JOIN expande o resultado
+
+🧮 GROUP BY condensa linhas
+
+Agrupa várias linhas em 1 linha por grupo
+
+Usa funções:
+
+COUNT
+
+SUM
+
+AVG
+
+MIN
+
+MAX
+
+👉 GROUP BY resume o resultado
