@@ -1,0 +1,52 @@
+-- Definição de Trigger
+
+-- Trigger é uma rotina armazenada no banco de dados que não é executada manualmente.
+-- Ela funciona como um gatilho, sendo acionada automaticamente quando ocorre um evento específico em uma tabela.
+
+-- Considerações sobre Triggers
+--  1 Trigger sempre está associada a uma tabela
+
+-- ✔ Não existe trigger sem vínculo.
+-- Ela sempre está ligada a uma tabela específica.
+
+-- 2 Não é executada manualmente
+
+-- ✔ Você não tem controle direto de execução.
+-- ✔ Não existe CALL trigger.
+-- A trigger é executada automaticamente quando o evento ocorre na tabela.
+
+-- 3 Eventos e momentos são limitados
+
+-- Os eventos que disparam uma trigger são:
+
+-- INSERT
+
+-- UPDATE
+
+-- DELETE
+
+-- E a trigger pode ser executada:
+
+-- BEFORE (antes do evento)
+
+-- AFTER (depois do evento)
+
+-- Por isso existem:
+
+-- BEFORE INSERT
+
+-- AFTER INSERT
+
+-- BEFORE UPDATE
+
+-- AFTER UPDATE
+
+-- BEFORE DELETE
+
+-- AFTER DELETE
+
+-- Definição curta
+
+-- Trigger é uma rotina armazenada no banco de dados que é executada automaticamente antes ou depois de eventos de INSERT, UPDATE ou DELETE em uma tabela.
+
+-- Para criar uma trigger, é obrigatório indicar a tabela à qual ela estará vinculada.
