@@ -1,0 +1,57 @@
+Testando a aplicação
+
+Para testar a aplicação criada, o primeiro passa é abri-la no VS Code.
+Para isso, vamos primeiro utilizar o terminal para acessar a pasta da aplicação.
+
+ C:\Users\Mykhael Bento\Desktop\Estudo\React-Framework\Projetos\react\minha-pagina
+
+ Com a pasta da aplicação aberta podemos executar comando code . para abrir a aplicação no VS Code.
+
+ exemplo:
+
+ code .
+
+ Ao executar o comando code ., a pasta da aplicação será aberta no VS Code.
+
+ Agora que abrimos a aplicação no VS Code, podemos executá-la através do próprio terminal do editor.
+
+
+ Com o terminal aberto, vamos digitar o comando npm run dev.
+
+ exemplo:
+
+ npm run dev
+
+
+ Ao executar o comando npm run dev, o Node.js
+
+ vai iniciar um servidor web local, gerando um endereço local de acesso (localhost:3000).
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.6:3000
+
+Para abrir a aplicação, basta clicar no endereço
+
+local gerado que ela será aberta no seu navegador.
+
+Você também pode abrir a aplicação digitando o endereço local diretamente na barra de pesquisa
+do navegador.
+
+Comandos:
+
+-- Comando usado para criar uma aplica ão React.js
+npx create-next-app
+
+-- Comando usado acessar a pasta do projeto criado
+cd minha-pagina
+
+-- Comando usado abrir a aplicação no VS Code
+code .
+
+-- Comando usado para iniciar um servidor web local
+npm run dev
+
+
+OBS.: Diferente da programação com HTML e CSS, ao criar uma aplicação React.js todos os arquivos iniciais e a estrutura básica para que o projeto inicie são criados automaticamente através do comando 'npx create-next-app'.
+

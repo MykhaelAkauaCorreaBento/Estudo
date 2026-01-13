@@ -1,0 +1,8 @@
+As principais características do React.js são:
+
+- Utiliza como base as linguagens HTML, CSS e JavaScript;
+- Utiliza o conceito de componentes para criar as páginas;
+- Cria Single Page Applications (SPAs).
+
+
+O React.js foi criado pelo Facebook e adotado pela comunidade de programadores front-end. Com isso, diversas empresas adotaram o React.js em seus projetos. Aprender a utilizá-lo te deixa mais próximo de entrar no mercado como programador front-end.

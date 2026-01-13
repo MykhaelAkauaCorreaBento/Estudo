@@ -1,0 +1,26 @@
+Conhecendo o Next.js
+
+
+Recentemente o React.js recebeu uma atualização em sua documentação oficial.
+
+Nessa atualização, é recomendado que você programe em React.js com o auxílio de um framework,
+O framework mais popular para React se chama Next.js.
+
+Em resumo, o Next.js:
+
+- Expande as funcionalidades nativas do React.js;
+
+- Torna o uso do React.js mais fácil para o programador.
+
+
+
+
+
+Abaixo, veja alguns exemplos de melhorias trazidos pelo Next.js:
+
+
+- Redução no tempo de criação de uma aplicação React.js;
+
+- Redução no tempo de carregamento inicial de uma página;
+
+- Permite que os mecanismos de busca encontrem páginas React.js com mais facilidade.
