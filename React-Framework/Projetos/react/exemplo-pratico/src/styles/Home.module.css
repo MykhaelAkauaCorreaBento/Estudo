@@ -139,34 +139,113 @@ a.secondary {
     --button-secondary-border: #1a1a1a;
   }
 }
- .container_principal{
-  width:100%;
-  padding: 60px 20px;
- }
 
- .container_texto{
+.container{
   width:100%;
-  padding: 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:60px;
-  align-items:center;
-  text-align:center;
-  border:1px solid gray;
-  border-radius: 8px;
- }
+}
 
- .container_texto h1{
-  color: white;
-  font-size:46px;
- }
+/*TOPO*/
+.container header{
+  display: flex;
+  align-items: center;
+  min-height: 5vh;
+  background-color: #20232a;
+  color: #61dafb;
+  padding: 30px 20px;
+}
 
- .container_texto p{
-  color:gray;
-  font-size:22px;
- }
+.container header p{
+  font-weight: bold;
+}
 
- .autor{
-  font-style: italic;
-  text-decoration: underline;
- }
+/*CONTEÚDO*/
+.conteudo_principal{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*SEÇÃO TÍTULO*/
+.secao_titulo{
+  min-height: 30vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: #282c34;
+}
+
+.secao_titulo h1{
+  font-size: 36px;
+  color: #61dafb;
+}
+
+.secao_titulo p{
+  font-size: 24px;
+  color: #fff;
+}
+
+.secao_titulo a{
+  text-decoration: none;
+  background-color: #61dafb;
+  color: #000;
+  font-weight: 600;
+  padding: 15px;
+}
+
+/*SEÇAO REQUISITOS*/
+.secao_requisitos{
+  min-height: 50vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.secao_requisitos p{
+  margin-bottom: 10px;
+}
+
+.container_cards{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.container_cards div{
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #282c34;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(145, 145, 145);
+}
+
+.container_cards div h3{
+  color: #edc854;
+}
+
+.container_cards div p{
+  color: #fff;
+}
+
+/*RODAPÉ*/
+.container footer{
+  color: #000;
+  min-height: 5vh;
+  padding: 30px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f3f6;
+}

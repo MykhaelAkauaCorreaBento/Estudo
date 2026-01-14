@@ -1,0 +1,9 @@
+Ao criar uma aplicação React.js teremos a seguinte estrutura de pastas e arquivos.
+
+Começando pela pasta public, no React.js ela é responsável por armazenar os arquivos de imagem(png, svg, ico).
+
+A pasta src é a principal da aplicação, responsável por conter todo o código da aplicação. Código JS e CSS.
+
+Dentre esses arquivos, o index.js na pasta pages é o principal arquivo da aplicação, pois contém o código que exibe os elementos em tela.
+
+Trabalhar com uma biblioteca requer que o desenvolvedor conheça a sua sintaxe. Contudo, após se familiarizar com o código, o processo de desenvolvimento se torna mais rápido e com menos repetições de código.

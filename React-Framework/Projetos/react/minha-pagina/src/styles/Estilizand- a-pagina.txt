@@ -1,0 +1,70 @@
+Estilizando a página
+
+Para estilizar a nossa página, vamos precisar adicionar o código CSS nos arquivos de
+estilo da pasta styles.
+Perceba que os arquivos de estilos possuem extensões diferentes (.css e .module.css).
+
+globals.css
+
+Home.module.css
+
+O uso de cada extensão definirá a responsabilidade de cada arquivo.
+
+No caso do arquivo globals.css, ele é responsável por conter estilos globais da aplicação.
+Já no caso do arquivo Home.modeule.css, ele é resposável por conter os estilos de index.js.
+
+
+Criando código de estilo.
+
+Para estilizar a nossa página, podemos começar definindo um estilo global para a aplicação. Para isso, no arquivo globals.css vamos aplicar um Reset CSS, uma cor de fundo e uma fonte padrão para a página.
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color:#282C34;
+  font-family: 'Arial', sans-serif;
+}
+
+
+Em seguida, vamos definir um estilo para os elementos da página.
+
+.container_principal{
+  width:100%;
+  padding: 60px 20px;
+ }
+
+ .container_texto{
+  width:100%;
+  padding: 20px;
+  display:flex;
+  gap:60px;
+  align-items:center;
+  text-align:center;
+  border:1px solid gray;
+  border-radius: 8px;
+ }
+
+ .container_texto h1{
+  color: white;
+  font-size:46px;
+ }
+
+ .container_texto p{
+  color:gray;
+  font-size:22px;
+ }
+
+ .autor{
+  font-style: italic;
+  text-decoration: underline;
+ }
+
+
+ No arquivo Home.module.css, vamos inserir o seguinte código CSS.
+
+ Repare que mesmo aplicando o código CSS no arquivo Home.module.css, a página
+  não tem a sua aparência alterada.
+
+
+  Isso ocorre por que as classes CSS ainda não foram aplicadas no código React.js.
