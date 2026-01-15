@@ -1,0 +1,26 @@
+O que são componentes
+
+Componentes são, basicamente, elementos visuais exibidos na tela para o usuário.
+
+Um botão da página pode ser um componente, um menu, formulários, campos de edição de dados,
+a própria página, em si, também é um componente, conhecido como componente pai. O componente
+pai é responsável por conter os componentes filhos da página.
+
+Uma página construída em React é um conjunto de componentes.
+
+Por que isso é útil?
+
+Todo elemento visual no React é um componente.
+
+O uso de componentes permite a divisão do código da aplicação em partes menores.
+Utilizar componentes facilita na manutenção da aplicação, já que dividimos um código
+inteiro em partes menores, além de conseguirmos reaproveitar nosso código.
+
+Componentização
+A proposta da programação em React é dividir o código em componentes menores.
+
+Com isso você consegue escrever códigos mais simples e organizados.
+
+
+Ao desenvolver aplicações React, é recomendável sempre criar componentes para deixar
+o código mais organizado.
