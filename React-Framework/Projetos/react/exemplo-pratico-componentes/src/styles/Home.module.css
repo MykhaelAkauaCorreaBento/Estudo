@@ -1,0 +1,12 @@
+.secao_cards{
+  width: 100%;
+  max-width: 1024px;
+  padding:100px 20px;
+  margin:0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}

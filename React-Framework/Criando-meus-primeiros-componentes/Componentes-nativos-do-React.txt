@@ -1,0 +1,118 @@
+Componentes nativos do React
+
+Além dos componentes que você já criou, na sua aplicação você poderá utilizar outros componentes que são nativos do React.
+
+Veja alguns deles:
+
+<Head>
+<Image>
+<Link>
+
+
+
+Componente <Head>
+
+
+Como visto anteriormente, o componente <Head> funciona igual à tag <head> do HTML.
+Assim como no HTML, o componente <Head> é responsável por conter as meta tags HTML.
+Para utilizar o componente <Head>Para utilizar o componente <Head>Para utilizar o 
+componente <Head> adotamos a seguinte sintaxe:
+
+import Head from "next/head";
+
+Repare que, ao criar uma aplicação React, o componente <Head> vem automaticamente 
+no componente Home.
+
+Geralmente, o componente <Head> é utilizado apenas uma vez, no componente principal da aplicação.
+
+
+
+
+Componente <Image>
+
+
+O React traz como alternativa ao uso da tag <img> o componente <lmage>.
+
+<Image src={Logo} alt="logomarca" />
+
+Assim como a tag <img>, o componente <lmage> nos permite inserir imagens em páginas web.
+
+
+Para utilizar o componente <lmage> adotamos a seguinte sintaxe:
+
+import Image from "next/image"
+
+
+O componente <lmage> também permite o uso dos atributos src e alt.
+
+No React, em vez de inserir o caminho da imagem diretamente no atributo src, primeiro devemos
+fazer a importação da imagem que será utilizada.
+
+import Logo from "../../public/logo.png";
+
+
+Repare que a imagem que será utilizada está armazenada na pasta public.
+
+
+Geralmente, as imagens utilizadas em um projeto React são salvas na pasta public.
+
+
+Ao importar a imagem da pasta public, basta inserir o nome da importação no src para exibi-la.
+
+
+Podemos também estilizar uma imagem ao inserir uma classe CSS no componente <lmage>.
+
+< Image className{estilos.img_logo} src={Logo} alt="logomarca"/>
+
+Com a classe CSS inserida, basta aplicar o estilo desejado que a imagem será estilizada.
+
+.img_logo{
+    width:250px;
+    background-color:aqua;
+}
+
+
+Agora veja a imagem aplicada com o componente <lmage> estilizada através da classe CSS.
+
+
+
+
+
+
+Componente <Link>
+
+
+Outro componente nativo do React é o <Link>.
+
+<Link href="https://www.youtube.com/">Clique aqui</Link>
+
+
+O <Link> é um componente utilizado para substituir a tag <a> do HTML,
+
+Assim como a tag <a>, o componente <Link>  nos permite criar links de navegação para páginas web.
+
+Para utilizar o componente <Link> adotamos a seguinte sintaxe:
+
+import Link from "next/link";
+
+O componente <Link> também permite o uso do atributo href para definir uma URL de navegação.
+
+<Link href="https://www.youtube.com/">
+
+Podemos também estilizar um link por meio de uma classe CSS aplicada no componente <Link>
+
+<Link className={estilos.link} href="https://www.youtube.com/">Youtube</Link>
+
+
+Como a classe CSS aplicada, basta adicionar o código CSS desejado que o link será estilizado.
+
+
+.link{
+    background-color:red;
+    padding:10px;
+    color:white;
+    text-decoration:nome;
+    font-weight:600;
+    font-size:16px;
+    border-radius:4px;
+}

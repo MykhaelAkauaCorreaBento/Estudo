@@ -1,0 +1,28 @@
+Já vimos que uma aplicação React é composta por componentes.
+
+Um componente pode ser um botão, uma seção da página, um formulário ou até uma página inteira.
+
+Criar nossa primeira aplicação em React significa, basicamente, criar nossos primeiros 
+componentes filho e depois importá-los para dentro do componente principal pai - o 
+componente inicial que representa toda a página (lembrando que neste exemplo temos apenas
+ uma página).
+
+Precisamos saber como criar, importar e exportar componentes para trabalhar com React.
+
+Ou seja, a mecânica fundamental de programação React funciona assim:
+
+1-Primeiro você codificará o seu componente (por exemplo, um botão na tela);
+2-Com o componente codificado, o segundo passo é exportar esse componente - o que significa
+ deixá-lo exposto para ser usado na sua página;
+3-Por último você vai importar o componente previamente exposto e dessa forma apresentá-lo
+na tela.
+Em termos mais técnicos:
+
+1-Criar o componente filho.
+2-Exportar o componente filho.
+3-Importar o componente filho dentro do componente pai (neste exemplo, na própria página).
+
+O React.js utiliza a linguagem JavaScript, portanto ele diferencia letras maiúsculas de 
+minúsculas. Por isso, para aplicar um componente é necessário que você escreva o nome do 
+componente com a letra inicial em maiúsculo, do contrário o componente não será aplicado
+corretamente.
