@@ -17,7 +17,7 @@ exemplo:
 
 
 
- Este comando precisa ser executado todas as vezes que voce for criar uma aplicação React.Js.
+ Este comando precisa ser executado todas as vezes que você for criar uma aplicação React.Js.
 
  npx create-next-app
 
@@ -26,7 +26,7 @@ exemplo:
 
  Após definir o nome da aplicação, o terminal dará algumas opções de configurações.
 
- Precisamos indicar 'yes' apenas para a criação da pasta 'src', pois ela conterá todos os aquivos iniciais padrão da aplicação.
+ Precisamos indicar 'yes' apenas para a criação da pasta 'src', pois ela conterá todos os arquivos iniciais padrão da aplicação.
 
  Por fim, ao concluir o processo de configuração, a aplicação será criada com sucesso.
 
