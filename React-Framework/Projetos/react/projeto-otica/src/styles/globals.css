@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: tahoma, sans-serif;
+}
+
+/*responsivo*/
+/* Tablet */
+@media (min-width: 768px) {
+    .header div {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Desktop pequeno */
+@media (min-width: 1024px) {
+    .header div {
+        gap: 30px;
+    }
+}
+
+/* FullHD */
+@media (min-width: 1920px) {
+    .header div {
+        gap: 40px;
+    }
+}
+
+/* 2K */
+@media (min-width: 2560px) {
+    .header div {
+        gap: 50px;
+    }
+}
+
+/* 4K */
+@media (min-width: 3840px) {
+    .header div {
+        gap: 60px;
+    }
+}
+
+/* Ultrawide */
+@media (min-width: 5120px) {
+    .header div {
+        gap: 80px;
+    }
+}

@@ -1,0 +1,92 @@
+.Capa {
+  position: relative;
+  height: 90vh;               /* altura da tela */
+  display: flex;
+  justify-content:center;  /* container textual à esquerda */
+  align-items: center;        /* centralizado verticalmente */
+  overflow: hidden;
+  flex-direction: column;
+  
+}
+
+/* Container textual */
+.textoCapa {
+  position: relative; 
+  width: 50%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;             /* espaçamento entre textos */
+  padding: 20px 40px;    /* padding lateral */
+  color: #fff;
+  z-index: 1;
+  text-align: right;      /* texto alinhado à direita */
+}
+
+/* Textos */
+.textoCapa p {
+  font-size: 36px;
+  margin: 0;
+  color: rgb(196, 196, 196);
+  
+}
+
+.textoCapa h1 {
+  font-family: tahoma, sans-serif;
+  font-size: 60px;
+  margin: 0;
+  line-height: 70px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  
+  
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .textoCapa {
+    width: 60%;
+    max-width: 400px;
+  }
+  .textoCapa h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .textoCapa p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textoCapa {
+    width: 70%;
+    max-width: 350px;
+    padding: 15px 20px;
+  }
+  .textoCapa h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .textoCapa p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Capa {
+    justify-content: center; /* centraliza o texto no mobile */
+  }
+  .textoCapa {
+    width: 90%;
+    padding: 10px;
+    text-align: center;     /* texto centralizado no mobile */
+  }
+  .textoCapa h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .textoCapa p {
+    font-size: 18px;
+  }
+}
