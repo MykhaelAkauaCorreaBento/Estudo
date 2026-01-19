@@ -1,0 +1,82 @@
+.sobre {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e0e0e0;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+/* Grid 2x2 alternado */
+.sobre_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(2, 300px);  /* 2 linhas, altura fixa */
+    gap: 0; /* caixas justas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre_card {
+    background: #fff;  /* fundo branco da caixa */
+    border: 1px solid #ccc; /* linha fina para separação */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container para imagem */
+.card_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Container para texto */
+.card_text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_text h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card_text p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .sobre_grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+        grid-template-rows: auto;   /* altura automática para cada caixa */
+    }
+
+    .sobre_card {
+        height: 300px; /* mantém altura fixa */
+    }
+}

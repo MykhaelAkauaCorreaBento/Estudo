@@ -1,0 +1,92 @@
+/* Seção produtos */
+.secaoProdutos {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+/* Centralizador */
+.limitarSecao {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container dos produtos */
+.containerProdutos {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Caixa do produto */
+.boxProduto {
+  background-color: #f6f6f6;
+  width: calc(50% - 15px); /* 2 por linha */
+  margin-bottom: 30px;
+  padding: 25px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título do produto */
+.boxProduto h4 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Imagem */
+.boxProduto img {
+  margin: 30px 0;
+}
+
+/* Preço */
+.boxProduto p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Lista */
+.secaoProdutos ul {
+  padding: 0;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secaoProdutos li {
+  text-align: left;
+  margin: 6px 0;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+  .secaoProdutos {
+    padding: 60px 20px;
+  }
+
+  .boxProduto h4 {
+    font-size: 22px;
+  }
+
+  .boxProduto p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .boxProduto {
+    width: 100%; /* 1 por linha */
+  }
+
+  .secaoProdutos ul {
+    align-items: flex-start;
+  }
+}

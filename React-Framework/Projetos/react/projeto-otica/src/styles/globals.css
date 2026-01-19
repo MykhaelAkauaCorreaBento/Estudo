@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: tahoma, sans-serif;
 }
+/*SCROLL SUAVE*/
+html {
+  scroll-behavior: smooth;
+}
+
 
 /*responsivo*/
 /* Tablet */

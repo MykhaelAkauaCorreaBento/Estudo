@@ -1,0 +1,27 @@
+.container_rodape {
+  width: 100%;
+  padding: 20px 10px;        /* menor altura */
+  background-color: black; /* mesma cor do contato */
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Texto do rodapé */
+.container_rodape p {
+  font-size: 12px;   /* menor e mais discreto */
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;      /* leve suavizada, igual à imagem */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .container_rodape p {
+    font-size: 13px;
+  }
+}

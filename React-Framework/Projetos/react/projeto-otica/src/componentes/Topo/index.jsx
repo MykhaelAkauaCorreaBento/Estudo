@@ -14,9 +14,9 @@ export default function Topo() {
         />
 
         <nav className={estilos.menu}>
-          <Link href="/produtos">PRODUTOS</Link>
-          <Link href="/sobre">SOBRE</Link>
-          <Link href="/contato">CONTATO</Link>
+          <a href="#produtos">PRODUTOS</a>
+          <a href="#sobre">SOBRE</a>
+          <a href="#contato">CONTATO</a>
         </nav>
       </div>
     </header>
