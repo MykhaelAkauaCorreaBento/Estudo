@@ -1,0 +1,16 @@
+SPA
+Ao reutilizar o componente Topo em outra página da aplicação, nossa página assume o
+ comportamento de uma SPA.
+
+ Ambas as páginas do nosso exemplo possuem o componente Topo inserido nelas.
+
+ exemplo:
+ foto28.jpeg
+ 
+ Note que ao navegar entre as páginas, o site adota o comportamente de uma SPA.
+ Em uma SPA, durante a navegação, a estrutura base permanece a mesma e
+ apenas uma parte da página é atualizada.
+ No nosso exemplo, sempre que ocorrer a navegação, o Topo permanecerá o mesmo
+ enquanto o restante da página será atualizado.
+
+ No React o comportamento SPA é gerenciado automaticamente. Ou seja, por padrão os sites construídos com React são SPAs.

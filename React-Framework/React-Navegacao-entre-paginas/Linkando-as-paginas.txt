@@ -1,0 +1,62 @@
+Linkando as páginas
+
+
+
+Nessa primeira parte vamos implementar a navegação da página inicial para a nova página criada.
+Agora vamos implementar a navegação entre as páginas do exemplo.
+
+Para isso vamos adicionar links nas páginas.
+exemplo:
+foto18.jpeg
+
+Começando pela página inicial, vamos primeiro importar e adicionar o componente <Link>.
+
+
+exemplo:
+foto19.jpeg
+
+Veja que no <Link> temos o atributo href. Nele podemos inserir o caminho de novapagina.
+Esse caminho também é conhecido como 'rota de navegação'.
+
+exemplo:
+foto20.jpeg
+
+No React, sempre que uma página é criada, o App Router cria automaticamente uma 'rota' para a ela.
+
+exemplo:
+foto21.jpeg
+
+
+Nesse caso, a rota criada para novapagina será: /novapagin.
+
+exemplo:
+foto22.jpeg
+
+Note que a rota terá o mesmo nome da pasta da página.
+
+
+Com isso, ao clicar no link da página inicial, o usuário será direcionado para a novapagina,
+completando assim a primeira parte da navegação.
+
+exemplo:
+foto23.jpeg
+
+
+Agora vamos concluir a segunda parte da navegação entre as páginas do exemplo.
+Para isso, vamos importar e adicionar um componente <Link> na novapagina.
+
+exemplo:
+foto24.jpeg
+
+No href do <Link> vamos inserir a rota da página inicial. Nesse caso, a rota definida App Router
+para a página inicial é: '/'.
+
+exemplo:
+foto25.jpeg
+
+Repare que, neste caso, a rota definida não possui o mesmo nome da pasta. Geralmente,
+a página inicial recebe por padrão a rota '/'.
+
+exemplo:
+foto26.jpeg
+foto27.jpeg

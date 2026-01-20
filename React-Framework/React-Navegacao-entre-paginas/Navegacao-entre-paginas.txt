@@ -1,0 +1,122 @@
+Navegação entre páginas
+
+Criando uma página
+
+Nesta aula veremos como criar sua primeira aplicação React com mais de uma página.
+
+Para criar uma nova aplicação, podemos realizar o seguinte processo:
+
+Primeiro, abrimos o terminal e acessamos a pasta que vamos salvar a aplicação.
+
+exemplo:
+react (Obs.: pasta aberta no terminal)
+C:\Users\Mykhael Bento\Desktop\Estudo\React-Framework\Projetos\react>
+
+
+
+A seguir, com a pasta aberta executamos o comando npx create-next-app
+
+
+exemplo:
+npx create-next-app(Obs.:comando usado para criar uma aplicação React)
+C:\Users\Mykhael Bento\Desktop\Estudo\React-Framework\Projetos\react> npx create-next-app
+
+
+
+Depois, definimos um nome para a aplicação.
+
+exemplo::
+coloquei o nome de "navegacao-entre-paginas"
+C:\Users\Mykhael Bento\Desktop\Estudo\React-Framework\Projetos\react> npx create-next-app
+√ What is your project named? ... navegacao-entre-paginas
+
+
+Por fim, configuramos a aplicação conforme o recomendado.
+
+exemplo:
+Vou colocar uma foto para ser mais didático.
+foto3.jpeg
+
+O App Router é o sistema de rotas utilizado no React para implementar a navegação entre
+páginas do mesmo site em uma aplicação.
+Podemos dizer que o App Router é o responsável por criar as rotas de cada página da aplicação.
+
+exemplo:
+Vou colocar uma foto para ser mais didático.
+foto4.jpeg
+foto5.jpeg
+foto6.jpeg
+
+Ao criar uma aplicação React que utiliza o App Router teremosque utiliza o App Router teremos
+uma nova estrutura de pastas e arquivos.
+
+
+Comparado a uma aplicação que não utiliza o App Router, a nova estrutura criada apresenta
+algumas diferenças.
+
+exemplo:
+foto7.jpeg
+
+Com a App Router, a pasta app substitui a pasta pages.
+exemplo:
+foto8.jpeg
+
+
+A pasta app será responsável por armazenar os arquivos padrão e também todas as
+páginas da aplicação.
+exemplo:
+foto9.jpeg
+
+
+A pasta styles não existe mais e com isso os arquivos de estilos são armazenados diretamente
+na pasta app.
+
+exemplo:
+foto10.jpeg
+
+
+Outra mudança é a substituição do arquivo index.js pelo arquivo page.js, que agora será
+o novo arquivo principal da aplicação.
+
+exemplo: 
+foto11.jpg
+
+
+Devido à mudança de arquivo index.js para page.js, o arquivo Home.module.css agora
+será page.module.css.
+
+exemplo: 
+foto12.jpg
+
+
+Além de ser o novo arquivo principal, o page.js também será o componente Home e a página principal da aplicação.
+
+
+exemplo: 
+foto13.jpg
+
+
+A pasta responsável por armazenar os componentes ainda poderá ser criada dentro de src.
+
+exemplo: 
+foto14.jpg
+
+
+(_______Editando o código da página inicial_______)
+O arquivo page.js (componente Home) é, geralmente, a página principal da aplicação.
+
+Com o uso do App Router, o arquivo page.js é, geralmente, a página inicial da aplicação.
+exemplo: 
+foto15.jpg
+
+
+Para editar a página inicial podemos começar deletando os trechos de código indicados.
+
+exemplo: 
+foto16.jpg
+
+
+Não se esqueça de deletar também o código padrão dos arquivos de estilo da aplicação.
+
+exemplo: 
+foto17.jpg

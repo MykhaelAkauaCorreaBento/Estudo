@@ -1,0 +1,90 @@
+Navegação de páginas no React
+
+No React, a navegação possui algumas diferenças em comparação a projetos HTML/CSS.
+Vamos começar com a navegação para
+
+
+
+
+(_____________Páginas externas_____________)
+
+import Link from "next/link";;
+
+export default function Link(){
+    return(
+        <div>
+            <Link href="https://twitter.com/mykhael" target="_blank"><img src="./assets/twitter.png"
+            alt="icone"/>
+            <p>Me siga no Twitter</p>
+            </Link>
+        </div>
+    );
+}
+
+Código React
+
+No React, ao invés da tag <a>, usamos o componente <Link>.
+
+
+
+
+
+Veja agora a navegação entre seções da mesma página.
+
+
+(______________navegação entre seções da mesma página______________)
+
+import Link from "next/link";;
+
+export default function Link(){
+    return(
+        <div>
+            ...
+            <Link href="#horarios">HORÁRIOS</Link>
+            ...
+        </div>
+    );
+}
+
+Código React
+
+
+
+Por último temos a navegação em páginas do mesmo site.
+No React, esse tipo de navegação tem um comportamento diferente, chamado SPA.
+A navegação entre páginas, dentro do mesmo site, é diferente no React devido à adoção do
+conceito de SPA. Vamos entender melhor o que é uma SPA.
+
+SPA (Single Page Application) é um tipo de site. Em sites SPA, quando o usuário navega de uma
+página para outra, o conteúdo da página não é recarregado completamente.
+
+Por exemplo, em sites HTML/CSS, sempre que precisamos navegar para uma página do site,
+todo o conteúdo do navegador é recarregado. Apos o clique no link o navegador será recarregado.
+
+Veja que, ao clicar no link, a página inteira ficará em branco enquanto o navegador carrega
+completamente o conteúdo da nova página.
+
+Somente após o navegador carregar o conteúdo da nova página por completo, ele será exibido na
+tela. Esse comportamento acontece em sites HTML e CSS, POIS esses não são SPAs.
+
+Esse comportamento não acontecerá quando o site for uma SPA. Um exemplo clássico de 
+SPA é o site Gmail. Observe que o site Gmail possui duas seções:
+uma estrutura e uma área de conteúdo.
+exemplo:
+
+foto1.jpeg
+
+Como o Gmail é uma SPA, quando o usuário navegar de uma página para outra, apenas a parte
+central, que contém o e-mail, será recarregada.
+
+A estrutura (topo e menus laterais) não será recarregada, permanecendo visível na tela, e
+apenas a parte do meio receberá o novo conteúdo.
+
+exemplo:
+ foto2
+
+A vantagem de sites SPA está na experiência de uso. Esses sites carregam mais rápido
+e proporcionam uma navegação mais 'fluida' para o usuário final.
+
+No React, por padrão, todos os sites são SPA, o que significa que a navegação entre páginas
+nesses sites seguirá esse conceito.
