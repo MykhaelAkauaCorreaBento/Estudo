@@ -1,0 +1,88 @@
+Implementar o App Router manualmente
+
+Como exemplo, vamos criar uma aplicação React sem o App Router.
+
+exemplo:
+exemplo1.jpeg
+
+Repare que, sem o App Router, a nossa aplicação terá a seguinte
+estrutura de pastas e arquivos, que foi visto em projetos anteriores,
+
+exemplo:
+exemplo2.jpeg
+
+Nesse caso, podemos implementar o App Router manualmente. 
+Para isso, vamos seguir alguns passos.
+
+Primeiro devemos abrir o arquivo next.config.mjs.
+
+exemplo:
+exemplo3.jpeg
+
+Repare que nele temos uma constante de nome nextConfig.
+
+Na constante nextConfig, adicione o seguinte código: appRouter: true.
+
+exemplo:
+exemplo4.jpeg
+
+Esse código indica para o React que vamos utilizar o App Router na aplicação.
+
+
+Em seguida, devemos criar na pasta src uma pasta de nome app.
+
+exemplo:
+exemplo5.jpeg
+
+Na pasta app crie os seguintes arquivos: page.js, layout.js, globals.css e e page.module.css.
+
+exemplo:
+exemplo6.jpeg
+
+O arquivo page.js será a página inicial da aplicação.
+
+exemplo:
+exemplo7.jpeg
+
+Já o arquivo layout.js representa o componente RootLayout.
+
+exemplo:
+exemplo8.jpeg
+
+Agora, com os arquivos criados na pasta app, os arquivos da pasta pages não serão utilizados.
+
+exemplo:
+exemplo9.jpeg
+
+Os arquivos da pasta styles também não serão necessários, por isso, fique a vontade para deletar a pasta com os arquivos.
+
+exemplo:
+exemplo10.jpeg
+
+Com isso, já podemos implementar a navegação entre páginas na aplicação.
+Para isso, vamos criar uma nova página na pasta app.
+
+exemplo:
+exemplo11.jpeg
+
+Agora, vamos inserir links de navegação em ambas as páginas da aplicação.
+
+exemplo:
+exemplo12.jpeg
+
+Ao testar a aplicação, podemos observar que o App Router já está funcionando.
+
+exemplo:
+exemplo13.jpeg
+
+
+
+Código:
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  appRouter: true
+};
+
+export default nextConfig;

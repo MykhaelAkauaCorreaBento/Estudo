@@ -1,0 +1,27 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: tahoma, sans-serif;
+}
+
+.link_retorno{
+  padding: 20px;
+  background-color: red;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+
+.link_guia{
+  padding: 20px;
+  background-color:chocolate; 
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+}
