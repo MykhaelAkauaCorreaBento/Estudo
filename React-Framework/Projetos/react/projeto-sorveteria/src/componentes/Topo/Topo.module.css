@@ -1,0 +1,37 @@
+/*Header ocupa 100% da tela*/
+.header{
+  width: 100%;
+  border-bottom: 1px solid #F9DB79;
+}
+
+/*Container centralizado*/
+.container{
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: #F9DB79;
+}
+
+/*Menu à direita*/
+.menu{
+  display: flex;
+  gap: 20px;
+ 
+}
+
+/*Links do menu*/
+.menu :global(a){
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/*Passar o mause por cima*/
+.menu :global(a):hover{
+  border-bottom: 2px solid #000;
+  color: black;
+}
+
