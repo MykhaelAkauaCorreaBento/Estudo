@@ -1,37 +1,90 @@
-/*Header ocupa 100% da tela*/
-.header{
+/* Container externo – ocupa 100% */
+.header {
   width: 100%;
+  background-color: #F9DB79;
   border-bottom: 1px solid #F9DB79;
 }
 
-/*Container centralizado*/
-.container{
-  margin: auto;
+/* Container interno – centralizado */
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 20px;
+
   display: flex;
   align-items: center;
-  justify-content:space-between;
-  background-color: #F9DB79;
+  justify-content: space-between;
 }
 
-/*Menu à direita*/
-.menu{
+/* Menu */
+.menu {
   display: flex;
   gap: 20px;
- 
 }
 
-/*Links do menu*/
-.menu :global(a){
+/* Links */
+.menu :global(a) {
   font-size: 16px;
   text-decoration: none;
   color: black;
   font-weight: 500;
 }
 
-/*Passar o mause por cima*/
-.menu :global(a):hover{
+/* Hover */
+.menu :global(a):hover {
   border-bottom: 2px solid #000;
-  color: black;
 }
 
+/* ===================== */
+/* RESPONSIVO – IGUAL AO RODAPÉ */
+/* ===================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .menu {
+    gap: 25px;
+  }
+}
+
+/* Desktop pequeno */
+@media (min-width: 1024px) {
+  .menu {
+    gap: 30px;
+  }
+}
+
+/* FullHD */
+@media (min-width: 1920px) {
+  .menu {
+    gap: 40px;
+  }
+}
+
+/* 2K */
+@media (min-width: 2560px) {
+  .menu {
+    gap: 50px;
+  }
+}
+
+/* 4K */
+@media (min-width: 3840px) {
+  .menu {
+    gap: 60px;
+  }
+}
