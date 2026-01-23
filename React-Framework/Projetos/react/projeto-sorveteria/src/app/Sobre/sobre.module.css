@@ -1,0 +1,170 @@
+/* ---------- Geral ---------- */
+.container_principal{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Seção banner ---------- */
+.secao_banner_gelateria{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../public/banner-sobre.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo_banner_gelateria{
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.titulo_banner_gelateria h1{
+    color:white;
+    font-size: 100px;
+    text-shadow: 3px 5px 2px #474747;
+}
+
+/* ---------- Seção Sobre Nós ---------- */
+
+.secao_sobre_nos{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    
+
+}
+
+.secao_sobre_nos div{
+    width: 100%;
+    max-width: 1024px;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.secao_sobre_nos h2{
+    font-size: 32px;
+    line-height: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.secao_sobre_nos h3{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+.secao_sobre_nos p{
+    text-align: center;
+    line-height: 26px;
+}
+
+
+.secao_imagens{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    
+
+}
+
+.secao_imagens div{
+    position: relative;
+    width: 50%;
+    height: 40vh;
+}
+
+/*Responsividade*/
+
+
+/*CELULAR (até 768px)*/
+
+@media (max-width: 768px) {
+
+    .titulo_banner_gelateria h1 {
+        font-size: 48px;
+    }
+
+    .secao_banner_gelateria {
+        min-height: 70vh;
+        padding: 20px;
+    }
+
+    .secao_sobre_nos div {
+        padding: 60px 20px;
+    }
+
+    .secao_sobre_nos h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .secao_sobre_nos h3 {
+        font-size: 18px;
+    }
+
+    .secao_imagens {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .secao_imagens div {
+        width: 100%;
+        height: 30vh;
+    }
+}
+
+
+
+/*TABLET (769px até 1024px)*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .titulo_banner_gelateria h1 {
+        font-size: 72px;
+    }
+
+    .secao_banner_gelateria {
+        min-height: 80vh;
+    }
+
+    .secao_sobre_nos div {
+        padding: 80px 30px;
+    }
+
+    .secao_imagens div {
+        width: 50%;
+        height: 35vh;
+    }
+}
+
+
+
+/*DESKTOP (acima de 1024px)*/
+
+@media (min-width: 1025px) {
+
+    .titulo_banner_gelateria h1 {
+        font-size: 100px;
+    }
+
+    .secao_imagens div {
+        width: 50%;
+        height: 40vh;
+    }
+}

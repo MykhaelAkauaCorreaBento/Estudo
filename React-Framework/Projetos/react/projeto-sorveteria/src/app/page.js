@@ -3,24 +3,23 @@ import estilos from "./page.module.css";
 
 export default function Home() {
   return (
-    <div>
-      <main className={estilos.main}>
-        <header>
-          <h1>SORVETE ARTESANAL</h1>
-          <Image src="/banner-home.png" alt="Banner"
-           width={200}
-           height={200}/>
-        </header>
+    <main>
+      <div>
+        <section className={estilos.secao_banner}>
+          <div className={estilos.texto_banner}>
+          <h1>GELATO ARTESANAL</h1>
+          </div>
+        </section>
         
-        <section>
+        <section className={estilos.secao_nossos_sabores}>
 
-            <div>
-              <Image src="/banner-sabores.jpg" alt="Sabores"
-               width={200}
-               height={200}/>
+            <div className={estilos.img_card}>
+              <Image  src="/banner-sabores.jpg" alt="Sabores"
+               fill
+               />
             </div>
 
-            <div>
+            <div className={estilos.container_texto}>
               <h2>NOSSOS SABORES</h2>
                 <h3>Novos e deliciosos!</h3>
                 <p>
@@ -31,48 +30,51 @@ export default function Home() {
                 ao mesmo tempo!
                 </p>
             </div>
-
-            <div>
+        </section>
+        
+        <section className={estilos.secao_nossos_eventos}>
+            <div className={estilos.container_texto}>
               <h2>NOSSOS EVENTOS</h2>
-              <h3>Delicias com sorvete!</h3>
+              <h3>Delicias com gelato!</h3>
               <p>
-              Mais do que uma sorveteria, é como se fosse a continuação da tua casa.
+              Mais do que uma gelateria, é como se fosse a continuação da tua casa.
               Aqui o pessoal é recebido de braços abertos, sempre prontos pra atender
-              bem e preparar eventos caprichados, com os melhores sorvetes que tu vai
+              bem e preparar eventos caprichados, com os melhores gelatos que tu vai
               provar na vida. Vem nos conhecer, puxar uma cadeira e passar um tempo
               bom aqui com a gente!
              </p>              
             </div>
 
-            <div>
+            <div className={estilos.img_card}>
               <Image src="/eventos-image.jpg" alt="Evento"
-              width={200}
-              height={200}/>
+              fill/>
             </div>
-              
-            <div>
+        </section>
+
+        <section className={estilos.secao_sobre_nos}>
+            <div className={estilos.img_card}>
               <Image src="/sobre-image.jpg" alt="Sobre Imagem"
-              width={200}
-              height={200}/>
+              fill/>
             </div>
               
-            <div>
+            <div className={estilos.container_texto}>
               <h2>SOBRE NÓS</h2>
               <h3>Alegria em cada casquinha!</h3>
               <p>
-                Vem tomar o melhor sorvete da região com a gente!
+                Vem tomar o melhor gelato da região com a gente!
                 Já são anos de estrada, trabalhando com capricho e dedicação
                 pra entregar sempre o que tem de melhor pra quem chega.
-                Aqui o atendimento é de primeira e o sorvete é daqueles 
+                Aqui o atendimento é de primeira e o gelato é daqueles 
                 que dão vontade de voltar.
                 Não fica de fora, tchê — chega mais, faz uma visita e 
-                aproveita o melhor sorvete da cidade!
+                aproveita o melhor gelato da cidade!
               </p>
              </div>
+         </section>
 
-        </section>
         
-      </main>
-    </div>
+        
+      </div>
+    </main>
   );
 }

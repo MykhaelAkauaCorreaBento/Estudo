@@ -11,7 +11,6 @@
   max-width: 1024px;
   margin: 0 auto;
   padding: 20px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +36,7 @@
 }
 
 /* ===================== */
-/* RESPONSIVO – IGUAL AO RODAPÉ */
+/* RESPONSIVO*/
 /* ===================== */
 
 /* Mobile */

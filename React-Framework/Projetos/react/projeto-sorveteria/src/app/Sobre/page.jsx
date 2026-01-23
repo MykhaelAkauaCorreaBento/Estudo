@@ -3,14 +3,15 @@ import estilos from "./sobre.module.css";
 
 export default function Sobre(){
     return(
-        <div>
-            <header>
+        <main className={estilos.container_principal}>
+            <section className={estilos.secao_banner_gelateria}>
+                <div className={estilos.titulo_banner_gelateria}>
                 <h1>A GELATERIA</h1>
-                <Image src="/banner-sobre.png" alt="Banner Sobre"
-                width={200}
-                height={200}/>
-            </header>
-            <section>
+                </div>
+            </section>
+
+            <section className={estilos.secao_sobre_nos}>
+                <div>
                 <h2>Sobre Nós</h2>
                 <h3>Somos apaixonados por gelato e carregamos com orgulho a descendência italiana.</h3>
                 
@@ -24,18 +25,19 @@ export default function Sobre(){
                     Aqui, tu pode aproveitar nossos gelatos na loja, levar pra casa e dividir com a família ou contar com a gente pra atender estabelecimentos e eventos como aniversários, formaturas e eventos empresariais.
                     Pra contratar nossos serviços, é só entrar em contato. A gente garante atendimento de primeira e sorvetes artesanais feitos com história, tradição e muito sabor — do jeito que o gaúcho gosta.
                 </p>
+                </div>
             </section>
 
-            <div>
-                <Image src="/sobre-image.jpg" alt="Sobre Image"
-                width={200}
-                height={200}/>
+            <section className={estilos.secao_imagens}>
+                <div>
+                    <Image src="/sobre-image.jpg" alt="Sobre Image" fill/>
+                </div>
+                
+                <div>
+                    <Image src="/sorveteria.jpg" alt="Sorveteria" fill/>
+                </div>
+            </section>
 
-                <Image src="/sorveteria.jpg" alt="Sorveteria"
-                width={200}
-                height={200}/>
-            </div>
-
-        </div>
+        </main>
     );
 }

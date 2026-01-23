@@ -1,0 +1,104 @@
+/* ---------- GERAL ---------- */
+
+.container_principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- BANNER ---------- */
+
+.secao_banner_sabores{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../public/banner-sabores.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo_banner_sabores{
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.titulo_banner_sabores h1{
+    color: #fff;
+    font-size: 100px;
+    text-shadow: 3px 5px 2px #474747;
+}
+
+/* ---------- SABORES ---------- */
+
+.secao_sabores{
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.secao_sabores h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Grid */
+.container_gelatos{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card */
+.card_gelato{
+    flex: 1 1 300px;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 15px 2px #d9dde1;
+}
+
+/* Imagem */
+.container_imagem{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.container_imagem img{
+    object-fit: contain;
+}
+
+/* Texto */
+.card_gelato h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card_gelato p{
+    font-size: 14px;
+    color: #555;
+    line-height: 22px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 768px){
+    .titulo_banner_sabores h1{
+        font-size: 60px;
+    }
+}
