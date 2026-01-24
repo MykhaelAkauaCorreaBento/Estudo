@@ -1,0 +1,232 @@
+State Hook e o Primeiro exemplo
+
+Nesta aula vamos conhecer uma ferramenta nativa do React chamada State Hook.
+
+Veremos como usar o State Hook em conjunto com o onClick para criar novos exemplos de eventos
+de clique.
+
+Na aula anterior vimos um exemplo de uma aplicação que exibe um alerta na tela, após o 
+clique no botão.
+
+Veja o código do exemplo:
+
+'use client';
+
+export default function Home(){
+        function exibirAlerta(){
+            alert('Olá, mundo!');
+        }
+    return(
+        <main>
+            <button onClink={exibirAlerta}>Clique aqui</button>
+        </main>
+    );
+}
+
+Para o botão executar a ação de exibir o alerta usamos o evento onClick.
+
+Além do alerta, outras ações como abrir uma janela, exibir um menu e mudar a cor de um elemento
+podem ser executadas com um evento de clique.
+
+
+Nesses casos, além do onClick, precisamos de outra ferramenta conhecida como State Hook.
+
+Código State Hook:
+import {useState} from 'react';
+const [state, setState] = useState(<valor>);
+
+
+O State Hook é uma ferramenta nativa do React.
+
+
+O que é o State Hook?
+O State Hook é uma ferramenta nativa do React. 
+
+
+Vamos ver um exemplo.
+
+Imagine uma aplicação que precise alterar o texto de um elemento quando um botão for clicado.
+
+exemplo:
+exemplo2.jpeg
+
+Veja o código deste exemplo:
+
+'use client';
+
+exprot default function Home(){
+    let mensagem = 'O React é uma biblioteca do JacaScript.';
+
+    function alterarMensagem(){
+        mensagem = 'O React é um framework utilizado para aplicações web';
+    }
+    return(
+        <div>
+        <h1>{mensagem}</h1>
+        <button onClink={alterarMensagem}>Mudar mensagem</button>
+        </div>
+    );
+}
+
+Observe que neste código definimos uma variável 'mensagem' com um valor inicial exibido na tela.
+
+exemplo:
+exemplo3.jpeg
+
+
+Para atualizar o valor da variável 'mensagem',usamos o evento onClick no botão recebendo
+a função que executa essa ação.
+
+exemplo:
+exemplo4.jpeg
+
+Contudo, esse código não funciona.
+
+exemplo:
+exemplo5.jpeg
+
+Quando clicamos no botão o texto não é alterado.
+
+Isso ocorre porque, no React, variáveis comuns (let ou const) não podem ser usadas para atualizar a interface de tela.
+
+exemplo:
+exemplo6.jpeg
+
+Para corrigir isso devemos usar uma ferramenta do React chamada State Hook.
+
+exemplo:
+exemplo7.jpeg
+
+O State Hook, ou useState, é uma
+
+ferramenta do React para criar variáveis que atualizam a interface da aplicação.
+
+Essas variáveis são chamadas de "variáveis de estado".
+Nesse caso, usamos o useState para criar a variável de estado 'mensagem'.
+
+exemplo:
+exemplo8.jpeg
+
+
+Dessa forma, com o useState aplicado, quando o botão for clicado o texto será alterado.
+
+exemplo:
+exemplo9.jpeg
+
+
+
+
+
+Sintaxe do useState
+
+Veja abaixo a sintaxe de uso do useState.
+
+'use client';   Código que permite o uso do UseState e do onClink
+
+import {useState} from 'react';  Importação do State Hook
+
+const [variavel, setVariavel] = useState(valor_inicial);  Cria uma varável de estado com um valor inicial
+
+
+setVariavel(novo_valor);  Função que atualiza a varável de estado.
+
+exemplo:
+exemplo10.jpeg
+
+Agora veja o código do exemplo anterior.
+
+exemplo:
+exemplo11.jpeg
+
+
+Para usar o useState primeiro devemos o aplicar no código o 'use client'.
+
+exemplo:
+exemplo12.jpeg
+
+Assim como no onClick, o 'use client' também deve ser usado quando usamos o useState.
+
+exemplo:
+exemplo13.jpeg
+
+Em seguida, importamos no código o useState.
+
+exemplo:
+exemplo14.jpeg
+
+
+Com o useState importado, criamos a variável de estado de nome 'mensagem'.
+
+exemplo:
+exemplo15.jpeg
+
+A variável de estado pode ter um nome de sua escolha e um valor inicial.
+
+exemplo:
+exemplo16.jpeg
+
+Neste caso, definimos um texto como valor inicial.
+
+Repare que nesse caso usamos a variável de estado 'mensagem' para exibir o texto na tela.
+
+exemplo:
+exemplo17.jpeg
+
+Variáveis de estado também aceitam valores como strings vazias, números ou booleanos.
+
+Veja exemplos:
+
+exemplo18.jpeg
+
+Veja que na variável de estado temos um código de nome setMensagem.
+Esse código é uma função que permite atualizar o valor da variável de estado.
+
+exemplo:
+exemplo19.jpeg
+
+Anteriormente, vimos que o código 'setMensagem' é uma função que nos permite atualizar a variável de estado.
+
+Essa função é geralmente nomeada com o prefixo 'set' seguido do nome da variável de estado.
+Neste caso, como a variável de estado se chama 'mensagem', a função é 'setMensagem'.
+
+exemplo:
+exemplo20.jpeg
+
+Veja que usamos a função setMensagem para atualizar a variável de estado com um novo texto.
+
+exemplo:
+exemplo21.jpeg
+
+Quando a função alterarMensagem for disparada pelo evento de clique, a variável de estado será
+atualizada com um novo texto.
+
+exemplo:
+exemplo22.jpeg
+
+Como a variável de estado está sendo usada para exibir o texto na tela, o novo texto também será exibido.
+
+exemplo:
+exemplo23.jpeg
+
+Dessa forma, quando o botão for clicado o texto será alterado.
+
+exemplo:
+exemplo24.jpeg
+
+'use client';
+import { useState } from 'react';
+
+export default function Home() {
+  const [mensagem, setMensagem] = useState('O React é uma biblioteca do JavaScript.');
+
+  function alterarMensagem(){
+    setMensagem("O React é um framework utilizado em aplicações web.");
+  }
+
+  return (
+    <div>
+      <p></p>
+      <button onClick={ alterarMensagem }>Clique aqui</button>
+    </div>
+  );
+}

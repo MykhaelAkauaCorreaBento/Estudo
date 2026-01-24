@@ -1,0 +1,61 @@
+Introdução
+
+Como criar uma aplicação React que possui eventos de clique.
+
+Botões são muito usados em sites, sendo essenciais para adicionar interatividade.
+
+Ao clicar em um botão diversas ações podem ser disparadas, como:
+
+• Abrir menus;
+• Enviar formulários;
+• Executar ações.
+
+Esse ato é conhecido como 'Evento de clique'.
+
+Um evento de clique é como um gatilho:
+ 
+Quando você clica em um botão, um código é executado e uma ação acontece.
+
+Para aplicar esse tipo de funcionalidade a um botão usamos um código chamado 'evento onClick'.
+
+Com o evento onClick podemos criar exemplos como este: uma aplicação que gera um número
+aleatório sempre que o botão for clicado.
+
+O que é o evento onClick?
+Ao clicar em um botão é comum que uma ação seja disparada. Para definir essa ação em React,
+utilizamos o evento onClick.
+
+O onClick é um código que deve ser aplicado a um botão para ele executar uma ação quando 
+for clicado.
+
+Exemplo:
+
+<button onClick={exibirAlerta}>Clique aqui</button>
+Código de um <button> com o evento onClick aplicado
+
+Para isso, o onClick deve receber um código que define a ação a ser executada. veja um exemplo:
+
+'use client';
+
+export default function Home(){
+        function exibirAlerta(){
+            alert('Olá, mundo!');
+        }
+    return(
+        <main>
+            <button onClink={exibirAlerta}>Clique aqui</button>
+        </main>
+    );
+}
+
+Nesse caso, o onClick recebe uma função que exibe um alerta na tela.
+
+
+Repare que neste exemplo temos um código aplicado: o 'use client'. 
+Esse código sempre deve ser usado quando utilizamos o evento onClick.
+
+
+Com isso, quando o botão é clicado, o evento executa a função e exibe o alerta.
+
+exemplo:
+exemplo1.jpeg
