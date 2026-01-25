@@ -1,0 +1,40 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 550px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.bg_vermelho {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.bg_azul {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.container button {
+  padding: 10px 30px;
+  border-radius: 24px;
+  border: 0;
+  font-weight: 600;
+  background-color: rgb(8, 168, 168);
+  color: white;
+  cursor: pointer;
+}
