@@ -1,0 +1,374 @@
+(------------------Props------------------)
+
+Nesta aula vamos conhecer a sintaxe de uso do props. Veremos como usar o props para enviar
+dados de um componente para outro.
+
+Mas antes vamos conhecer o exemplo que será usado no aprendizado da sintaxe de uso do props. 
+Para conhecer a sintaxe de uso do props, vamos utilizar o seguinte exemplo.
+
+exemplo:
+exemplo_1.png
+
+Neste exemplo, temos um componente que será reutilizado três vezes.
+
+export default function Home(){
+    return(
+        <main className={estilos.container_principal}>
+            <CardProduto/>
+            <CardProduto/>
+            <CardProduto/>
+            
+        </main>
+    );
+}
+
+exemplo:
+exemplo_2.png
+
+
+Repare que neste exemplo o componente inicia sem conteúdo, Veja o código inicial desse componente.
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         <div>
+            <h3></h3>
+            <p>R$</p>
+            <small></small>
+            <button>Adicionar</button>
+         </div>
+        </div>
+    );
+}
+Código do componente CardProduto.
+
+exemplo:
+exemplo_3.png
+
+Neste caso, queremos que o componente CardProduto exiba um preço e um conteúdo textual diferentes a cada reutilização.
+
+exemplo:
+exemplo_4.png
+
+
+Para isso, precisamos passar os dados para o componente CardProduto utilizando o props.
+
+exemplo:
+exemplo_5.png
+
+
+
+
+
+
+(------------------Sintaxe de uso props------------------)
+
+Veja abaixo a sintaxe do props no envio de dados de um componente para outro.
+
+
+<CardProduto          //Componente CardProduto
+
+nome={'Hamburguer'}     //Dados enviados para o componente CardProduto
+preco={18}              //Dados enviados para o componente CardProduto
+categoria={'Lanche'}    //Dados enviados para o componente CardProduto
+/>;
+
+exemplo:
+exemplo_6.png
+
+Repare que definimos um nome para cada props e aplicamos o valor a ser enviado entre chaves {}.
+
+exemplo:
+exemplo_7.png
+
+Agora veja a sintaxe do props no recebimento de dados em um componente.
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         <div>
+            <h3></h3>
+            <p>R$</p>
+            <small></small>
+            <button>Adicionar</button>
+         </div>
+        </div>
+    );
+}
+
+O props recebido é basicamente um objeto JavaScript com os dados
+
+<CardProduto          //Componente CardProduto
+
+nome={'Hamburguer'}     //Dados enviados para o componente CardProduto
+preco={18}              //Dados enviados para o componente CardProduto
+categoria={'Lanche'}    //Dados enviados para o componente CardProduto
+/>;
+
+exemplo:
+exemplo_8.png
+
+Você pode usar qualquer nome para receber dados no componente, porém, é recomendado usar o termo 'props'.
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         ...
+        </div>
+    );
+}
+exemplo:
+exemplo_9.png
+
+Para aplicar os dados recebidos podemos usar a seguinte sintaxe:
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         <div>
+            <h3>{props.nome}<</h3>
+            <p>R${props.preco}<</p>
+            <small>{props.categoria}</small>
+            <button>Adicionar</button>
+         </div>
+        </div>
+    );
+}
+exemplo:
+exemplo_10.png
+
+Repare que, para aplicar um dado recebido, usamos o termo Ipropsl seguido do nome da prop enviada.
+
+exemplo:
+exemplo_11.png
+
+Seja enviando ou recebendo dados, o props pode ser usado sem a necessidade de importar
+código ou instalar uma biblioteca.
+
+exemplo:
+exemplo_12.png
+
+Veja outros dados sendo enviados para o componente reutilizado.
+
+import estilos from './page.module.css';
+import CardProduto from './componentes/CardProduto';
+
+export default function Home() {
+  return (
+    <main className={estilos.container_principal}>
+      <CardProduto nome={'Hamburguer'} preco={18} categoria={'Lanche'}/>
+      <CardProduto nome={'Coca-cola'} preco={7} categoria={'Bebida'}/>
+      <CardProduto nome={'Sorvete'} preco={12} categoria={'Sobremesa'}/>
+    </main>
+  );
+}
+
+exemplo:
+exemplo_13.png
+
+Com isso, o componente reutilizado será exibido da seguinte forma.
+
+exemplo:
+exemplo_4.png
+
+Agora vamos enviar mais um dado para o componente: uma imagem.
+
+exemplo:
+exemplo_14.png
+
+Para isso, primeiro vamos importar no componente Home as imagens que serãoenviadas para o componente CardProduto.
+
+exemplo:
+exemplo_15.png
+
+Em seguida, usamos o props para enviar as imagens importadas para o componente CardProduto.
+
+exemplo:
+exemplo_16.png
+As imagens também são passadas entre chaves {}.
+
+Agora veja como fica o props recebendo as imagens no componente CardProduto.
+exemplo:
+exemplo_17.png
+
+Para aplicar a imagem no componente usamos o seguinte código. Assim como os outros dados, a imagem também é aplicada entre chaves {}.
+exemplo:
+exemplo_18.png
+
+Com isso, uma imagem diferente será aplicada cada vez que o componente CardProduto for reutilizado.
+exemplo:
+exemplo_19.png
+
+import estilos from './page.module.css';
+import CardProduto from './componentes/CardProduto';
+
+import ImgProduto1 from '/public/hamburguer.jpg';
+import ImgProduto2 from '/public/refrigerante.jpg';
+import ImgProduto3 from '/public/sorvete.jpg';
+
+export default function Home() {
+  return (
+    <main className={estilos.container_principal}>
+      <CardProduto
+        imagem={ImgProduto1} nome={'Hamburguer'}
+        preco={18} categoria={'Lanche'}
+      />
+      <CardProduto
+        imagem={ImgProduto2} nome={'Coca-cola'}
+        preco={7} categoria={'Bebida'}
+      />
+      <CardProduto
+        imagem={ImgProduto3} nome={'Sorvete'}
+        preco={12} categoria={'Sobremesa'}
+      />
+    </main>
+  );
+}
+
+export default function CardProduto(props) {
+  return (
+    <div className={estilos.card_container}>
+      <div>
+        <Image src={props.imagem} alt={props.nome}/>
+      </div>
+      <div>
+        <h3>{props.nome}</h3>
+        <p>R$ {props.preco}</p>
+        <small>{props.categoria}</small>
+        <button>Adicionar</button>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+(------------------Forma alternativa de receber props------------------)
+Até o momento vimos a seguinte sintaxe usada para receber dados via props.
+
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         <div>
+            <h3>{props.nome}<</h3>
+            <p>R${props.preco}<</p>
+            <small>{props.categoria}</small>
+            <button>Adicionar</button>
+         </div>
+        </div>
+    );
+}
+
+exemplo:
+exemplo_10.png
+
+
+Além dessa, existe outra forma de receber dados conhecida como desestruturação.
+Veja um exemplo abaixo:
+
+import estilos from './CardProduto.module.css';
+import Image from 'next/image';
+
+export default function CardProduto({ imagem, nome, preco, categoria }) {
+  return (
+    <div className={estilos.card_container}>
+      <div>
+        <Image src={imagem} alt={nome}/>
+      </div>
+      <div>
+        <h3>{nome}</h3>
+        <p>R${preco}</p>
+        <small>{categoria}</small>
+        <button>Adicionar</button>
+      </div>
+    </div>
+  );
+}
+
+exemplo:
+exemplo_20.png
+
+
+Essa forma de receber dados via props tem a sintaxe modificada em dois aspectos - primeiro,no cabeçalho da função do componente:
+
+
+
+Forma tradicional de receber dados via props:
+export default function CardProduto (props) {
+
+
+Forma alternativa (desestruturação) de receber dados via props:
+export default function CardProduto({ imagem, nome, preco, categoria }) {
+
+exemplo:
+exemplo_21.png
+
+Observe que, nessa nova forma, os nomes dos parâmetros devem ser iguais aos definidos no envio.
+
+exemplo:
+exemplo_22.png
+
+Já a segunda mudança fica na forma como os dados recebidos são inseridos no componente. Veja abaixo:
+
+
+
+Forma tradicional de aplicar os dados via props:
+
+export default function CardProduto (props) {
+    return (
+        <div className={estilos.card_container}>
+         <div>
+            <h3>{props.nome}<</h3>
+            <p>R${props.preco}<</p>
+            <small>{props.categoria}</small>
+            <button>Adicionar</button>
+         </div>
+        </div>
+    );
+}
+
+
+
+
+Formal alternatica de aplicar os dado recebidos via props:
+
+export default function CardProduto({ imagem, nome, preco, categoria }) {
+  return (
+    <div className={estilos.card_container}>
+      <div>
+        <Image src={imagem} alt={nome}/>
+      </div>
+      <div>
+        <h3>{nome}</h3>
+        <p>R${preco}</p>
+        <small>{categoria}</small>
+        <button>Adicionar</button>
+      </div>
+    </div>
+  );
+}
+
+exemplo:
+exemplo_23.png
+
+
+Repare que a forma de passar os dados para o componente não muda.
+
+exemplo:
+exemplo_24.png
+
+
+Veja como fica o exemplo dessa aula utilizando a desestruturação para receber os dados via props.
+Exemplo desta aula usando a desestruturação no props
+
+exemplo:
+exemplo_25.png
+
+
+
+O uso da desestruturação é opcional. Em ambos os casos, o código final terá o mesmo resultado.
+
+exemplo:
+exemplo_26.png

@@ -1,0 +1,107 @@
+O que são props
+Para enviar dados para um componente podemos utilizar uma ferramenta do React conhecida como
+'props'.
+
+Em aplicações que possuem componentes, uma prática comum é passar dados (valores) para os componentes.
+
+Para enviar dados para um componente utilizamos uma ferramenta do React de nome 'props'.
+
+<CardUsuario           //Componente CardUsuario
+
+nome={'Mykhael'}       //props enviadas para o componente CardUsuario
+imagem={ImagemUsuario} //props enviadas para o componente CardUsuario
+idade={27}             //props enviadas para o componente CardUsuario
+/>;
+
+exemplo:
+exemplo_1.png
+
+O 'props' (ou parâmetro) é uma forma de enviar dados entre componentes.
+
+//Componente pai
+
+export default function Home(){
+    return(
+        <div>
+            <h1>Minha aplicação React</h1>
+                <CardUsuario
+                nome={'Mykhael'}
+                imagem={ImagemUsuario}
+                idade={27}
+                />
+        </div>
+    );
+}
+
+//Componente filho
+
+export default function CardUsuario(props){
+    return(
+        <div>
+            <Image src={props.image} alt={props.nome}/>
+            <h2>{props.nome}</h2>
+            <p>Idade: {props.idade}</p>
+        </div>
+    );
+}
+
+Componente Home passando dados para o componente CardUsuano wa props.
+
+exemplo:
+exemplo_2.png
+
+A sintaxe do 'props' é muito parecida com a passagem de parâmetros para uma função no JavaScript.
+
+
+//Componente filho
+export default function CardUsuario(props){
+    return(
+        <div>
+            <Image src={props.image} alt={props.nome}/>
+            <h2>{props.nome}</h2>
+            <p>Idade: {props.idade}</p>
+        </div>
+    );
+}
+
+Componente React recebendo props.
+
+
+function saudacao(nome){
+    return `Olá, ${nome}!`;
+}
+
+console.log(saudacao('Mykhael'));
+//Resultado: Olá, Stenffensen!
+
+exemplo:
+exemplo_3.png
+
+Podemos usar 'props' para reutilizar um componente sem precisar repetir o conteúdo exibido.
+
+exemplo:
+exemplo_4.png
+
+
+Para isso, basta definir o conteúdo de cada componente e enviar os dados via 'props'.
+
+<div className={estilos.lista}>
+    <ItemLista
+    signo={"Aquário"} dataInicio={21/01}
+    dataFim={"19/02"} imagem={Aquario}
+    />
+   <ItemLista
+    signo={"Peixes"} dataInicio={20/02}
+    dataFim={"20/03"} imagem={Peixes}
+    />
+    <ItemLista
+    signo={"Touro"} dataInicio={21/04}
+    dataFim={"21/05"} imagem={Touro}
+    />
+</div>
+
+exemplo:
+exemplo_5.png
+
+Com o uso de props você pode enviar dados de um componente para outro e reutilizar componentes
+exibindo diferentes conteúdos.

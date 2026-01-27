@@ -1,0 +1,15 @@
+.topo_container {
+  padding: 10px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d538c;
+}
+
+.topo_container h1 {
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
