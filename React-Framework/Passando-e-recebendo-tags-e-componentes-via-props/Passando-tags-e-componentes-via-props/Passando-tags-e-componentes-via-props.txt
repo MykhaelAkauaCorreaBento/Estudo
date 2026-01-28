@@ -1,0 +1,127 @@
+Passando tags e componentes via props
+
+Na aula anterior vimos que as tags e componentes podem ser passadas via props para outros
+componentes de uma aplicação React. Os elementos enviados são representadas por meio do termo
+props.children.
+O props.children é, basicamente, uma propriedade que possibilita a passagem de elementos, sejam
+eles componentes ou tags, como filhos para um componente pai. 
+
+Passando tags e componentes via props
+
+Até o momento, enviamos dados para um componente, passando props diretamente na tag.
+
+Componente ItemLista
+
+<ItemLista
+    signo={'Capricornio'}
+    dataInicio={'21/01'}
+    dataFim={'19/02'}
+    imagem={Capricornio}
+/>
+
+exemplo_1.png
+
+Contudo, para enviar um conteúdo (tags HTML ou componentes) vamos precisar de duas tags, sendo
+uma de abertura e a outra de fechamento.
+
+exemplo_2.png
+
+Todo conteúdo (tags ou componentes) que será passado via props será inserido entre as tags de
+abertura e fechamento.
+
+<NomeDoComponente>
+
+  <h1>Este é um título</h1>
+  <OutroComponente />
+
+</NomeDoComponente>
+
+exemplo_3.png
+
+Com isso, o conteúdo ficará acessível no componente através do termo props.children.
+
+export default function NomeDoComponente(props) {
+  return(
+    <div>{props.children}</div>
+  );
+}
+
+exemplo_4.png
+
+O props.children é uma propriedade que possibilita o envio de elementos (componentes ou tags),
+como filhos de um componente pai.
+
+exemplo_5.png
+
+exemplo_6.png
+
+Um componente pode receber via props funções e valores (string, boolean, number) inseridas na tag de abertura e um conteúdo (tags e componentes) entre as tags de abertura e fechamento.
+
+
+(--------------------Passando props para o componente--------------------)
+
+Passando props para o componente
+
+
+Aqui estamos passando uma string e duas tags para o componente, via props.
+
+<NomeDoComponente titulo="Página de conteúdo">
+
+<h2>Props</h2>
+<p>Passando props para o componente ...</p>
+</NomeDoComponente>
+
+exemplo_7.png
+
+Agora veja como o componente recebe os conteúdos passados via props.
+
+exemplo_8.png
+
+Por fim, veja o fluxo de envio e recebimento do conteúdo para o componente.
+
+exemplo_9.png
+
+(---------------Exemplo Prático---------------)
+
+exemplo_10.png
+
+import estilos from './page.module.css'
+import BoxMensagem from './componentes/BoxMensagem';
+import Image from 'next/image';
+
+export default function Home () {
+  return (
+    <div className={estilos.conteudo}>
+      <h1>Minhas mensagens</h1>
+
+      <div className={estilos.mensagens_box}>
+        <BoxMensagem>
+          <p>Lembra aquele produto que você estava procurando?</p>
+          <p>Ele abaixou o preço!! Corre que dá tempo de comprar.</p>
+          <a href="https://www.americanas.com.br/1818873801">
+            Ver produto
+          </a>
+        </BoxMensagem>
+
+        <BoxMensagem>
+          <p>Separamos esta foto para você.</p>
+          <Image src="/Imagem09.jpeg" alt='Água'/>
+        </BoxMensagem>
+      </div>
+    </div>
+  )
+}
+
+
+Veja o conteúdo que será enviado para o componente BoxMensagem.
+
+exemplo_11.png
+exemplo_12.png
+
+Veja agora outro conteúdo que será enviado para o componente BoxMensagem.
+exemplo_14.png
+exemplo_13.png
+
+Por fim, confira o fluxo de envio e recebimento de conteúdo para o componente BoxMensagem.
+
+exemplo_15.png

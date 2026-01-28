@@ -1,0 +1,63 @@
+Recebendo tags e componentes via props
+
+Na aula anterior, aprendemos como podemos enviar tags e componentes através do uso de props
+e porque isso é útil na programação React.
+
+Agora, vamos avançar no conteúdo e aprender como receber elementos (tags e componentes)
+em um componente. No flow a seguir você aprenderá como exibir os elementos recebidos via props:
+
+Recebendo tags e componentes via props
+
+Qualquer conteúdo enviado para um componente pode ser acessado através do parâmetro props.
+
+exemplo_16.png
+
+O parâmetro props possui a propriedade children que representa as tags e componentes recebidas.
+
+exemplo_17.png
+ 
+Para exibir o conteúdo recebido basta inserir props.children no elemento desejado para a
+exibição desse conteúdo.
+
+
+export default function MeuComponente(props) {
+  return(
+    <div>
+      {props.children}
+    </div>
+  );
+}
+
+Exemplo de uso do props.children
+
+exemplo_18.png
+
+A propriedade props.chi/dren aplicada no código, representa o conteúdo recebido pelo componente.
+
+exemplo_19.png
+
+Agora veja o código do conteúdo enviado para o componente BoxMensagem.
+
+exemplo_20.png
+
+Por meio do props, o componente recebe as tags <p> e <img> e o props.chi/dren é usado para
+exibir as tags recebidas.
+
+exemplo_21.png
+
+Com isso, o componente será exibido da seguinte forma.
+
+import estilos from './BoxMensagem.module.css';
+
+export default function BoxMensagem(props) {
+  return (
+    <div className={estilos.box_mensagem}>
+      <h2>Mensagem</h2>
+      <div className={estilos.conteudo_mensagem}>
+        {props.children}
+      </div>
+    </div>
+  );
+}
+
+O props.children representa as tags e componentes passados para outro componente
