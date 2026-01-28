@@ -1,0 +1,69 @@
+Introdução
+
+Em um projeto criado em React é comum a criação e a reutilização de um componente. Através de props conseguimos inserir tags e componentes dentro de outro componente.
+
+Tags e componentes podem ser passados via props para dentro de um componente.
+Ao fazer isso, o componente que recebe esses elementos poderá exibi-los junto ao seu código.
+
+exemplo:
+exemplo_1.png
+exemplo_2.png
+exemplo_3.png
+exemplo_4.png
+exemplo_5.png
+
+
+Com isso, o componente BoxMensagem exibirá o seu próprio conteúdo e os elementos recebidos via props.
+
+exemplo_6.png
+
+Veja o componente BoxMensagem aplicado no componente Home.
+
+exemplo_7.png
+exemplo_8.png
+
+import estilos from './page.module.css'
+import Imagem09 from '/public/Imagem09.jpeg';
+import BoxMensagem from './componentes/BoxMensagem';
+import Image from 'next/image';
+
+export default function Home () {
+  return (
+    <div className={estilos.conteudo}>
+      <h1>Minhas mensagens</h1>
+
+      <div className={estilos.mensagens_box}>
+        <BoxMensagem>
+          <p>Lembra aquele produto que você estava procurando?</p>
+          <p>Ele abaixou o preço!! Corre que dá tempo de comprar.</p>
+          <a href="https://www.americanas.com.br/1818873801">
+            Ver produto
+          </a>
+        </BoxMensagem>
+
+        <BoxMensagem>
+          <p>Separamos esta foto para você.</p>
+          <Image src={Imagem09} alt='Água'/>
+        </BoxMensagem>
+      </div>
+    </div>
+  )
+}
+
+
+(-----------------Passar e receber tags e componente via props-----------------)
+
+Alguns componentes possuem a mesma estrutura alterando apenas o seu conteúdo.
+
+
+exemplo_9.png
+
+Essa estrutura é o componente BoxMensagem, que possui um espaço reservado para exibir o
+conteúdo recebido.
+
+exemplo_10.png
+exemplo_11.png
+exemplo_12.png
+
+Dessa forma, conseguimos ter um componente com parte do seu conteúdo dinâmico.
+Além de valores como string, boolean, number e function conseguimos enviar para um componente também tags e outros componentes via props. 
