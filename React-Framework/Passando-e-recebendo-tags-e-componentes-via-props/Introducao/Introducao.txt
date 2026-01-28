@@ -67,3 +67,5 @@ exemplo_12.png
 
 Dessa forma, conseguimos ter um componente com parte do seu conteúdo dinâmico.
 Além de valores como string, boolean, number e function conseguimos enviar para um componente também tags e outros componentes via props. 
+
+É através de props que um componente recebe textos, números, booleanos, funções, tags e componentes
