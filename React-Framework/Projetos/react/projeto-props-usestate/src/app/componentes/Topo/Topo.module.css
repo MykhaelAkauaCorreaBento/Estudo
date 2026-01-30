@@ -1,0 +1,21 @@
+.header_container {
+  width: 100%;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid gray;
+  color: black;
+}
+
+.header_container button {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: white;
+}
