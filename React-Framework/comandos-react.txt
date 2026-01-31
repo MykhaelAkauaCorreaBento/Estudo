@@ -1,0 +1,11 @@
+npx create-next-app // cria  a estrutura / pasta
+npm run dev // teste da aplicação
+code . // abrir via cmd
+npm install react-icons --save // instalar ícones no react
+
+catálogo de ícones da biblioteca React Icons:
+https://react-icons.github.io/react-icons/
+
+path da pasta dos projetos
+
+Desktop\Estudo\React-Framework\Projetos\react
