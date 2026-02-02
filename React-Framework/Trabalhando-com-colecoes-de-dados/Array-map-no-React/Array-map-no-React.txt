@@ -1,0 +1,195 @@
+Array-map-no-React.txt
+
+O Array.map é uma função nativa do JavaScript, o que significa que ela não precisa de importação,
+e pode ser usada diretamente.
+
+Exemplo de código de utilização do Array.map no React:
+
+jogosExclusivos.map((jogo) => {
+   return(
+     <ItemJogos key = { jogo.id } nome= { jogo.nome } plataforma = { jogo.plataforma }/>
+   )
+});
+
+
+
+Array.map no React Sintaxe:
+
+exemplo_1.png
+
+Essa sintaxe também pode ser simplificada da seguinte maneira.
+
+exemplo_2.png
+
+Em geral, o Array.map será utilizado dentro do return de um componente.
+
+exemplo_3.png
+
+Para que o código JavaScript não apresente erros, é necessário que ele 
+esteja dentro de chaves ( { } ).
+
+exemplo_4.png
+
+Utilizando essa sintaxe, o array (coleção de dados) será percorrido e o componente ItemJogos será
+exibido na tela.
+
+exemplo_5.png
+
+
+
+(------------------------------A propriedade key------------------------------)
+
+Agora conheceremos uma importante propriedade do React que deve ser usada junto
+do Array.map, a propriedade key.
+
+jogosExclusivos.map((jogo, index) => (
+   <ItemJogos key = { index } nome = { jogo.nome } plataforma = { jogo.plataforma }/>
+ ));
+
+A key é uma propriedade nativa do React, que ajuda a identificar itens de um array
+percorrido pelo Array.map.
+
+Array.map no React
+Utilizando a propriedade Key
+
+Key é uma propriedade nativa do React que, obrigatoriamente, deve ser utilizada com o Array.map.
+
+jogosExclusivos.map((jogo, index) => (
+   <ItemJogos key = { index } nome = { jogo.nome } plataforma = { jogo.plataforma }/>
+ ));
+
+A key define um ID para os componentes criados. Neste exemplo, cada componente ItemJogos
+terá um ID único.
+
+A key é necessária para o React conseguir diferenciar componentes iguais criados
+atravesdoArray.map.
+
+exemplo_6.png
+
+Veja que, com base na coleção, cada componente ItemJogos criado receberá um ID da prop key.
+
+
+A propriedade key não precisa ser consumida dentro do componente ItemJogos.
+
+exemplo_7.png
+
+
+Ao trabalhar com componentes dinâmicos, é obrigatório que o mesmo possua um ID (key).
+Caso contrário, o código React apresentará o seguinte erro.
+
+exemplo_8.png
+
+Existe também uma forma simples de passar um valor para key. Você pode usar,
+no Array.map, o parâmetro index.
+
+exemplo_9.png
+
+O index retorna o índice de cada item do array. Com isso, você consegue passar um valor de
+ID automático.
+
+
+(-----------------------------------Entendendo o exemplo-----------------------------------)
+
+
+Agora que já vimos a sintaxe do Array.map e da propriedade key, vamos conhecer o exemplo desta aula.
+
+
+
+Mas antes veja alguns dos códigos que serão apresentados
+
+
+Coleção de dados de jogos exclusivos:
+export const jogosExclusivos = [
+  { id: 1, nome: "Contraband", plataforma: "xbox" },
+  { id: 2, nome: "Avowed", plataforma: "xbox" },
+  { id: 3, nome: "Starfield", plataforma: "xbox" },
+  { id: 4, nome: "Ghost of Tsushima 2", plataforma: "playstation" },
+  { id: 5, nome: "Marvel's Spider-Man 2", plataforma: "playstation" },
+  { id: 6, nome: "Death Stranding 2", plataforma: "playstation" },
+  { id: 7, nome: "Mario Odissey", plataforma: "nintendo" },
+  { id: 8, nome: "Zelda: Tears of Kingdom", plataforma: "nintendo" },
+  { id: 9, nome: "Xenoblade Chronicles 3", plataforma: "nintendo" },
+];
+
+
+Componente ItemJogos:
+import Image from "next/image";
+import estilos from './ItemJogos.module.css';
+import xboxLogo from '/public/xbox.png';
+import playstationLogo from '/public/playstation.jpg';
+import nintendoLogo from '/public/nintendo.jpg';
+
+export default function ItemJogos({ nome, plataforma }) {
+  return(
+    <div className={estilos.card}>
+      <figure>
+        <Image
+          src={plataforma === "xbox"
+              ? xboxLogo
+              : plataforma === "playstation"
+              ? playstationLogo
+              : nintendoLogo}
+          alt="logo"
+        />
+      </figure>
+      <div>
+        <p></p>
+      </div>
+    </div>
+  )
+}
+
+
+Componente ListaDeJogosExclusivo mostrando o uso do Array.map:
+import Image from "next/image";
+import estilos from "./page.module.css";
+import Lupa from "/public/lupa.png";
+import ItemJogos from "./componentes/ItemJogos";
+import { jogosExclusivos } from "./dados/banco";
+
+export default function Home() {
+  return (
+    <div className={estilos.container_principal}>
+      <h2>Lista de Jogos Exclusivos</h2>
+      <div className={estilos.container_input}>
+        <Image src={ Lupa } alt="icone" />
+        <input type="text" placeholder="Pesquisar por um jogo" />
+      </div>
+      <div className={estilos.container_cards}>
+        {jogosExclusivos.map((jogo) => (
+          <ItemJogos key={jogo.id} nome={jogo.nome} plataforma={jogo.plataforma}/>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+Para entender o uso do Array.map no React, criamos uma aplicação que lista jogos exclusivos de
+diferentes plataformas.
+
+exemplo_10.png
+
+
+Esses jogos são listados a partir de uma coleção de dados.
+
+exemplo_11.png
+
+A coleção é importada de um arquivo externo.
+
+exemplo_12.png
+
+
+Cada jogo será um componente de nome ItemJogos, que será exibido em tela.
+
+exemplo_13.png
+
+O Array.map irá percorrer a coleção de dados para listar os jogos através do componente ItemJogos.
+
+exemplo_14.png
+
+Com isso, teremos uma lista com 12 jogos da coleção, sendo exibidos na tela.
+
+exemplo_15.png
+
