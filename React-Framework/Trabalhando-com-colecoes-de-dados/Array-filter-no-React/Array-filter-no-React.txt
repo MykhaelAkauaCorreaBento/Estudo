@@ -1,1 +1,211 @@
 Array.filter no React
+
+O Array.filter é uma função nativa do JavaScript, que serve para realizar buscas em uma coleção
+de dados.
+
+Nesta aula, iniciaremos relembrando o que vimos sobre Array.filter no módulo de JavaScript.
+
+O objetivo é recordar como é o funcionamento do Array.filter antes de irmos direto para sua 
+sintaxe, uma vez que seu funcionamento é o mesmo no JavaScript e no React.
+
+Confira nos códigos exemplos de uso do Array.filter.
+
+
+
+Exemplo de uso do Array.filter com uma função externa:
+
+
+function buscarNumerosPares (numero) {
+    return numero % 2 === 0
+}
+
+const numeros = [2, 15, 30, 46, 57];
+const numerosPares = numeros.filter((numero) => buscarNumerosPares(numero));
+
+console.log(numerosPares)
+
+
+
+
+
+Exemplo de uso do Array.filter com uma arrow function:
+
+
+const numeros = [2, 15, 30, 46, 57];
+const numerosPares = numeros.filter((numero) => numero % 2 === 0);
+
+console.log(numerosPares)
+
+
+Array.filter Relembrando
+
+
+Vimos no módulo de JavaScript que o Array.filter é uma função nativa, utilizada para realizar
+buscas em uma coleção de dados.
+
+
+Nesse exemplo buscamos números pares dentro do array numeros.
+
+exemplo_1.png
+
+Para isso, chamamos o método .filter no array que desejamos realizar a busca.
+
+exemplo_2.png
+
+Dentro do Array.filter passamos uma função externa com uma lógica de busca, ou então,
+passamos diretamente a lógica no código.
+
+exemplo_3.png
+
+O parâmetro passado para a função representa cada item do array.
+
+exemplo_4.png
+
+O parâmetro pode ter qualquer nome. Neste exemplo o chamamos de numero.
+
+
+O Array.filter irá percorrer o array numeros e buscar por itens que atendam a condição
+estabelecida (o item deve ser par).
+
+exemplo_5.png
+
+
+Ao imprimir a constante numerosPares, o resultado será um novo array com os valores: [2, 30, 46]
+
+exemplo_6.png
+
+
+(---------------------------- Por que é útil? ----------------------------)
+
+Agora que já relembramos o que é e como funciona o Array.filter, vejamos a sua utilidade no React.
+O Array.filter no React pode ser combinado com o Array.map para exibir os elementos de uma coleção
+através de um filtro.
+
+Vimos que o Array.map é utilizado para exibir componentes de forma dinâmica, com base
+em uma coleção de dados.
+
+exemplo_7.png
+
+No React, o Array.filter pode ser utilizado em conjunto com o Array.map para exibir apenas
+alguns elementos da coleção.
+Exibindo apenas os jogos da plataforma "nintendo"
+
+exemplo_8.png
+
+
+A combinação desses dois métodos permite a criação de buscas e filtros no site.
+
+exemplo_9.png
+
+Através do uso de Array.filter os dados serão filtrados e os componentes serão atualizados
+automaticamente na tela.
+
+exemplo_10.png
+
+(----------------------Sintaxe----------------------)
+
+
+O Array.filter é uma função nativa de JavaScript, o que significa que ela não precisa
+de importação, e pode ser usada diretamente.
+
+Exemplo de uso do Array.filter no React:
+const jogosBuscados = jogosExclusivos.filter((jogo) => {
+  return jogo.plataforma === "nintendo"
+});
+
+O Array.filter no React possui a seguinte sintaxe:
+
+exemplo_11.png
+
+Essa sintaxe pode ser simplificada de tal forma:
+
+exemplo_12.png
+
+
+Utilizando essa sintaxe, podemos buscar ou filtrar qualquer dado de um array (coleção de dados).
+
+exemplo_13.png
+
+Aplicando o retorno do Array.filter no Array.map, podemos apresentar em tela os dados filtrados.
+
+exemplo_14.png
+
+(--------------------Entendendo o exemplo--------------------)
+
+Agora que relembramos sobre o Array.filter e conferimos a sua sintaxe, conheceremos o exemplo
+desta aula.
+
+
+Código apresentando o uso do Array.filter com o Array.map:
+
+import estilos from './page.module.css';
+import ItemJogos from './componentes/ItemJogos';
+import jogosExclusivos from './dados/jogos';
+
+export default function Home() {
+
+  const jogosFiltrados = jogosExclusivos.filter(
+    (jogo) => jogo.plataforma === 'nintendo'
+  );
+
+  return (
+    <div className={estilos.container_principal}>
+      <h2>Lista de Jogos Exclusivos</h2>
+      <div className={estilos.container_cards}>
+        {jogosFiltrados.map((jogo, index) => (
+          <ItemJogos
+            key={ index }
+            nome={ jogo.nome }
+            plataforma={ jogo.plataforma }
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+Array.filter no React Entendendo o exemplo
+
+Para entender o uso do Array.filter no React, usamos o exemplo da aula anterior.
+
+exemplo_15.png
+
+Nesta versão do exemplo, a aplicação inicia com os jogos filtrados na tela.
+
+A ideia é exibir somente os jogos da Nintendo.
+
+exemplo_16.png
+
+Utilizamos o Array.filter em conjunto com o Array.map.
+
+exemplo_17.png
+
+Os jogos são filtrados a partir da coleção de dados jogosExclusivos.
+
+exemplo_18.png
+
+A coleção é importada e utilizada no Array.filter.
+
+exemplo_19.png
+
+O Array.filter irá percorrer a coleção e retornar somente os jogos da plataforma "nintendo".
+
+Os dados filtrados pelo Array.filter serão utilizados pelo Array.map.
+
+exemplo_20.png
+
+O .map irá percorrer o retorno do .filter e listar os jogos filtrados, através do
+componente ItemJogos.
+
+Repare que não foi necessário o uso de uma variável de estado (state).
+O state não foi utilizado porque o site, neste exemplo, sempre exibe os mesmos dados.
+
+exemplo_21.png
+
+O state será necessário auando o filtro mudar conforme a ação do usuário, No exemplo
+abaixo o filtro muda no clique do botão:
+
+exemplo_22.png
+
+Veremos esse cenário na próxima aula.
+
