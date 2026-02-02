@@ -1,1 +1,186 @@
-Introdução
+(-------------------------Introdução--------------------------)
+
+Nesta aula revisaremos o que já vimos sobre o Array.map no módulo de JavaScript. O objetivo é 
+recordar como é o seu funcionamento antes de entrar em detalhes sobre sua funcionalidade
+no React.
+
+Veja o seguinte exemplo:
+Aqui temos um array de números em que cada número deverá ser multiplicado por 3.
+
+const numeros = [3, 6, 10, 12, 15];
+
+for (let i = 0; i < numeros.length; i++){
+    numeros[i] = numeros[i] * 3;
+}
+
+console.log(numeros);
+
+
+Console Resultado:
+[9, 18, 30, 36, 45]
+
+Na forma tradicional, essa operação pode ser realizada utilizando um loop for.
+
+
+
+O método nativo .map permite realizar a mesma operação de forma mais simples. Veja o exemplo:
+
+const numeros = [3, 6, 10, 12, 15];
+const triplo = numeros.map((numero) => numero * 3);
+console.log(triplo);
+Obs.:Arrow function que percorre todo o array e multiplica cada item por 3.
+
+
+Console Resultado:
+[9, 18, 30, 36, 45]
+
+
+O .map é uma função nativa do JavaScript que só pode ser utilizada em elementos do tipo array.
+
+exemplo_1.png
+
+
+
+
+Para utilizar o .map, chamamos a função a partir do array desejado.
+
+const numeros = [3, 6, 10, 12, 15];
+const triplo = numeros.map((numero) => numero * 3);
+
+Neste exemplo o array desejado é o numeros, e é possível ver que o numeros.map
+
+
+Dentro do Array.map podemos passar uma função externa ou então, passar diretamente o código da
+função.
+
+exemplo_2.png
+
+
+O parâmetro passado para a função representa cada item do array. Aqui o chamamos de numero,
+no entanto, ele pode ter qualquer nome.
+
+const numeros = [3, 6, 10, 12, 15];
+const triplo = numeros.map((numero) => numero * 3);
+
+exemplo_3.png
+
+Através da função, cada parâmetro passado será multiplicado por 3.
+
+O .map irá percorrer o array e executar o código (lógica) para cada item encontrado no array.
+
+const numeros = [3, 6, 10, 12, 15];
+const triplo = numeros.map((numero) => numero * 3);
+
+3 * 3 = 9
+6 * 3 = 18
+10 * 3 = 30
+12 * 3 = 36
+15 * 3 = 45
+
+Se imprimirmos a constante triplo na tela, seu resultado será o array: [9, 18, 30, 36, 45]
+
+Agora que você relembrou o que é o Array.map, veja no tópico seguinte porque ele é útil no React,
+além de ver alguns exemplos de uso.
+
+
+
+
+(--------------------Por que é útil?--------------------)
+
+
+A utilidade do Array.map no React está em permitir a utilização de uma coleção de dados
+para exibir componentes em tela.
+Isso fará com que o desenvolvedor não precise alterar o código React caso um novo componente
+tenha que ser exibido, bastando adicioná-lo à sua coleção de dados.
+
+Veja o seguinte código:
+
+
+exemplo_4.png
+
+Neste código, o componente ItemJogos é repetido 6 vezes e recebe dados (nome e plataforma),
+via props.
+
+
+
+Com o Array.map podemos simplificar o código para ficar da seguinte forma.
+
+
+export const jogosExclusivos = [
+  { id: 1, nome: "Contraband", plataforma: "xbox" },
+  { id: 2, nome: "Avowed", plataforma: "xbox" },
+  { id: 3, nome: "Starfield", plataforma: "xbox" },
+  { id: 4, nome: "Ghost of Tsushima 2", plataforma: "playstation" },
+  { id: 5, nome: "Marvel's Spider-Man 2", plataforma: "playstation" },
+  { id: 6, nome: "Death Stranding 2", plataforma: "playstation" },
+  { id: 7, nome: "Final Fantasy XVI", plataforma: "playstation" },
+  { id: 8, nome: "Marvel's Wolverine", plataforma: "playstation" }
+];
+
+
+export default function Home(){
+    return(
+        <>
+            {jogosExclusivos,map((jogo, index)=>(
+                <ItemJogos
+                key={index}
+                nome={jogo.nome}
+                plataforma={jogo.plataforma}
+                />
+            ))}
+        </>
+    );
+}
+
+exemplo_5.png
+
+
+No React o Arrav.mao pode ser utilizado para repetir a exibição de um componente com base 
+em uma coleção de dados.
+
+exemplo_6.png
+
+
+
+Sem o Array.map, o código ficaria assim:
+
+exemplo_7.png
+
+Note que para exibir ItemJogos 6 vezes na tela, tivemos que repetir o código.
+
+
+
+
+Já com o Array.map, podemos criar um código mais simples, sem precisar repetir o 
+componente inúmeras vezes.
+
+
+export default function Home(){
+    return(
+        <>
+            {jogosExclusivos,map((jogo, index)=>(
+                <ItemJogos
+                key={index}
+                nome={jogo.nome}
+                plataforma={jogo.plataforma}
+                />
+            ))}
+        </>
+    );
+}
+
+
+exemplo_8.png
+
+
+Comparando os dois códigos, podemos verificar que com o Array.map não precisamos nos
+preocupar com o número de itens a ser exibido.
+
+exemplo_9.png
+
+
+Com isso, os componentes serão exibidos de forma dinâmica.
+
+exemplo_10.png
+
+Em resumo, ao adicionar novos itens na coleção de dados, eles serão automaticamente exibidos.
