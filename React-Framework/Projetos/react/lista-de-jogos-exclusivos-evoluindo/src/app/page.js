@@ -4,28 +4,25 @@ import estilos from "./page.module.css";
 import Lupa from "../../public/lupa.png";
 import ItemJogos from "./componentes/ItemJogos";
 import {useState} from "react";
-import { jogosExclusivos } from "./dados/jogos";
+import { filtrarJogo, buscarJogo, retornarJogos } from './servico';
 
 export default function Home() {
-  const [listaJogos, setListaJogos] = useState(jogosExclusivos);
+  const [listaJogos, setListaJogos] = useState(retornarJogos);
   const [textoBusca, setTextoBusca] = useState("");
 
   const handleFiltrarJogoPlataforma = (plataforma) => {
-    setListaJogos(jogosExclusivos.filter((jogo) => jogo.plataforma === plataforma));
+    setListaJogos(filtrarJogo(plataforma));
     setTextoBusca("");
   }
 
   const handleLimparFiltro = () => {
-    setListaJogos(jogosExclusivos);
+    setListaJogos(retornarJogos());
     setTextoBusca("");
   }
 
   const handleBuscarJogo = (textoDigitado) => {
     setTextoBusca(textoDigitado);
-    setListaJogos(jogosExclusivos.filter((jogo) =>
-      jogo.nome.toLowerCase().includes(textoDigitado.toLowerCase()) || 
-      jogo.plataforma.toLowerCase().includes(textoDigitado.toLowerCase()))
-    );
+    setListaJogos(buscarJogo(textoDigitado));
   };
 
   return (
