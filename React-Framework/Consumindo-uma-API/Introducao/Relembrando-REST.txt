@@ -1,0 +1,117 @@
+(--------------------------------Relembrando REST--------------------------------)
+
+Como já estudamos anteriormente, REST é um conjunto de regras que define como a API deve ser
+implementada.
+
+Essas regras servem para que as APIs sigam um padrão simples de usar, além de trazer
+diversos benefícios tais como: performance e escalabilidade para a API.
+
+Na aula anterior lembramos que um sistema Fullstack é composto de um Front-end Back-end.
+Ambos se conectam através de APIs.
+
+exemplo_1
+
+A API é um padrão de integração. Qualquer Front-end pode se conectar a qualquer Back-end, desde
+que adotem o mesmo padrão de API.
+
+exemplo_2
+
+Existem vários tipos de API. Nesta trilha, toda vez que falamos "API", estamos nos referindo a um
+tipo específico de API, que se chama API RESTful, ou simplesmente API REST.
+
+Os termos API RESt ou API RSTful são sinônimos.
+A API do tipo REST é o padrão adotado atualmente pelo mercado.
+
+Desde forma, toda vez que você ler "API", fica subentendido que estamos nos referindo a APIs
+do tipo REST, o padrão de mercado.
+
+exemplo_2
+
+
+(--------------------------------Detalhes da API REST--------------------------------)
+
+A API REST indica como o Front-end e o BAck-end devem se comunir.
+Esse padrão tem 3 pontos principais.
+
+exemplo_3
+
+
+
+(---------------------Padrão 1- Verbos HTTP---------------------)
+
+O Front-end indica o que deseja fazer (ação) através de um verbo HTTP.
+
+exemplo_4
+
+Existem diversos verbos HTTP, cada um com um propósito, mas os quatro principais são os que
+compõem o CRUD (Create, Read, Update, Delete).
+
+exemplo_5
+
+
+Sempre que o Front-end quiser fazer uma dessas quatros ações no Back-end, isso é indicado
+através do envio de um verbo HTTP.
+
+Por exemplo, se o Front-end quer obter uma lista de rodutos e preços, ele vai enviar para
+o Back-end o verbo httpp GET - ou seja, o Front-end quer obter dados.
+
+exemplo_4
+
+
+
+
+(---------------------Padrão 2 - dados em JSON---------------------)
+
+Os dados são enviados e recebidos no formato JSON.
+O JSON é, por convenção, o formato padrão para comunicação enter Front-end e Back-end de 
+uma API REST
+
+Sua estrutura é bem simples, e é baseada na estrutura de um objeto JavaScript:
+
+exemplo_6
+
+O formato JSON deve ser usado tanto para envio, quanto para recebimento de dados através de API.
+
+(---------------------Padrão 3 - Endpoints---------------------)
+
+o Front-end acessa o BAck-end através de URLs (endpoints).Essas URLs seguem um padrão de montagem.
+
+exemplo_7
+
+Esse padrão segue a regra:
+
+O endpoint deve ter o nome de recurso que será usado e não da ação.
+
+
+Obs: O termo endpoint se refere apenas aos valores a partir da "/".Ex:/UF.
+
+exemplo_8
+
+Outros exemplos de endpoint seriam:
+
+exemplo_9
+
+Em resumo, os pontos principais do padrão REST são:
+
+exemplo_10
+
+
+(-------------------------------Para onde vamos?-------------------------------)
+
+Até o momento nós criamos sites que possuem apenas a camada Front-end.
+Os dados do Projeto de Cardápio foram armazenados em uma coleção local, sem back-end.
+
+exemplo_11
+
+Não vamos mais trabalhar com dados locais. A partir desse curso, todos os projetos
+vão contar com Front-end e Back-end.
+
+exemplo_12
+
+
+Nossos próximos sites vão receber os dados de um Back-end.
+
+exemplo_13
+
+Ou seja, a partir desse momento, você irá construir aplicações mais inteligentes
+e que trabalham com APIs, o que chamamos de sistemas Fullstack.

@@ -1,0 +1,27 @@
+Conhecendo o projeto
+
+Neste curso daremos mais um passo no nosso aprendizado de React e veremos como construir uma aplicação capaz de consumir dados de uma API.
+
+A ideia é que a aplicação se conecte à internet para buscar dados a partir de uma API, ao invés de usar dados de coleções locais.
+
+Esse será o nosso primeiro projeto Fullstack. O projeto é um site que lista dados de UFs:
+
+exemplo_1
+
+Neste curso o nosso objetivo será construir uma aplicação React capaz de obter dados de uma API.
+
+Chamamos isso de "consumir uma API".
+
+
+Nossa aplicação React será um Front-end que lista os dados das UFs:
+
+exemplo_1
+
+Essa é uma aplicação bem simples, e seu propósito é mostrar na tela uma tabela com toda as UFs brasileiras.
+
+NOssa tabela possuirá 3 colunas: Id, UF e NOME.
+
+
+A grande diferenã dela para o que vimos até agora é a origem dos dados. Ao invés de uma coleção local, os dados das UFs bem de uma API.
+
+exemplo_2

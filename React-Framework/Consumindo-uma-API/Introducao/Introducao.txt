@@ -1,0 +1,109 @@
+Introdução
+
+Neste curso daremos mais um passo no nosso aprendizado de React e veremos como construir
+uma aplicação capaz de consumir dados de uma API.
+
+A ideia é que a aplicação se conecte à internet para buscar dados a partir de uma API,
+ao invés de usar dados de coleções locais.
+
+Esse será seu primeiro passo na construção de sistemas Full Stack.
+
+(--------------------Consumindo uma API--------------------)
+
+Onde estamos?
+
+Até esse momento, na nossa jornada Front-end, nós construímos sites 'stand-alone', ou seja,
+sites que não se conectam a um Back-end.
+Do ponto de vista da tecnologia, dominamos o HTML o CSS. Além disso, já criamos
+SPAs e sites interativos com o framework React.
+
+Com o React, também criamos sites que possuem dados armazenados em coleções de dados locais.
+Um exemplo disso foi a aplicação do cardápio de restaurante, que utilizou uma coleção local
+de dados para armazenar os itens do cardápio.
+
+Agora nosso objetivo é dar o próximo passo, substituindo o uso de coleções de dados locais
+pelo uso de APIs.
+
+exemplo_1
+
+
+
+A vantagem de se trabalhar com APIs é que elas permitem que o seu site se conecte a um Back-end
+para acessar dados, o que torna sua página dinâmica.
+
+exemplo_2
+
+
+
+Se os itens do cardápio estiverem em um banco de dados (no back-end), ao invés da coleção local,
+podemos atualizar o preço sem mexer no código.
+
+exemplo_3
+
+A API vai possibilitar a comunicação entre o seu site e o  Back-end, levando as informações
+do banco de dados para o site.
+
+exemplo_4
+exemplo_5
+
+Isso é útil especialmente conforme o site vai crescendo.
+
+Com o uso de APIs e um sistema Back-end você não vai precisar mexer no código só
+para alterar o preço ou estoque.
+
+Isso é o que significa um sistema Fullstack: um Front-end que recebe dados de um Back-end,
+através de APIs.
+
+
+(-----------------------------------Front-end e Back-end-----------------------------------)
+
+Consumindo uma API Front-end e Back-end
+
+Nós vimos previamente na trilha que o Front-end é a parte visual e interativa de um sistema.
+
+Já o Back-end é a camada do sistema responsável por manipular e armazenar informações.
+Vimos ainda um exemplo, onde o fogão seria o Front-end por onde o usuário interage através
+dos botões para acender a chama.
+
+O Back-end, por sua vez, seria o botijão que armazena o gás e envia para o fogão quando
+solicitado.
+
+Sendo assim, o Front-end seriam as corres, botões, campos e tudo aquilo que o usuário interage
+em um site.
+
+O Back-end é a camada que vai conter e tratar as informações. No site do restaurante,
+por exemplo, os preços e as imagens dos produtos ficam no Back-end.
+
+exemplo_6
+
+(------------------------------Relembrando o conceito de API------------------------------)
+
+Consumindo uma API 
+Conceito de API
+
+A API é, na prática, uma ponte que conecta o Front-end ao Back-end.
+No exemplo que usamos anteriormente o fogão fez papel do Front-end, enquanto o botijão de gás
+fez o papel do Back-end.
+Nesse cenário, a API seria o tubo que conecta o fogão ao botijão.
+Quando o usuário gira a boca do fogão, ela abre a conexão do tubo para solicitar gás.
+O botijão, por sua vez. pega o gás armazenado e envia para o fogão através desse mesmo tudo.
+Ou seja, o tubo é a ponte que conecta o fogão e o botijão e permite que eles se comuniquem.
+
+exemplo_7
+
+Esse mesmo conceito se aplica aos sites.
+A API é a ponte que conecta o Front-end e Back-end e permite a comunicação entre eles.
+
+exemplo_8
+
+É importante saber que API não é o código em si, mas um conjuto de padrões que definem como a
+conexão entre Front-end e Back-end devem ocorrer.
+
+A ideia é que qualquer Front-end possa se conectar a qualquer Back-end, desde que ambos sigam
+o mesmo padrão de uso de APIs.
+
+exemplo_8
+
+Uma aplicação que possui um Front-end e um Back-end é chamada de aplicação FullStack.
+
+exemplo_9
