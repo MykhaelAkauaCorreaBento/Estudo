@@ -1,0 +1,105 @@
+(---------------------------------Testando a API na prática---------------------------------)
+
+Nessa aula vamos dar sequência ao conteúdo aprendido, vendo na prática como nossa API REST
+funciona, começando por entender como os dados do nosso App de UFs são obtidos.
+
+Consumindo uma API
+Como os dados chegam ao projeto?
+Vimos anteriormente que nosso projeto é um site que lista todas as UFS do Brasil:
+
+Esse site recebe os dados através de uma API hospedada na Devmidia.
+
+exemplo_1
+
+Esse site recebe os dados através de um Back-end. Não se trata de uma coleção de dados local.
+E qual seria o próximo passo antes de ver o código?
+O próximo passo é ver como a API funciona.Veremos de forma prática os padrões que estudados que
+são endpoints, verbos HTTP e formato JSON.
+
+Estudar a API antes de começar a codificar, nos permite planejar melhor nossa aplicação,
+conhecendo a estrutura e os campos retornados:
+
+exemplo_2
+
+Para isso, precisamos conhecer primeiro uma ferramenta chamada Postman.
+
+(------------------------------Testando a API de UFs------------------------------)
+
+Como vimos, ao fazer login, você será apresentado a esta tela no
+Postman:
+
+exemplo_3
+
+Para iniciar o processo de testagem, vamos clicar no botão 'New Request' ao lado de
+'Send an API Requestl'.
+
+exemplo_4
+
+Isso irá levar você até esta outra tela. É nessa tela que vamos utilizar os conceitos
+que vimos; começando com o endpoint.
+
+exemplo_5
+
+Toda API possui uma URL, um endereço onde ela fica hospedada.
+
+Nesse caso, nós temos a API de UFs da Devmidia que fica em:
+https://www.devmidia.com.br/projetos-api/ufs 
+
+
+Essa URL deve ser inserida no campo 'Enter URL or paste text'
+
+exemplo_6
+
+Esse campo é onde definimos o endpoint. 
+URL = Endereço base + Endpoint
+Endereço base = www.devmidia.com.br/projetos-api
+Endpoint = /UFs
+
+exemplo_7
+
+Uma vez que temos o endpoint definido, precisamos definir o verbo. Isso é feito na caixa de
+seleção que fica ao lado do endpoint.
+
+exemplo_8
+
+Como queremos obter a lista de UFs, selecionamos a opção 'GET', que é a opção padrão no Postman.
+Com isso feito, já podemos enviar nossa requisiçao, bastando clicar no botão azul 'Send'.
+
+Veja que isso vai retornar a lista de UFs no formato JSON, conforme falamos anteriormente.
+
+exemplo_9
+
+(------------------Como saber se a requisição foi bem sucedida?------------------)
+
+Como vimos, ao fazer uma requisição para uma API através do Postman ela retorna uma resposta
+em JSON:
+
+exemplo_9
+
+Porém, além disso, a API também retorna um código de status, que indica se a requisição
+foi bem sucedida ou se houve um erro.
+
+exemplo_10
+
+
+O código de status de sucesso é o '200 OK' e você pode vê-lo nessa requisição,
+indicando que ela foi bem sucedida.
+
+exemplo_11
+
+Agora veja o que acontece, por exemplo, se utilizarmos uma URL inválida. Nesse caso temos o erro
+'404 Found', porque a API não foi encontrada nessa URL.
+
+exemplo_12
+
+Os códigos de status são vários e mudam conforme o tipo de erro ou sucesso. Mas o mais
+importante nesse momento é o código 200 OK.
+
+Sempre que você receber um código 200 OK sua requisição foi bem sucedida.
+exemplo_13
+
+
+
+
+
+

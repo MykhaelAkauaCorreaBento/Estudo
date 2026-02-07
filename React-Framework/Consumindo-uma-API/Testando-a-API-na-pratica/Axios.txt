@@ -1,0 +1,115 @@
+(---------------------------------Axios---------------------------------)
+
+Nessa aula vamos dar sequência ao conteúdo aprendido conhecendo a biblioteca
+Axios, que nos permite consumir APIs de dentro do código JavaScript.
+
+Consumindo uma API
+Conhecendo e instalando o axios
+
+Axios é uma biblioteca JS que permite ao desenvolvedor conseguir uma API de dentro do código.
+
+exemplo_1
+
+Em outras palavras, o Axios é como o Postman para o JavaScript, permitindo o consumo de APIs REST de forma fácil.
+
+exemplo_2
+
+Para utilizar o axios no seu projeto é necessário instalá-lo. Isso pode ser feito 
+através do comando npm install axios.
+
+Ao final da instalação você verá uma tela semelhante a essa no terminal:
+
+exemplo_3
+
+Caso necessário, você pode conferir outras formas de instalação no site oficial do axios,
+clicando em Get Started.
+
+exemplo_4
+
+Nessa tela você verá o método que utilizamos, além de outras formas de instalação.
+
+exemplo_5
+
+(---------------------------------Utilizando o Axios---------------------------------)
+Com o Axios instalado nós já podemos utilizá-lo no nosso projeto.
+
+Se fizermos um comparativo com o Postman podemos ver que estamos utilizando a mesma estrutura: endpoint + Verbo HTTP GET.
+
+exemplo_6
+
+No axios existe uma função JavaScript para cada verbo HTTP, elas são acessadas através de 
+'axios.'.
+
+exemplo_7
+
+Como queremos obter as UFs, vamos utilizar a função get.
+
+exemplo_8
+
+Observe que para acessar as funções do axios, ele deve ser importado no código.
+
+exemplo_9
+
+Como parâmetro passamos para o get a nossa constante endpoint, ou seja, a uri da API.
+
+exemplo_10
+
+A propriedade data no final da linha é responsável por receber a resposta da API, nesse caso, o
+JSON contendo as UFs.
+
+exemplo_11
+
+Desse modo, a constante listaUFs vai armazenar o JSON retornado API.
+
+exemplo_12
+
+Você deve ter notado que além de tudo isso temos uma palavra-chave chamada await 
+antes de chamar o axios. Veremos do que se trata isso no próximo Flow.
+
+exemplo_13
+(---------------------------------Chamada assíncrona---------------------------------)
+
+Consumindo uma API
+Chamada assíncrona
+
+O await é utilizado quando precisamos aguardar a execução de uma chamada assíncrona,
+também chamada de promise.
+
+Uma promise é uma operação JS que não sabemos quando vai terminar, nesse caso, a requisição da API.
+ 
+exemplo_14
+
+Quanto tempo leva até uma API retornar o JSON?
+
+R: Depende.
+
+Obter a resposta de uma API depende de muitos fatores, como a velocidade da sua internet, o
+tamanho dos dados e até o desempenho do servidor.
+
+exemplo_14
+
+Isso pode fazer com que a API retorne em tempos variáveis.
+
+Desse modo, não sabemos se uma API vai demorar 3, 5 ou 10 segundos para retornar o JSON.
+
+exemplo_15
+
+Assim, para garantir que o código só prossiga depois que os dados forem retornados, nós utilizamos o await.
+
+exemplo_16
+
+Em português, await significa literalmente aguardar, então quando o utilizamos, estamos dizendo que o código deve aguardar até que a requisição conclua.
+
+exemplo_17
+
+O código só continua depois que a API de UFS der uma resposta.
+
+Em outras palavras, o código só vai prosseguir depois que as UFS forem retornadas pela APIs
+
+
+
+import axios from "axios";
+import estilo from "./page.module.css";
+
+const endpoint = 'https://www.devmedia.com.br/projetos-api/ufs';
+const listaUfs = (await axios.get(endpoint)).data;

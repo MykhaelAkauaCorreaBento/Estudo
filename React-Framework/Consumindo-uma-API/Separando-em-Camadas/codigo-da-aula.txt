@@ -1,0 +1,54 @@
+(-------------------------------Código 1. page.js-------------------------------)
+
+
+import estilo from "./page.module.css";
+    import { retornaUfs } from "./servicos/ufs";
+
+    const listaUfs = await retornaUfs();
+
+    export default function Home() {
+      return (
+        <main className={estilo.main} >
+   <header className={estilo.header} >
+    App de UFs
+   </header >
+   <table className={estilo.tabela} >
+     <thead >
+       <tr >
+         <th >ID </th >
+         <th >UF </th >
+         <th >NOME </th >
+       </tr >
+     </thead >
+     <tbody >
+    {
+      listaUfs.erro ?
+       <tr >
+         <td colSpan="3" >{listaUfs.erro} </td >
+       </tr >
+      :
+      listaUfs.map((dadosUF, index) = > (
+         <tr key= >
+           <td >{dadosUF.id} </td >
+           <td >{dadosUF.uf} </td >
+           <td >{dadosUF.nome} </td >
+         </tr >
+      ))
+    }
+     </tbody >
+   </table >
+ </main >
+);
+}
+
+
+(-------------------------------Código 2. servicos/ufs.js-------------------------------)
+
+import axios from "axios";
+
+export async function retornaUfs() {
+    const endpoint = 'https://www.devmedia.com.br/projetos-api/ufs';
+    const listaUfs = (await axios.get(endpoint)).data;
+
+    return listaUfs;
+}

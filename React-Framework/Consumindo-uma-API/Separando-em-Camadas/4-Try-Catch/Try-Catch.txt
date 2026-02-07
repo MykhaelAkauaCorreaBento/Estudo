@@ -1,0 +1,32 @@
+Try / Catch
+
+Na aula anterior nós separamos o código do App de UFs em camadas.
+
+Agora vamos avançar para algo que é muito importante no consumo de APIs: o tratamento de erros.
+
+Porém, antes disso precisamos conhecer um recurso do JavaScript criado para tratar erros de 
+código: a estrutura try / catch.
+
+
+(---------------------------Código 1. index.js---------------------------)
+
+const conteudo = "Hello World";
+const arrayConteudo = conteudo.split(" ");
+
+const palavra = arrayConteudo[0];
+
+console.log(palavra);
+
+
+(---------------------------Código 2. index2.js---------------------------)
+
+try {
+    const conteudo = "Hello World";
+    const arrayConteudo = conteudo.split(" ");
+
+    const palavra = arrayConteudo[0];
+
+    console.log(palavra);
+} catch (error) {
+    console.log("Erro: " + error.message);
+}
