@@ -1,0 +1,37 @@
+Timeout
+Ótimo! Você melhorou sua aplicação tratando os erros com códigos de status.
+
+Nós vimos previamente que a API funciona de forma assíncrona, ou seja, não
+sabemos quando tempo vai levar parar retornar uma resposta.
+
+O timeout nada mais é tempo que o Front-end vai esperar pela resposta da API.
+
+VAmos dizer que estamos com a internet lenta, e ao abrir o site vemos uma
+tela em branco por mais de 1 minuto até os dados carregarem.
+
+exemplo_1
+
+Isso é uma experiência ruim, 1 minuto é tempo demais e o usuário não sabe
+se está carregando ou se deu erro.
+
+Pra testar isso, remova o parâmetro mock_status e inclua o parâmetro mock_delay=30000
+
+exemplo_2
+
+Veja que a página leva 30 segundos até que o endpoint de teste traga algum retorno.
+
+exemplo_3
+
+Você pode notar isso pela animação de carregamento na aba do navegador.
+
+exemplo_4
+
+Resolver isso é bem simples, basta utilizar o parâmetro timeout, nativo do axios, passndo
+como valor o tempo máximo que deseja esperar em milisegundos:
+
+exemplo_5
+
+Nesse caso, o código vai esperar 10 segundos pela resposta, e caso ela não venha,
+vai disparar um erro que será tratado pelo catch.
+
+exemplo_6

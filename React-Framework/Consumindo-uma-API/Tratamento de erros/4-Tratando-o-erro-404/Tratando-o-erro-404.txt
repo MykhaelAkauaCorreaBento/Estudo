@@ -1,0 +1,23 @@
+Tratando o erro 404
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+
+Perfeito! A camada de serviço foi tratada corretamente e o erro já não ocorre mais.
+
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17

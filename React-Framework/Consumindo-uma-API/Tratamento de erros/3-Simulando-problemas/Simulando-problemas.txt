@@ -1,0 +1,44 @@
+Simulando problemas
+
+Agora, veremos como tratar outros tipos de problemas tais como erro 404, erro 500 e timeout.
+
+Porém, é necessário antes conhecer um tipo de ferramenta conhecida como mockup, que vai nos
+ajudar a testar esse tipo de erro.
+
+Os mockups são como chamamos dados fictícios que usamos em uma aplicação.
+
+Nesse caso, a ferramenta de mockup vai nos ajudar a criar endpoints fictícios que simulam erros
+dentro de uma API.
+
+
+
+Vamos avançar no tratamento de erros vendo como lidar com o erro 404 Not Found.
+
+No contexto de uma API o erro 404 Not Found ocorre quando um endpoint ou recurso não existe
+(url não encontrada/ UF não encontrada).
+exemplo_1
+
+Veja que no Flow anterior a URL existe, mas o conteúdo dela é inválido. Aqui o erro
+é diferente: a URL nem existe.
+
+exemplo_2
+
+Para testar o erro 404 em APIs, a forma mais simples é simular esse problema utilizado um 
+recurso conhecido como mocking.
+
+exemplo_3
+
+Mocking, em uma API, é um reciso que nos permite criar endpoints fictícios para simular
+cenários, tais como sucesso, erros ou timeout.
+
+Para isso usaremos a ferramenta MockAnAPI para criar um endpoint que simula um erro 
+404 Not Found(Não encontrado).
+
+Para utilizar a ferramenta crie uma conta ou faça login no MockAnAPI usando sua conta
+Google ou Github.
+
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8

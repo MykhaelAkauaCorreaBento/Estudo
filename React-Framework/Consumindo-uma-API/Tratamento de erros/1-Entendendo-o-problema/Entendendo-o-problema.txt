@@ -1,0 +1,43 @@
+Tratamento de erros
+
+
+Consumindo uma API
+
+Entendendo o problema
+
+Nosso Front-end está finalizado.
+
+O último passo é verificar o que acontece quando o Front-end não consegue receber os dados do
+Back-end, ou seja, quanto temos algum erro no consumo.
+
+Vamos começar vendo o primeiro erro potencial:
+o programador digitou a URL da API de forma incorreta.
+
+Atualmente nós temos na camada de serviço o seguinte código:
+
+exempo_1
+
+Para simular o problema da digitação de uma URL incorreta, vamos utilizar o endpoint /teste-erro
+no lugar do endpoint /ufs:
+
+exemplo_2
+
+Se acessarmos essa url inválida no navegador, ela irá redirecionar para a página inicial da DevMidia.
+
+exemplo_3
+
+www.devmedia.com.br/projetos-api/teste-erro
+redireciona para www.devmedia.com.br
+
+Isso significa que o endpoint vai retornar um texto (string) contendo o código
+HTML da página, ao invés de um array de UFs.
+Retorno do endpoint no Postman
+
+exemplo_4
+
+Com o nosso código atual, isso resultará em um erro nada amigável.
+
+exemplo_5
+
+Isso ocorre pois map é uma função de array e como o retorno veio no formato string, a função
+map falhou.

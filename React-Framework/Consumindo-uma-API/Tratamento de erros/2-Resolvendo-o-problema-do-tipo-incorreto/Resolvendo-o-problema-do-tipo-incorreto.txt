@@ -1,0 +1,39 @@
+Resolvendo o problema do tipo incorreto
+
+Resolvendo o problema
+
+Como vimos anteriormente, quando o endpoint retornou uma string ocorreu um erro na função
+map, pois é uma função de array.
+
+exemplo_1
+
+resolver esse problema precisamos verificar o tipo do retorno da constante listaUfs.
+
+exemplo_2
+
+Para isso usamos a função Array.isArray, nativa do JavaScript. Essa função verifica se a variável
+passada como parâmetro (listaUfs) é do tipo Array ou não.
+
+exemplo_3
+
+Se os dados forem do tipo array, então listamos as UFS na tela. Caso contrário, exibimos
+uma mensagem na tabela dizendo "Erro ao consumir API".
+
+exemplo_4
+
+Isso vai fazer com que a função map só seja executada se os dados forem do tipo array,
+resolvendo o problema que vimos anteriormente.
+
+exemplo_5
+
+Com essa simples alteração o erro que vimos anteriormente some e temos essa mensagem amigável.
+
+exemplo_6
+
+Perfeito. O nosso primeiro problema foi resolvido. Porém, essa solução não resolve
+todos os casos.
+
+exemplo_7
+
+Perfeito! Já melhoramos o nosso código resolvendo um tipo de problema, porém, essa solução não se
+aplica a tudo.
