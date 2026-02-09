@@ -35,3 +35,4 @@ Nesse caso, o código vai esperar 10 segundos pela resposta, e caso ela não ven
 vai disparar um erro que será tratado pelo catch.
 
 exemplo_6
+
