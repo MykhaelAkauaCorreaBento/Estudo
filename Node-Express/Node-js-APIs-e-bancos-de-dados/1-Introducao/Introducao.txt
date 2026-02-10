@@ -1,0 +1,179 @@
+Introducao
+
+Parabéns por mais um passo na sua carreira programador back-end.
+
+Nesse curso iniciaremos um novo módulo na sua jornada, que é a integração das suas APIs com 
+bancos de dados.
+
+Até aqui construímos algumas APIs básicas com Node.js e Express, tais como a API de UFs, API
+de histórico IPCA, API de conversão de milhas, entre outras.
+
+Em resumo, criamos APIs que realizam dois tipos de ações:
+
+Executam funções: por exemplo, a API que converte de Celsius para Fahrenheit (ou vice-versa).
+Nesse cenário, a API recebe valores do front-end, realiza algum tipo de processamento e retorna
+um resultado.
+Lidam com coleções de dados: por exemplo, a API que retorna dados de UFs. Nesse contexto, a API
+retorna dados da coleção de UFs, conforme os parâmetros enviados pelo front-end.
+Até então, as APIs que construímos para lidar com dados, tal como a API de UFs, utilizam
+coleções de dados estáticas, escritas diretamente no código-fonte.
+
+
+APIs e banco de dados
+
+contextualizando
+
+Até o momento, criamos algumas APIs que trabalham com coleções de dados. Exemplos:
+
+A API de UFs e a API de Histórico IPCA.
+
+https://api-ufs.onrender.com/ufs
+
+https://api-ipca.onrender.com.historicoipca
+
+A API de UFs retorna dados de Ufs:
+
+exemplo_1
+
+Consumo no Postman
+
+Da mesma forma, a API Histórico IPCA retorna dados sobre o índice IPCA:
+
+exemplo_2
+
+Consumo no Postman
+
+Essas APIs acessam dados através de uma coleção interna ao código da aplicação. Esses dados
+são estáticos.
+
+exemplo_3
+
+O uso de dados estáticos, ou seja, escritos no código do projeto, traz algumas limitações.
+
+
+(-----------------------Limitações de coleções de dados estáticas-----------------------)
+
+Coleções de dados estáticas
+
+Exemplos de limitações
+
+Vimos que, até então, nossas APIs utilizam coleções de dados estáticas. Esse cenário traz
+limitações - vamos entender através de exemplos práticos.
+
+exemplo_4
+
+Considere a alteração na API Histórico IPCA:
+Queremos adicionar na API dados do ano 2014 (nossa API tem dados somente a partir de 2015).
+
+exemplo_5
+
+Como os dados são estáticos, tenamos que fazer alguns passos. Primeiro, modificar o código da
+coleção e inserir os dados de 2014.
+
+exemplo_6
+
+Depois, precisamos interromper o funcionamento da API e realizar o upload da nova versão,
+contendo os novos dados.
+
+Ou seja, temos uma limitação. Toda vez que você precisar inserir dados na coleção, terá
+que alterar o código, parar a API e realizar o upload novamente.
+
+Isso é trabalhoso e propenso a erros.
+
+Vamos analisar um segundo cenário:
+imagine uma API para um sistema e-commerce.
+
+exemplo_7
+
+Esse tipo de sistema tem uma diferença em relação as APIs que fizemos: seus dados
+mudam com o tempo.
+
+Na API de Historico IPCA os dados não mudam. Já em um e-commerce, os dados mudam.
+Por exemplo, o preço de um produto pode ser alterado.
+
+exemplo_8
+
+Imagine o trabalho: toda vez que o preço de um produto mudar precisaremos alterar o código,
+para o funcionamento da API e publicá-la novamente.
+
+exemplo_9
+
+Considere um cenário pior: digamos que no nosso sistema os preços mudam com frequência: 
+Por exemplo um e-commerce de mercado, onde os preços alteram todo dia.
+
+Nesse cenário, é inviável manter os dados dos produtos escritos dentro do código da API.
+
+exemplo_10
+
+A solução é separar a coleção de dados do código da aplicação, através de um
+banco de dados.
+
+Com um banco de dados, os dados poderão ser modificados sem que a API precise ser atualizada.
+
+exemplo_11
+
+O próximo passo na evolução como programador back-end é separar os dados da coleção do
+código da API. A ideia é utilizar um banco de dados, ao invés de escrever os dados diretamente
+no código da API.
+
+(--------------------------Reduzindo a dependência--------------------------)
+
+Mover os dados da API para um banco de dados vai reduzir o grau de dependência do sistema.
+Esse é um conceito importante do ponto de vista da arquitetura.
+
+Banco de dados
+
+Reduzindo a dependência do sistema
+
+Diminuir a dependência aumenta a qualidade do sistema.
+
+exemplo_12
+
+Ou seja, a ideia é separar dois componentes do sistema: o código da API e os dados da coleção:
+
+exemplo_13
+
+Tecnicamente, dizemos que esse tipo de separação dos componentes "reduz a dependência do sistema".
+Dependência, nesse caso, indica componentes que estão diretamente interligados.
+
+Veja um exemplo. Considere esta linha de código:
+
+exemplo_14
+
+Aqui, temos uma dependência: o codigo HTML e o código CSS estão diretamente interligados, na
+mesma linha.
+
+Reduzir a dependência nesse caso seria separar os dois componentes. Por exemplo:
+
+exemplo_15
+
+Reduzir a dependência é bom por um motivo simples: um componente pode ser alterado
+sem impactar o outro. Vamos usar um fogão como analogia:
+
+exemplo_16
+
+Nesse Sistema, a dependência foi reduzida. O fogão não armazena o gás, da mesma forma que o 
+botijão não aquece a comida.
+
+exemplo_17
+
+Você pode trocar o botijão de gás ou consertar o fogão independentemente um do outro.
+
+exemplo_18
+
+
+O mesmo acontece com nosso sistema: se a coleção está no banco de dados, podemos fazer
+alterações nos dados sem nos preocupar com a API - e vise-versa.
+
+exemplo_19
+
+De volta ao Histórico IPCA: se a coleção estiver em um banco de dados, podemos inserir novos
+dados diretamente nele, sem precisar alterar nada no código da API.
+
+exemplo_20
+
+
+Ou seja, sua evolução como programador back-end é fazer com que suas APIs se conectem a um
+banco de dados.
+
+exemplo_21

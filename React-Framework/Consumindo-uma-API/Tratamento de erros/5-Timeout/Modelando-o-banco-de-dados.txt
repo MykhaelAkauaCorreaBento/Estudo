@@ -1,0 +1,213 @@
+Modelando o banco de dados
+
+Nesta aula vamos iniciar a criação do projeto do curso: uma API de informações sobre títulos da
+copa de futebol Libertadores.
+
+O objetivo é criar uma API que retorna dados sobre os campeões da Copa Libertadores de
+2000 a 2022. 
+
+Esses dados devem vir de um banco de dados MySQL, diferente de projetos anteriores, onde
+os dados eram escritos internamente no código da API.
+
+API Copa Libertadores
+
+Entendendo o projeto do curso
+
+Neste curso vamos construir uma API que irá consumir dados de um banco de dados.
+
+exemplo_1
+
+O objetivo da API é retornar dados dos vencedores do campeonato Libertadores da América.
+
+exemplo_2
+
+Os dados são referentes aos anos de 2000 a 2022 e estarão salvos em um banco de dados MySQL.
+
+exemplo_3
+
+A API terá quatro rotas de consumo:
+
+exemplo_4
+
+propriedades da coleção são:
+
+id - identificador único do elemento
+campeao - time campeão
+vice - time vice-campeão
+ano - ano do campeonato 
+
+exemplo_5
+
+O objetivo é que a coleção de dados não esteja escrita no código da API. Os dados devem estar no
+banco de dados, reduzindo assim a dependência do sistema.
+
+exemplo_6
+
+Dessa forma, se você inserir novos dados (por exemplo, o campeão da Libertadores mais
+recente), o código da API não precisará ser alterado.
+
+exemplo_7
+
+(----------------------Array de objetos X Tabelas----------------------)
+
+Até esse momento, construímos coleções de dados como arrays em JavaScript e as incluímos
+diretamente no código da API.
+No entanto, nosso objetivo agora é migrar esses dados para um banco de dados.
+
+Até agora, as coleções que criamos eram arrays em JavaScript. Essas coleções foram escritas
+no próprio código da API. Veja por exemplo a API de UFs:
+
+exemplo_8
+
+Seguindo essa ideia, se a coleção de campeões fosse escrita no código, ela ficaria assim:
+
+exemplo_9
+
+O objetivo agora é disponibilizar esses dados no banco de dados, ao invés de tê-los como
+um array no código:
+
+exemplo_10
+
+Aqui temos um ponto importante:
+
+A forma como os dados são escritos em uma coleção JavaScript não é igual a forma como
+os dados são criados no banco de dados.
+
+Em um array JavaScript, os dados são objetos. No banco de dados, os dados são 
+colunas e linhas.
+Veja o exemplo:
+
+exemplo_11
+
+No exemplo da coleção campeoesLibertadores, cada linha do array é um objeto.
+
+exemplo_12
+
+id, campeao, vice e ano são propriedades do objeto.
+
+No array de Libertadores temos 23 objetos. Para acessar, por exemplo,um objeto na
+posição 0 do array, usamos a sintaxe:
+
+campeoesLibertadores[0]
+
+Para imprimir ovalor de uma propriedade, usamos:
+
+colecao[posição].nome-da-propriedade
+
+Exemplo:
+
+campeoesLibertadores[0].campeao
+
+O código abaixo imprime a propriedade campeao do primero objeto da coleção:
+
+exemplo_13
+
+No banco de dados, por sua vez, os dados não são objetos, e sim linhas de uma tabela.
+Por exemplo:
+
+exemplo_14
+
+Note como uma tabela é, na verdade, uma planilha, Se nossa coleção fosse criada no Excel,
+ela teria a mesma aparência do banco de dados:
+
+exemplo_15
+
+Dessa forma, teremos uma mudança no formato dos dados. VAmos precisar converter os dados do
+formato 'objeto' para o formato 'tabela':
+
+exemplo_16
+
+Como vimos, teremos uma mudança nos dados. Até aqui, nossos dados eram um array de objetos. No
+banco de dados, os dados serão linhas e colunas.
+
+exemplo_16
+
+Isso acontece porque usaremos bancos de dados do tipo relacional. Esse tipo de banco trabalha com dados no formato de tabelas, como uma planilha do excel.
+
+exemplo_17
+
+Outra característica de um banco relacional é que ele utiliza a linguagem SQL para manipular os dados.
+
+Essa linguagem é específica para lidar com dados no formato de tabela.
+
+exemplo_18
+
+Neste curso usaremos o banco de dados relacional MySQL. Nele os dados não são objetos, e sim
+tabelas.
+
+exemplo_19
+
+Contudo, nem todo banco de dados é relacional. Existem bancos de dados que lidam com objetos, com
+por exemplo o MongoDB:
+
+exemplo_20
+
+Nele os dados não precisam ser 'traduzidos', pois a sintaxe e similar ao array deobJetos.
+
+Nós vamos utilizar banco de dados relacionais pois a maioria dos sistemas e empresas
+utilizam bancos de dados desse tipo.
+
+exemplo_21
+
+O próximo passo é criarmos os dados de campeões da libertadores no formato de tabela,
+para que eles possam ser inseridos no MySQL.
+
+exemplo_22
+
+Em resumo:
+
+Até esse momento nossos dados foram escritos no código da API, no formato array de objetos,
+e eram lidos diretamente através do JavaScript. Agora, os dados serão criados no MySQL, em 
+formato de tabela, e serão lidos com SQL.
+
+(-----------------------Modelo de dados-----------------------)
+
+Estruturando o banco de dados
+
+Vamos então construir o modelo de dados em formato de tabela. Essa etapa é chamada de
+'modelagem dos dados'.
+
+exemplo_23
+
+Iniciaremos construindo os dados no formato que estamos acostumados: um array de objetos.
+Faremos isso apenas para ter uma visão didática. Ficaria assim:
+
+exemplo_24
+
+A coleção irá conter dados entre os anos de 2000 e 2022:
+
+exemplo_25
+
+Nessa coleção as propriedades de cada objeto serão id, campeão, vice e ano.
+
+exemplo_26
+
+O objetivo agora é migrar esses dados para o formato tabela, ou seja, relacional.
+Você pode iniciar esse processo inserindo os dados no Excel, por exemplo.
+
+exemplo_27
+
+Observe que temos uma tabela com quatro colunas, que estão representando as quatro
+propriedades do objeto: id, campeão, vice e ano.
+
+No modelo relacional, as colunas são chamadas campos.
+
+exemplo_28
+
+Bom, nossa tabela possui quatro campos, No modelo relacional, é obrigatório identificar o tipo
+de cada campo. Por exemplo:
+
+id - inteiro (interger)
+campeao - string
+vice - string
+ano - inteiro (interger)
+
+Dessa forma, nossa modelagem está concluída. Definimos que:
+
+- Nosso banco de dados terá uma tabela
+- A tabela terá quatro campos
+- Identificamos o tipo de cada campo na tebela
+
+O modelo final segue abaixo:
+
+exemplo_29
