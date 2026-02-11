@@ -1,0 +1,23 @@
+login: usuariolibertadores
+password: senhalibertadores
+
+login: novousuario
+passwaord: novasenha
+
+
+códigos utilizados
+
+Código para verificar o usuário atual
+SELECT CURRENT_USER()
+
+Código para criar o usuário novousuario
+CREATE USER 'novousuario' IDENTIFIED BY 'novasenha';
+
+Código para conceder a permissão de acesso do novousuario ao banco novoprojetodb
+GRANT ALL PRIVILEGES ON novoprojetodb TO 'novousuario';
+
+Código Para criar o usuário usuariolibertadores
+CREATE USER 'usuariolibertadores' IDENTIFIED BY 'senhalibertadores';
+
+Código para conceder a permissão de acesso do usuariolibertadores ao banco libertadoresdb
+GRANT ALL PRIVILEGES ON libertadoresdb TO 'usuariolibertadores';

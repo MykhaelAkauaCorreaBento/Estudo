@@ -1,0 +1,85 @@
+Criando o banco de dados
+
+O MySQL Workbench é uma ferramenta gráfica que permite a manipulação do servidor MySQL.
+
+Com ele veremos duas formas de criar um banco de dados:
+
+A primeira é usando códigos SQL dentro do Workbench;
+A segunda é usando a própria interface gráfica do Workbench.
+
+Nessa aula vamos criar o nosso banco de dados. Para isso utilizaremos a ferramenta gráfica
+MySQL Workbench.
+
+Com o MySQL Workbench podemos criar e manipular um banco de dados MySQL.
+
+Você pode abrir o MySQL Workbench através da barra de tarefas do Windows.
+Ao abrir o MySQL Workbench, você precisará conectá-lo ao servidor. Para isso, clique em "Local
+instance" (servidor local) no MySQl Connections.
+Será necessário colocar a senha definida anteriormente.
+Após conectar ao servidor, você verá a seguinte tela:
+exemplo_1
+
+Na seção "Query" escreveremos códigos SQL para manipular os dados.
+
+exemplo_2
+
+Para criar um novo banco de dados escreva o seguinte código SQL:
+
+CREATE DATABASE LibertadoresDB
+
+"LibertadoresDB" será o nome do nosso banco de dados para o projeto Copa Libertadores.
+
+No MySQL Workbench, você excreverá isso na seção Query, desta forma:
+
+exemplo_3
+
+Você pode executar o código SQL de 3 formas:
+
+1º - ctrl + Enter na linha do código;
+
+2º - apertar F5;
+
+3º - clicar no ícone de raio amarelo.
+
+exemplo_4
+
+Na seção "Output", você pode ver as respostas do códifo executado, semelhante ao consile no Visual Studio Code.
+
+exemplo_5
+
+Se ver essa mensagem, o seu banco de dados foi criado com sucesso.
+
+exemplo_6
+
+Na aba "Schemas", dentro de "Navigator", você pode conferir o banco de dados criado:
+
+exemplo_7
+
+Com isso, você criou o banco de dados LibertadoresDB para o nosso projeto.
+
+(------------------  Construção do banco de dados com interface gráfica  ------------------)
+
+Agora veremos a segunda forma de como se criar um banco de dados usando o MySQL Workbench.
+
+Neste caso, não usaremos códigos SQL. Ao invés disso, iremos utilizar somente a interface gráfica do Workbench.
+
+Criando o banco de dados Construção do banco com a interface gráfica
+Veremos agora como criar o banco de dados usando apenas a interface gráfica do MySQL Workbench.
+
+Na seção Navigator, clique com o botão direito do mouse em "Schemas".
+
+Escolha "Create Schema" para criar um novo banco de dados.
+
+exemplo_8
+
+Uma nova aba chamada "Schema" será aberta. Nela, digite o nome do banco para o projeto, que será "LibertadoresDB".
+
+exemplo_9
+
+Em seguida, clique em "Apply" para criar o banco de dados.
+
+exemplo_10
+
+Assim, o banco de dados será criado com sucesso através da interface gráfica do MySQL Workbench.
+
+exemplo_11

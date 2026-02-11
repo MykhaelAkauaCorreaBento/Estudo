@@ -1,0 +1,127 @@
+A normalização dos dados
+
+Antes de iniciar a construção do banco de dados, você precisa entender um novo conceito:
+a normalização dos dados.
+
+Dizemos que os dados estão normalizados quando eles não se repetem em uma tabela do banco.
+
+No nosso projeto da Copa Libertadores, os dados se repetem na tabela.
+
+exemplo_1
+
+Entendendo o conceito
+
+No modelo relacional há um conceito chamado normalização.
+
+Antes de prosseguir com a construção do banco de dados, precisamos entender mais sobre esse
+conceito.
+
+A normalização é a principal diferença entre os dados no formato 'objetos' e os dados no
+formato 'tabela'.
+
+exemplo_2
+
+De forma simples, a ideia é a seguinte: dados 'normalizados' não possuem repetição.
+
+exemplo_3
+
+A normalização é uma preocupação quando os dados estão no formato tabela, Quando os dados estão
+no formato objeto, não há problema com repetições.
+
+exemplo_4
+
+No formato 'tabela' (relacional) o ideal é que os dados não sejam repetidos. No nosso projeto,
+por exemplo, temos dados repetidos na tabela:
+
+exemplo_5
+
+Chamamos uma tabela que possui dados repetidos de tabela desnormalizada.
+
+exemplo_5
+
+O "Boca Juniors" repete várias vezes, logo a tabela está desnormalizada.
+
+(-----------------------Entendendo a normalização-----------------------)
+
+A normalização dos dados
+
+Entendendo com exemplos
+
+Vamos entender porque a falta de normalização pode ser um problema através de um exemplo.
+Imagine um e-commerce, Digamos que temos uma tabela com pedidos de venda:
+
+exemplo_6
+
+Observe que o cliente 'João' fez dois pedidos. Os dados desse cliente estão repetidos.
+
+exemplo_7
+
+Nesse modelo, se o cliente João fizer um novo pedido, seus dados - nome, email, endereço -serão
+sempre repetidos.
+
+exemplo_8
+
+Agora vem o problema: imagine que João trocou o email para joaoNOVO@email.com.
+Teríamos que fazer alterações nos pedidos para manter o email atualizado.
+
+exemplo_9
+
+Isso pode ser problemático, pois estamos alterando dados de pedidos que já aconteceram.
+Além disso, pode ficar confuso saber qual é o email atual de João.
+
+A solução é a normalização. A ideia é: para cada conjunto de dados repetidos, criar uma
+nova tabela. Nesse exemplo, teríamos uma tabela exclusiva para salvar os dados de clientes.
+
+exemplo_10
+
+Na tabela de pedidos, ao invés de salvar os dados do cliente, teríamos apenas a In ormaçao do
+código do cliente. Por exemplo:
+
+exemplo_11
+
+Isso é a normalização, Se uma informação de João mudar, como o email, seria necessário alterar
+apenas uma vez, na tabela de clientes.
+
+exemplo_12
+
+Se você precisar consultar alguma informação de João, você fará isso apenas na tabela de clientes.
+O cliente pode ser encontrado através do ID, nesse caso, ID = 1.
+
+exemplo_13
+
+Veja como ficaria a diferença entre os modelos normalizado X desnormalizado:
+
+exemplo_14
+
+(--------------------- O banco de dados Libertadores está normalizado? ---------------------)
+
+O banco de dados que foi modelado para o projeto da Copa Libertadores está desnormalizado.
+Veja no flow a seguir porque isso não representa um problema para o nosso projeto e como ele
+ficaria se fosse normalizado:
+
+Na última aula fizemos a modelagem do banco de dados. Nosso projeto possui uma tabela, com quatro
+campos.
+
+exemplo_15
+
+Observe que nossa tabela está desnormalizada: os nomes dos times aparecerm repetidos.
+
+exemplo_16
+
+Para normalizar, a técnica é: separar os dados repetidos em uma nova tabela. Veja como ficaria o
+modelo atualizado.
+
+exemplo_17
+
+Contudo, a normalização não é obrigatória. Em alguns cenários, normalizar pode não trazer muitos
+ganhos.
+Por exemplo, em sistemas simples, como o projeto API Libertadores, a normalização nao vai trazer
+muitos benefícios.
+
+Nesse projeto não teremos mudanças no nome dos times. Provavelmente, o time Palmeiras continuará
+se chamando Palmeiras. Nesse caso, podemos dizer que normalizar é um excesso de engenharia.
+
+Por esse motivo vamos manter a modelagem da aula anterior, e prosseguir o projeto com a tabela
+desnormalizada:
+
+exemplo_18

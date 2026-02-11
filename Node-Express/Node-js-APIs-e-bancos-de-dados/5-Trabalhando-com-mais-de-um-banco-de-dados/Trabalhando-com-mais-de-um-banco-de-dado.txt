@@ -1,0 +1,264 @@
+Trabalhando com mais de um banco de dados
+
+Na aula anterior, você aprendeu a criar o seu primeiro banco de dados no MySQL.
+
+Com o passar do tempo e a evolução dos estudos, a tendência é que você crie novos bancos de dados
+- um para cada projeto de API.
+
+Ou seja, cada sistema vai ter um banco de dados próprio.
+
+exemplo_1
+
+Aqui precisamos notar um ponto importante. Nesse momento, estamos acessando o banco de dados
+libertadoresDB, no MySQL Workbench, através da senha principal do MySQL, que foi definida no
+momento da instalação.
+
+Esta senha principal é chamada de root, e dá acesso global ao MySQL. Ou seja, com esta senha
+é possível se conectar e acessar todos os bancos de dados criados.
+
+Na máquina local usar a senha root na API não é um problema, pois você está no ambiente de
+desenvolvimento.
+
+Porém, se a API estiver online, o ideal é não utilizar a senha root para se conectar ao banco
+de dados, pois essa senha é para o acesso administrador.
+
+Com a senha root, uma API pode acessar o banco de dados de outra API que esteja no mesmo
+servidor MySQL.
+
+exemplo_2
+
+A solução é criar novos usuários e senhas, um para cada banco de dados. Dessa forma, cada 
+API vai enxergar somente o seu banco de dados.
+
+
+(------------------------  Trabalhando com mais de um banco de dados  ------------------------)
+
+Introdução
+
+Nesse momento temos um banco de dados criado no MySQL. Porém, podemos ter mais de um banco de
+dados no mesmo servidor.
+
+exemplo_3
+
+Na aula anterior criamos um banco de dados para o projeto Copa Libertadores.
+
+exemplo_4
+
+A ideia é ter um banco de dados para cada projeto de API que venha a ser criado. Ou seja,
+cada API terá seu próprio banco de dados.
+
+exemplo_5
+
+Para criar um novo banco de dados, execute um novo comando CREATE DATABASE:
+
+CREATE DATABASE novoprojetodb
+
+exemplo_6
+
+Observe como o Workbench exibe os dois bancos de dados criados.
+
+exemplo_7
+
+Aqui temos um ponto: até então, os dois bancos de dados serão acessados usando a mesma senha que
+você definiu na instalaçãp do MySQL.
+
+exemplo_8
+
+Essa senha pertence ao usuário root, que tem acesso a todos os bancos de dados do servidor MySQL.
+
+exemplo_9
+
+Quando uma API utiliza a senha do root ela ganha acesso livre a qualquer banco do seu MySQL.
+Dessa forma, uma API pode acessar o banco de dados de outra API.
+
+exemplo_10
+
+Na máquina local isso não é um problema - afinal, você está no ambiente de desenvolvimento.
+
+exemplo_11
+
+Entretanto, no ambiente de produção, o ideal é criar novos usuários no MySQL, um para cada
+banco de dados.
+
+exemplo_12
+
+Dessa forma, cada projeto vai acessar um banco de dados próprio e ter um usuário e senha
+de acesso.
+
+exemplo_13
+
+Vamos ver como criar novos usuários e senhas no MySQL. Lembrando que esse passo não é obrigatório
+quando você está trabalhando na sua máquina local.
+
+(-------------------------------- Usuários e senhas no MySQL --------------------------------)
+
+Criando e configurando usuários
+
+Vimos que, quando o projeto estiver online, o ideal é que ele use um usuário de acesso
+específico do MySQL.
+
+Agora vamos criar novos usuários, um para cada banco de dados.
+
+Vejamos o passo a passo. Primeiro se conecte no Workbench. Observe que você vai se conectar
+como root, ou seja, administrador.
+
+exemplo_14
+
+No Workbench você pode conferir qual usuário está logado através do comando SELECT CURRENT_USER();.
+
+Observe que você está conectado como root.
+
+exemplo_15
+
+Conectado como root, vamos criar um novo usuário.
+Para isso, execute o comando CREATE USER:
+
+CREATE USER novousuario IDENTIFIED BY 'novasenha'
+
+exemplo_16
+
+Você pode conferir o usuário criado na aba "Navigator" em "Users and Privileges".
+
+exemplo_17
+
+Por padrão, o usuário criado não tem permissão para acessar nenhum banco de dados. Para
+configurar a permissão, use o comando GRANT:
+
+GRANT ALL PRIVILEGES ON novoprojetodb TO novousuario
+
+exemplo_18
+
+Veja em detalhes a sintaxe do GRANT:
+
+GRANT ALL PRIVILEGES ON banco-de-dados TO 'usuario'
+
+exemplo_19
+
+Dessa forma, você está permitindo que o usuário 'novousuario' acesse o banco 'novoprojetodb'.
+
+exemplo_20
+
+Para fazer o mesmo para libertadoresdb, basta criar um novo usuário.
+
+exemplo_21
+
+O objetivo é garantir que cada usuário possa acessar apenas o seu banco (exceto o usuário
+"root" que pode acessar todos os bancos).
+
+exemplo_22
+
+No ambiente de produção, o ideal é que o projeto Copa Libertadores acesse o banco libertadoresdb
+com o usuariolibertadores.
+
+exemplo_23
+
+E o novo projeto acesse o banco novoprojetodb com o usuário novousuario.
+
+exemplo_24
+
+Assim, o usuário root será usado apenas pelo administrador do banco de dados.
+
+Testando os acessos de cada usuário
+
+(--------------------- Testando os acessos de cada usuário ---------------------)
+
+Agora que você aprendeu a criar usuários e senhas para cada banco, vamos testar o acesso deles:
+
+root, usuariolibertadores, novousuario.
+
+Na tela inicial do Workbench, até o momento, só existe a opção de se conectar com o usuário root.
+Vamos adicionar como opção os outros usuários.
+
+exemplo_25
+
+
+Para adicionar conexões de usuário clique no ícone "+" posicionado ao lado de "MySQL Connections".
+
+Com isso, a janela "Setup New Connection" será aberta.
+
+exemplo_26
+
+Vamos inserir os do novo usuário. Comece colocando, no campo 'Connection Name', um nome amigável
+para identificar o acesso.
+
+exemplo_27
+
+No campo 'Username', coloque o nome do usuário:
+
+exemplo_28
+
+Os demais campos não precisam ser preenchidos.
+
+Para testar a conexão com o usuário, clique em "Test Connection" e coloque a senha:
+
+exemplo_29
+
+O aviso indica que o usuário foi conectado com sucesso. Clieque em OK para prosseguir.
+
+exemplo_30
+
+Após clicar em OK, a conexão com o novo usuário aparecerá na tela inicial do Workbench:
+
+exemplo_31
+
+Em seguida, faça o mesmo processo para o usuariolibertadores:
+
+exemplo_32
+
+Dessa forma, você terá 3 conexões (uma para cada usuário) disponíveis na tela inicial do
+Workbench.
+
+exemplo_33
+
+Agora vamos acessar o MySQL Workbench com os 3 usuários. Primeiro conecte-se com o root.
+
+Ao se conectar com o root, veja que todos os bancos de dados podem ser acessados:
+
+exemplo_34
+
+Agora feche o Workbench, abra novamente e conecte-se com o novousuario:
+
+exemplo_35
+
+Com o 'novousuario' veja que só podemos nos conectar ao banco novousuariodb.
+
+O 'novousuario' não possui permissão de acesso ao 'libertadoresdb'.
+
+exemplo_36
+
+Por fim, conecte-se com o usuariolibertadores.
+
+exemplo_37
+
+Veja que o 'usuariolibertadores' só pode acessar o banco libertadoresdb:
+
+exemplo_38
+
+Dessa forma, garantimos que cada usuário (além do root) tenha acesso somente ao banco
+de dados em que está relacionado.
+
+exemplo_39
+
+login: usuariolibertadores
+password: senhalibertadores
+
+login: novousuario
+passwaord: novasenha
+
+
+códigos utilizados
+
+Código para verificar o usuário atual
+SELECT CURRENT_USER()
+
+Código para criar o usuário novousuario
+CREATE USER 'novousuario' IDENTIFIED BY 'novasenha';
+
+Código para conceder a permissão de acesso do novousuario ao banco novoprojetodb
+GRANT ALL PRIVILEGES ON novoprojetodb TO 'novousuario';
+
+Código Para criar o usuário usuariolibertadores
+CREATE USER 'usuariolibertadores' IDENTIFIED BY 'senhalibertadores';
+
+Código para conceder a permissão de acesso do usuariolibertadores ao banco libertadoresdb
+GRANT ALL PRIVILEGES ON libertadoresdb TO 'usuariolibertadores';
