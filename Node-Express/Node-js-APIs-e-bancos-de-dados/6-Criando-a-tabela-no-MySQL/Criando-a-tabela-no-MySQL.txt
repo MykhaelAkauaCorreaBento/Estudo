@@ -1,0 +1,220 @@
+Criando a tabela no MySQL
+
+Nas aulas anteriores vimos como criar um banco de dados e se conectar ao MySQL Workbench.
+
+Agora, veremos como utilizar essa ferramenta para construir a tabela 'campeonatos' dentro do
+nosso banco de dados Libertadores.
+
+(-------------- Criando a tabela no banco de dados --------------)
+
+Nosso objetivo agora é criar a tabela campeonatos dentro do banco de dados libertadoresdb.
+
+Para isso, precisaremos utilizar o comando CREATE TABLE.
+
+Vamos utilizar o SQL para criar a tabela Campoenatos. Faremos isso no MySQL Workbench.
+
+exemplo_1
+
+A tabela será criada a partir da modelagem:
+
+exemplo_2
+
+Vamos começar selecionando o banco de dados. Para isso, clique duas vezes em 'libertadoresdb'
+na aba 'Schemas'.
+
+exemplo_3
+
+Em seguida, na aba "query" execute o comando
+CREATE TABLE:
+
+exemplo_4
+
+Vamos entender passo-a-passo a sintaxe do comando
+CREATE TABLE:
+
+exemplo_4
+
+O comando CREATE TABUE Campeonatos cria uma tabela de nome "Campeonatos".
+
+exemplo_5
+
+O comando id INTEGER cria uma coluna de nome "id", para armazenar valores do tipo inteiro.
+
+exemplo_6
+
+O comando 'campeao VARCHAR(35)' cria a coluna "campeao" que armazena strings com até 35 caracteres.
+
+exemplo_7
+
+Escolhemos 35 caracteres como um tamanho padrão para acomodar a maioria dos nomes de times.
+
+Você pode usar um tamanho diferente até o limite de 255.
+
+O comando 'vice VARCHAR(35)' cria uma coluna de nome 'vice'  com as mesmas características da
+coluna "campeao".
+
+exemplo_8
+
+O comando 'ano INTEGER' cria uma coluna de nome "ano" para armazenar números inteiros.
+
+exemplo_9
+
+Você pode verificar a tabela criada na aba Schemas:
+
+exemplo_10
+
+Com isso a tabela Campeonatos está criada.
+
+Código usado:
+
+CREATE TABLE Campeonatos (
+id INTEGER,
+campeao VARCHAR(35),
+vice VARCHAR(35),
+ano INTEGER);
+
+Ainda temos mais um passo na configuração da tabela. O próximo passo é configurar a chave
+primária na nossa tabela.
+
+(---------------------------- Chave primária ----------------------------)
+
+O objetivo dos próximos passos é nos ajudar a configurar uma chave primária
+na tabela campeonatos. Porém, antes precisamos entender o que é esse conceito.
+
+Agora vamos entender um conceito importante em bancos de dados relacionais, chamado chave primária.
+
+
+exemplo_11
+
+Toda tabela precisa ter uma chave primária. A chave primária é um campo único na tabela que 
+identifica os dados de uma linha.
+
+exemplo_11
+
+A definição de chave primária envolve dois pontos:
+
+1.A tabela precisa ter um campo com valores únicos.
+
+2.Esse campo precisa ser um índice.
+
+Vamos enteder esses dois pontos a seguir.
+
+1) A tabela precisa ter um campo com valores únicos.
+
+Isso é similar ao padrão RESt, onde a coleção de dados precisa ter um ID sequencial. Exemplo:
+
+exemplo_12
+
+Na tabela campeonatos, o campo ID poder ser usado parar compor a nossa chave primária.
+
+exemplo_13
+
+Legal! Você já sabe como funciona o primeiro atributo da chave primária, o campo único,
+agora veja como é o funcionamento do segundo atributo:
+
+
+Chave primária - Index
+
+Vimos anteriormente o primeiro critério da Chave Primária, ser única.
+
+Agora veremos o segundo critério: ser um index.
+
+1.A tabela precisa ter um campo com valores únicos.
+2. Esse campo precisa ser um índice.
+
+
+2) O campo de uma Chave Primária precisa ser um índice na tabela.
+
+Um índice é uma ferramenta exclusiva de bancos de dados.
+
+exemplo_14
+
+Quando trabalhávamos com coleções de dados em JavaScript, não usávamos índices.
+
+A ideia do índice é otimizar o acesso aos dados da tabela.
+Pense em um índice remissivo (aquele no fim do livro), por exemplo: a ideia é a mesma.
+
+exemplo_15
+
+Você usa um índice remissivo para encontrar rapidamente um conteúdo no livro.
+
+exemplo_15
+
+O banco de dados trabalha da mesma forma. 
+O índice classifica todos os dados da tabela, permitindo que eles sejam acessados
+de forma rápida.
+
+É algo que acontece internamente no banco de dados. Em tabelas pequenas, como na
+tabela Campeonatos, essa diferença de performance não é perceptível.
+
+exemplo_16
+
+Contudo, em tabelas com muito volume, índices são fundamentais. Por exemplo:
+
+O Uber recebe corridas em diversos países do mundo.
+
+A Uber possui um imenso volume de dados.
+
+Nesse cenário, ter índices é fundamental para garantir a performance da
+aplicação no acesso a esses dados.
+ 
+exemplo_17
+
+Em bancos de dados, não importa se a tabela é grande ou pequena: toda tabela
+precisa ter um índice de chave primária.
+
+exemplo_18
+
+Uma chave primária consiste em um campo com valores únicos, indexados.
+
+Agora que já entendemos o que é uma chave primária nós precisamos configurá-la,
+e é isso que faremos no próximo tópico.
+
+
+(---------------------- Configurando a chave primária da tabela ----------------------)
+
+Para configurar a chave primária na nossa tabela precisaremos alterá-la através do comando
+ALTER TABLE
+
+Agora, vamos transformar a coluna id da tabela Campeonatos em uma chave primária.
+
+exemplo_11
+
+Primeiro, execute no MySQL Workbench o comando ALTER TABLE:
+
+ALTER TABLE Campeonatos MODIFY id INT AUTO_INCREMENT PRIMARY KEY;
+
+Vamos entender passo a passo a sintaxe desse comando.
+
+exemplo_19
+
+O ALTER TABLE campeonatos indica que estamos alterando a tabela campeonatos
+
+exemplo_20
+
+O comando MODIFY realiza uma modificação na coluna chamada "id" seguindo as instruções
+posteriores, nesse caso AUTO_INCREMENT E PRIMARY_KEY.
+
+exemplo_21
+
+AUTO_INCREMENT faz o campo receber um valor sequencial de forma automática.
+Ou seja, se o campo for auto_increment, ele terá os valores 1, 2, 3, assim por diante.
+
+exemplo_22
+
+Por fim, o PRIMARY KEY define a coluna "id" como índice de chave primária da tabela.
+
+exemplo_23
+
+Com isso feito, agora podemos inserir os dados referentes ao projeto Copa Libertadores
+na tabela.
+
+Você pode confirmar que o campo id está como Primary Key e Auto Increment.
+
+Basta selecionar a sua tabela e observar a área 'lnformation' no MySQL Workbench:
+
+
+exemplo_24
+
+Ótimo! Sua tabela está devidamente configurada e pronta para receber dados. Na próxima 
+aula veremos como inserir informações dentro da tabela campeonatos.

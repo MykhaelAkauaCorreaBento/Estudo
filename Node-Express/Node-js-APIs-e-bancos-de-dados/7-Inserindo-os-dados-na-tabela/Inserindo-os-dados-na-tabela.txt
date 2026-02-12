@@ -1,0 +1,188 @@
+Inserindo os dados na tabela
+
+Na aula anterior vimos como criar a nossa tabela campeonatos, além de configurar a chave primária.
+
+Agora veremos como inserir os dados na nossa tabela:
+
+Agora, vamos inserir alguns dados na tabela campeonatos.
+
+exemplo_1
+
+Para isso, vamos executar no MySQL Workbench o comando INSERTO:
+
+exemplo_2
+
+Vamos entender passo a passo a sintaxe do comando INSERTO.
+
+O INSERT INTO campeonatos indica que estamos inserindo dados na tabela campeonatos.
+
+exemplo_3
+
+(campeao, vice, ano) contém o nome dos campos da tabela que queremos preencher.
+
+exemplo_4
+
+Nesse caso vamos inserir dados em campeao, vice e ano.
+
+Observe que não informamos o campo id mo comando.
+
+exemplo_4
+
+Como vimos anteriormente, o campo id será incrementado automaticamente,
+por isso não precisamos informá-lo
+
+O comando VALUES indica que o próximo parênteses vai conter os valores que serão
+inseridos nos campos.
+
+exemplo_5
+
+Os valores são inseridos na mesma ordem que os campos aparecem no comando, ou seja:
+
+campeao ='Peñarol'
+vice = 'Olimpia'
+ano = 1960
+
+exemplo_6
+
+Note que os valores dos campos campeao e vice estão entre aspas, mas o ano não.
+As aspas são obrigatórias para dados do tipo string, mas não para dados numéricos.
+
+exemplo_7
+
+Agora quejá entendemos o comando INSERT INTO, precisamos utilizá-lo para registrar os dados.
+
+Com o comando pronto, basta clicar no ícone do raio para executá-lo.
+
+exemplo_8
+
+Uma mensagem de confirmação será mostrada na área output:
+
+exemplo_9
+
+Para visualizar o resultado, clique com o botão direito do mouse sobre a tabela 'campeonatos'
+e escolha a opção 'Select Rows'.
+
+exemplo_10
+
+Select Rows vai listar os dados da tabela campeonatos. Veja que os dados foram inseridos
+corretamente:
+
+exemplo_11
+
+Note que o campo id foi automaticamente inserido como 1, pois esse é o primeiro registro.
+
+exemplo_12
+
+Lembre-se de executar o comando INSERT para o restante dos dados.
+
+exemplo_13
+
+Ao final dos inserts sua tabela deve estar como essa:
+
+exemplo_14
+
+Comandos:
+
+INSERT INTO campeonatos (campeao, vice, ano) VALUES
+('Boca Juniors', 'Palmeiras', 2000),
+('Boca Juniors', 'São Caetano', 2001),
+('Olimpia', 'Santos', 2002),
+...
+('Flamengo', 'Athletico Paranaense', '2022 ');
+
+
+Ou você pode colocar um por um:
+
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Boca Juniors', 'Palmeiras', '2000 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Boca Juniors', 'São Caetano', '2001 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Olimpia', 'Santos', '2002 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Boca Juniors', 'Santos', '2003 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Once Caldas', 'Boca Juniors', '2004 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('São Paulo', 'Athletico Paranaense', '2005 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Internacional', 'São Paulo', '2006 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Boca Juniors', 'Grêmio', '2007 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Liga de Quito', 'Fluminense', '2008 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Estudiantes', 'Cruzeiro', '2009 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Internacional', 'Guadalajara', '2010 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Santos', 'Peñarol', '2011 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Corinthians', 'Boca Juniors', '2012 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Atlético Mineiro', 'Olimpia', '2013 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('San Lorenzo', 'Nacional', '2014 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('River Plate', 'Tigres', '2015 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Atletico Nacional', 'Independiente Del Valle', '2016 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Grêmio', 'Lanús', '2017 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('River Plate', 'Boca Juniors', '2018 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Flamengo', 'River Plate', '2019 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Palmeiras', 'Santos', '2020 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Palmeiras', 'Flamengo', '2021 ');
+INSERT INTO Campeonatos (campeao, vice, ano) VALUES ('Flamengo', 'Athletico Paranaense', '2022 ');
+
+O sinal de ponto e vírgula (;) ao final de cada comando serve para separar os comandos no
+MySQL Workbench.
+Desse modo podemos executar todos os comandos em sequência automática, ao invés de ter que
+'clicar no raio' uma vez para cada comando.
+
+
+No próximo tópico veremos como inserir um registro graficamente, sem precisar escrever o
+comando INSERT.
+
+Inserindo dados na tabela graficamente
+
+
+Além do comando INSERT, é possível inserir dados na tabela através da interface gráfica do
+MySQL Workbench, ou seja, sem escrever código.
+
+Para isso, vá até o MySQL Workbench, clique com o botão direito do mouse na tabela campeonatos:
+
+exemplo_15
+
+No menu suspenso, clique na opção 'Select Rowsl:
+
+exemplo_16
+
+Ao fazer isso, observe que uma área mostrando o conteúdo da tabela é exibida:
+
+exemplo_17
+
+Nessa área, clique em um dos campos com valor 'null' para digitar o valor desejado:
+
+exemplo_18
+
+Note que não precisamos informar o id, pois ele será inserido automaticamente ao fim do processo.
+
+exemplo_19
+
+Sendo assim, preencha a primeira linha dos campos 'campeao', 'vice' e 'ano'.
+
+exemplo_20
+
+Com os dados preenchidos, clique no botão 'Apply':
+
+exemplo_21
+
+Observe que o MySQL Workbench gerou o comando INSERT automaticamente na janela que foi aberta:
+
+exemplo_22
+
+Na janela, clique novamente em Apply:
+
+exemplo_23
+
+Ao clicar em Apply, você deve ver uma confirmação de que a inserção foi feita:
+
+exemplo_24
+
+Clique em finish e veja que os dados foram cadastrados corretamente.
+
+exemplo_25
+
+Observe como o valor '1' apareceu automaticamente no campo id.
+
+exemplo_26
+
+Pronto!
+
+Você inseriu um registro na tabela sem precisar escrever o comando INSERT.
+
+Perfeito! Agora você sabe fazer inserção de registro em tabelas MySQL tanto pelo
+comando INSERT, quanto pela interface gráfica do MySQL Workbench.

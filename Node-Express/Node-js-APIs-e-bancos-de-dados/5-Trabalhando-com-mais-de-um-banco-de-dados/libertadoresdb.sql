@@ -1,1 +1,1 @@
-create database novoprojetodb
+SELECT * FROM libertadoresdb.campeonatos;

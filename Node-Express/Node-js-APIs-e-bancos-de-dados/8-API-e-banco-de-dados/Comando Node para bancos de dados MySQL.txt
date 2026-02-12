@@ -1,0 +1,1 @@
+npm install mysql2 // Para instalar a biblioteca do do banco de dados MySQL através do Node.

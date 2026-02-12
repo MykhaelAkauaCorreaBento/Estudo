@@ -1,0 +1,92 @@
+API e banco de dados
+
+Na aula anterior nós inserimos os dados dos campeões da libertadores na tabela 'campeonatos'.
+
+Agora, o objetivo é fazer com que nossa API seja capaz de ler esses dados do banco de
+dados - ao invés de trabalhar com arrays internos, como fizemos nos código anteriores.
+
+Entendendo o processo
+Há uma sequência de passos que precisamos seguir para que nosso código JavaScript leia
+dados do banco de dados.
+
+Vamos conhecer esses passos a seguir:
+
+Entendendo o processo
+
+Para acessar os registros de um banco de dados via JavaScript, precisamos seguir um processo.
+O processo para acessar os registros de um banco de dados é:
+
+1.lnstalar uma biblioteca JS de banco de dados;
+2.Se conectar ao banco de dados;
+3.Executar comandos SQL para retornar os dados.
+
+Como vimos, o primeiro passo é a instalação de uma biblioteca JS para bancos de dados:
+
+exemplo_1
+
+A biblioteca tem como propósito permitir o acesso ao bancos de dados a partir do código JS:
+
+exemplo_2
+
+Uma vez instalada, vamos utilizar a biblioteca para conectar a API ao banco de dados.
+
+exemplo_3
+
+Por exemplo, para acessar as tabelas no Workbench nós precisamos nos conectar:
+
+exemplo_4
+
+Da mesma forma, para acessar um banco de dados a apartir ded uma API também precisamos nos
+conectar a ele.
+
+Desse modo, para acessar a tabela campeonatos a apartir da API é necessário se conectar primeiro
+ao banco de dados.
+
+exemplo_3
+
+Uma vez conectada, a API pode enviar comandos SQL para o banco de dados para obter sues registros.
+
+exemplo_5
+
+A API pode então manipular o retorno do banco como se fosse uma coleção dos dados.
+
+exemplo_6
+
+veremos como colocar esse conhecimento em prática, começando instalação da biblioteca.
+
+
+(--------------------------  Conhecendo e instalando o mysql2  --------------------------)
+
+Como vimos, para acessar o banco de dados via JavaScript precisamos nos conectar a ele através
+de uma biblioteca JavaScript.
+
+Para se conectar a um banco de dados MySQL através da nossa API, vamos utilizar a biblioteca 
+mysql2, que tem como objetivo permitir o acesso a um banco de dados MySQL a partir do Node.js:
+
+Conhecendo e instalando o mysq12
+
+Como já sabemos, nossa tabela campeonatos foi criada no banco de dados MySQL.
+
+Por esse motivo, para acessar os dados na nossa API precisamos utilizar a biblioteca mysq12:
+
+exemplo_7
+
+O objetivo dessa biblioteca é nos permitir acessar o nosso banco de dados MySQL através do Node:
+
+exemplo_8
+
+A biblioteca deve ser instalada na pasta do seu projeto. Para isso, no terminal do VS Code
+execute o seguinte comando:
+
+exemplo_9
+
+Na próxima aula veremos como se conectar ao banco de dados usando a biblioteca mysq12.
+
+npm install mysql2
+
+Perfeito!
+
+Você já tem a biblioteca mysql2 devidamente instalada.
+
+Na próxima aula veremos como utilizar a biblioteca mysql2 para conectar com o banco de dados,
+através do nosso código JavaScript.
