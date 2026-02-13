@@ -1,0 +1,253 @@
+Conectando ao banco de dados
+
+
+Na aula anterior conhecemos os tipos de conexão existentes e optamos por utilizar createPool, 
+conforme o Código:
+
+
+import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+    host     : 'localhost',
+    user     : 'novousuario',
+    password : 'novasenha',
+    database : 'libertadoresdb'
+});
+
+export default pool;
+
+
+Atenção! Essa aula conta com as propriedades async e await em algumas linhas de código.
+Não se preocupe em entendê-las nesse momento.
+Explicaremos o funcionamento de async e await na próxima aula.
+
+
+Agora, vamos aprender a utilizar o mysql2 para criar uma conexão com o banco de dados
+e testá-la no código da nossa API
+
+
+Utilizando a biblioteca mysq12
+
+
+Nós já entendemos a diferença entre os tipos de conexão. Agora vamos aprender a utilizar o
+mysql2 para criar uma conexão com o banco de dados. O objetivo dessa conexão é permitir que a API
+acesse os dados armazenados na nossa tabela.
+
+
+
+exemplo_1
+
+
+
+Para iniciar, vamos criar um arquivo chamado conexao.js dentro da camada de serviço(pasta servico).
+É nele que vamos criar nossa conexão:
+
+
+
+exemplo_2
+
+
+
+Começamos nosso conexao.js importando o mysq12.
+A importação do mysq12 é que nos dará acesso aos recursos da biblioteca.
+
+
+
+exemplo_3
+
+
+
+Em seguida, vamos utilizar o método createPool do mysq12, passando para eles alguns parâmetros.
+
+
+
+exemplo_4
+
+
+
+No campo host informamos o servidor do banco de dados, nesse caso localhost:
+
+
+
+exemplo_5
+
+
+
+Você pode conferir o endereço do servidor na página inicial do MySQL Workbench:
+
+
+
+
+exemplo_6
+
+
+
+No campo user informamos o usuário do banco de dados.
+
+
+
+exemplo_7
+
+
+Observe que estamos utilizando o mesmo usuário que criamos na Aula 5.
+
+
+No campo password informamos a senha do usuário anterior:
+
+
+
+exemplo_8
+
+
+
+Assim como o usuário, essa é a mesma senha que criamos previamente.
+
+
+Após a senha, temos o campo database, onde informamos o nome do banco de dados.
+
+
+
+exemplo_9
+
+
+
+Você pode conferir o nome do banco de dados diretamente no Workbench:
+
+
+exemplo_10
+
+
+
+Por fim, vamos exportar o pool, para podermos acessá=lo de outro arquivo posteriormente.
+
+Em resumo, o pool é o local onde ficam armazenadas as conexões disponíveis para serem buscadas,
+como vimos na aula anterior:
+
+
+
+exemplo_11
+
+
+
+import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+    host     : 'localhost',
+    user     : novousuario,
+    password : 'novasenha',
+    database : 'libertadoresdb'
+});
+
+export default pool;
+
+
+(----------------------------------  Testando a conexão  ----------------------------------)
+
+
+Perfeito! Nós já estamos utilizando o mysql2 para construir o pool, agora precisamos testar se
+está tudo funcionando corretamente.
+
+Agora que temos a pool criada, nós precisamos apenas testar a conexão.
+Para isso, vamos até o arquivo index.js e importar o pool que criamos anteriormente:
+
+
+
+exemplo_12
+
+
+Com o pool importado, vamos utilizá-lo para buscar uma conexão:
+
+
+exemplo_13
+
+
+
+Observe que no código utilizamos duas palavras novas: async e await. Você não precisa se
+preocupar com elas nesse momento, falaremos sobre isso na próxima aula.
+
+
+
+exemplo_14
+
+
+
+O getConnection irá buscar no pool uma conexão para usar, caso não ache, uma nova
+conexão será criada.
+
+
+exemplo_15
+
+
+Feito isso, podemos testar a conexão imprimindo no console o threadld, que é a
+identificação da conexão.
+
+
+
+exemplo_16
+
+
+
+Por fim, ao terminar de utilizar a conexão, colocamos ela de volta no pool:
+
+
+exemplo_17
+
+
+Feito isso, execute sua API e observe o console:
+
+
+exemplo_18
+
+
+Se um número aparecer no seu console, parabéns!
+
+Isso significa que sua conexão está funcionando corretamente.
+
+
+exemplo_19
+exemplo_20
+
+
+import express from 'express';
+import pool from './servico/conexao.js';
+
+const app = express();
+
+app.listen (9000, async () => {
+    const data = new Date();
+    console.log("Servidor node iniciado em: "+data);
+
+    const conexao = await pool.getConnection();
+
+    console.log(conexao.threadId);
+
+    conexao.release();
+})
+
+
+
+
+Ao concluir o teste, remova a importação da conexão e o seu conteúdo doapp.listen, pois não
+precisaremos deles no index.js
+
+
+
+exemplo_21
+
+
+
+import express from 'express';
+
+const app = express();
+
+app.listen (9000, async () => {
+    const data = new Date();
+    console.log("Servidor node iniciado em: "+data);
+})
+
+
+
+Perfeito! Sua API se conecta corretamente ao banco de dados.
+
+Na próxima aula veremos como retornar os dados da tabela campeonatos usando a
+conexão que construímos.

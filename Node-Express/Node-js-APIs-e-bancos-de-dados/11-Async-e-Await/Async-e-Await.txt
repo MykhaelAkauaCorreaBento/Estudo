@@ -1,0 +1,464 @@
+Async e Await
+
+
+Na aula anterior nós utilizamos a biblioteca mysql2 para conectar a API ao banco de dados
+através do JavaScript.
+
+Você deve ter notado dois termos inéditos no nosso código: async e await, conforme vemos
+no Código 1.
+
+import express from 'express';
+import pool from './servico/conexao.js';
+
+const app = express();
+
+app.listen(9000, async () => {
+    const data = new Date();
+    console.log("Servidor node iniciado em: "+data);
+
+    const conexao = await pool.getConnection();
+
+    console.log(conexao.threadId);
+
+    conexao.release();
+})
+
+Código 1. Conexão com a API
+
+
+async e await são recursos do JavaScript para tratamento de operações assíncronas. vamos entender
+mais sobre essas palavras, começando por await:
+
+
+Na aula anterior construímos o seguinte código:
+
+exemplo_1
+
+
+Observe que no código temos duas palavras novas: async e await.
+
+
+exemplo_2
+
+
+Vamos entender primeiro a palavra await.
+
+
+exemplo_3
+
+
+
+O await só é utilizado antes de funções assíncronas.
+
+
+exemplo_4
+
+
+
+Ou seja, usamos await porque getConnection é uma função assíncrona.
+
+
+
+exemplo_5
+
+
+Link da documentação:
+https://sidorares.github.io/node-mysql2/docs/examples/connections/create-pool#createpoolconfig
+
+
+Identificamos que  getconnection é uma função assíncrona através da sua documentação.
+No exemplo de uso da documentação é usado o await.
+
+exemplo_6
+
+Link da documentação:
+https://sidorares.github.io/node-mysql2/docs/examples/connections/create-pool#createpoolconfig
+
+
+O await é usado apenas em conjunto com funções assíncronas. Mas o que é uma função assíncrona 
+e para que serve o await?
+
+
+Mas o que é uma função assíncrona e para que serve o await?
+
+Ótimo, você já sabe que getConnection é uma função assíncrona, devido ao uso do await na
+documentação.
+
+
+(------------------------------- Operações assíncronas -------------------------------)
+
+
+Perfeito! Já sabemos que o getConnection é uma função assíncrona. Mas o que de fato são
+operações assíncronas?
+
+
+Operações assíncronas
+
+Uma operação assíncrona possui duas características principais:
+
+
+Seu tempo de resposta é desconhecido.
+
+Ela executa paralelamente a outras operações.
+
+
+Tempo de resposta é o tempo que leva para que um determinado código conclua sua execução.
+
+
+
+exemplo_7
+
+
+Por exemplo, quando iniciamos uma conexão com um banco de dados, não sabemos quanto tempo vai 
+levar para a conexão se estabelecer.
+
+
+exemplo_8
+
+
+
+Fatores como velocidade da internet, lentidão no servidor, entre outros, podem afetar o
+tempo de resposta.
+
+
+
+exemplo_9
+
+
+Outro ponto da operação assíncrona é a execução de código em paralelo.
+
+
+exemplo_10
+
+
+Isso significa que uma operação assíncrona não impede a execução de outra parte do código.
+
+
+exemplo_11
+
+
+Ótimo! Você já entende a definição de operação assíncrona. Agora, vamos ver em um exemplo
+prático o funcionamento de uma operação assíncrona:
+
+
+Para entender as operações assíncronas, considere o exemplo a seguir:
+
+exemplo_12
+
+
+Se executarmos a aplicação o resultado será esse:
+
+
+exemplo_13
+
+Veja que tudo foi executado na ordem esperada, primeiro A, depois B e depois C.
+Isso é o que chamamos de operação síncrona.
+Uma operação síncrona executa as tarefas em ordem, uma de cada vez.
+
+
+Mas e a operação assíncrona, como se comporta?
+
+Para exemplificar uma operação assíncrona, mudamos levemente esse código incluindo o método
+setTimeout no console.log B.
+
+
+exemplo_14
+
+
+O setTimeout é uma função assíncrona do JavaScript, usada quando queremos aguardar um
+tempo antes de executar um código.
+
+
+exemplo_15
+
+
+No nosso exemplo, passamos o valor 2000, que é o mesmo que 2 segundos.
+
+
+exemplo_16
+
+
+O tempo passado para o setTimeout é em milisegundos (ms).
+
+(1000ms = 1s).
+
+
+Ou seja, o aplicativo vai aguardar 2 segundos, de forma assíncrona, antes de executar o 
+código dentro do then - neste caso, console.log("B").
+
+
+
+exemplo_17
+
+
+
+O then será executado, de forma assíncrona, após o tempo definido no setTimeout.
+
+
+
+exemplo_18
+
+
+
+O fluxo de execução assíncrona fica assim:
+
+
+exemplo_19
+
+
+Se executarmos a aplicação o resultado será o seguinte:
+
+
+exemplo_20
+
+
+Veja que dessa vez a ordem foi A, C e B.
+
+B demorou mais  para executar, mas não impediu a execução de C.
+
+As operações assíncronas não impededm a execução do restante do código.
+
+Veja o fluxo completo da aplicação.
+
+
+exemplo_21
+
+
+
+Código 2. Código final:
+
+
+
+import  from 'timers/promises';
+
+console.log("A", new Date());
+
+setTimeout(2000).then(() => {
+  console.log("B", new Date());
+})
+
+console.log("C", new Date());
+
+
+
+(-----------------  Tratando uma operação assíncrona com await  -----------------)
+
+
+Ótimo! Você já entende o funcionamento de uma operação assíncrona. Agora, vamos aprender
+a tratar uma operação assíncrona e mudar seu comportamento utilizando o await:
+
+
+Tratando uma operação assíncrona com await
+
+Na aula anterior vimos o seguinte código assíncrono:
+
+
+exemplo_22
+
+
+Vamos agora usar await no código e ver o que acontece:
+
+
+exemplo_23
+
+
+O await indica ao código que ele deve aguardar a conclusão da operação assíncrona antes de 
+prosseguir.
+
+
+exemplo_24
+
+
+Se executarmos esse código veremos o seguinte resultado:
+
+
+exemplo_25
+
+
+Ou seja, com await o fluxo de execução deixou de ser assíncrona:
+
+
+exemplo_26
+
+
+Observe que o console.log("B") e console("C") foram impressos 2 segundos após o console.log("A").
+
+Isso mostra que o código só prosseguiu quando o setTimeout concluiu.
+
+
+exemplo_27
+
+
+O await pausa a execução do código até que a operação assíncrona seja concluida.
+
+
+exemplo_28
+
+
+Veja abaixo a sinxtaxe antes e depois de usar o await:
+
+
+exemplo_29
+
+
+Código 3. Código.
+
+
+
+import  from 'timers/promises';
+
+console.log("A", new Date());
+
+await setTimeout(2000);
+console.log("B", new Date());
+
+console.log("C", new Date());
+
+
+
+(-------------------------- await e a função getConnection --------------------------)
+
+
+Ótimo! Você já sabe como o await funciona e quando utilizá-lo.
+
+
+await e a função getConnection
+
+
+Na aula 'Conectando ao banco de dados' nós vimos o seguinte código sendo usado:
+
+
+exemplo_30
+
+
+No nosso código, temos a função assíncrona getConnection, que retorna uma conexão.
+
+
+exemplo_31
+
+
+Nosso objetivo no exemplo é imprimir o ID da conexão no console, e para isso, 
+precisamos garantir que exista uma conexão antes de utilizá-la.
+
+
+exemplo_32
+
+
+
+Não faz sentido tentar imprimir o threadId antes de ter uma conexão estabelecida com o
+banco de dados.
+
+
+exemplo_33
+
+
+Porém, getConnection é um método assíncrono.
+
+
+exemplo_34
+
+
+Dessa forma, usamos ele em conjunto com await, para garantir que a impressão do ID da conexão só
+aconteça depois que getConnection concluir a execução.
+
+
+exemplo_35
+
+Podemos confirmar o funcionamento do await ao executar a aplicação e ver que o console.log
+imprime corretamente o threadId.
+
+
+exemplo_36
+
+
+(-------------------------- Utilizando o async --------------------------)
+
+
+Perfeito! Nós já entendemos o await e vimos como ele foi usado em conjunto com o método
+getConnection.
+
+
+Como vimos anteriormente, o await é usado para aguardar a conclusão de uma operação assíncrona.
+
+exemplo_37
+
+
+Porém, existe um detalhe referente a sintaxe do await. Quando ele é usado dentro de uma função,
+a função precisa receber a palavra async.
+Para demonstrar, vamos modificar novamente nosso exemplo.Observe que apenas colocamos o código
+dentro de uma função, não mudamos nada mais.
+
+
+exemplo_38
+
+
+
+Observe que agora o VS Code indica um erro no await.
+
+exemplo_39
+
+
+Esse erro acontece por uma questão de sintaxe da linguagem JavaScript.
+
+exemplo_39
+
+
+No JavaScript, quando uma função contém código assíncrono com await,, isso precisa ser "indicado"
+na função através da palavra async.
+
+
+exemplo_40
+
+
+A ideia é: se uma função contém código assíncrona e await, então a função precisa ser sinalizada     
+como assíncrona, através de palavra async.
+
+É uma questão de sintaxe.
+
+Observe que ao incluir o async o erro do await sumiu.
+
+exemplo_41
+
+Vamos observar esse comportamento no código da API:
+
+
+exemplo_42
+
+
+Veja que a função getConnection() está sendo precendida pela palavra chave await:
+
+
+exemplo_43
+
+
+E, por estarmos usando await dentro de uma função, ela foi declarada com a palavra chave async:
+
+exemplo_44
+
+
+Com essas alterações, nosso código fica 100% funcional.
+Ele vai aguardar o retorno de uma conexão bem-sucedia antes de imprimir a threadId no console.
+
+
+exemplo_45
+
+
+
+Código 4 
+
+
+import express from 'express';
+import pool from './servico/conexao.js';
+
+const app = express();
+
+app.listen(9000, async () => {
+    const data = new Date();
+    console.log("Servidor node iniciado em: "+data);
+
+    const conexao = await pool.getConnection();
+
+    console.log(conexao.threadId);
+
+    conexao.release();
+})

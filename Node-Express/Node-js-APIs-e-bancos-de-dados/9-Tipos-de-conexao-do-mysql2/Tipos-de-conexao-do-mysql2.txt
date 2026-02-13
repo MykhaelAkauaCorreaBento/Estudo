@@ -1,0 +1,188 @@
+10. Tipos de conexão do mysql2
+
+Na aula anterior nós conhecemos o processo necessário para retornar registros do banco dados
+na nossa API e instalamos a biblioteca mysql2.
+
+Nesta aula vamos conhecer os tipos de conexão disponibilizados pela biblioteca mysql2.
+
+
+(------------------------------------- Tipos de conexão -------------------------------------)
+
+Como vimos, o próximo passo na nossa implementação da API é nos conectar ao banco de dados
+através do JavaScript.
+
+Porém, vamos conhecer primeiro os tipos de conexão existentes no mysql2. 
+
+
+O mysql2 possui duas formas de se conectar com o banco de dados:
+
+createConnection e createPool.
+
+exemplo_1
+
+Observe que a estrutura do código é bem semelhante .
+A diferença está no funcionanmento.
+
+exemplo_1
+
+
+createConnection cria uma conexão que deve ser gerenciada manualmente pelo programador.
+
+
+
+exemplo_2
+
+
+
+Uma conexão manual significa que o programador deve abrir e fechar a conexão manualmente.
+
+Abrir = Iniciar a conexão com o banco de dados.
+
+Fechar = Encerrar a conexão com o banco de dados.
+
+
+createPool, por sua vez, cria uma conexão gerenciada automaticamente.
+
+
+
+exemplo_3
+
+
+
+Uma conexão automática não precisa da intervenção do programador para abrir e fechar.
+
+
+
+
+exemplo_3
+
+
+
+Além disso, como consequência do gerenciamento automático, o createPool economiza recursos
+ao reaproveitar as conexões criadas.
+
+
+
+(--------------------------   Tipos de conexão - createConnection   --------------------------)
+
+
+Agora que já entendemos os tipos de conexão, vamos ver em mais detalhes o funcionamento de
+cada um.
+
+Vamos começar com o createConnection:
+
+Com o createConnection, o programador é responsável em abrir e fechar a conexão.
+
+O processo de consumo do banco de dados através do createConnection funciona assim:
+
+
+
+
+exemplo_4
+
+
+
+
+Veja que uma nova conexão é criada sempre que a API é acessada.
+
+
+
+exemplo_5
+
+
+
+O banco de dados só pode ser acessado através de uma conexão aberta.
+
+
+
+exemplo_6
+
+
+ 
+Ao utilizar o createConnection, estamos consumindo recursos ao criar e encerrar diversas conexões.
+Se a receber 3 acessos, serão 3 conexões. Se receber 100, serão 100 conexões abertas e fechadas.
+
+
+
+exemplo_7
+
+
+
+Com o createConnection, uma nova conexão será criada sempre que a API for acessada.
+
+Se a API for receber um volume grande de acessos, o método createConnection não é o ideal.
+
+
+
+
+(----------------------------  Tipos de conexão - createPool  ----------------------------)
+
+
+Perfeito! Entendemos o funcionamento do createConnection.
+
+Agora vamos entender o createPool:
+
+
+O createPoll possui 2 características que o diferenciam do createConnection:
+
+
+Gerencia a abertura e fechamento da conexão de forma automática;
+
+Reutiliza conex~ees que já foram abertas.
+
+
+O gerenciamento automático da conexão significa que o programador não precisa abrir e fechar a
+conexão manualmente.
+
+Com o uso do createPool o código funciona assim:
+
+
+
+exemplo_8
+
+
+
+Observe que o programador não precisa abrir e fechar a conexão, o processo acontece automaticamente.
+
+
+
+exemplo_8
+
+
+
+Após a API ser acessada, uma conexão anteriormente aberta será buscada através createPool.
+
+Ou seja, o createPool reutiliza uma conexão que já tenha sido aberta e aue ainda não tenha
+sido fechada.
+
+
+
+exemplo_9
+
+
+
+Caso não haja uma conexão disponível, ela será criada.
+
+
+
+exemplo_10
+
+
+
+Dessa forma, se a API tiver 300 acessos, não serão criadas 300 conexões com o banco de dados:
+
+
+
+exemplo_11
+
+
+
+O createPool é a forma ideal de gerenciar conexões em APIs com muitas requisições ao banco
+de dados.
+
+Perfeito!
+
+Agora você já conhece os tipos de conexão existentes no mysql2.
+
+Na próxima aula vamos utilizar a biblioteca mysql para construir e testar uma conexão
+do tipo createPool.
