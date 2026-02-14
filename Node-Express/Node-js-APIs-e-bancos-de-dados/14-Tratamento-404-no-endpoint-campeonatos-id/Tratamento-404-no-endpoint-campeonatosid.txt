@@ -1,0 +1,32 @@
+Tratamento 404 no endpoint campeonatosid
+
+
+O objetivo desta aula é implementar o tratamento de status 404 para o endpoint /campeonatos/:id.
+
+A ideia é que, ao informar um id inexistente, a API retorne um status 404 e uma mensagem de erro:
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+
+Código 1 
+
+app.get('/campeonatos/:id', async (req, res) => {
+    const id = req.params.id;
+
+    const campeonato = await retornaCampeonatosID(id);
+
+    if(campeonato.length > 0) {
+        res.json(campeonato);
+    } else {
+        res.status(404).json({mensagem: "Nenhum campeonato encontrado"})
+    }
+});

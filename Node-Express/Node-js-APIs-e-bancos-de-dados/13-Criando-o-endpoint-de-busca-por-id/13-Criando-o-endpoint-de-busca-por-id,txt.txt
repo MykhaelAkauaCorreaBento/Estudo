@@ -1,0 +1,83 @@
+Criando o endpoint de busca por id
+
+O objetivo desta aula é prosseguir com a construção da nossa API de campeonatos criando mais um
+endpoint, o /campeonatos/:id.
+
+A ideia é que esse endpoint seja utilizado para retornar os dados de um campeonato com base no 
+id informado:
+
+exemplo_1
+exemplo_2
+exemplo_3
+
+
+(--------------------   Buscando o campeonato pelo id  --------------------)
+
+Agora que já relembramos as nossas rotas, vamos dar sequência na construção da API.
+
+O objetivo é implementar o método que será responsável por buscar um registro de ID específico
+no banco de dados:
+
+
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+
+
+Código 1 
+
+
+SELECT id, campeao, vice, ano FROM campeonatos WHERE id = 1
+
+
+Código 2. Função retornaCampeonatosID
+
+
+export async function retornaCampeonatosID(id) {
+    const conexao = await pool.getConnection();
+
+    const campeonatos_tb = await conexao.query('SELECT id, campeao, vice, ano FROM campeonatos WHERE id = '+id);
+
+    const campeonatos = campeonatos_tb[0];
+
+    conexao.release();
+
+    return campeonatos;
+}
+
+
+(---------------------   Criando o endpoint   ---------------------)
+
+Agora que temos a função retornaCampeonatosID criada, precisamos utilizá-la na construção 
+do endpoint.
+
+
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+
+
+Perfeito! Com isso o nosso endpoint campeonatos/:id está concluído.
+
+
+
+Código 3. Endpoint campeonatos/:id
+
+app.get('/campeonatos/:id', async (req, res) => {
+    const id = parseInt(req.params.id);
+
+    const campeonato = await retornaCampeonatosID(id);
+
+    res.json(campeonato);
+});

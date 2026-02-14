@@ -1,0 +1,94 @@
+Iniciando a construção da API
+
+
+Na aula anterior aprendemos a utilizar os recursos async e await para tratar operações 
+assíncronas.
+
+Agora, vamos utilizar o que aprendemos para iniciar a construção da API de campeonatos, 
+começando pelo endpoint /campeonatos, que lista todos os campeonatos armazenados no banco 
+de dados.
+
+Porém, antes de começar, vamos relembrar alguns conceitos já vistos anteriormente como o 
+uso de coleção de dados e comando SELECT do MySQL.
+
+
+Vamos começar nosso exemplo com uma versão da API onde os dados dos campeonatos estão em
+um array, como fizemos nos cursos anteriores.
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+
+(------------------ Construindo APIs - Relembrando o comando SELECT ------------------)
+
+Ótimo! Já relembramos o processo de construção de uma API. Agora vamos relembrar o comando SELECT:
+
+O comando SELECT do SQL é utilizado quando queremos retornar registros de uma tabela.
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+
+
+Comando SELECT utilizado 
+
+SELECT id, campeao, vice, ano FROM campeonatos;
+
+
+(------------- Construindo APIs - Alterando a função retornaCampeonatos -------------)
+
+O próximo passo na nossa API é alterar a função retornaCampeonatos localizada em 
+servico/retornaCampeonatos_servico.js.
+
+A ideia é que a função pare de ler dados da coleção local e passe a buscar esses dados na
+tabela de campeonatos, do banco de dados MySQL:
+
+
+exemplo_17
+exemplo_18
+
+Como queremos buscar os dados na tabela campeonatos vamos precisar primeiro nos conectar 
+ao banco de dados.
+
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+
+Código final do arquivo servico/retornarCampeonatos_servico.js
+
+
+
+(------------------------  Construindo APIs - Alterando o index.js  ------------------------)
+
+
+Com o retornaCampeonatos_servico.js alterado, precisamos agora fazer alguns ajustes no index.js:
+
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
+exemplo_32
+exemplo_33
+exemplo_34
+exemplo_35
+
+Código do endpoint campeonatos localizado no index.js
+
+
