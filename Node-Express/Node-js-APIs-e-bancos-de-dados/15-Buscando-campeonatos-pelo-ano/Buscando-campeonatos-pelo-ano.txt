@@ -1,0 +1,73 @@
+Buscando campeonatos pelo ano
+
+
+O objetivo desta aula é implementar o filtro por ano ao endpoint campeonatos. A ideia é que ao 
+informar um ano (por exemplo 2002), o campeonato corresponde ao ano informado seja listado 
+pela API:
+
+exemplo_1
+exemplo_2
+exemplo_3
+
+
+Código 1. Função retornaCampeonatosAno
+
+
+export async function retornaCampeonatosAno(ano) {
+    const conexao = await pool.getConnection();
+
+    const campeonatos_tb = await conexao.query('SELECT id, campeao, vice, ano FROM campeonatos WHERE ano = '+ano);
+
+    const campeonatos = campeonatos_tb[0];
+
+    conexao.release();
+
+    return campeonatos;
+}
+
+
+(-------------------- Alterando o endpoint campeonatos --------------------)
+
+Agora que temos a função retornaCampeonatosAno criada, precisamos utilizá-la no 
+endpoint /campeonatos quando o usuário passar o parâmetro 'ano' na URL:
+
+
+
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+
+
+
+Código 2. Código final do endpoint /campeonatos
+
+
+app.get('/campeonatos', async (req, res) => {
+    let campeonatos;
+
+    const ano = req.query.ano;
+
+    if(typeof ano === 'undefined') {
+        campeonatos = await retornaCampeonatos();
+    } else {
+        campeonatos = await retornaCampeonatosAno(parseInt(ano));
+    }
+
+    if(campeonatos.length > 0) {
+        res.json(campeonatos);
+    } else {
+        res.status(404).json({mensagem: "Nenhum campeonato encontrado"})
+    }
+});
+
+
+Perfeito! Nossa API agora é capaz de filtrar os campeonatos por ano.
+
+Na próxima aula vamos implementar a última rota da API, a filtragem de campeonatos por time.

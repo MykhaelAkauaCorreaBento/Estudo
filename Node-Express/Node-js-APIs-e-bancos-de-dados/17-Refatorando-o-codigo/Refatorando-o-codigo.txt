@@ -1,7 +1,55 @@
+Refatorando o código
+
+O objetivo desta aula é refatorar a nossa API de campeonatos.
+
+A ideia é modificar a nossa camada de serviço para reduzir a repetição de código onde for 
+possível, além de deixar nosso código mais fácil de ler:
+
+exemplo_1
+exemplo_2
+
+
+O objetivo dessa aula é refatorar o código, evitando a repetição onde for possível e
+deixando nosso código mais fácil de ler.
+
+
+exemplo_3
+
+
+(------------------------------ Otimizando a camada de serviço ------------------------------)
+
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+
+
+Com a função feita, precisamos agora utilizá-la, e é isso que faremos.
+
+
+
+(------------------------------ Utilizando a função executaQuery ------------------------------)
+
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+
+
+
+Código refatorado
+
 import pool from "./conexao.js";
 
 async function executaQuery(conexao, query) {
-    
+
     const resultado_query = await conexao.query(query);
 
     const resposta = resultado_query[0];

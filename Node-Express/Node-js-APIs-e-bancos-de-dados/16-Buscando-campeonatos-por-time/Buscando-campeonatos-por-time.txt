@@ -1,0 +1,74 @@
+Buscando campeonatos por time
+
+
+O objetivo desta aula é implementar o filtro por time no endpoint campeonatos.
+
+A ideia é que ao informar o nome de um time (por exemplo, Boca Juniors), todos os campeonatos 
+vencidos pelo time sejam listados:
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+Código apresentado
+
+export async function retornaCampeonatosTime(time) {
+    const conexao = await pool.getConnection();
+
+    const campeonatos_tb = await conexao.query('SELECT id, campeao, vice, ano FROM campeonatos WHERE campeao = "'+time+'"');
+
+    const campeonatos = campeonatos_tb[0];
+
+    conexao.release();
+
+    return campeonatos;
+}
+
+
+(-------------------- Alterando o endpoint campeonatos --------------------)
+
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+
+
+Código final do endpoint /campeonatos
+
+app.get('/campeonatos', async (req, res) => {
+    let campeonatos;
+
+    const ano = req.query.ano;
+    const time = req.query.time;
+
+    if(typeof ano === 'undefined' && typeof time === 'undefined') {
+        campeonatos = await retornaCampeonatos();
+    }
+    else if (typeof ano !== 'undefined') {
+        campeonatos = await retornaCampeonatosAno(ano);
+    }
+    else if (typeof time !== 'undefined') {
+        campeonatos = await retornaCampeonatosTime(time);
+    }
+
+    if(campeonatos.length > 0) {
+        res.json(campeonatos);
+    } else {
+        res.status(404).json({mensagem: "Nenhum campeonato encontrado"})
+    }
+});
+
+
+Perfeito! Você concluiu a API de campeonatos. Porém, ainda falta mais uma etapa, a refatoração 
+do código, e é o que faremos na próxima aula.
+
