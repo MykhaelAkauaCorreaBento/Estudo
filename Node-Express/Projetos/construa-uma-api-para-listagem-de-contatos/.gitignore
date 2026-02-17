@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Ambiente
+.env
+
+# Conexão e dados sensíveis
+conexao.js
+*.sql
+
+# Build / dist
+dist/
+build/
