@@ -1,0 +1,269 @@
+Conhecendo o código
+
+
+
+
+Nesta aula vamos apresentar o código Front-end (React) da página da Clínica de Pediatria.
+
+Nosso foco não será no código todo; focaremos apenas nos trechos relacionados ao consumo da 
+API e da exibição dos dados na página. Confira o Flow:
+
+
+Conhecendo a página inicial
+
+
+Nas aulas anteriores nós vimos a apresentação do projeto Front-end da clínica, assim como o 
+Back-end que retorna os dados dos médicos.
+
+exemplo_1
+
+
+Agora, vamos ver na prática como funciona o código que consome essa API e lista a equipe
+médica na tela.
+
+
+exemplo_2
+
+
+Vamos começar com a página inicial, o arquivo page.js
+
+
+exemplo_3
+
+
+Essa é a página que vemos quando abrimos o site. Você pode conferir observando o conteúdo da
+área inicial.
+
+
+exemplo_4
+
+
+Nessa página é onde listamos os dados dos médicos retornados da API.
+
+
+exemplo_5
+
+
+
+Esses dados estão na constante 'medicos', que é iterada através da função map.
+
+
+
+exemplo_6
+
+
+Observe que o nome das propriedades usadas no código são os mesmos nomes dos campos no 
+JSON retornado pela API.
+
+exemplo_7
+
+
+
+Esses dados são retornados pela função retornaMedicos, que pode ser vista logo no início
+do código; seu retorno é armazenada na constante medicos.
+
+
+exemplo_8
+
+
+Essa função é importada do arquivo 'medicos.js', localizado na pasta 'dados', e é o arquivo
+que veremos no Flow seguinte.
+
+
+exemplo_9
+
+
+Ótimo. Você já conhece o código do arquivo page.js.
+
+Agora veremos como o consumo da API foi feito.
+
+
+
+(--------------- Arquivo medicos.js ---------------)
+
+
+No Flow seguinte veremos como utilizamos o axios para retornar os dados da API na função 
+retornaMedicos. Confira:
+
+
+No Flow anterior vimos que a função retornaMedicos é importada do arquivo medicos.js,
+localizado na pasta 'dados'.
+
+
+exemplo_10
+
+
+Agora, vamos conhecer o código da função retornaMedicos.
+
+
+exemplo_11
+
+
+Observe que começamos declarando um array vazio. Isso foi feito para evitar que um erro ocorra
+no uso do map.
+
+
+exemplo_12
+
+
+Em resumo, caso ocorra um erro no consumo da API, a função retornaMedicos vai retornar um
+array vazio.
+
+
+exemplo_13
+
+
+Isso vai fazer com que a seção 'Nossa equipe médica' seja exibida sem dados ao invés de causar
+um erro, caso o consumo da API dê algum erro.
+
+
+exemplo_14
+
+
+Em seguida temos uma estrutura try / catch. Dentro do try está nosso consumo da API através
+do axios.
+
+
+exemplo_15
+
+
+Veja que o verbo utilizado e a URL da API são as mesmas que vimos no Postman.
+
+exemplo_16
+
+Caso o consumo seja bem-sucedido, o array com os dados dos médicos retornados pela API
+vai substituir o array vazio na variável Imedicosl.
+
+
+exemplo_17
+
+
+Caso contrário, além da variável medicos manter o seu valor como um array vazio, uma 
+mensagem de erro será escrita no console.
+
+
+exemplo_18
+
+
+Por fim, retornamos a variável 'medicos'.
+
+exemplo_19
+
+
+Desse modo a função retornaMedicos() irá retornar os dados da API.
+
+
+A URL da API foi atualizada para o novo endereço: https://clinica-backend-3kn6.onrender.com/medicos
+Perfeito!
+
+Agora você conhece o código do arquivo medicos.js
+
+Abaixo você pode conferir o código completo.
+
+
+Código page.js
+
+import { retornaMedicos } from "@/dados/medicos";
+
+   const medicos = await retornaMedicos();
+
+   export default function Home() {
+     return (
+       <div className="container">
+       <div className="hero">
+         <div className="conteudo-hero">
+           <h1 className="titulo-hero">Clínica de Pediatria </h1>
+           <p className="subtitulo-hero">
+            Cuidando da sua saúde com excelência e dedicação
+           </p>
+
+           <div className="info-rapida">
+             <div className="cartao-info">
+               <span className="material-symbols-outlined" >place</span>
+               <span>Av. Paulista, 1000 - São Paulo </span>
+             </div>
+             <div className="cartao-info">
+               <span className="material-symbols-outlined">schedule </span>
+               <span >Seg-Sex: 8h às 20h </span>
+             </div>
+             <div className="cartao-info">
+               <span className="material-symbols-outlined">call </span>
+               <span>(11) 3000-0000 </span>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <main className="principal">
+         <h2 className="titulo-principal">
+          Nossa Equipe Médica
+         </h2>
+
+         <div className="container-medicos">
+          {medicos.map((medico) => (
+             <div key={medico.id} className="cartao-medico">
+               <div className="conteudo-medico">
+                 <div className="container-avatar">
+                   <span className="material-symbols-outlined">person </span>
+                 </div>
+                 <h3 className="nome-medico">
+                  {medico.nome}
+                 </h3>
+                 <p className="descricao-medico">{medico.descricao} </p>
+                 <div className="info-contato">
+                   <div className="item-contato">
+                     <span className="material-symbols-outlined">call </span>
+                     <span>{medico.telefone} </span>
+                   </div>
+                   <div className="item-contato">
+                     <span className="material-symbols-outlined">email </span>
+                     <span>{medico.email}</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+          ))}
+         </div>
+       </main>
+
+      {/* Rodapé */}
+       <footer className="rodape">
+         <div className="conteudo-rodape">
+           <h3 className="titulo-rodape">Clínica de Pediatria </h3>
+           <p className="subtitulo-rodape">Cuidando da sua saúde desde 1995 </p>
+           <div className="links-sociais">
+             <a href="tel:1130000000" className="link-social">
+               <span className="material-symbols-outlined">call</span>
+             </a>
+             <a href="mailto:contato@clinica.com" className="link-social">
+               <span className="material-symbols-outlined">email</span>
+             </a>
+             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="link-social">
+               <span className="material-symbols-outlined">place </span>
+             </a>
+           </div>
+         </div>
+       </footer>
+     </div>
+  );
+}
+
+
+
+Código dados/medicos.js
+
+
+
+import axios from "axios";
+
+export async function retornaMedicos() {
+    let medicos = [];
+
+    try {
+        medicos = (await axios.get("https://clinica-backend-3kn6.onrender.com/medicos")).data;
+    } catch (erro) {
+        console.error("Erro ao buscar os médicos:", erro);
+    }
+
+    return medicos;
+}

@@ -1,0 +1,110 @@
+Conhecendo o Projeto
+
+Nesta aula vamos apresentar uma visão geral sobre o projeto da Clínica de Pediatria, com foco
+principal no Front-end da aplicação, ou seja, o site.
+
+
+exemplo_1
+
+
+Uma aplicação FullStack é composta por duas partes: Front-end e Back-end. No Flow seguinte
+veremos como será o Front-end da aplicação que vamos construir. Confira:
+
+
+Conhecendo o Projeto
+
+
+Na missão anterior nós criamos uma API que retorna contatos de médicos pediatras de um 
+banco de dados.
+
+
+exemplo_2
+
+
+
+Nosso objetivo agora é criar um Front-end capaz de consumir essa API e mostrar os dados dos médicos.
+
+
+exemplo_3
+
+
+Veja que temos aqui uma landing page bem simples, com algumas informações sobre a clínica.
+
+
+
+
+exemplo_4
+
+
+
+Porém, a parte mais importante no nosso contexto é a área 'Nossa Equipe Médica', pois
+é nela onde listamos os dados da API.
+
+
+
+exemplo_5
+
+
+
+Nosso objetivo nesse curso é construir essa landing page.
+
+
+
+exemplo_6
+
+
+
+A ideia é que ela consuma a API e liste os dados médicos.
+
+
+Perfeito!
+
+Você já sabe qual projeto vamos fazer.
+
+No próximo Flow veremos a vantagem de se consumir os dados de uma API.
+
+
+(-----------------------------  Vantagem da API  -----------------------------)
+
+
+Veja no Flow seguinte a vantagem de se consumir dados de uma API ao invés de uma
+coleção de dados local.
+
+Vantagens da API A grande vantagem no uso da API está na separação entre Front-end e Back-end.
+
+
+exemplo_7
+
+
+Isso significa que se precisarmos atualizar o registro de algum médico ou incluir alguém novo
+na equipe, basta alterar essa informação no banco de dados.
+
+
+
+exemplo_8
+
+
+
+
+Qualquer alteração feita no banco de dados será refletida automaticamente no Front-end.
+
+
+
+
+exemplo_9
+
+
+
+Consumir os dados de uma API ao invés de uma coleção de dados locais deixa nosso Front-end
+independente.
+
+
+exemplo_10
+
+
+
+Ótimo!
+
+Agora você já sabe o que é o projeto e qual a principal vantagem do uso de APIs.
+
+Na próxima aula vamos consumir a API de médicos via Postman para entender melhor o seu funcionamento.

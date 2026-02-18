@@ -1,0 +1,134 @@
+Conhecendo a API
+
+
+Nesta aula vamos apresentar a API de médicos que vamos consumir no site da Clínica de Pediatria.
+
+
+Conhecendo a API Na aula anterior nós vimos que a aplicação Front-end consome a API de médicos.
+
+
+exemplo_1
+
+
+
+Agora vamos ver em mais detalhes o Back-end, ou seja, a API de médicos que será consumida 
+pelo Front-end.
+
+
+
+exemplo_2
+
+
+
+
+Para isso, vamos até o Postman consumir a API através da sua URL.
+
+
+
+
+exemplo_3
+
+
+
+Veja que como estamos listando dados a API é consumida com o verbo GET, seguindo o padrão REST.
+
+
+
+exemplo_4
+
+
+
+Ao consumir a API temos retornado os dados médicos no formato JSON.
+
+
+
+exemplo_5
+
+
+Veja que o retorno é um array de objetos; o objeto é composto por 5 campos: Id, nome, telefone, emall e descrição.
+O campo id não será exibido no Front-end.
+
+
+exemplo_6
+
+
+Conhecer a API vai facilitar a escrita do código na hora de construir o Front-end.
+
+
+Abaixo você pode conferir o JSON retornado pela API:
+
+
+
+[
+    {
+        "id": 1,
+        "nome": "Dr. Luiz Idelgardes",
+        "telefone": "(21) 90000-0000",
+        "email": "lidelgardes@email.com",
+        "descricao": "Médico especialista em pediatria"
+    },
+    {
+        "id": 2,
+        "nome": "Dr. Peter Addison",
+        "telefone": "(21) 91111-1111",
+        "email": "paddison@email.com",
+        "descricao": "Médico especializado em alergia infantil"
+    },
+    {
+        "id": 3,
+        "nome": "Dra. Elisa Amaral",
+        "telefone": "(21) 92222-2222",
+        "email": "eamaral@email.com",
+        "descricao": "Médica especializada em psiquiatria infantil"
+    },
+    {
+        "id": 4,
+        "nome": "Dra. Catherine Halsey",
+        "telefone": "(21) 93333-3333",
+        "email": "chalsey@email.com",
+        "descricao": "Médico especialista em pediatria"
+    },
+    {
+        "id": 5,
+        "nome": "Dr. Gregory House",
+        "telefone": "(21) 94444-4444",
+        "email": "ghouse@email.com",
+        "descricao": "Médica especializada em fisioterapia infantil"
+    },
+    {
+        "id": 6,
+        "nome": "Dra. Sofia Amaral",
+        "telefone": "(21) 99999-0001",
+        "email": "samaral@email.com",
+        "descricao": "Médico especializado em infectologia"
+    },
+    {
+        "id": 7,
+        "nome": "Dra. Júlia Zaccarias",
+        "telefone": "(21) 99999-0005",
+        "email": "jzaccarias@email.com",
+        "descricao": "Médico especializado em pediatria"
+    },
+    {
+        "id": 8,
+        "nome": "Dr. Curtis Connors",
+        "telefone": "(21) 99999-0002",
+        "email": "cconnors@email.com",
+        "descricao": "Médico especializado em genética"
+    },
+    {
+        "id": 9,
+        "nome": "Dr. John Seward",
+        "telefone": "(21) 99999-0003",
+        "email": "jseward@email.com",
+        "descricao": "Médico especializado em psiquiatria infantil"
+    }
+]
+
+
+Perfeito!
+
+Você já conhece em detalhes a API.
+
+Na próxima aula vamos construir o código do Front-end, responsável por consumir a API e listar
+os dados na página.
