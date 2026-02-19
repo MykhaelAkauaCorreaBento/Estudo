@@ -1,0 +1,14 @@
+{
+  "name": "listagem-de-medicos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd ./back-end && npx nodemon index.js",
+    "dev:frontend": "cd ./frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "nodemon": "^3.0.0"
+  }
+}

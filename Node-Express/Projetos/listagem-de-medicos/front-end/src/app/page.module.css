@@ -1,0 +1,85 @@
+.principal {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+
+.titulo-principal {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.container-medicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cartao-medico {
+  flex: 1 1 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.cartao-medico:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container-avatar {
+  width: 96px;
+  height: 96px;
+  margin: 16px auto 24px;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-avatar .material-symbols-outlined {
+  font-size: 48px;
+  color: white;
+}
+
+.nome-medico {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.descricao-medico {
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 24px;
+  min-height: 60px;
+}
+
+.info-contato {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-contato {
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.item-contato .material-symbols-outlined {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #3b82f6;
+}
