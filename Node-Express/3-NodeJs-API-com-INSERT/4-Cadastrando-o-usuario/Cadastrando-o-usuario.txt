@@ -1,0 +1,9 @@
+Cadastrando o usuário
+
+Nessa aula vamos dar início ao código da nossa API de cadastro, nos conectando ao nosso 
+banco de dados e inserindo um registro na tabela leads.
+
+Para isso, utilizaremos a biblioteca mysql2, a mesma que usamos no curso anterior
+
+Confira o Flow:
+

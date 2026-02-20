@@ -1,0 +1,121 @@
+Introdução
+
+Seja bem-vindo ao curso e parabéns por mais um passo na sua Carreira Programador.
+
+Já sabemos criar APIs que se conectam com um banco de dados.
+
+Neste momento, nossas primeiras APIs conseguem listar informações da tabela do banco, através
+do método http GET.
+
+Agora vamos à próxima etapa, criando uma API que também insere registros na tabela do banco 
+de dados.
+
+Neste curso, vamos aprender a construir APIs que conseguem inserir registros no banco de dados.
+A inserção de dados vai nos permitir expandir o tipo de APIs que podemos criar.
+Através da inserção de dados podemos construir, por exemplo, uma API de cadastro de contatos,
+que poderá ser utilizada por um site ou app:
+
+exemplo_1
+
+Esse tipo de sistema pode ser usado para que uma empresa possa receber dúvidas sobre um produto
+e ajudar um possível consumidor, por exemplo.
+
+exemplo_2
+
+Ao enviar a mensagem, os dados vao para a API, que os salva no banco de dados. Essas informações
+podem ser usadas pelo marketing da empresa.
+
+exemplo_3
+
+Neste curso, nós vamos construir uma API de cadastro que armazena o nome e o e-mail de um usuário
+no banco de dados.
+
+exemplo_4
+
+Ao final do curso você será capaz de construir APIs que informações externas e as salvam no
+banco de dados.
+
+(---------------------------- Programador Empreendedor ----------------------------)
+
+Legal, você já sabe o que vamos aprender!
+
+Agora, vamos conhecer alguns exemplos de como esse conteúdo pode te auxiliar na sua jornada
+de Programador Empreendedor.
+
+API de cadastro de dados Programador Empreendedor
+
+Uma API que cadastra dados pode ser utilizada por diversos tipos de sistemas.
+Através dessas APIs, você dá mais um passo em direção a sua carreira como Programador empreendedor.
+
+exemplo_5
+
+Com APIs que inserem dados, você pode começar a oferecer para seus clientes páginas e app que fazem
+a captura dos dados do Lead.
+
+exemplo_6
+
+Lead significa um cliente potencial. Após salvar os dados do Lead, a empresa pode realizar ações 
+de marketing.
+
+Por exemplo, a empresa pode enviar e-mails periódicos (newsletters) para a base de Leads.
+
+exemplo_7
+
+Uma forma de implementar isso é adotar ferramentas de automação de e-mails. Uma ferramenta famosa
+para fazer isso é o Mailchimp.
+
+exemplo_8
+
+Vejamos um exemplo: considere uma página que captura os dados de nome e e-mail do Lead:
+
+exemplo_9
+
+Funciona assim: a página vai capturar as informações e enviar para a API, que vai salvar no 
+banco de dados.
+
+exemplo_10
+
+Ou seja: os e-mails salvos no banco de dados, em um segundo momento, podem ser exportados para a
+automação de emails (Mailchimp).
+
+exemplo_11
+
+Esse processo poderia ser feito também co o número de WhatsApp dos Leads.
+
+A ideia é parecida: nesse caso, seria usada uma ferramenta de automação de WhatsApp, tal como o 
+ZapFácil.
+
+exemplo_12
+
+Veja como o recurso de salvar no banco de dados aumenta as possibilidades que você pode
+oferecer para o seu cliente de tecnologia.
+
+exemplo_13
+
+Ao final desse curso você será capaz de criar APIs que são a base de sistemas como esses.
+
+(-------------------------- Exemplo do curso --------------------------)
+
+Nós vimos no Flow anterior alguns exemplos de sistemas que podemos criar com APIs que fazem 
+inserção de dados.
+
+Agora, veremos um pouco mais sobre o exemplo que vamos construir nesse curso.
+
+API de cadastro de dados
+
+Conhecendo o exemplo
+
+A API que vamos desenvolver neste curso tem como objetivo coletar Leads. Vamos armazenar o
+nome e o email do Lead no banco de dados.
+
+exemplo_14
+
+Essa API é, de certa forma, uma evolução do que vimos no curso anterior.
+
+Enquanto a API de Campeonatos apenas lista informações, a API de cadastro vai permitir que você 
+salve informações no banco de dados. 
+
+exemplo_15
+
+Isso aumenta suas possibilidades de criação na hora de construir projetos, podendo criar APIs
+que permitem o input de dados.

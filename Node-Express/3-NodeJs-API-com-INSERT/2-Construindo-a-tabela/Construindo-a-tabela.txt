@@ -1,0 +1,123 @@
+Construindo a tabela
+
+Nessa aula vamos dar inicio a construção da nossa API de cadastro.
+
+Vamos começar construindo a estrutura da tabela que irá armazenar as informações coletadas.
+
+Para isso, usaremos a mesma ferramenta vista no curso anterior, o MySQL Workbench. Confira o Flow:
+
+API de cadastro de dados
+
+(-------------------------  Criando a Tabela - parte 1  -------------------------)
+
+Como vimos, nossa API de cadastro vai receber o nome e o email informados pelo usuário e cadastrar
+no banco de dados.
+
+
+Isso significa que nossa tabela precisa ter 3 campos:
+
+id (Inteiro) - identificador único com auto-incremento
+
+nome (varchar(200)) - Armazena o nome do usuário
+
+email (varchar(200)) - Armazena o email do usuário
+
+Para iniciar o processo de criação da tabela, vá até o MySQL workbench e conecte-se no seu perfil.
+
+exemplo_2
+
+Uma vez dentro da tela principal, vamos criar um banco de dados e dar a ele o nome de leads_bd:
+
+exemplo_3
+
+Expanda o menu do leads_bd e clique com o botão direito do mouse em 'Tables' para criar uma nova tabela:
+
+exemplo_4
+
+Vamos chamar a tabela de leads, e criar os campos id, nome e email que vimos no início deste flow.
+
+exemplo_5
+
+Veja que criamos 3 campos: id, nome e email. O campo id possui alguns atributos, dentre eles 
+inteiro e auto incremento.
+
+
+exemplo_6
+
+O atributo inteiro pode ser visto na coluna 'Datatype'. Já o auto incremento é representado pelo 
+checkbox 'AI'.
+
+exemplo_7
+
+Inteiro significa que o campo recebe apenas números inteiros. Já auto incremente significa que o 
+campo id será incrementado em 1 a cada inserção.
+
+exemplo_8
+
+Além disso, temos outros dois atributos no campo id: 'PK' e 'NN'.
+
+exemplo_9
+
+PK significa Primary Key (Chave Primária)
+
+NN significa Not Null (campo não pode ficar sem valor)
+
+exemplo_10
+
+Quando marcamos um campo como PK, os campos NN e AI são marcados automaticamente.
+
+exemplo_11
+
+
+(-------------------------  Criando a Tabela - parte 2  -------------------------)
+
+
+Legal, vimos a estrutura da tabela até o campo id.
+
+Agora, vamos dar sequência a construção da nossa tabela de leads retomando a partir do campo nome:
+
+
+API de cadastro de dados
+
+Criando a Tabela - parte 2
+
+Em seguida temos o campo nome com o atributo Varchar(200)
+
+exemplo_12
+
+Varchar significa que esse é um campo textual. Já o número 200 é o tamanho máximo do campo.
+
+exemplo_13
+
+Por fim temos o campo email, que também é um varchar(200), seguindo as mesma regras do campo nome.
+
+exemplo_14
+
+Se preferir, você também pode criar essa mesma tabela usando o CREATE TABLE.
+
+exemplo_15
+
+
+Veja que o código possui as mesmas especificações que acabamos de explicar.
+
+exemplo_16
+
+Com o comando pronto, podemos clicar no botão de raio para executar a query e criar a tabela.
+
+exemplo_17
+
+Após criar a tabela, independente do modo que fizer, você poderá vê-la no menu ao lado:
+
+exemplo_18
+
+Com a tabela criada, o próximo passo é iniciar o código da nossa API, começando pela coneção
+ com o banco de dados, e é isso que veremos a seguir.
+
+
+Comando SQL criar a tabela
+
+CREATE TABLE leads_bd.leads (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(200) NULL,
+    email VARCHAR(200) NULL,
+PRIMARY KEY (id));

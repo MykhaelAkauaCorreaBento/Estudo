@@ -1,0 +1,96 @@
+Relembrando o INSERT
+
+Vimos anteriormente o comando SQL INSERT, usado para inserir registros em uma tabela no banco de dados.
+
+Nessa aula vamos relembrar o uso desse comando que será importante no desenvolvimento da nossa API.
+
+O objetivo é reforçar o seu aprendizado. Confira o Flow:
+
+API de cadastro de dados
+
+
+(---------------- Relembrando o INSERT - Parte 1 ----------------)
+
+O INSERT é um comando da linguagem SQL utilizado para inserir registros no banco de dados.
+Nós vamos relembrar o funcionamento do comando INSERT, através do uso do MySQL Workbench.
+
+exemplo_1
+
+Para isso, vamos até o MySQL Workbench abrir nova aba para escrever nossa query:
+
+exemplo_2
+
+No próximo Flow vamos analisar passo a passo o comando INSERTO.
+
+(---------------- Relembrando o INSERT - Parte 2 ----------------)
+
+Agora que já sabemos o que vamos fazer, vamos analisar em detalhes o funcionamento do comando
+INSERT da linguagem SQL.
+
+Confira:
+
+
+Vamos analisar o comando INSERT parte por parte e entender seu funcionamento.
+
+exemplo_3
+
+INSERT INTO indica que estamos iniciando um comando de inserção.
+
+exemplo_4
+
+Em seguida, temos o nome da tabela que nesse caso é leads.
+
+exemplo_5
+
+Os valores após o nome da tabela são os campos que queremos preencher: nome e email.
+
+exemplo_6
+
+Note que os nomes dos campos devem estar entre parênteses e separados por vírgula.
+
+exemplo_7
+
+Perceba também que não precisamos informar o campo id, pois ele é auto incremento.
+
+exemplo_8
+
+A palavra chave VALUES indica que vamos informar os valorea que queremos inserir.
+
+exemplo_9
+
+Veja que estamos inserindo 'Julia' no campo 'nome' e o endereço 'julia@email.com' no campo 'email'.
+
+exemplo_10
+
+ordem dos valores deve ser a mesma aos dos campos:
+
+exemplo_11
+
+
+Tanto o nome quanto o email estão entre aspas. Topop valor textual deve ser escrito com aspas.
+
+exemplo_12
+
+(---------------- Relembrando o INSERT - Parte 3 ----------------)
+
+Perfeito! Temos nosso comando montado.
+
+Veja no Flow seguinte como executar esse comando para que os dados sejam cadastrados no
+banco de dados:
+
+
+API de cadastro de dados
+
+Relembrando o INSERT - Parte 3
+
+Para executar a query, clique no botão de raio. Você verá o resultado mais abaixo na seção output.
+
+exemplo_13
+
+Liste os registros da tabela leads para conferir se os dados da Júlia foram salvos:
+
+exemplo_14
+
+Comando INSERT
+
+INSERT INTO leads (nome, email) VALUES ('Júlia', 'julia@email.com');
