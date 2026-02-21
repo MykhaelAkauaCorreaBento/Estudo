@@ -7,3 +7,177 @@ Para isso, utilizaremos a biblioteca mysql2, a mesma que usamos no curso anterio
 
 Confira o Flow:
 
+Antes de poder inserir registros na nossa tabela, precisamos nos conectar com o banco de dados.
+
+
+Para isso, vamos criar uma pasta chamada servicos, e dentro dela, um arquivo chamado conexao.js
+
+exemplo_1
+
+
+No conexao.js, vamos usar o mysql2 para se conectar ao banco, exatamento como nos cursos anteriores.
+
+exemplo_2
+
+A estrutura é a mesma apresentada no curso anterior com a importação do mysql2 e o método createPool.
+
+exemplo_3
+
+A diferença está apenas nos dados de acesso, como o login, senha e o nome do banco de dados.
+
+exemplo_4
+
+
+Para garantir que tudo está funcionando, crie um arquivo index.js na raiz do projeto:
+
+exemplo_5
+
+No arquivo index.js, importe e imprima 'pool.threadId' no console;
+
+exemplo_6
+
+Execute a aplicação, e se um Id aparecer impresso no console, você se conectou com sucesso ao 
+banco de dados.
+
+exemplo_7
+
+O próximo passo é utilizar essa conexão que criamos para cadastrar um usuário no banco de dados,
+e é isso que faremos.
+
+
+Código do Arquivo conexao.js
+
+
+import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'leads_bd'
+});
+
+export default pool;
+
+
+
+Código do Arquivo index.js
+
+import express from 'express';
+import pool from './servicos/conexao.js';
+
+const app = new express();
+
+app.listen(3001, async () => {
+    console.log("Servidor Iniciado");
+
+    const conexao = await pool.getConnection();
+    console.log(conexao.threadId);
+});
+
+
+
+(-------------------------- Cadastrando o usuário no banco de dados --------------------------)
+
+
+Perfeito! Já nos conectamos ao banco de dados.
+
+Agora, vamos criar uma função na camada de serviço que será usada para cadastrar o usuário no 
+banco de dados.
+
+API de cadastro de dados
+
+Cadastrando o usuário no banco de dados
+
+Para cadastrar o usuário, vamos começar criando outro arquivo na pasta servicos: cadastro_servico.js
+
+exemplo_8
+
+No arquivo cadastra_servico.js começaremos criando a função cadastraLead:
+
+exemplo_9
+
+A função cadastra Lead recebe dois parâmetros: nome e email:
+
+exemplo_10
+
+
+Dentro da função, iniciamos a conexão:
+
+exemplo_11
+
+
+Com a conexão iniciada, podemos chamar o método query, assim como fazemos com o select:
+
+exemplo_12
+
+O comando tem a mesma estrutura da aula anterior, o que muda é que nome e email são passados por
+parâmetro e concatenados na query:
+
+exemplo_13
+
+
+Com o comando pronto, vamos imprimir a resposta da execução da query e liberar a conexão:
+
+exemplo_14
+
+
+(------------------------------------- Testando o código -------------------------------------)
+
+Perfeito! Nós construímos nossa função na camada de serviço.
+
+O próximo passo é testar o nosso código e ver se tudo está funcionando corretamente. 
+Confira o Flow:
+
+
+API de cadastro de dados
+Testando o código
+
+Para testar, vamos fazer a seguinte modificação no index.js
+
+exemplo_15
+
+
+Veja que importamos a função 'cadastraLead' e passamos para ela os parâmetros nome e email.
+
+exemplo_16
+
+
+Execute o servidor e observe que é mostrado no console a linha 'Affected Rows' com valor 1;
+isso significa que a inserção foi feita.
+
+exemplo_17
+
+Para confirmar, vá ao MySQL Workbench e confira o registro na tabela:
+
+exemplo_18
+
+
+Código do Arquivo cadastro_servico.js
+
+
+export async function cadastraLead(nome, email) {
+   const conexao = await pool.getConnection();
+
+   const resposta = await conexao.query('INSERT INTO leads (nome, email)
+                                     VALUES ("'+nome+'","'+email+'")');
+
+    console.log(resposta);
+
+    conexao.release();
+}
+
+
+Código do Arquivo index.js
+
+
+import express from 'express';
+import { cadastraLead } from './servicos/cadastro_servico.js';
+
+const app = new express();
+
+app.listen(3001, async () => {
+    console.log("Servidor Iniciado");
+
+    cadastraLead('Marcos', 'marcos@email.com');
+});

@@ -1,0 +1,90 @@
+Uso dos verbos HTTP
+
+Nessa aula vamos relembrar um pouco do padrão REST e dos verbos HTTP.
+
+O objetivo é reforçar o aprendizado para podermos aplicá-lo na prática na nossa API de cadastro de usuários.
+
+Confira o Flow:
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+
+(--------------------------- Uso dos verbos HTTP - GET ---------------------------)
+
+Legal, você já relembrou os verbos HTTP!
+
+Agora vamos revisar como a comunicação entre front-end e back-end funciona e como os verbos 
+HTTP afetam essa comunicação.
+
+Confira:
+
+API de cadastro de dados
+
+Uso dos verbos HTTP - GET
+
+
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+
+(---------------------------- Uso dos verbos HTTP - POST ----------------------------)
+
+
+Ótimo! Vimos como funciona uma requisição GET.
+
+Veja no Flow seguinte como funciona uma requisição com o verbo POST:
+
+API de cadastro de dados
+
+Uso dos verbos HTTP - POST
+
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+exemplo_28
+
+(------------------------------  Verbos HTTP - back-end  ------------------------------)
+
+
+Agora vamos ver como funcionam as requisições do ponto de vista do back-end.
+
+Confira:
+
+API de cadastro de dados
+
+Verbos HTTP - back-end
+
+
+exemplo_29
+exemplo_30
+exemplo_31
+exemplo_32
+exemplo_33
+exemplo_34
+exemplo_35
+exemplo_36
+exemplo_37
+exemplo_38
+exemplo_39
+exemplo_40
+exemplo_41
