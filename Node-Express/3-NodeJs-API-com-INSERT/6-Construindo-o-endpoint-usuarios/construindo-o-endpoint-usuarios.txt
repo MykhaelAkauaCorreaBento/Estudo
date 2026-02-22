@@ -1,0 +1,142 @@
+Construindo o endpoint /usuarios
+
+Nessa aula vamos continuar a construção da nossa API criando o endpoint /usuarios.
+
+Essa rota deverá receber o nome e email informados, através de uma requisição POST. Em seguida, os dados recebidos devem ser salvos no banco de dados.
+
+Mas antes de colocar a mão no código vamos ver na prática a conexão entre front-end e back-end, como aprendemos na aula anterior.
+
+Confira o Flow:
+
+API de cadastro de dados
+Utilizando o verbo POST
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+
+
+(------------------------- Entendendo o endpoint /usuarios -------------------------)
+Perfeito! Você já viu o funcionamento da conexão entre front-end e back-end na prática.
+
+Agora vamos entender como deve funcionar o endpoint /usuarios.
+
+Confira:
+
+API de cadastro de dados
+Entendendo o endpoint /usuarios
+
+
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+
+
+
+(------------------------- Construindo o código -------------------------)
+Ótimo! Você já conhece o objetivo da nossa API.
+
+Agora, veremos como implementar esse objetivo na prática através da construção de um endpoint no express.
+
+Confira:
+
+API de cadastro de dados
+
+Construindo o código
+
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+
+
+( ------------------------- Habilitando o req.body -------------------------)
+Legal! Você já tem o código para receber os parâmetros nome e email via POST.
+
+Porém, por padrão, o req.body não vem habilitado no express.
+
+Veja no Flow como ativá-lo:
+
+API de cadastro de dados
+Habilitando o req.body
+
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
+exemplo_32
+
+
+( ------------------------- Testando o código ------------------------- )
+Perfeito! Agora que já temos tudo configurado, precisamos testar o código para saber se o endpoint está correto.
+
+Confira no Flow:
+
+API de cadastro de dados
+Testando o código
+
+exemplo_33
+exemplo_34
+exemplo_35
+exemplo_36
+
+
+
+Relembre também o código da camada de serviço, construído anteriormente na aula 4:
+
+import express from 'express';
+import cors from 'cors';
+
+import { cadastraLead } from './servicos/cadastro_servico.js';
+
+const app = new express();
+
+app.use(express.json());
+app.use(cors());
+
+app.post('/usuarios', async (req, res) => {
+	const nome = req.body.nome;
+	const email = req.body.email;
+
+	await cadastraLead(nome, email);
+
+	res.status(204).end();
+});
+
+app.listen(3001, async () => {
+	console.log("Servidor Iniciado");
+});
+
+
+Relembre também o código da camada de serviço, construído anteriormente na aula 4:
+
+
+import pool from "./conexao.js";
+
+export async function cadastraLead(nome, email) {
+  const conexao = await pool.getConnection();
+
+  const resposta = await conexao.query('INSERT INTO leads(nome, email)
+                                    VALUES ("'+nome+'","'+email+'")');
+
+  conexao.release();
+
+  return resposta;
+}
