@@ -1,0 +1,85 @@
+ Prepared Statements
+
+ Nesta aula daremos continuidade ao assunto SQL Injections
+
+O objetivo é mostrar como os prepared statements podem ser usados como uma segunda camada de 
+proteção de ataques SQL Injection.
+
+No decorrer dessa aula veremos o que são os prepared statements e como utilizamos esse recurso 
+no nosso código.
+
+API de cadastro de dados
+Prepared statements
+
+exemplo_1
+
+Para deixar nosso código mais seguro, vamos mudar a forma de escrever o comando INSERT.
+
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+Confira abaixo o código da camada de serviço usando prepared statements:
+
+Código 1. Arquivo index.js
+
+import express from 'express';
+import cors from 'cors';
+
+import { cadastraLead } from './servicos/cadastro_servico.js';
+
+const app = new express();
+
+app.use(express.json());
+app.use(cors());
+
+app.post('/usuarios', async (req, res) => {
+    const nome = req.body.nome;
+    const email = req.body.email;
+
+    await cadastraLead(nome, email);
+    res.status(204).end();
+});
+
+app.listen(9000, async () => {
+    console.log("Servidor Iniciado");
+});
+
+
+
+Código 2. Arquivo servico/conexao.js
+
+import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'leads_bd',
+    multipleStatements: true,
+});
+
+export default pool;
+
+
+Código 3. Arquivo servico/cadastro_servico.js
+
+import pool from "./conexao.js";
+
+export async function cadastraLead(nome, email) {
+  const conexao = await pool.getConnection();
+
+  const resposta = await conexao.query("INSERT INTO leads (nome, email)
+                                    VALUES (?, ?)", [nome, email]);
+
+  conexao.release();
+
+  return resposta;
+}

@@ -1,0 +1,128 @@
+Ataques SQL Injection
+
+
+Nesta aula veremos um ponto muito importante na construção de APIs quando trabalhamos com 
+bancos de dados: o cuidado contra ataques SQL Injection
+
+O objetivo é entender como o SQL Injection funciona, para então podermos proteger nossa API 
+contra esse tipo de ataque.
+
+Para isso, vamos estudar um recurso nativo do SQL que é essencial para o funcionamento do SQL 
+Injection: os comandos em lote.
+
+
+API de cadastro de dados
+
+Executando múltiplos comandos SQL
+
+Um dos maiores problemas de segurança no uso do SQL são ataques de SQL Injections.
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+( -------------------------- SQL Injection -------------------------- )
+Legal, você já sabe que o SQL permite que múltiplos comandos sejam executados em sequência 
+quando separados por ponto-e-vírgula.
+
+Agora, veja como o SQL Injection se utiliza desse recurso para criar ataques maliciosos:
+
+
+API de cadastro de dados
+SQL Injection
+
+Neste Flow veremos como o SQL Injection utiliza a execução de múltiplos comandos
+para efetuar ataques.
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+
+A seguir veremos um exemplo prático de SQL Injection através do Postman.
+
+
+
+
+( -------------------------- SQL Injection na prática -------------------------- )
+Ótimo, você já entende a ideia por trás do SQL Injection.
+
+Agora veja como um ataque desse tipo pode ser enviado para uma API usando o Postman.
+
+Confira:
+
+API de cadastro de dados
+SQL Injection na Prática
+
+Como vimos, o ataque SQL Injection explora a união de comandos SQL, atraves do sinal de ponto e 
+vírgula.
+
+
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+
+Com isso feito, podemos testar nosso SQL Injection e é isso que faremos no próximo Flow.
+
+
+( -------------------------- Testando o SQL Injection - Parte 1 -------------------------- )
+Perfeito, você já entende o funcionamento do SQL Injection.
+
+Agora vamos testá-lo para ver na prática como nossa API vai se comportar quando receber os dados via Postman.
+
+Confira:
+
+
+API de cadastro de dados
+
+Testando o SQL Injection - Parte 1
+
+
+Agora que entendemos como o SQL Injection funciona via Postman, vamos preparar nossa API para
+testar o SQL Injection na prática.
+
+
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+
+
+( -------------------------- Testando o SQL Injection - Parte 2 -------------------------- )
+Vimos que o ataque SQL Injection falhou devido à proteção padrão da biblioteca mysql2.
+
+Nesse Flow vamos desabilitar essa segurança para entender o estrago que pode ser causado por um
+ataque SQL Injection.
+
+Confira:
+
+
+API de cadastro de dados
+
+Testando o SQL Injection - Parte 2
+
+
+Vimos que a bibliotecamysql2 possui uma segurança padrão que bloquei a execução de múltiplos
+comandos SQL.
+
+
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
+exemplo_32
+exemplo_33
+exemplo_34

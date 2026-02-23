@@ -1,0 +1,85 @@
+Validacao de dados.txt
+
+Nesta aula vamos falar sobre um importante processo que deve ser feito quando a API recebe dados 
+digitados por um usuário: a validação de dados.
+
+A ideia da validação de dados é filtrar as informações enviadas pelos usuários antes de enviá-las
+ ao banco de dados.
+
+Porém, antes de começar, vamos ver como está o código da nossa API até aqui.
+
+Confira:
+
+
+API de cadastro de dados
+
+Revisando o código
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+
+( ----------------------------------- Validação de dados ----------------------------------- )
+Legal! Nós já vimos como está o código da API de cadastro atualmente.
+
+Confira:
+
+API de cadastro de dados
+Validação de dados
+
+
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+
+
+( ------------------------------ Exemplo de validação de dados ------------------------------ )
+Agora que você já sabe o que são as validações de dados, vamos ver como essa ideia se aplica em 
+um exemplo real.
+
+Confira:
+
+API de cadastro de dados
+
+Exemplo de validação de dados
+
+
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+
+
+( ------------------------------ Validação de dados na prática ------------------------------ )
+Ótimo! Você já sabe como o processo de validação de dados funciona na teoria.
+
+Agora, veremos esse funcionamento na prática através de uma requisição via Postman.
+
+Confira:
+
+
+API de cadastro de dados
+Validação de dados na prática
+
+exemplo_26
+exemplo_27
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
