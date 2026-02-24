@@ -1,0 +1,184 @@
+Validando os dados da API de cadastro
+
+Nesta aula vamos implementar uma camada de validação no código JavaScript da nossa API de 
+cadastro de usuários.
+
+O objetivo é colocar na prática a teoria aprendida na aula anterior.
+
+Confira:
+
+API de cadastro de dados
+
+Validando a API de cadastro
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+No próximo Flow começaremos com a implementação do código da função validaNome.
+
+
+( ------------------------------ Função validaNome ------------------------------ )
+Ótimo! Já conhecemos a estrutura de funções da nossa camada de validação.
+
+Agora veremos em detalhes o código da função validaNome.
+
+Confira:
+
+API de cadastro de dados
+Função validaNome
+
+Nesse Flow vamos entender o funcionamento da função de validação validaNome.
+
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+
+
+( -------------------------------- Função validaEmail -------------------------------- )
+Perfeito, nós já validamos o campo nome.
+
+Agora veremos em detalhes o código da função validaEmail.
+
+Confira:
+
+API de cadastro de dados
+
+Função validaEmaiI
+
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+
+
+( -------------------------------- Função validaUsuario -------------------------------- )
+
+Perfeito, já temos uma função que valida o nome e outra que valida o email.
+
+Agora veremos em detalhes o código da função validaUsuario, que vai unificar as duas validações.
+
+Confira:
+
+API de cadastro de dados
+
+Função validaUsuario
+
+exemplo_26
+exemplo_27
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
+exemplo_32
+exemplo_33
+exemplo_34
+exemplo_35
+exemplo_36
+exemplo_37
+
+
+( ------------------------------ Testando a função validaUsuario ------------------------------ )
+No Flow anterior nós construímos a função validaUsuario, que integra as validações de nome e email.
+
+Agora veremos como testar o funcionamento dessa função.
+
+Confira:
+
+
+API de cadastro de dados
+
+Testando a função validaUsuario
+
+exemplo_38
+exemplo_39
+exemplo_40
+exemplo_41
+exemplo_42
+exemplo_43
+exemplo_44
+exemplo_45
+exemplo_46
+exemplo_47
+exemplo_48
+exemplo_49
+
+Perfeito! Você conseguiu validar os campos nome e email enviados para sua API.
+
+Na próxima aula veremos como aprimorar esse sistema de validação utilizando expressões regulares
+
+Abaixo você pode conferir o código do arquivo valida.js e o código atualizado do index.js:
+
+
+Arquivo validacao/valida.js
+
+function validaNome(nome) {
+    const isValid = nome.length >= 2;
+    return isValid;
+}
+
+function validaEmail(email) {
+    const isValid = email !== '' ? true : false;
+    return isValid;
+}
+
+export function validaUsuario(nome, email) {
+    const nomeValido = validaNome(nome);
+    const emailValido = validaEmail(email);
+
+    const usuarioValido = nomeValido && emailValido;
+
+    if(usuarioValido) {
+        return {status: true, mensagem: ''};
+    } else {
+        return {status: false, mensagem: 'Nome ou Email inválidos'};
+    }
+}
+
+
+Arquivo index.js
+
+
+import express from 'express';
+import cors from 'cors';
+
+import { cadastraLead } from './servicos/cadastro_servico.js';
+import { validaUsuario } from './validacao/valida.js';
+
+const app = new express();
+
+app.use(express.json());
+app.use(cors());
+
+app.post('/usuarios', async (req, res) => {
+    const nome = req.body.nome;
+    const email = req.body.email;
+
+    const usuarioValido = validaUsuario(nome, email);
+
+    if(usuarioValido.status) {
+        await cadastraLead(nome, email);
+        res.status(204).end();
+    } else {
+        res.status(400).send({mensagem: usuarioValido.mensagem});
+    }
+});
+
+app.listen(9000, async () => {
+    console.log("Servidor Iniciado");
+});
