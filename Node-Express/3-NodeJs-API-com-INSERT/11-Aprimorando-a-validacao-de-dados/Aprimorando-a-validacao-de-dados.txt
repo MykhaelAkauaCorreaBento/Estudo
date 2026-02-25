@@ -1,0 +1,119 @@
+Aprimorando a validação de dados
+
+Na aula anterior implementamos um sistema de validação na nossa API que impede o cadastro de 
+nomes com menos de dois caracteres e de emails em branco.
+
+Porém, a validação que fizemos anteriormente possui algumas falhas que vamos identificar no 
+Flow seguinte.
+
+Confira:
+
+
+API de cadastro de dados
+Problemas na validação
+
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+
+( --------------------------- Validação com funções de string --------------------------- )
+Legal! Vimos que nossa validação atual não cobre todos os cenários que precisamos, por isso, 
+precisamos aprimorá-la
+
+Mas por quê não utilizar as já conhecidas funções nativas de string?.
+
+Confira no Flow seguinte o motivo:
+
+API de cadastro de dados
+
+Validação com funções de string
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+
+
+( --------------------------- Expressão Regular (RegEx) --------------------------- )
+Ótimo! Vimos por que o uso de expressões regulares é recomendado para validação.
+
+No Flow seguinte vamos conhecer melhor as expressões regulares, entendendo o seu funcionamento.
+
+Confira:
+
+API de cadastro de dados
+
+Expressão Regular (RegEx)
+
+
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+
+
+Perfeito! Você já entendeu o problema e viu a forma correta de solucioná-lo.
+
+Na próxima aula veremos na prática como automatizar o processo de construção das expressões 
+regulares utilizando duasferramentas online para isso.
+
+Abaixo você pode conferir o código completo da validação feita com funções de string para ter 
+uma ideia da dimensão do código:
+
+
+function validarEmail(email) {
+    // Dividir o endereço de email pelo símbolo "@"
+    const partes = email.split("@");
+
+    // Verificar se há exatamente duas partes
+    if (partes.length !== 2) {
+        return false;
+    }
+
+    // Verificar se a parte local (antes do "@") e
+    // a parte do domínio (depois do "@") não estão vazias
+    if (partes[0].length === 0 || partes[1].length === 0) {
+        return false;
+    }
+
+    // Verificar se a parte do domínio contém um ponto (".")
+    if (partes[1].indexOf(".") === -1) {
+        return false;
+    }
+
+    // Verificar se o email não começa nem termina com um ponto (".")
+    if (partes[0][0] === "." ||
+        partes[0][partes[0].length - 1] === "." ||
+        partes[1][0] === "." ||
+        partes[1][partes[1].length - 1] === ".") {
+        return false;
+    }
+
+    // Verificar se o email não contém pontos (".") consecutivos
+    if (partes[0].includes("..") || partes[1].includes("..")) {
+        return false;
+    }
+
+    // Verificar se o email não contém caracteres especiais
+    //além de ponto (".") ou hífen ("-") na parte do domínio
+    const caracteresEspeciais = "!#$%^&*()+=[\\]{};':\"|,<>/?";
+    for (let i = 0; i < partes[1].length; i++) {
+        if (caracteresEspeciais.includes(partes[1][i])) {
+            return false;
+        }
+    }
+
+    return true;
+}

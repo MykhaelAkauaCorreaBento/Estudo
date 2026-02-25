@@ -1,0 +1,74 @@
+RegEx na prática
+
+Na aula anterior vimos que as expressões regulares são a melhor forma de validar dados em 
+formato texto, enviados pelo front-end.
+
+Agora, veremos na prática duas ferramentas que vão automatizar o processo de criação de 
+expressões regulares.
+
+Confira:
+
+API de cadastro de dados
+Ferramentas para construção de RegEX
+
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+( ---------------------------- Criando uma RegEx com o ChatGPT ---------------------------- )
+Ótimo! Já conhecemos duas ferramentas capazes de nos ajudar na construção e testagem de expressões regulares.
+
+Agora veremos na prática como utilizar a primeira delas: o ChatGPT.
+
+Confira:
+
+API de cadastro de dados
+Criando uma RegEx com o ChatGPT
+
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+
+
+( -------------------------- Usando a Regex 101 para testar uma RegEx -------------------------- )
+No Flow anterior nós criamos a nossa RegEx utilizando o ChatGPT.
+
+Agora veremos como testar a RegEx gerada usando o site Regex101.
+
+Confira:
+
+API de cadastro de dados
+
+Testando expressões regulares com o RegEx101
+
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+
+
+Perfeito! Você já sabe como criar e testar suas expressões regulares.
+
+Na próxima aula vamos utilizar o que aprendemos para aprimorar a validação da nossa API de 
+cadastro.
+
+Abaixo você pode conferir os links do ChatGPT e do RegEx 101.
+
+ChatGPT
+https://chat.openai.com/
+RegEx 101
+https://regex101.com/

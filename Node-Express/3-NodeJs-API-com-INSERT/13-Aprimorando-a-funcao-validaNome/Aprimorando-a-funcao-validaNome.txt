@@ -1,0 +1,95 @@
+Aprimorando a função validaNome
+
+Na aula anterior, conhecemos as duas ferramentas que nos ajudam a automatizar a criação de 
+expressões regulares.
+
+Agora vamos utilizar essas ferramentas na prática para melhorar a validação da nossa função 
+validaNome.
+
+Confira:
+
+API de cadastro de dados
+
+RegEx validaNome
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+
+
+( -------------------------- Gerando a RegEx -------------------------- )
+Ótimo! Nós já sabemos como deve ser a nossa RegEx para validar o nome.
+
+Agora veremos como gerar a RegEx utilizando o ChatGPT.
+
+Confira:
+
+
+API de cadastro de dados 
+Gerando a RegEx
+
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+
+( -------------------------- Função validaNome -------------------------- )
+Legal! Nós já temos a RegEx de validação de nome.
+
+Agora vamos implementar a RegEx na nossa função validaNome.
+
+Confira:
+
+API de cadastro de dados
+
+Função validaNome
+
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+
+
+( -------------------------- Testando a função validaNome -------------------------- )
+Perfeito! Nossa função validaNome está pronta e já podemos testá-la.
+
+Acompanhe no Flow a seguir:
+
+API de cadastro de dados
+
+Testando a função validaNome
+
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+exemplo_28
+exemplo_29
+
+Perfeito! Com isso feito, sua função validaNome está completa e já não permite mais o cadastro 
+de informações inválidas.
+
+Abaixo você pode conferir o código final da função validaNome:
+
+
+Código 1. Arquivo valida.js
+
+
+function validaNome(nome) {
+    const regexNome = /^[a-zA-ZÀ-ÿ\s\-']+$/;
+
+    const isValid = nome.length >= 2 && regexNome.test(nome);
+    return isValid;
+}
