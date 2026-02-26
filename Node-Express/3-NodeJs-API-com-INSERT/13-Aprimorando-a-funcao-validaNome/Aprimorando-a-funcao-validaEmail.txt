@@ -1,0 +1,154 @@
+Aprimorando a função validaEmail
+
+Na aula anterior nós validamos a função validaNome utilizando expressões regulares.
+
+Agora faremos o mesmo com a função validaEmail.
+
+Confira:
+
+API de cadastro de dados
+RegEx validaEmail
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+
+( --------------------------------- Gerando a RegEx --------------------------------- )
+
+Ótimo! Nós já sabemos como deve ser a nossa RegEx para validar o email.
+
+Agora veremos como gerar a RegEx utilizando o ChatGPT.
+
+Confira:
+
+API de cadastro de dados
+
+Gerando a RegEx
+
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+
+( --------------------------------- Função validaEmail --------------------------------- )
+Legal! Nós já temos a RegEx de validação de email.
+
+Agora vamos implementar a RegEx na nossa função validaEmail.
+
+Confira:
+
+API de cadastro de dados
+
+Função validaEmaiI
+
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+
+(  --------------------------- Testando a função validaEmail  --------------------------- )
+Perfeito! Nossa função validaEmail está pronta e já podemos testá-la.
+
+Acompanhe no Flow a seguir:
+
+API de cadastro de dados
+Testando a função validaEmaiI
+
+API de cadastro de dados
+
+Testando a função validaEmaiI
+
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_25
+
+
+
+(  --------------------------- Camada de validação  --------------------------- )
+
+
+Código 1. Arquivo index.js
+
+
+
+function validaNome(nome) {
+    const regexNome = /^[a-zA-ZÀ-ÿ\s\-']+$/;
+
+    const isValid = nome.length >= 2 && regexNome.test(nome);
+    return isValid;
+}
+
+function validaEmail(email) {
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = regexEmail.test(email);
+
+    return isValid;
+}
+
+export function validaUsuario(nome, email) {
+    const nomeValido = validaNome(nome);
+    const emailValido = validaEmail(email);
+
+    const usuarioValido = nomeValido && emailValido;
+
+    if(usuarioValido) {
+        return {status: true, mensagem: ''};
+    } else {
+        return {status: false, mensagem: 'Nome ou Email inválidos'};
+    }
+}
+
+
+
+  (  --------------------------- Camada de serviço --------------------------- )
+
+  Código 3. Arquivo conexao.js
+
+
+  import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'leads_bd'
+});
+
+export default pool;
+
+
+
+
+Código 4. Arquivo cadastro_servico.js
+
+
+import pool from "./conexao.js";
+
+export async function cadastraLead(nome, email) {
+  const conexao = await pool.getConnection();
+
+  const resposta = await conexao.query("INSERT INTO leads (nome, email)
+                                    VALUES (?, ?)", [nome, email]);
+
+  conexao.release();
+
+  return resposta;
+}
+
+
+
+Não esqueça de remover a linha multipleStatements: true do arquivo conexao.js
+Parabéns!
+Você concluiu sua API de cadastro de dados e deu mais um passo na sua carreira como programador.
+
