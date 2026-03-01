@@ -1,0 +1,24 @@
+Como funciona a autenticação?
+
+Nesta aula vamos nos aprofundar no sistema de autenticação do nosso projeto e entender o que ocorre 
+quando uma autenticação falha.
+
+O objetivo é entender como a API responde quando recebe dados de autenticação inválidos. 
+Confira o Flow:
+
+
+API com Autenticação
+Como funciona?
+
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11

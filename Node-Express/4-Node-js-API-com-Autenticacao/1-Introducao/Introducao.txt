@@ -1,0 +1,34 @@
+Introdução
+
+Seja bem-vindo ao curso e parabéns por mais um passo na sua Carreira Programador.
+
+Já sabemos como criar APIs utilizando o express e também como listar informações a partir de um 
+endpoint.
+
+Agora vamos à próxima etapa, criando uma API que permite o acesso apenas para requisições 
+autenticadas.
+
+Contudo, antes de falar sobre autenticação, vamos conhecer o exemplo que vamos construir nesse 
+curso.
+
+Exemplo do curso
+
+No Flow a seguir conheceremos o exemplo que vamos construir neste curso. Confira:
+
+API com Autenticação
+
+Conhecendo o exemplo
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+Perfeito! Você agora conhece o projeto que iremos trabalhar no decorrer do curso.
+
+Na próxima aula começaremos a entender como nosso projeto funciona.
