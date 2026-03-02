@@ -1,0 +1,56 @@
+Verbo HTTP POST
+
+Nesta aula veremos dois conceitos importantes sobre a nossa aplicação que precisamos conhecer 
+antes de iniciar a codificação.
+
+O uso do verbo http POST para o endpoint /login
+Como nossa API lida com usuários administrativos.
+Entendendo o login
+Vimos anteriormente que o primeiro passo da autenticação é enviar uma requisição para o 
+endpoint /login. Um ponto importante aqui é: observe que a requisição é feita com o verbo 
+http POST.
+
+exemplo_1
+
+Veja no Flow seguinte porque utilizamos POST ao invés de GET nessa situação.
+
+
+API com Autenticação
+
+Entendendo o login
+
+
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+
+Perfeito! Já entendemos por que o login usa o verbo POST.
+
+O usuário administrativo
+Como vimos anteriormente, nosso sistema possui uma tela que lista os leads, mas para acessá-la 
+é necessário estar autenticado.
+
+A autenticação ocorre através dos dados de acesso (usuário e senha) de um usuário administrativo.
+
+Veja no Flow seguinte o que é o usuário administrativo e como ele é definido na aplicação.
+
+
+
+API com Autenticação
+
+O Usuário administrativo
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+
+Ótimo! Agora já entendemos como nossa aplicação vai lidar com o usuário administrador.
+
+Na próxima aula vamos entrar no código da nossa aplicação node/express.

@@ -1,0 +1,49 @@
+Validando o token
+
+Nesta aula vamos nos aprofundar no processo de autenticação e entender como a API sabe que um token é válido.
+
+Como o token é validado?
+No Flow seguinte vamos entender como o token é validado pela nossa aplicação. Confira:
+
+API com Autenticação
+
+Como o token é validado?
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+
+
+Validando o token no back-end
+Agora que já sabemos como o token é gerado, precisamos entender como o back-end faz para validar 
+o token, ou seja, como o back-end sabe que o token recebido é válido. Confira:
+
+
+API com Autenticação
+Validando o token no back-end
+
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+
+Perfeito! Você já sabe como um token é validado.
+
+A partir da próxima aula veremos como isso é feito no código.

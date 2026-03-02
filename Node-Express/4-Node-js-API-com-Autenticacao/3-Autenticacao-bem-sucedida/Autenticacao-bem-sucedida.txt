@@ -1,0 +1,37 @@
+Autenticação bem-sucedida
+
+Nesta aula vamos nos aprofundar no processo de autenticação e entender o que acontece quando o 
+login é bem-sucedido. Confira:
+
+API com Autenticação
+
+Autenticação bem-sucedida
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+
+Autenticando com Token
+No Flow seguinte veremos como nos autenticamos em um endpoint utilizando o token. Confira:
+
+API com Autenticação
+
+Autenticando com Token
+
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
