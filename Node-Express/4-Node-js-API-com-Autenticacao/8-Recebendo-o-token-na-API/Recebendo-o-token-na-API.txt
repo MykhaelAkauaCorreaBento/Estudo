@@ -1,0 +1,77 @@
+Recebendo o token na API
+
+Como vimos anteriormente, quando fazemos login na nossa API é gerado um Token no padrão JWT.
+
+Agora veremos como esse Token é recebido pela API. Confira no Flow.
+
+
+API com Autenticação
+
+Recebendo o token na API - Parte 1
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+
+Perfeito, já sabemos que nosso objetivo é entender como o token será recebido.
+
+Agora veja no Flow seguinte como isso ocorre no código.
+
+
+API com Autenticação
+
+Recebendo o token na API - Parte 2
+
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+
+
+
+Código 1. Token recebido pelo código da API
+
+
+app.get('/lista-leads', async(req, res) => {
+    //Recebe o Token enviado na requisição e usa split para remover o texto 'Bearer'
+    let token;
+
+    if(typeof req.headers.authorization !== 'undefined')
+    {
+        token = req.headers.authorization.split(' ')[1];
+    }
+    else
+    {
+        token = -1;
+    }
+
+    const tokenValido = validaToken(token);
+
+    if(!tokenValido.status) {
+        res.status(tokenValido.codigo).end();
+        return;
+    }
+
+    const listaLeads = await RetornaLeads();
+
+    res.status(tokenValido.codigo).send();
+});
+
+app.listen(9000, async () => {
+    console.log("Servidor Iniciado");
+});
+
+
+
+Ótimo, já sabemos como funciona o código de recebimento do token pela API.
+
+Na próxima aula veremos como é feita a validação do token.

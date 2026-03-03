@@ -1,0 +1,47 @@
+Conhecendo o código
+
+Nesta aula vamos ver de forma prática como o fluxo descrito nas aulas anteriores é implementado 
+no código.
+
+Vamos iniciar essa etapa conhecendo o código do endpoint /login. Confira:
+
+API com Autenticação
+
+Endpoint /login
+
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+
+
+Código 1. Processo de login
+
+app.post('/login', (req, res) => {
+    const usuario = req.body.usuario;
+    const senha = req.body.senha;
+
+    const autenticacaoValida = ValidaDadosAutenticacao(usuario, senha);
+
+    if(!autenticacaoValida) {
+        res.status(401).send({message: "Usuário não autorizado"});
+        return;
+    }
+
+    const token = GeraToken();
+
+    res.status(200).send({token: token});
+});
+
+
+
+Perfeito! Você já conhece como o endpoint /login funciona.
+
+Na próxima aula vamos aprender como nosso token é gerado utilizando um padrão conhecido como JWT.

@@ -1,0 +1,67 @@
+Validando o Token
+
+
+Na aula anterior vimos como recebemos o token na API.
+
+Agora veremos como o token recebido é validado no código. Confira no Flow.
+
+API com Autenticação
+Validando o Token - Parte 1
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10
+
+
+
+
+
+API com Autenticação
+Validando o Token - Parte 2
+
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+
+
+Código 1. Função validaToken
+
+export function validaToken(token) {
+    let status;
+    let codigo;
+
+    jwt.verify(token, JWT_SECRET, function(erro, dadosToken) {
+        if(erro == null && dadosToken.idUsuario == 1)
+        {
+            status = true;
+            codigo = 200;
+        }
+        else
+        {
+            status = false;
+            codigo = 401;
+        }
+    });
+
+    return {status: status, codigo: codigo};
+}
+
+Na próxima aula veremos como utilizar o token validado para liberar o acesso a lista de leads.
+

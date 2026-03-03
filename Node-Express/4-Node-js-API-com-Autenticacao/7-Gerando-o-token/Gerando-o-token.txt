@@ -1,0 +1,96 @@
+Gerando o token
+
+
+Como vimos anteriormente, para validar nosso login nós utilizamos um token. Esse token é gerado 
+em um padrão conhecido como JWT.
+
+Por esse motivo, antes de entender o código, precisamos saber o que é JWT. Confira no Flow.
+
+API com Autenticação
+
+o que é JWT(JSON Web Token)?
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+
+
+
+( --------------------------- JWT e Node/Express --------------------------- )
+Vimos que o token que usamos na nossa API se utiliza do formato JWT.
+
+Agora veremos como preparamos nosso projeto Node/Express para trabalhar com tokens JWT.
+
+
+API com Autenticação
+
+JWT e Node/Express
+
+exemplo_7
+exemplo_8
+exemplo_9
+exemplo_10 (npm install jsonwebtoken)
+exemplo_11
+exemplo_12
+exemplo_13
+
+
+( --------------------------- Gerando o token --------------------------- )
+No Flow anterior vimos como instalar a biblioteca jsonwebtoken no nosso projeto.
+
+Agora veremos como utilizamos essa biblioteca no código para gerar o token JWT.
+
+
+API com Autenticação
+
+Gerando o token
+
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+
+
+( --------------------------- Data de expiração --------------------------- )
+No Flow anterior vimos que ao gerar um token ele recebe uma data de expiração.
+
+Agora veremos como essa data é incluída no token e para que serve a data de expiração.
+
+
+API com Autenticação
+
+Data de expiração
+
+exemplo_25
+exemplo_26
+exemplo_27
+exemplo_28
+exemplo_29
+exemplo_30
+exemplo_31
+
+
+
+Código 1. Criação do token
+
+
+import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from "../env/env.js";
+
+export function GeraToken() {
+    const usuarioLogado = {"idUsuario": 1}
+
+    const token = jwt.sign(usuarioLogado, JWT_SECRET, { expiresIn: '30d' });
+
+    return token;
+}
