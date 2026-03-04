@@ -1,0 +1,97 @@
+Liberando o acesso a lista de leads
+
+Na aula anterior vimos como o token, depois de recebido, é validado pelo sistema.
+
+Agora veremos como usar a resposta dessa validação para liberar o acesso ao consumo dos leads. 
+Confira no Flow.
+
+
+API com Autenticação
+
+Acessando a lista de leads
+
+exemplo_1
+exemplo_2
+exemplo_3
+exemplo_4
+exemplo_5
+exemplo_6
+exemplo_7
+exemplo_8
+exemplo_9
+
+
+( ------------------------- Função RetornaLeads ------------------------- )
+
+
+
+No Flow seguinte veremos como a função RetornaLeads retorna a lista de leads para o endpoint. 
+Confira.
+
+API com Autenticação
+
+Função RetornaLeads
+
+
+exemplo_10
+exemplo_11
+exemplo_12
+exemplo_13
+exemplo_14
+exemplo_15
+exemplo_16
+exemplo_17
+
+( ------------------------- Testando a API ------------------------- )
+
+
+
+No Flow seguinte veremos como podemos testar nossa API. Confira.
+
+
+API com Autenticação
+
+Testando a API
+
+exemplo_18
+exemplo_19
+exemplo_20
+exemplo_21
+exemplo_22
+exemplo_23
+exemplo_24
+exemplo_25
+exemplo_26
+exemplo_27
+
+
+
+Código 1. Código servico_leads.js
+
+
+import pool from "../conexao/conexao.js";
+
+export async function RetornaLeads() {
+    const conexao = await pool.getConnection();
+
+    const resposta = await conexao.query("SELECT id, nome, email, telefone FROM cadastro_leads");
+    conexao.release();
+
+    const leads = resposta[0];
+
+    return leads;
+}
+
+
+
+( ------------------------- Uso Prático ------------------------- )
+
+
+
+Com sua API concluída, ela poderá ser utilizada por outras aplicações, como apps e sites.
+
+Confira na Figura abaixo um exemplo de uma aplicação front-end (site) consumindo a API de leads.
+
+
+exemplo_28
+exemplo_29
