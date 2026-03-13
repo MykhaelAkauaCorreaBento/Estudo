@@ -1,0 +1,28 @@
+
+Git e Github
+
+
+Durante o desenvolvimento das aplicações o código passa por diversas mudanças e muitas vezes é preciso realizar 
+testes e voltar a versões anteriores. Quando não usamos um sistema de controle de versão esse gerenciamento de 
+mudanças é feito por meio de cópias das pastas e arquivos do projeto, processo que pode se mostrar inseguro e 
+levar a erros no projeto.
+
+Nesse contexto entra o Git, um Sistema de Controle de Versão (SCV ou VCS em inglês) que nos permite controlar as 
+mudanças ocorridas nos arquivos de forma segura. Com ele podemos persistir mudanças no código e voltar atrás quando 
+for necessário sem precisar fazer cópias manuais.
+
+
+GitHub
+O GitHub é um serviço web de hospedagem de código que possibilita o controle de versão de projetos de software.
+
+Construído sobre o Git, esse serviço abstrai do programador questões de infraestrutura, disponibilizando em um 
+servidor web os seus projetos, de modo que você ou uma equipe (centralizada ou distribuída), possa trabalhar
+no mesmo projeto a partir de um controle de versão rápido e simples.
+
+
+Integração com IDEs
+O Git dispõe de uma ferramenta de linha de comandos que pode ser usada da mesma forma em diferentes sistemas
+operacionais. Porém, como no dia a dia utilizamos com frequência os IDEs (ambientes de desenvolvimento integrado), 
+podemos integrá-los com o Git e fazer o controle de versão sem precisar sair da interface e ir para o prompt de
+comandos/terminal.
+
