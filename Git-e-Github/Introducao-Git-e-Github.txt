@@ -26,3 +26,4 @@ operacionais. Porém, como no dia a dia utilizamos com frequência os IDEs (ambi
 podemos integrá-los com o Git e fazer o controle de versão sem precisar sair da interface e ir para o prompt de
 comandos/terminal.
 
+
