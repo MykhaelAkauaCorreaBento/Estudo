@@ -1,0 +1,56 @@
+Introdução
+
+Aprender a controlar as versões do código é um processo simples, porém trabalhoso, se não utilizarmos uma boa 
+ferramenta para isso. Atualmente, o Git é o sistema mais indicado para isso. Leve, rápido e eficiente, com simples
+comandos possibilita a um ou mais programadores gerenciar as mudanças feitas no código de um projeto. Caso ainda 
+não o conheça, nesta aula vamos falar sobre ele, abordando a importância de utilizá-lo e como ele funciona, 
+analisando em paralelo alguns dos seus comandos.
+
+
+
+
+
+Conteúdo de apoio
+
+O Git é uma ferramenta criada com o intuito de facilitar o controle de versão dos arquivos de projetos de software, 
+sejam eles da linguagem de programação que você utiliza, XML, JSON, HTML, CSS, enfim, todos eles. Com o Git é 
+abstraído o esforço e a complexidade da execução de tarefas que podem prejudicar a produtividade de qualquer 
+programador. Para isso, ele fornece comandos simples para tudo o que precisamos no que diz respeito ao controle de 
+versão: da criação do repositório à criação de uma nova versão do código.
+
+Para compreender a importância dessa ferramenta, imagine que você está trabalhando em um projeto e decide 
+experimentar uma biblioteca indicada por um amigo. Muitas vezes, por descuido, ou por não utilizar uma ferramenta
+de controle de versão, fazemos o teste da biblioteca no código do nosso projeto, sem criar uma nova versão para 
+o teste.
+
+Quando fazemos isso estamos assumindo um risco muito alto. No teste, podemos realizar várias mudanças no código e 
+depois perder, até mesmo, horas, para conseguir voltar ao estado que gostaríamos, no caso de optarmos por não 
+adotar a biblioteca. A depender do estágio do projeto, pode ser comum recomeçar do zero.
+
+Agora, imagine que você está trabalhando em um projeto com uma equipe de cinco pessoas. Como vocês fariam para 
+manter uma versão do projeto compatível? Como você faria para passar aos seus colegas as mudanças que você fez no 
+código? Quão trabalhoso pode ser gerir o código de todas as pessoas?
+
+O Git facilita tudo isso ao prover uma solução distribuída, leve e robusta. A Figura 1 apresenta os principais
+elementos relacionados a essa ferramenta e como ela funciona.
+
+
+exemplo:
+
+funcionamento_git.png
+
+Figura 1. Funcionamento do Git
+Note que a imagem principal representa uma pasta, o diretório do projeto. Esse nada mais do que o diretório em que 
+nosso projeto será criado. Ao criarmos um repositório Git, fazemos desse diretório nossa Working Area, ou área de 
+trabalho. Dentro dele, é criado um diretório oculto, de nome .git. Esse é nosso repositório de fato. Ele que guardará
+as informações, os metadados, referentes ao nosso código.
+
+A partir disso, qualquer arquivo criado/modificado na working area do Git. Para que possamos adicionar esse arquivo
+criado/modificado ao repositório, precisamos lidar com outro conceito, o conceito de Stage (ou palco). Assim, 
+devemos adicionar os arquivos nessa área e, somente a partir disso, executar o commit. O stage nada mais é que 
+um espaço intermediário que irá conter o que deve ser adicionado ao repositório.
+
+
+Quando executamos o commit, estamos adicionando os novos arquivos e as mudanças realizadas ao repositório, criando 
+assim uma nova versão do nosso código, o que gera um código hash, representado na Figura 1 pelo código de seis 
+dígitos à direita. É utilizando esse código que conseguimos navegar entre as versões do projeto.
