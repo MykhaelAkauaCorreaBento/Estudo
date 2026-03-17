@@ -88,7 +88,7 @@ git checkout nomeDoBranch
 
 
 
-
+ 
 Logo após, todas as mudanças realizadas a partir de agora estarão acessíveis apenas nesse branch. Portanto, se você 
 criar um ou mais arquivos, ao voltar para o branch master (com o comando git checkout master) esses arquivos não serão
 encontrados, pois nesse ramo esses arquivos não existem.
