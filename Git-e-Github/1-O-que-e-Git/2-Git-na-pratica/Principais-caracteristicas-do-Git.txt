@@ -1,0 +1,205 @@
+Principais características do Git
+
+📌 Resumo — Como usar o Git
+💡 Por que usar controle de versão?
+
+Em projetos com várias pessoas, é comum:
+
+editar o mesmo arquivo ao mesmo tempo
+
+ter medo de quebrar o sistema
+
+não saber qual versão está correta
+
+👉 O controle de versão resolve isso, permitindo:
+
+ver quem alterou
+
+saber o que mudou
+
+entender por que mudou
+
+recuperar versões antigas
+
+✔ Exemplo
+
+4 devs editando o mesmo arquivo → o Git consegue juntar tudo depois (merge) sem perder nada.
+
+⚠️ Problema comum
+
+Mesmo usando Git, erros acontecem por:
+
+falta de entendimento da ferramenta
+
+confundir Git com SVN (muito comum)
+
+👉 Exemplo clássico de erro:
+
+achar que commit já envia pro servidor (isso é falso no Git)
+
+🔄 Conceito central: Git é distribuído
+🆚 Git vs SVN/CVS
+Característica	SVN/CVS (centralizado)	Git (distribuído)
+Commit	Vai direto pro servidor	Fica local
+Internet	Obrigatória	Não precisa
+Velocidade	Mais lento	Mais rápido
+Branches	Limitados	Muito eficientes
+
+👉 No Git:
+
+commit → salva localmente
+
+push → envia para o servidor
+
+📸 Como o Git salva versões (Snapshots)
+
+Diferente de outras ferramentas, o Git:
+
+não salva só diferenças
+
+salva o estado completo do projeto (snapshot)
+
+✔ Exemplo
+
+Versão 1 → A, B, C
+
+Versão 2 → muda A → Git copia só A e referencia B e C
+
+Versão 3 → muda C → copia só C
+
+👉 Resultado: rápido e eficiente
+
+⚡ Trabalho local (vantagem gigante)
+
+O Git guarda tudo localmente, então:
+
+é rápido
+
+funciona offline
+
+histórico completo disponível
+
+📦 Estados do Git (ESSENCIAL)
+
+Existem 3 estados:
+
+Modified → arquivo alterado
+
+Staged → pronto para commit
+
+Committed → salvo no repositório
+
+📍 Fluxo básico
+
+Edita arquivo
+
+git add → vai para stage
+
+git commit → salva
+
+🔧 Comandos principais (com exemplos)
+🧱 Configuração
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+📁 Criar repositório
+git init
+📌 Ver status
+git status
+
+👉 Mostra:
+
+arquivos modificados
+
+arquivos não rastreados
+
+➕ Adicionar arquivos
+git add .
+
+ou
+
+git add arquivo.java
+💾 Commit
+git commit -m "mensagem"
+
+👉 Dica:
+
+escreva mensagens claras (ex: "corrige bug login")
+
+📜 Histórico
+git log
+
+👉 Mostra:
+
+autor
+
+data
+
+mudanças
+
+👥 Trabalhando em equipe
+📥 Clonar repositório
+git clone URL
+🚀 Enviar alterações
+git push
+🔄 Atualizar projeto
+git pull
+🌿 Branches (muito importante)
+
+Branches permitem trabalhar sem afetar o código principal.
+
+Criar branch
+git checkout -b nova-feature
+Trocar de branch
+git checkout master
+Mesclar (merge)
+git merge nova-feature
+✔ Exemplo
+
+Cria branch → faz feature
+
+Volta pro master
+
+Faz merge
+
+👉 Assim evita quebrar o sistema principal
+
+🏷️ Tags (versões)
+
+Usadas para marcar versões do sistema:
+
+git tag 1.0.0 <hash>
+
+👉 Exemplo:
+
+versão 1.0.0 do sistema
+
+🚨 Dicas importantes
+
+✔ Entenda o fluxo (isso evita 90% dos erros)
+✔ Não confunda Git com SVN
+✔ Faça commits pequenos e frequentes
+✔ Use branches para tudo
+✔ Sempre use mensagens claras no commit
+✔ Lembre:
+
+commit ≠ enviar
+
+push = enviar
+
+🧠 Resumo final (simplificado)
+
+O Git:
+
+controla versões
+
+permite trabalho em equipe
+
+salva histórico completo
+
+usa snapshots
+
+funciona localmente
+
+permite branches e merges eficientes
+
+👉 Dominar Git = trabalhar melhor em equipe + evitar bugs + mais produtividade
