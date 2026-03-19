@@ -3,7 +3,7 @@ Liberando o acesso a lista de leads
 Na aula anterior vimos como o token, depois de recebido, é validado pelo sistema.
 
 Agora veremos como usar a resposta dessa validação para liberar o acesso ao consumo dos leads. 
-Confira no Flow.  
+Confira no Flow.   
 
 
 API com Autenticação
@@ -17,7 +17,7 @@ exemplo_4
 exemplo_5
 exemplo_6
 exemplo_7
-exemplo_8
+exemplo_8 
 exemplo_9
 
 
