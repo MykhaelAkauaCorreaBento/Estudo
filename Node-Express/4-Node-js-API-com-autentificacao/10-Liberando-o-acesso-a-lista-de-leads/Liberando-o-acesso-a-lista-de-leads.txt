@@ -19,9 +19,6 @@ exemplo_7
 exemplo_8 
 exemplo_9
 
-
-
-
 ( ------------------------- Função RetornaLeads ------------------------- )
 
 
