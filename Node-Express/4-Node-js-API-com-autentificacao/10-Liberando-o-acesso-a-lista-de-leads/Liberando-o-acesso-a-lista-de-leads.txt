@@ -1,4 +1,4 @@
-Liberando o acesso a lista de leads
+Liberando o acesso a lista de leads 
 
 Na aula anterior vimos como o token, depois de recebido, é validado pelo sistema. 
 
