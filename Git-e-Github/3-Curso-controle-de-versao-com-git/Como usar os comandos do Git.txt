@@ -1,0 +1,159 @@
+Como usar os comandos do Git
+
+
+Grandes equipes de desenvolvimento trabalham em paralelo, divididas em partes do projeto. Como tudo precisa se integrar, surge a necessidade de controle de versão, garantindo organização, segurança e histórico das mudanças. Um dos sistemas mais usados é o Git.
+
+🔹 Conceitos básicos
+Working tree (diretório de trabalho): onde você edita os arquivos.
+Staging area (index): onde você prepara o que será commitado.
+Repositório: onde ficam as versões salvas.
+
+👉 Fluxo básico:
+
+git add arquivo
+git commit -m "mensagem"
+🔹 Clonando um projeto
+
+Para baixar um repositório remoto:
+
+git clone URL
+
+Isso cria uma cópia local pronta para edição.
+
+🔹 Comando git add
+
+Adiciona arquivos ao stage.
+
+Exemplo:
+
+git add index.html
+
+💡 Dicas:
+
+git add -i: modo interativo (escolher arquivos ou partes).
+Permite selecionar apenas trechos (hunks) de um arquivo.
+Você pode desfazer com revert dentro do modo interativo.
+🔹 Comando git commit
+
+Salva as alterações no histórico.
+
+Exemplo:
+
+git commit -m "Alteração no arquivo"
+
+Outras formas:
+
+Commitar tudo:
+git commit -a -m "mensagem"
+Commitar arquivo específico:
+git commit -m "msg" arquivo
+
+💡 Dicas:
+
+Sempre escreva mensagens claras.
+O stage é limpo após o commit.
+🔹 Verificando alterações
+git status: mostra o estado atual.
+git diff: mostra diferenças.
+
+Exemplos:
+
+git diff            # mudanças não adicionadas
+git diff --cached   # mudanças no stage
+git diff HEAD       # tudo comparado ao último commit
+
+💡 Dica:
+
++ indica adição
+- indica remoção
+🔹 Manipulação de arquivos
+Renomear:
+git mv arquivo novo_nome
+Remover:
+git rm arquivo
+🔹 Branches (ramificações)
+
+Permitem trabalhar sem afetar o código principal.
+
+Criar:
+
+git branch novo
+
+Trocar:
+
+git checkout novo
+
+Criar e trocar:
+
+git checkout -b novo
+
+💡 Quando usar:
+
+Testes/experimentos
+Novas funcionalidades
+Correção de bugs
+🔹 Merge (junção de branches)
+
+Tipos principais:
+
+Merge simples (fast-forward)
+git merge branch
+Squash (comprime commits em um só)
+git merge --squash branch
+Cherry-pick (um commit específico)
+git cherry-pick <id>
+🔹 Conflitos
+
+Ocorrem quando dois branches alteram a mesma parte do código.
+
+Exemplo de conflito:
+
+<<<<<<< HEAD
+código atual
+=======
+código do outro branch
+>>>>>>> branch
+
+💡 Dica:
+
+Resolver manualmente e depois fazer commit.
+🔹 Histórico (log)
+
+Visualizar commits:
+
+git log
+
+Opções úteis:
+
+Últimos commits:
+git log -1
+Por período:
+git log --after="5 hours"
+🔹 Revertendo alterações
+
+Para desfazer commits:
+
+git revert HEAD
+
+💡 Dica:
+
+O revert não apaga o histórico, ele cria um novo commit desfazendo o anterior.
+✅ Conclusão
+
+O Git permite:
+
+Trabalhar em equipe com segurança
+Controlar versões do código
+Testar sem riscos (branches)
+Reverter erros facilmente
+
+👉 Resumo prático do fluxo:
+
+git clone
+git add
+git commit
+git status
+git diff
+git branch / checkout
+git merge
+git log
