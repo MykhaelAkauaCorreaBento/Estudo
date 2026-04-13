@@ -8,6 +8,7 @@ Working tree (diretório de trabalho): onde você edita os arquivos.
 Staging area (index): onde você prepara o que será commitado.
 Repositório: onde ficam as versões salvas.
 
+
 👉 Fluxo básico:
 
 git add arquivo
