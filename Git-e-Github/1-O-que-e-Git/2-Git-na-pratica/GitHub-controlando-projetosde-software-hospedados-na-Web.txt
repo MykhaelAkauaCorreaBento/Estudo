@@ -1,0 +1,194 @@
+GitHub: controlando projetos de software hospedados na Web (resumo com dicas e exemplos)
+
+O GitHub é uma plataforma criada em 2008 para hospedar projetos e controlar versões de software na internet utilizando o Git, ferramenta criada por Linus Torvalds.
+
+Seu principal objetivo é permitir que desenvolvedores trabalhem em equipe, acompanhem alterações no código e compartilhem projetos online.
+
+Atualmente, empresas e organizações utilizam amplamente o GitHub, inclusive a Microsoft em diversos projetos open source.
+
+1. Como o GitHub funciona
+
+O fluxo básico é simples:
+
+Baixar o projeto para o computador.
+Fazer alterações.
+Salvar as mudanças.
+Enviar as alterações para a internet.
+
+Fluxo:
+
+GitHub (internet)
+       ↓
+git clone
+
+Editar arquivos
+
+git add
+
+git commit
+
+git push
+
+GitHub atualizado
+2. Repositórios públicos e privados
+
+O GitHub permite dois tipos de repositórios:
+
+Público
+
+Qualquer pessoa pode visualizar e baixar o projeto.
+
+Exemplo:
+
+Projetos open source.
+Portfólios de desenvolvedores.
+Privado
+
+Apenas usuários autorizados têm acesso.
+
+Normalmente utilizado em projetos empresariais.
+
+3. GitHub for Windows
+
+Era uma ferramenta gráfica criada para facilitar o uso do Git no Windows.
+
+Ela permitia:
+
+Criar repositórios.
+Clonar projetos.
+Fazer commits.
+Publicar projetos.
+Sincronizar alterações.
+
+Atualmente, a ferramenta foi substituída pelo GitHub Desktop.
+
+4. Criando um repositório
+
+Após instalar a ferramenta:
+
+Clique em + (Novo Repositório).
+Escolha a pasta do projeto.
+Crie o repositório.
+
+Exemplo:
+
+C:\Desenvolvimento\TesteGitHubWindows
+
+O Git passará a monitorar todos os arquivos do projeto.
+
+5. O arquivo .gitignore
+
+Nem todos os arquivos devem ser enviados para a internet.
+
+O .gitignore serve justamente para ignorar arquivos desnecessários.
+
+Exemplos comuns:
+
+bin/
+obj/
+packages/
+
+*.suo
+*.user
+Benefícios
+Reduz o tamanho do projeto.
+Evita enviar arquivos temporários.
+Evita enviar arquivos pessoais.
+6. Fazendo o primeiro commit
+
+Após configurar os arquivos:
+
+git add .
+
+git commit -m "Primeira versão do projeto"
+
+O commit prepara o projeto para ser publicado.
+
+7. Publicando no GitHub
+
+Depois do commit, publique o projeto.
+
+git push
+
+O projeto ficará disponível na plataforma.
+
+Se o repositório for público, outras pessoas poderão baixá-lo.
+
+8. Baixando um projeto
+
+Qualquer usuário pode baixar um projeto público.
+
+Duas opções comuns:
+
+Via Git
+git clone https://github.com/usuario/projeto.git
+Via arquivo ZIP
+
+Botão:
+
+Download ZIP
+9. Sincronizando alterações
+
+Quando um arquivo é alterado, a ferramenta detecta automaticamente as mudanças.
+
+Exemplo:
+
+Arquivo Index.cshtml alterado
+
+Fluxo:
+
+Editar arquivo
+
+↓
+
+Sincronizar
+
+↓
+
+Commit
+
+↓
+
+Push
+10. Fluxo de trabalho completo
+
+O processo mais comum é:
+
+1. Criar ou clonar o projeto
+
+2. Alterar arquivos
+
+3. git add .
+
+4. git commit -m "descrição"
+
+5. git push
+Dicas importantes
+
+✅ Sempre crie um arquivo .gitignore.
+
+✅ Faça commits pequenos e frequentes.
+
+Exemplo:
+
+git commit -m "Corrige bug da tela de login"
+
+Evite:
+
+git commit -m "alterações"
+
+✅ Organize seus projetos em repositórios separados.
+
+✅ Use o GitHub como portfólio profissional.
+
+✅ Atualize seu repositório regularmente.
+
+Principais vantagens do GitHub
+Armazenamento de projetos na nuvem.
+Trabalho colaborativo.
+Controle completo do histórico.
+Compartilhamento de projetos.
+Integração com diversas linguagens e ferramentas.
+Resumo em uma frase
+
+O GitHub é uma plataforma online baseada no Git que permite armazenar, compartilhar, versionar e desenvolver projetos de software de forma colaborativa.

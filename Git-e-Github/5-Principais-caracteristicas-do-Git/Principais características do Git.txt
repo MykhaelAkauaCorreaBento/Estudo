@@ -1,0 +1,136 @@
+Principais características do Git (resumo com dicas e exemplos)
+
+O Git é um sistema de controle de versão distribuído, usado para gerenciar alterações em projetos, principalmente de software. Ele permite que várias pessoas trabalhem simultaneamente nos mesmos arquivos, mantendo um histórico completo das mudanças.
+
+Principais características
+1. Controle de versão
+
+Permite acompanhar todas as alterações realizadas nos arquivos ao longo do tempo.
+
+Benefícios:
+
+Saber quem alterou um arquivo.
+Saber quando e por que a alteração foi feita.
+Recuperar versões anteriores quando necessário.
+
+Exemplo: Se uma atualização causar erro no sistema, é possível voltar para uma versão anterior.
+
+2. Trabalho colaborativo
+
+Várias pessoas podem trabalhar no mesmo projeto ao mesmo tempo sem precisar esperar umas pelas outras.
+
+Isso é possível graças ao merge, que une as alterações feitas por diferentes desenvolvedores.
+
+Exemplo:
+
+Desenvolvedor A cria uma tela.
+Desenvolvedor B corrige um bug.
+O Git junta as duas alterações posteriormente.
+3. Sistema distribuído
+
+Diferente de ferramentas antigas, o Git não depende exclusivamente de um servidor central.
+
+Cada desenvolvedor possui uma cópia completa do projeto em seu computador.
+
+Vantagens:
+
+Trabalhar offline.
+Maior velocidade.
+Mais segurança dos dados.
+
+Importante:
+
+commit: salva as alterações localmente.
+push: envia as alterações para o servidor remoto.
+
+Erro comum: achar que o commit já envia as alterações para a internet. Isso só acontece com o push.
+
+4. Uso de snapshots
+
+O Git não salva apenas diferenças entre arquivos; ele cria uma espécie de "fotografia" do projeto a cada commit.
+
+Se um arquivo não foi alterado, ele apenas referencia a versão anterior, economizando espaço.
+
+5. Trabalho local rápido
+
+A maioria das operações acontece no próprio computador, sem precisar acessar a internet.
+
+Isso torna comandos como histórico, comparação e criação de branches muito rápidos.
+
+6. Estados dos arquivos
+
+Todo arquivo no Git pode estar em três estados:
+
+Estado	Significado
+Modified	Arquivo alterado, mas ainda não preparado
+Staged	Arquivo preparado para o próximo commit
+Committed	Arquivo salvo no repositório local
+
+Fluxo básico:
+
+Editar → git add → git commit → git push
+
+7. Branches (ramificações)
+
+Permitem criar ambientes separados para desenvolver novas funcionalidades sem afetar a versão principal do projeto.
+
+Exemplo:
+
+main → versão principal.
+login → desenvolvimento da tela de login.
+pagamento → desenvolvimento da tela de pagamento.
+
+Depois, tudo pode ser unido com merge.
+
+8. Histórico completo
+
+O Git registra:
+
+Autor da alteração.
+Data.
+Mensagem do commit.
+Código identificador (hash).
+
+Comando:
+
+git log
+Principais comandos do Git
+Comando	Função
+git init	Cria um repositório
+git clone	Baixa um repositório remoto
+git status	Mostra o estado atual
+git add	Prepara arquivos
+git commit -m "mensagem"	Salva alterações localmente
+git push	Envia alterações para o servidor
+git pull	Atualiza o projeto local
+git branch	Gerencia ramificações
+git checkout	Troca de branch
+git merge	Une branches
+git tag	Marca versões do projeto
+Dicas importantes
+
+✅ Aprenda a diferença entre commit e push.
+
+✅ Faça commits pequenos e frequentes.
+
+✅ Sempre escreva mensagens claras nos commits.
+
+Exemplo:
+
+git commit -m "Corrige validação do formulário de login"
+
+Evite:
+
+git commit -m "alterações"
+
+✅ Use branches para desenvolver novas funcionalidades.
+
+✅ Antes de começar a trabalhar em equipe, execute:
+
+git pull
+
+para atualizar seu projeto.
+
+Resumo em uma frase
+
+Git é uma ferramenta que permite controlar versões, colaborar em equipe, trabalhar com segurança e organizar o desenvolvimento de software de forma rápida e eficiente.

@@ -1,0 +1,268 @@
+Trabalhando com o Repositório Remoto no Git (resumo com dicas e exemplos)
+
+O repositório remoto é utilizado para que os desenvolvedores possam compartilhar o código e sincronizar o trabalho da equipe.
+
+Ele fica armazenado em um servidor, como o GitHub, GitLab ou Bitbucket.
+
+1. Protocolos de comunicação do Git
+
+O Git utiliza a rede para se comunicar com os repositórios remotos.
+
+Existem três protocolos principais:
+
+SSH
+
+É o mais seguro e um dos mais utilizados.
+
+Exemplo:
+
+git@github.com:usuario/projeto.git
+
+Características:
+
+Utiliza autenticação.
+Permite leitura e escrita.
+Muito usado em equipes.
+Git
+
+É o protocolo mais rápido.
+
+Exemplo:
+
+git://github.com/usuario/projeto.git
+
+Características:
+
+Apenas leitura.
+Acesso anônimo.
+Pode ser bloqueado por firewalls.
+HTTP/HTTPS
+
+Exemplo:
+
+https://github.com/usuario/projeto.git
+
+Características:
+
+Fácil de configurar.
+Funciona na maioria das redes.
+Um pouco mais lento.
+Dica rápida
+Situação	Melhor protocolo
+Segurança	SSH
+Velocidade	Git
+Facilidade de acesso	HTTPS
+
+Muitas empresas utilizam:
+
+Git para leitura (pull)
+SSH para escrita (push)
+2. Clonando um repositório
+
+O comando git clone cria uma cópia local do projeto.
+
+git clone https://github.com/usuario/projeto.git
+
+O Git baixa:
+
+Arquivos
+Histórico de alterações
+Configurações do repositório
+
+Depois:
+
+cd projeto
+3. Buscando atualizações
+
+Com o tempo, outros desenvolvedores alteram o projeto.
+
+Para atualizar as informações do servidor:
+
+git fetch
+
+Baixa as alterações, mas não as mistura com seu código.
+
+git fetch
+git pull
+
+Baixa e já faz a integração (merge).
+
+git pull
+Diferença importante
+git fetch = baixar
+
+git pull = baixar + integrar
+4. Visualizando branches remotas
+git branch -r
+
+Exemplo:
+
+origin/HEAD
+origin/master
+origin/login
+
+Observação:
+
+Não altere diretamente branches remotas.
+
+Crie um branch local a partir delas.
+
+5. Enviando alterações para o servidor
+
+Após fazer:
+
+editar
+↓
+git add
+↓
+git commit
+
+É preciso compartilhar com a equipe usando:
+
+git push
+
+Exemplo:
+
+git push
+
+O Git, por padrão, assume:
+
+Repositório: origin
+Branch atual
+Dica importante
+
+git push não envia alterações que ainda não foram commitadas.
+
+Isto não será enviado:
+
+Working Tree
+Staging Area
+
+Somente:
+
+Commit realizado
+
+será enviado.
+
+6. Enviando para um branch específico
+
+Sintaxe:
+
+git push <repositorio> <origem>:<destino>
+
+Exemplo:
+
+git push origin login:master
+
+Envia o branch login para o master remoto.
+
+7. Criando apelidos para repositórios (aliases)
+
+Ao invés de digitar URLs grandes, podemos dar nomes aos repositórios.
+
+Criar:
+
+git remote add empresa https://github.com/empresa/projeto.git
+
+Usar:
+
+git pull empresa HEAD
+
+Comandos úteis:
+
+Listar remotos:
+
+git remote
+
+Ver detalhes:
+
+git remote show origin
+
+Remover:
+
+git remote rm empresa
+8. Organizando o repositório com Tags
+
+As tags servem para marcar versões importantes.
+
+Exemplos:
+
+1.0
+1.1
+2.0
+
+Criar:
+
+git tag 1.1
+
+Listar:
+
+git tag
+Importante
+
+As tags são somente leitura (read-only).
+
+Elas representam versões congeladas do projeto.
+
+9. Criando branches a partir de uma tag
+
+Muito usado para corrigir bugs em versões já publicadas.
+
+Exemplo:
+
+git branch RB_1.0.1 1.0
+
+git checkout RB_1.0.1
+
+Depois da correção:
+
+git tag 1.0.1
+
+E remove-se o branch:
+
+git checkout master
+
+git branch -D RB_1.0.1
+10. Boas práticas de organização
+
+✅ Use nomes claros.
+
+Exemplos:
+
+login
+cadastro_usuario
+pagamentos
+RB_1.2
+
+Evite:
+
+teste
+novo
+abc
+Dicas importantes
+
+✅ Faça git pull antes de começar a trabalhar.
+
+✅ Faça git push frequentemente.
+
+✅ Nunca trabalhe diretamente no master/main.
+
+✅ Use tags para marcar versões entregues.
+
+✅ Utilize aliases (git remote add) para facilitar o trabalho.
+
+Fluxo mais comum em equipe
+1. git clone
+
+2. git pull
+
+3. editar arquivos
+
+4. git add .
+
+5. git commit -m "descrição"
+
+6. git push
+Resumo em uma frase
+
+O repositório remoto é o espaço compartilhado onde a equipe sincroniza o projeto, enviando (push) e recebendo (pull) alterações de forma organizada e segura.

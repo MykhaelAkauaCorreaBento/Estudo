@@ -1,0 +1,312 @@
+Resumo: Principais comandos do Git (com dicas e exemplos)
+O que é Git?
+
+O Git é um sistema de controle de versão utilizado para acompanhar alterações no código, permitir o trabalho em equipe e manter o histórico do projeto.
+
+Benefícios:
+Permite que várias pessoas trabalhem no mesmo projeto.
+Mantém o histórico das alterações.
+Facilita correções e recuperação de versões antigas.
+Organiza o desenvolvimento através de branches.
+1. Clonar um repositório
+
+Baixa um projeto remoto para sua máquina.
+
+git clone git://github.com/projetoCMS/meusite.git
+Dica
+
+Este geralmente é o primeiro comando usado quando você entra em um projeto já existente.
+
+2. Entendendo o fluxo do Git
+
+Existem três áreas importantes:
+
+Working Directory (Área de trabalho)
+
+Arquivos que você está editando.
+
+Staging Area (Stage)
+
+Área temporária que prepara arquivos para o commit.
+
+Repositório (Repository)
+
+Onde o Git salva oficialmente as versões.
+
+Fluxo:
+
+Editar arquivo
+ ↓
+git add
+ ↓
+Staging Area
+ ↓
+git commit
+ ↓
+Repositório Git
+3. git add
+
+Adiciona arquivos ao Stage.
+
+Adicionar um arquivo:
+
+git add index.html
+
+Adicionar vários:
+
+git add arquivo1 arquivo2
+
+Adicionar tudo:
+
+git add .
+Dica
+
+git add não salva no histórico. Ele apenas prepara os arquivos para serem salvos.
+
+4. git commit
+
+Salva as alterações no histórico.
+
+git commit -m "Adicionada página inicial"
+Exemplo comum
+git add .
+git commit -m "Corrigido bug de login"
+Commit automático (-a)
+git commit -a -m "Alterações realizadas"
+
+Importante: funciona apenas em arquivos que já eram monitorados.
+
+5. git status
+
+Mostra o estado atual do projeto.
+
+git status
+
+Exibe:
+
+Arquivos modificados.
+Arquivos no Stage.
+Arquivos ainda não adicionados.
+Dica
+
+É um dos comandos mais utilizados no dia a dia.
+
+Use constantemente.
+
+6. git diff
+
+Mostra exatamente o que foi alterado.
+
+git diff
+Comparações úteis
+
+Diferenças entre Working Directory e Stage:
+
+git diff
+
+Diferenças entre Stage e repositório:
+
+git diff --cached
+
+Diferenças entre tudo e o último commit:
+
+git diff HEAD
+Símbolos
++ linha adicionada
+- linha removida
+7. Renomear arquivos
+git mv index.html home.html
+
+Depois:
+
+git commit -m "Renomeado arquivo"
+8. Branches
+
+Branches são linhas paralelas de desenvolvimento.
+
+Servem para:
+
+Criar novas funcionalidades.
+Corrigir bugs.
+Fazer testes sem afetar a versão principal.
+Criar um branch
+git branch nova-funcionalidade
+
+Visualizar branches:
+
+git branch
+
+O asterisco indica o branch atual.
+
+* master
+nova-funcionalidade
+Trocar de branch
+git checkout nova-funcionalidade
+Criar e entrar no branch ao mesmo tempo
+git checkout -b nova-funcionalidade
+Renomear um branch
+git branch -m antigo novo
+
+Exemplo:
+
+git branch -m master principal
+9. Quando criar um branch?
+Alterações experimentais
+
+Testar ideias sem quebrar o projeto.
+
+Novas funcionalidades
+
+Criar uma funcionalidade isoladamente.
+
+Correção de bugs
+
+Corrigir problemas sem interferir em outras partes.
+
+10. git merge
+
+Une branches.
+
+Exemplo:
+
+git checkout master
+
+git merge nova-funcionalidade
+Tipos de merge
+Merge normal
+
+Une dois históricos.
+
+git merge branch
+Squash merge
+
+Agrupa vários commits em apenas um.
+
+git merge --squash branch
+
+Depois:
+
+git commit -m "Nova funcionalidade concluída"
+Dica
+
+Muito usado quando vários pequenos commits pertencem à mesma funcionalidade.
+
+11. Cherry-pick
+
+Copia apenas um commit específico para outro branch.
+
+git cherry-pick 321d76f
+Exemplo
+
+Imagine:
+
+master
+|
+feature
+
+Você quer trazer apenas uma correção da feature, sem trazer tudo.
+
+12. Conflitos de merge
+
+Ocorrem quando duas pessoas alteram a mesma parte do arquivo.
+
+Exemplo:
+
+<<<<<<< HEAD
+
+Código do branch atual
+
+=======
+
+Código do outro branch
+
+>>>>>>> outro-branch
+Como resolver
+Abrir o arquivo.
+Escolher qual código ficará.
+Remover os marcadores.
+Salvar.
+Fazer commit.
+13. Excluir branches
+
+Excluir branch mesclado:
+
+git branch -d branch
+
+Forçar exclusão:
+
+git branch -D branch
+14. git log
+
+Mostra o histórico de commits.
+
+git log
+
+Exibe:
+
+ID do commit.
+Autor.
+Data.
+Mensagem.
+Mostrar poucos commits
+git log -1
+
+ou
+
+git log -2
+Buscar por período
+
+Últimas 5 horas:
+
+git log --after="5 hours"
+
+Antes de 5 horas:
+
+git log --before="5 hours"
+15. git revert
+
+Desfaz um commit sem apagar o histórico.
+
+git revert HEAD
+
+Ou um commit específico:
+
+git revert 540ecb7
+
+Depois:
+
+git commit -m "Revertendo alterações"
+Dica
+
+git revert é mais seguro que apagar commits.
+
+Resumo dos comandos mais usados no dia a dia
+Comando	Função
+git clone	Clonar projeto
+git status	Verificar alterações
+git add .	Adicionar arquivos
+git commit -m	Salvar alterações
+git diff	Ver diferenças
+git branch	Listar branches
+git checkout	Trocar de branch
+git checkout -b	Criar e entrar no branch
+git merge	Unir branches
+git cherry-pick	Copiar um commit
+git log	Ver histórico
+git revert	Desfazer um commit
+git mv	Renomear arquivos
+Dica para quem está começando
+
+Decore primeiro este fluxo:
+
+git clone
+↓
+git status
+↓
+git add .
+↓
+git commit -m "mensagem"
+↓
+git push
+
+Esse é o fluxo que você usará diariamente como desenvolvedor.
