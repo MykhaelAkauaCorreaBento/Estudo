@@ -1,0 +1,46 @@
+Integracao-Git-com-o-Eclipse-veja-como-fazer-atraves-do-EGit.txt
+
+
+Resumo: Integração Git com o Eclipse via EGit
+
+O Git é um sistema de controle de versão distribuído que registra alterações em arquivos ao longo do tempo, permitindo recuperar versões anteriores, rastrear mudanças e facilitar o trabalho em equipe. Ele é rápido, eficiente e muito usado em projetos de software por possibilitar colaboração simultânea, redução de conflitos e organização do histórico do projeto.
+
+Uma de suas principais vantagens é o suporte a branches (ramificações), que permitem criar linhas de desenvolvimento paralelas sem interferir na versão principal. Essas ramificações podem ser posteriormente unificadas (merge), facilitando o desenvolvimento de novas funcionalidades e correções de forma isolada.
+
+No fluxo básico do Git, o trabalho acontece em três áreas:
+
+Working Directory: arquivos atuais do projeto
+Index (staging area): área intermediária onde mudanças são preparadas
+HEAD: último commit registrado
+
+O uso básico envolve comandos como:
+
+git init → cria um repositório
+git clone → copia repositórios locais ou remotos
+git add → envia mudanças para o index
+git commit -m "mensagem" → registra alterações
+git push → envia alterações para o repositório remoto
+git pull → atualiza o repositório local
+
+Também é possível criar e gerenciar branches com comandos como:
+
+git checkout -b branch_x → cria nova branch
+git checkout master → volta para a branch principal
+git merge → une branches
+git branch -d → remove branch
+
+O artigo também apresenta o uso do EGit, um plugin do Eclipse que integra o Git diretamente à IDE. Ele permite realizar operações como commit, push, pull e gerenciamento de branches sem sair do ambiente de desenvolvimento. O plugin é instalado pelo Eclipse Marketplace e, após configurado, facilita o controle de versão dentro dos projetos Java.
+
+No Eclipse com EGit, o fluxo de trabalho inclui:
+
+Compartilhar o projeto com Git (Team → Share Project)
+Adicionar arquivos ao index (Add to index)
+Fazer commit com mensagem descritiva
+Enviar para o GitHub com push
+Atualizar versões com pull quando necessário
+
+Em casos de conflitos entre versões locais e remotas, o EGit permite resolver diferenças manualmente por meio de ferramentas de sincronização, comparação de código e marcação de arquivos como “merged”.
+
+Por fim, o sistema permite visualizar todo o histórico de commits, ajudando a rastrear alterações e entender a evolução do projeto.
+
+Em resumo, a integração do Git com o Eclipse via EGit torna o controle de versão mais prático, melhora o trabalho em equipe e facilita o gerenciamento de projetos de software de forma organizada e segura.

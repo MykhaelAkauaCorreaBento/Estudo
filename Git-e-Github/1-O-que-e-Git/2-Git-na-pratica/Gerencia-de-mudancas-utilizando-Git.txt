@@ -1,0 +1,300 @@
+Gerencia-de-mudancas-utilizando-Git
+
+
+Gerência de mudanças utilizando Git (resumo com dicas e exemplos)
+
+A gerência de mudanças é um conjunto de práticas utilizadas para controlar a evolução de um software, registrando todas as alterações feitas durante seu desenvolvimento.
+
+Seu objetivo é organizar o trabalho da equipe, evitar perda de código e facilitar a manutenção do projeto.
+
+1. O que é gerência de configuração?
+
+É o processo de controlar tudo o que é produzido em um projeto.
+
+Isso inclui:
+
+Código-fonte
+Documentos
+Arquivos de configuração
+Correções e novas funcionalidades
+
+A importância dessa prática aumenta conforme o projeto cresce.
+
+Exemplo
+
+Em um projeto pequeno com duas pessoas, o controle pode até ser feito manualmente.
+
+Já em uma empresa com dezenas de desenvolvedores, trabalhando em locais diferentes, surgem perguntas como:
+
+Quem alterou esse código?
+Quando a alteração foi feita?
+Como evitar sobrescrever o trabalho de outra pessoa?
+
+É aí que entram os sistemas de controle de versão.
+
+2. Sistemas de controle de versão (SCV)
+
+São ferramentas que registram o histórico dos arquivos ao longo do tempo.
+
+Permitem:
+
+Recuperar versões antigas.
+Comparar alterações.
+Identificar autores das mudanças.
+Reverter erros.
+
+Existem três tipos.
+
+Controle local
+
+Consiste em criar cópias manuais dos arquivos.
+
+Exemplo:
+
+Projeto
+Projeto_v1
+Projeto_v2
+Projeto_final
+Projeto_final_agora_vai
+
+Funciona, mas é muito arriscado.
+
+Controle centralizado
+
+Existe um servidor central que armazena todos os arquivos.
+
+Vantagem:
+
+Fácil gerenciamento.
+
+Desvantagem:
+
+Se o servidor falhar, todo o projeto fica comprometido.
+Controle distribuído (Git)
+
+Cada desenvolvedor possui uma cópia completa do projeto.
+
+Vantagens:
+
+Trabalhar offline.
+Maior segurança.
+Maior velocidade.
+Cada clone funciona como backup.
+3. Configurando o Git
+
+Após instalar o Git, configure seu usuário.
+
+git config --global user.name "Seu Nome"
+
+git config --global user.email "email@exemplo.com"
+
+Essas informações identificam o autor de cada alteração.
+
+4. Utilizando SSH
+
+O SSH permite comunicação segura com o servidor.
+
+Para gerar uma chave:
+
+ssh-keygen
+
+Serão criadas:
+
+Chave privada
+
+Chave pública (.pub)
+
+A chave pública é cadastrada no servidor.
+
+5. Hospedando projetos
+
+Plataformas comuns:
+
+GitHub
+Bitbucket
+
+Elas armazenam o repositório remoto da equipe.
+
+6. Clonando um projeto
+
+Para baixar um projeto existente:
+
+git clone git@servidor:usuario/projeto.git
+
+O clone baixa:
+
+Arquivos.
+Histórico completo.
+Configurações.
+
+Cada clone funciona como um backup.
+
+7. Estados dos arquivos no Git
+
+Os arquivos podem estar em três estados:
+
+Estado	Significado
+Modified	Arquivo alterado
+Staged	Arquivo preparado
+Committed	Arquivo salvo
+
+Fluxo:
+
+Editar
+
+↓
+
+git add
+
+↓
+
+git commit
+8. Verificando alterações
+git status
+
+O Git mostra a situação atual dos arquivos.
+
+Exemplo:
+
+untracked files
+
+Significa:
+
+Arquivos ainda não preparados.
+
+Preparar:
+
+git add .
+9. Salvando alterações
+git commit -m "Adiciona tela de login"
+Dica
+
+Sempre use mensagens descritivas.
+
+Bom exemplo:
+
+git commit -m "Corrige validação do CPF"
+
+Evite:
+
+git commit -m "alterações"
+10. Consultando o histórico
+git log
+
+Mostra:
+
+Autor
+Data
+Mensagem
+
+Para ver as diferenças:
+
+git log -p
+11. Enviando alterações para a equipe
+git push origin master
+
+Isso envia os commits locais para o servidor.
+
+12. Criando versões oficiais (Tags)
+
+As tags marcam pontos importantes do projeto.
+
+Exemplo:
+
+git tag -a v0.1 -m "Versão inicial"
+
+Enviar:
+
+git push origin v0.1
+13. Trabalhando com branches
+
+Os branches permitem desenvolver funcionalidades separadamente.
+
+Exemplo:
+
+master
+
+login
+
+cadastro
+
+pagamentos
+
+Criar:
+
+git checkout -b login
+
+Trocar:
+
+git checkout login
+
+Listar:
+
+git branch
+14. Fazendo merge
+
+O merge une branches diferentes.
+
+Exemplo:
+
+master
+
+↓
+
+merge login
+
+↓
+
+master atualizado
+15. Conflitos
+
+Acontecem quando duas pessoas alteram a mesma parte de um arquivo.
+
+O Git interrompe o processo e pede intervenção manual.
+
+Como diminuir conflitos?
+
+Antes de enviar seu código:
+
+git pull
+
+Depois:
+
+git push
+
+Fluxo recomendado:
+
+git pull
+
+↓
+
+editar
+
+↓
+
+git add
+
+↓
+
+git commit
+
+↓
+
+git push
+Dicas importantes
+
+✅ Configure seu usuário logo após instalar o Git.
+
+✅ Faça commits pequenos e frequentes.
+
+✅ Use mensagens claras.
+
+✅ Utilize branches para novas funcionalidades.
+
+✅ Sempre faça git pull antes do git push.
+
+✅ Crie tags para marcar versões importantes.
+
+Resumo em uma frase
+
+A gerência de mudanças com Git é a organização e o controle das alterações de um projeto, permitindo que equipes trabalhem juntas de forma segura, rastreável e eficiente.

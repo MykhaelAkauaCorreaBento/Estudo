@@ -1,0 +1,75 @@
+Usando-o-GitHub-e-o-Netbeans.txt
+
+Resumo: Usando GitHub e o NetBeans
+
+O texto apresenta uma introdução ao uso do Git com integração ao GitHub e ao GitHub, além de ensinar como trabalhar com repositórios no Apache NetBeans.
+
+O que é Git
+
+O Git é um sistema de controle de versão criado por Linus Torvalds. Ele permite gerenciar alterações no código de forma organizada, facilitando o trabalho em equipe e o controle de versões de projetos.
+
+Criando conta no GitHub
+Acesse o GitHub e crie uma conta gratuita.
+Escolha plano (gratuito ou pago).
+Após o cadastro, você já pode criar e gerenciar repositórios.
+Instalando Git e configurando SSH Key
+Instale o Git no computador.
+Abra o Git Bash.
+
+Gere a chave SSH com:
+
+ssh-keygen -t rsa -C seuemail@provedor.com
+Copie o conteúdo do arquivo id_rsa.pub.
+No GitHub, vá em Settings → SSH Keys → Add Key e cole a chave.
+
+Teste a conexão:
+
+ssh -T git@github.com
+
+Se aparecer “yes”, a autenticação foi concluída.
+
+Comandos úteis de manutenção da SSH Key
+
+Se já existir uma chave SSH:
+
+cd ~/.ssh
+ls
+mkdir key_backup
+cp id_rsa* key_backup
+rm id_rsa*
+Criando um repositório
+No GitHub, clique em Create New Repository
+Defina nome, descrição e visibilidade
+Escolha a linguagem (ex: Java)
+Crie o repositório
+Usando Git no NetBeans
+
+No Apache NetBeans:
+
+Vá em Team → Git → Clone
+Cole a URL do repositório (HTTPS)
+Informe usuário e senha
+Escolha o branch (geralmente master)
+Defina a pasta local e finalize
+Fluxo básico de trabalho com Git
+
+Adicionar arquivos ao controle:
+
+Git → Add
+
+Salvar alterações localmente:
+
+Commit + mensagem
+
+Enviar para o GitHub:
+
+Push
+
+Atualizar do repositório remoto:
+
+Pull
+Ideia principal
+
+O fluxo padrão de trabalho com Git é:
+
+Editar código → Add → Commit → Push (enviar) → Pull (atualizar)

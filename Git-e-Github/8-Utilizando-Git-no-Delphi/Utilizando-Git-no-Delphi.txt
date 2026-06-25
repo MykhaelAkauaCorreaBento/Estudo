@@ -1,0 +1,119 @@
+Utilizando-Git-no-Delphi.txt
+
+
+Utilizando Git no Delphi (Resumo)
+
+A integração do Git no Delphi XE7 trouxe melhorias importantes para o desenvolvimento, principalmente no trabalho em equipe, permitindo que vários desenvolvedores trabalhem no mesmo projeto com mais organização e controle.
+
+O Git é um sistema de controle de versão que registra todas as alterações feitas nos arquivos, permitindo voltar a versões anteriores, acompanhar mudanças e resolver conflitos quando duas pessoas editam o mesmo arquivo.
+
+Ele é comparável ao Subversion (SVN), outro sistema de versionamento bastante usado, mas o Git se destaca por ser mais moderno e distribuído.
+
+O que é controle de versão e por que usar
+
+Um sistema de controle de versão é responsável por armazenar o histórico de mudanças de arquivos, permitindo recuperar qualquer versão anterior.
+
+No desenvolvimento de software, ele é essencial porque:
+
+Backup automático: substitui cópias manuais de arquivos.
+Rastreabilidade: permite saber quem alterou o quê e quando.
+Organização de arquivos: evita nomes confusos como arquivo_old, arquivo_v2.
+Planejamento de mudanças: permite testar melhorias sem afetar a versão atual.
+Tipos de controle de versão
+1. Local
+Tudo fica no próprio computador.
+Exemplo histórico: RCS.
+Usa “patches” para guardar diferenças entre versões.
+2. Centralizado
+Existe um servidor central.
+Todos acessam e enviam alterações para ele.
+Problema: se o servidor falha, o histórico pode ser perdido.
+3. Distribuído (Git)
+Cada usuário tem uma cópia completa do repositório.
+Funciona offline.
+Sincroniza alterações depois.
+Mais seguro e flexível.
+O Git
+
+O Git é um sistema distribuído criado por Linus Torvalds (2005).
+
+Características principais:
+Alta performance: operações locais são rápidas.
+Segurança: usa hash SHA-1 para proteger dados.
+Atomicidade: operações são “tudo ou nada” (sem estados intermediários).
+Instalação e configuração
+
+Para usar Git no Delphi:
+
+Instalar o Git manualmente (não vem no Delphi XE7).
+Durante instalação, ativar:
+Git Bash Here
+Git GUI Here
+Opção de usar Git no Prompt do Windows
+Operações principais do Git
+Commit: salva alterações no repositório local.
+Clone: copia um repositório remoto para o computador.
+Configuração inicial (exemplo)
+
+Definir usuário e e-mail:
+
+git config --global user.name "seu nome"
+git config --global user.email "seu email"
+
+Configuração local:
+
+git config --local user.name "seu nome"
+git config --local user.email "seu email"
+
+Ver configurações:
+
+git config --list
+Uso no Delphi (fluxo básico)
+Criar um repositório (Git GUI ou linha de comando)
+Copiar arquivos do projeto para a pasta
+Adicionar arquivos ao stage (Mudanças marcadas)
+Fazer o commit inicial
+Abrir o projeto no Delphi via Open From Version Control
+Clonar o repositório no IDE
+Commit no Delphi
+
+No IDE, o commit permite:
+
+Selecionar arquivos alterados
+Escrever comentários da alteração
+Registrar mudanças no repositório local
+
+⚠️ Importante: no Delphi XE7, o commit vai apenas para o repositório local.
+
+Push (externo ao Delphi)
+
+O Delphi XE7 não faz push diretamente.
+Para enviar ao repositório remoto, usa-se:
+
+git push
+Visualização e histórico
+
+O Delphi permite ver:
+
+Log de versões
+Histórico de commits
+Diferenças entre versões (diff)
+Anotações de linhas (annotate)
+Outros comandos importantes
+git checkout → desfaz alterações (Revert no Delphi)
+git diff → mostra diferenças entre versões
+git annotate → mostra histórico de cada linha
+Conclusão
+
+O Git no Delphi XE7 melhora o desenvolvimento ao permitir:
+
+Controle eficiente de versões
+Trabalho em equipe mais organizado
+Histórico completo de mudanças
+Segurança e recuperação de versões
+
+O Delphi hoje suporta três modelos:
+
+Local
+Centralizado (SVN)
+Distribuído (Git)

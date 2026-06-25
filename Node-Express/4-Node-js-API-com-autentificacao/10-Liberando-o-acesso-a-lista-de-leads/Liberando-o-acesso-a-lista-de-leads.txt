@@ -40,31 +40,6 @@ exemplo_14
 exemplo_15
 exemplo_16
 exemplo_17
-Estudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-Estudos Estudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-EstudosEstudos
-Estudos
-Estudos
-Estudos
-Estudos
 ( ------------------------- Testando a API ------------------------- )
 
 
