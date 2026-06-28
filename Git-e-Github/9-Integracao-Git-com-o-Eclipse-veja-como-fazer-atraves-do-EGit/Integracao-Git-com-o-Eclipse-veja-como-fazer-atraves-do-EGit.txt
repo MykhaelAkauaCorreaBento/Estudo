@@ -17,6 +17,7 @@ O uso básico envolve comandos como:
 
 
 
+
 git init → cria um repositório
 git clone → copia repositórios locais ou remotos
 git add → envia mudanças para o index
