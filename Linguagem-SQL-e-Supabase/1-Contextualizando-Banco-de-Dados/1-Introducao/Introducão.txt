@@ -8,6 +8,7 @@ páginas estáticas até aplicações complexas e interativas.
 O objetivo é desmistificar o conceito de banco de dados, utilizando analogias práticas para facilitar a compreensão e 
 demonstrar sua aplicação em cenários reais, como sistemas de login, captura de leads e comércio eletrônico.
 
+
 (------------O Que é um Banco de Dados?------------)
 
 De forma simplificada, um banco de dados é uma ferramenta projetada para armazenar, organizar e gerenciar informações
