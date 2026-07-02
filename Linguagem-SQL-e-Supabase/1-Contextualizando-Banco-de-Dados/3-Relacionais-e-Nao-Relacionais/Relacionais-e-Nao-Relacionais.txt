@@ -1,0 +1,122 @@
+Relacionais e Não-Relacionais
+
+
+
+
+Nesta terceira aula, expandimos nossa visão sobre o armazenamento de dados, explorando o fato de que o modelo 
+relacional, similar a planilhas, não é a única abordagem existente. O objetivo é apresentar a diversidade de bancos 
+de dados disponíveis e contextualizar por que, apesar dessa variedade, o foco da formação permanece no modelo 
+relacional.
+
+A aula introduz o conceito de bancos de dados não relacionais (NoSQL) e demonstra como diferentes tipos de dados 
+exigem diferentes formas de armazenamento, garantindo que a escolha da tecnologia seja sempre adequada à finalidade 
+do sistema.
+
+
+(-------------------------Bancos de Dados Relacionais vs. Não Relacionais (NoSQL)-------------------------)
+
+Até agora, focamos no banco de dados relacional, que organiza os dados em tabelas com linhas e colunas. Este é o 
+modelo mais tradicional e amplamente utilizado na maioria das aplicações comerciais, como sistemas de gestão, 
+e-commerces e plataformas de login.
+
+No entanto, o universo da tecnologia de dados é vasto. Existem muitos outros tipos de bancos de dados, 
+coletivamente conhecidos como não relacionais ou NoSQL (Not Only SQL). Esses bancos foram criados para 
+resolver problemas específicos que o modelo relacional não atende de forma otimizada.
+
+
+Comentário:
+
+"Apesar de esse ser o banco de dados mais usado na maioria dos projetos... ele não é o único tipo de banco de dados. 
+Existem outros tipos de bancos de dados, vários." - Tone
+
+
+(-------------------------Tipos de Bancos de Dados e Suas Aplicações-------------------------)
+
+Cada tipo de banco de dados é projetado para uma finalidade específica. A escolha do banco de dados correto depende 
+da natureza dos dados e dos requisitos da aplicação.
+
+Exemplo:
+
+
+Tipo-de-tabelas.jpeg
+
+
+(-------------------------O Formato JSON e Bancos de Dados de Documentos-------------------------)
+
+Um dos formatos de dados mais comuns na internet é o JSON (JavaScript Object Notation). Ele organiza os dados em uma 
+estrutura de chave-valor, que é mais flexível e hierárquica do que o modelo rígido de linhas e colunas.
+
+"post_id": 123,
+"autor": "Eduardo",
+"conteudo": "Esta é uma postagem sobre bancos de dados!",
+"curtidas": 42,
+"comentarios": [
+  { "usuario": "Tone", "texto": "Ótimo conteúdo!" },
+  { "usuario": "Maria", "texto": "Muito esclarecedor." }
+]
+
+Bancos de dados como o MongoDB são especializados em armazenar informações nativamente em formato JSON. Isso é 
+ideal para aplicações onde os dados não têm uma estrutura fixa, como postagens em redes sociais (ex: Facebook), 
+onde cada post pode ter um número variável de comentários, curtidas e outros elementos.
+
+
+(-------------------------Foco da Formação: Por Que o Modelo Relacional?-------------------------)
+
+
+Embora o mundo dos bancos de dados NoSQL seja fascinante e poderoso, esta formação se concentrará exclusivamente no 
+modelo relacional. A razão para essa escolha é estratégica e prática:
+
+*Onipresença no Mercado: A grande maioria dos sistemas comerciais, especialmente aqueles que um desenvolvedor 
+iniciante encontrará, utiliza bancos de dados relacionais.
+
+*Base Sólida: Dominar o modelo relacional e a linguagem SQL fornece uma base conceitual sólida que facilita o 
+aprendizado de outras tecnologias de dados no futuro.
+
+*Hibridismo Moderno: Ferramentas como o Supabase, baseado no PostgreSQL, permitem trabalhar principalmente com dados 
+relacionais, mas também oferecem suporte a JSON e outras estruturas quando necessário.
+
+
+(-------------------------Conclusão: A Ferramenta Certa para o Trabalho Certo-------------------------)
+
+
+Esta aula demonstrou que não existe um melhor tipo de banco de dados, mas sim a ferramenta certa para cada trabalho.
+A escolha depende do que você precisa armazenar e de como pretende usar essa informação.
+
+Ao focar no modelo relacional, esta formação prepara você para a realidade da maioria dos projetos de desenvolvimento
+de software, garantindo que você tenha as habilidades mais requisitadas pelo mercado. O conhecimento sobre bancos de 
+dados não relacionais é um passo avançado, a ser explorado após a consolidação dos fundamentos.
+
+
+(-------------------------Próximos Passos-------------------------)
+
+Introduzir a linguagem SQL, a interface padrão para interagir com bancos de dados relacionais.
+
+Começar a construir e manipular tabelas no Supabase usando comandos SQL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

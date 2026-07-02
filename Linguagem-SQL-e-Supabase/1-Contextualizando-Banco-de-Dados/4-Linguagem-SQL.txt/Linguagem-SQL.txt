@@ -1,0 +1,108 @@
+Linguagem-SQL
+
+Nesta quarta e última aula do primeiro curso, o foco se volta para a Linguagem SQL (Structured Query Language), a 
+interface universal para comunicação com bancos de dados relacionais. Após entendermos o que são bancos de dados e 
+por que são essenciais, esta aula introduz a ferramenta que nos permite criar, manipular e consultar os dados 
+armazenados.
+
+O objetivo é desmistificar o SQL, apresentando-o como uma linguagem padronizada, intuitiva e fundamental para 
+qualquer profissional que trabalhe com desenvolvimento de sistemas. A aula demonstra os comandos mais básicos e 
+estabelece a base para o aprofundamento que ocorrerá nos próximos cursos da formação.
+
+
+(----------------------------O Que é SQL (Structured Query Language)?----------------------------)
+
+SQL, ou Linguagem de Consulta Estruturada, é a linguagem padrão utilizada para gerenciar e manipular bancos de dados 
+relacionais. Independentemente do sistema de banco de dados escolhido  seja PostgreSQL, MySQL, SQL Server ou Oracle 
+a base da comunicação será feita através do SQL. Embora possam existir pequenas variações de sintaxe entre os sistemas,
+o conhecimento fundamental da linguagem é universalmente aplicável.
+
+
+
+Comentário:
+
+"Para a gente trabalhar com bancos de dados relacionais, a gente precisa de uma linguagem. E essa linguagem é a 
+linguagem SQL." - Tone
+
+O SQL permite realizar todas as operações necessárias em um banco de dados, desde a criação de sua estrutura até a 
+manipulação detalhada dos dados contidos nele.
+
+
+(----------------------------Os Quatro Pilares da Manipulação de Dados (CRUD)----------------------------)
+
+
+As operações mais comuns em um banco de dados são frequentemente agrupadas no acrônimo CRUD 
+(Create, Read, Update, Delete). Em SQL, essas operações correspondem a quatro comandos principais:
+
+Exemplo:
+
+Tabela.jpg
+
+Além desses, o SQL possui comandos para definir e gerenciar a estrutura do banco de dados, como CREATE TABLE 
+(para criar tabelas), ALTER TABLE (para modificar tabelas) e DROP TABLE (para excluir tabelas).
+
+
+(----------------------------SQL na Prática: O Comando SELECT----------------------------)
+
+
+Para ilustrar o poder do SQL, a aula demonstra o uso do comando SELECT, que é a porta de entrada para a extração de
+informações do banco de dados.
+
+Exemplo 1: Selecionando Todos os Dados de uma Tabela
+Para visualizar todos os serviços cadastrados na tabela servicos, o comando utilizado é:
+
+SELECT * FROM servicos;
+
+SELECT *: Indica que queremos selecionar todas as colunas.
+FROM servicos: Especifica que a consulta deve ser feita na tabela servicos.
+
+O resultado é a exibição de todos os registros e todas as colunas da tabela, de forma similar à visualização de uma
+planilha completa.
+
+
+
+
+
+(----------------------------Exemplo 2: Filtrando Dados com a Cláusula WHERE----------------------------)
+
+
+O verdadeiro poder do SQL começa a aparecer quando filtramos os dados para obter respostas específicas. 
+Para buscar apenas o serviço com ID igual a 1, o comando é modificado com a cláusula WHERE:
+
+SELECT * FROM servicos WHERE id = 1;
+
+WHERE id = 1: adiciona uma condição à consulta, instruindo o banco de dados a retornar apenas as linhas onde o valor 
+da coluna id é igual a 1.
+
+Essa capacidade de filtrar, ordenar e combinar dados de maneiras complexas é o que torna os bancos de dados 
+relacionais muito mais poderosos do que simples planilhas.
+
+
+
+(----------------------------Conclusão: A Porta de Entrada para a Manipulação de Dados----------------------------)
+
+
+Esta aula conclui o primeiro curso da formação, estabelecendo o SQL como a linguagem essencial para qualquer 
+desenvolvedor que precise interagir com bancos de dados relacionais. Foi demonstrado que, apesar de sua vasta 
+capacidade, a sintaxe do SQL é intuitiva e relativamente fácil de aprender.
+
+Com uma compreensão básica do que é SQL e de como o comando SELECT funciona, estamos prontos para avançar. 
+O próximo curso se aprofundará na prática da modelagem de dados, e os cursos subsequentes retornarão ao SQL com 
+exemplos mais complexos e detalhados, construindo uma fluência sólida na linguagem.
+
+Fim do Curso 1.
+
+
+(----------------------------Revisão----------------------------)
+
+Contextualizamos o que é um banco de dados, exploramos uma ferramenta prática (Supabase), discutimos diferentes 
+tipos de bancos e, finalmente, introduzimos a linguagem SQL.
+
+
+(----------------------------Próximo Curso----------------------------)
+
+Foco na modelagem de dados  como planejar a estrutura do seu banco de dados antes de construí-lo.
+
+
+
+

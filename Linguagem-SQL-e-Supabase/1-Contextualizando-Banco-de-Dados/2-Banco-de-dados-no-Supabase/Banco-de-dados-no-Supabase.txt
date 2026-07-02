@@ -1,0 +1,89 @@
+Banco de dados no Supabase
+
+(-------------------------Aula 2: Explorando a Estrutura de um Banco de Dados com Supabase-------------------------)
+
+Nesta segunda aula, a teoria dá lugar à prática. O objetivo é apresentar a ferramenta que será utilizada ao longo da 
+formação, o Supabase, e explorar a estrutura de um banco de dados real. Ao invés de apenas discutir conceitos, esta 
+aula oferece uma visualização concreta de como os dados são organizados em um ambiente de desenvolvimento moderno.
+
+
+O Supabase foi escolhido por sua praticidade: por ser uma plataforma baseada na nuvem, elimina a necessidade de 
+instalação e configuração de um ambiente de banco de dados local. Isso permite que o foco seja direcionado 
+inteiramente para o aprendizado da estrutura de dados e da linguagem SQL
+
+
+(-------------------------Apresentando o Supabase: Um Banco de Dados como Serviço-------------------------)
+
+
+O Supabase é uma plataforma de código aberto que oferece um conjunto de ferramentas para acelerar o desenvolvimento 
+de aplicações, incluindo um banco de dados PostgreSQL, autenticação, armazenamento de arquivos e APIs automáticas.
+Para os propósitos desta formação, seu principal benefício é fornecer um banco de dados acessível via navegador, 
+simplificando o processo de aprendizado.
+
+
+Comentário:
+
+
+"O Supabase é uma ferramenta muito legal porque a gente não precisa instalar nada no nosso computador. A gente tem 
+um banco de dados ali direto, a gente acessa ali no navegador... e aí a gente não precisa configurar nem instalar 
+nada no nosso computador." - Tone
+
+
+Nesta aula, utilizamos um banco de dados de exemplo que simula um sistema de agendamento de serviços para uma 
+barbearia. Este contexto prático ajuda a ilustrar como as tabelas são usadas para organizar informações de um 
+negócio real.
+
+
+
+
+(-------------------------A Estrutura de um Banco de Dados: Tabelas, Linhas e Colunas-------------------------)
+
+Ao explorar a interface do Supabase, a primeira e mais importante observação é que um banco de dados relacional é 
+fundamentalmente composto por tabelas. Cada tabela funciona como um contêiner para um conjunto específico de 
+informações, reforçando a analogia com as planilhas do Excel apresentada na aula anterior.
+
+(-------------------------Tabela de Serviços-------------------------)
+
+
+A primeira tabela explorada é a de serviços. Ela armazena todas as opções que a barbearia oferece aos seus clientes.
+
+ID	| Nome	            | Preço	   | Duração (minutos)
+1	| Corte Masculino	|  50.00   |        30
+2	| Barba Completa	|  40.00   |        25
+3	| Sobrancelha	    |  25.00   |        15
+4	| Platinado	    	|  150.00  |        90
+
+
+
+Colunas: Cada coluna representa um atributo do serviço (ID, Nome, Preço, Duração).
+Linhas: Cada linha representa um serviço específico oferecido pela barbearia.
+
+
+(-------------------------Tabela de Notas (Avaliações)-------------------------)
+
+Em seguida, foi analisada a tabela de notas, que armazena as avaliações deixadas pelos clientes sobre os serviços 
+executados. É importante notar que a avaliação está associada ao serviço prestado, e não ao agendamento em si.
+
+ID	|  Comentário	                |  Nota	|  Data
+1	|  "Corte e barba impecáveis!"  |	5	|  2025-11-20
+2	|  "Atendimento excelente."	    |   5	|  2025-11-21
+3	|  "Poderia ser melhor."        |	4	|  2025-11-22
+
+Esta tabela demonstra como diferentes contextos (serviços e avaliações) são separados em tabelas distintas para 
+manter a organização e a clareza dos dados.
+
+
+(-------------------------Conclusão: Da Teoria à Visualização Prática-------------------------)
+
+Esta aula proporcionou uma transição crucial da teoria abstrata para a visualização prática. Ao explorar a 
+interface do Supabase e analisar as tabelas de um sistema de exemplo, o conceito de banco de dados relacional 
+se torna mais tangível.
+
+A principal lição é a confirmação de que os dados são organizados em tabelas com linhas e colunas, e que cada 
+tabela agrupa informações de um contexto específico. Essa estrutura organizada é a base sobre a qual sistemas 
+complexos são construídos.
+
+(-------------------------Próximos Passos-------------------------)
+
+Discutir outros tipos de bancos de dados que não seguem o modelo relacional.
+Aprofundar na importância da linguagem SQL para interagir com as tabelas apresentadas.
