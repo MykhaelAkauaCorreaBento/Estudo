@@ -1,0 +1,94 @@
+(------------------------Visualizando um Modelo de Dados------------------------)
+
+Nesta segunda aula, saímos do campo teórico para explorar um modelo de dados real e funcional. Utilizando a interface 
+do Supabase, analisamos a estrutura de um sistema de agendamento de serviços, o que nos permite visualizar como os 
+conceitos de tabelas, colunas e linhas se materializam em um projeto prático.
+
+O objetivo é desmistificar a aparência de um modelo de dados e demonstrar que, independentemente da sofisticação da 
+ferramenta, os princípios fundamentais da modelagem permanecem os mesmos. A aula também reforça a ideia de que a 
+modelagem pode ser feita de múltiplas formas, desde um diagrama visual até um simples documento de texto.
+
+(------------------------Explorando o Modelo de Dados do Sistema de Agendamento------------------------)
+
+
+
+O Supabase oferece uma ferramenta visual que gera um diagrama do modelo de dados a partir das tabelas existentes. 
+Este diagrama nos permite ter uma visão panorâmica de toda a estrutura do banco de dados, incluindo as tabelas e, 
+como veremos mais adiante, seus relacionamentos.
+
+Coméntário:
+
+"Aqui a gente está mostrando ele feito dentro do Supabase, então ele tem uma carinha mais sofisticada e tal, mas como 
+a gente falou na aula anterior, isso poderia ser feito até no papel, em formato rascunho." - Tone
+
+O modelo de dados do nosso sistema de agendamento de barbearia é composto por várias tabelas, cada uma responsável por 
+armazenar um tipo específico de informação.
+
+(------------------------As Entidades Principais do Sistema------------------------)
+
+As três entidades fundamentais que formam a base do nosso sistema são:
+
+*Serviços: Armazena o catálogo de serviços oferecidos pela barbearia (ex: corte de cabelo, barba completa).
+
+*Clientes: Contém os dados das pessoas que utilizam os serviços.
+
+*Atendentes: Guarda as informações dos profissionais que realizam os atendimentos.
+
+
+Essa separação é lógica e intuitiva. Assim como em uma planilha não misturaríamos dados de clientes com a 
+lista de serviços, em um banco de dados, cada um desses contextos pertence à sua própria tabela.
+
+Exemplo:
+
+Tabela.png
+
+
+(------------------------A Flexibilidade da Modelagem: Ferramenta vs. Conceito------------------------)
+
+
+Uma das lições mais importantes desta aula é a distinção entre a ferramenta de modelagem e o conceito de modelagem. 
+O Supabase oferece uma visualização elegante e automática, mas o mesmo modelo poderia ser representado de formas 
+muito mais simples.
+
+O Eduardo demonstra isso ao apresentar uma versão em texto do modelo, que seria similar a um rascunho feito no 
+papel ou em um editor de texto simples:
+
+servicos:
+  - id
+  - nome
+  - preco
+  - duracao_servico
+
+clientes:
+  - id
+  - nome
+  - statusservicos:
+  - id
+  - nome
+  - preco
+  - duracao_servico
+
+clientes:
+  - id
+  - nome
+  - status
+
+  Isso prova que a essência da modelagem não está na sofisticação da ferramenta, mas na clareza do planejamento. Seja em um diagrama complexo ou em uma lista de texto, o objetivo é o mesmo: definir a estrutura dos dados antes de construí-la.
+
+  Comentário:
+
+  "Você pode modelar da forma que você preferir, inclusive em texto... o Supabase ele faz o processo reverso, você cria as tabelas e ele monta o modelo... você também pode fazer o processo reverso, você pode criar o modelo e o Supabase vai gerar as tabelas para você." - Tone
+
+(------------------------Conclusão: O Modelo de Dados como um Mapa------------------------)
+
+Nesta aula, tivemos nosso primeiro contato com um modelo de dados completo, visualizando como as diferentes partes de um sistema são organizadas em tabelas distintas. Entendemos que cada tabela possui um contexto claro e que a forma como o modelo é representado (visual ou textual) é menos importante do que o planejamento que ele representa.
+
+O modelo de dados funciona como um mapa que guia a construção do banco de dados, garantindo que todas as informações necessárias tenham um lugar definido e organizado. Com este mapa em mãos, estamos prontos para explorar o próximo conceito fundamental: como essas tabelas se conectam.
+
+(------------------------Próximos Passos------------------------)
+
+*Aprofundar na organização dos dados em tabelas separadas.
+
+*Introduzir o conceito de relacionamentos entre tabelas.
+
+*Simular a estrutura do banco de dados usando planilhas para validar o modelo.
