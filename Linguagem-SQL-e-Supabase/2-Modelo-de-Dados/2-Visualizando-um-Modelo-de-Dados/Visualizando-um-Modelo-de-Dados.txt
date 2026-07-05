@@ -18,6 +18,7 @@ como veremos mais adiante, seus relacionamentos.
 
 Coméntário:
 
+
 "Aqui a gente está mostrando ele feito dentro do Supabase, então ele tem uma carinha mais sofisticada e tal, mas como 
 a gente falou na aula anterior, isso poderia ser feito até no papel, em formato rascunho." - Tone
 
