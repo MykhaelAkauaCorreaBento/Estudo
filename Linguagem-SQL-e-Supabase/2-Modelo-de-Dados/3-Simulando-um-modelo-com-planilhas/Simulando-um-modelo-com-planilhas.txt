@@ -1,0 +1,70 @@
+Simulando-um-modelo-com-planilhas.txt
+
+Nesta terceira aula, reforçamos um princípio fundamental da modelagem de dados: a organização dos dados em tabelas 
+separadas por contexto. Utilizando uma ferramenta universalmente conhecida, o Excel, demonstramos de forma prática 
+por que não devemos misturar informações de diferentes naturezas (como clientes e serviços) na mesma estrutura.
+
+Além disso, a aula introduz uma técnica poderosa para a validação de modelos de dados: o uso de mockups, ou dados 
+fictícios. O objetivo é mostrar como a simulação com dados de exemplo pode revelar falhas e oportunidades de 
+melhoria no modelo antes mesmo de sua implementação, economizando tempo e recursos.
+
+
+(----------------------A Lógica da Separação: Cada Tabela, um Contexto----------------------)
+
+Para ilustrar a importância da organização, criamos um arquivo Excel com três abas, cada uma representando uma tabela 
+do nosso sistema de agendamento de barbearia:
+
+Serviços: Contém a lista de serviços oferecidos, com seus preços e durações.
+Clientes: Armazena os dados dos clientes que frequentam a barbearia.
+Atendentes: Mantém o cadastro dos profissionais que realizam os serviços.
+
+Comentário:
+
+"Não daria para a gente misturar com a planilha de clientes, porque aí, pô, quem é cliente, quem é atendente, 
+imagina que tá uma bagunça. Então a mesma ideia que a gente tá vendo aqui nas planilhas, a gente vai ter no banco 
+de dados, com os dados organizados por tabelas." - Tone
+
+Essa demonstração prática torna evidente que a separação por contexto não é uma regra arbitrária, mas uma necessidade 
+lógica para manter a clareza, a integridade e a manutenibilidade dos dados. Misturar essas informações em uma única 
+tabela resultaria em caos e dificultaria qualquer tipo de consulta ou gerenciamento.
+
+Exemplo:
+
+tabela.png
+
+(----------------------Validando o Modelo com Dados Fictícios (Mockups)----------------------)
+
+Uma vez que o rascunho do modelo de dados está pronto, como podemos ter mais certeza de que ele está correto e 
+completo? Uma técnica eficaz é preenchê-lo com dados fictícios, um processo conhecido como criação de mockups.
+
+Ao popular as tabelas (ou planilhas de simulação) com exemplos de dados, forçamos nosso cérebro a sair do nível de 
+abstração da estrutura e a pensar nos dados concretos. Esse exercício simples é extremamente valioso para:
+
+Identificar Campos Faltantes: "Esqueci de adicionar uma coluna para o status do cliente (ativo/inativo)."
+Verificar a Lógica: "Será que o campo 'preço' deveria aceitar valores negativos?"
+Validar Requisitos: "O modelo atual suporta um cliente com múltiplos endereços?"
+
+Comentário:
+
+"É uma forma muito legal de você aumentar a tua abstração, não ficar só olhando para a estrutura dos dados, você 
+olhar para os dados também. Mesmo que em formato não real, é muito interessante você também fazer esse exercício, 
+porque isso vai te abrir a oportunidade de enxergar algum problema em potencial." - Tone
+
+Para agilizar esse processo, podemos utilizar ferramentas modernas como o ChatGPT para gerar dados de mockup 
+automaticamente, bastando fornecer a estrutura das tabelas como entrada.
+
+(----------------------Conclusão: Da Simulação à Confiança----------------------)
+
+Esta aula demonstrou duas práticas essenciais na modelagem de dados: a organização lógica em tabelas contextuais e a 
+validação do modelo através de simulação com dados fictícios. A analogia com as planilhas do Excel serve como uma 
+ponte perfeita para entender a estrutura de um banco de dados relacional.
+
+Ao adotar o hábito de preencher seu modelo com mockups, você adiciona uma camada extra de revisão ao seu processo de 
+planejamento, aumentando a confiança na estrutura antes de partir para a implementação. Este passo, embora opcional, 
+é um diferencial que pode evitar muitos problemas futuros.
+
+(----------------------Próximos Passos----------------------)
+
+Introduzir o conceito de relacionamentos entre tabelas.
+Entender como as tabelas separadas se conectam para formar um sistema coeso.
+Explorar exemplos práticos de relacionamentos 1-para-N.
