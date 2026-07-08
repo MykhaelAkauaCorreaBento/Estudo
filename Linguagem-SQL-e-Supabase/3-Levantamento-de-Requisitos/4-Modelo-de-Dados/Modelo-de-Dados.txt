@@ -1,6 +1,7 @@
 Modelo-de-Dados.txt
 
 
+
 Nesta quarta e última aula do Curso 3, completamos o ciclo que transforma uma ideia em uma especificação técnica 
 pronta para implementação. Após documentar os requisitos, o próximo passo crucial é produzir o modelo de dados, a 
 estrutura que organizará todas as informações do sistema.
