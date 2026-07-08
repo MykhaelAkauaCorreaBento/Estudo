@@ -1,0 +1,200 @@
+Criando-o-documento.txt
+
+Após compreendermos a importância do levantamento de requisitos e do escopo bem definido, chegou o momento de 
+responder à pergunta prática: como fazer isso na prática? Nesta terceira aula, exploramos técnicas concretas para 
+coletar, organizar e documentar requisitos de forma eficiente.
+
+O objetivo é fornecer um método simples e funcional que qualquer desenvolvedor possa aplicar imediatamente em seus
+ projetos, evitando os erros comuns que levam ao fracasso de muitos sistemas.
+
+( -----------------------A Analogia da Viagem: Por Que o Escopo é Essencial-----------------------)
+
+Para ilustrar a importância do escopo, Tone apresenta uma analogia simples e poderosa:
+
+Comentário:
+
+"Eu quero sair do Rio, eu quero chegar em Salvador dirigindo. Então, porra, eu vou criar lá um escopo. Onde é que eu 
+vou parar? Onde é que eu vou dormir? Porque, senão, eu estou indo no Rio. Aí, daqui a pouco, Minas é legal, 
+eu vou passar em Minas também... Daqui a pouco, porra, já passei de Salvador, nem cheguei, me perdi." - Tone
+
+
+Sem um plano claro, você pode:
+
+Desviar do objetivo original
+Adicionar paradas desnecessárias
+Nunca chegar ao destino final
+
+Isso acontece constantemente na área de sistemas.
+
+(-----------------------A Técnica: Entrevistas e Perguntas-----------------------)
+
+A técnica mais simples e funcional para levantamento de requisitos é o processo de entrevistas estruturadas. 
+O método consiste em:
+
+Fazer perguntas sobre o sistema
+Documentar as respostas de forma organizada
+Revisar e refinar até atingir completude
+
+
+(-----------------------Quem Responde as Perguntas?-----------------------)
+
+
+Origem da Ideia    |	Quem Responde
+Cliente / Terceiro |	Você entrevista o cliente
+Sua própria ideia  |	Você faz as perguntas para si mesmo
+
+
+Não há problema em fazer as perguntas para si próprio. O importante é documentar as respostas.
+
+(-----------------------As Perguntas Essenciais-----------------------)
+
+
+1. Qual é o Objetivo do Sistema?
+
+Esta é a pergunta número um de todas. No caso do sistema de agendamento:
+
+"O objetivo é a gente criar um sistema que permita os clientes marcarem atendimentos com antecedência, ou seja, 
+realizarem agendamentos desses atendimentos com antecedência e de forma que o sistema evite marcações de agendamento
+ no mesmo horário e que o sistema também ofereça uma visualização de blocagem." – Tone
+
+
+ 2. Quem Vai Usar o Sistema?
+
+É o próprio cliente final?
+É um operador do sistema?
+São ambos?
+
+
+3. Quais Informações Serão Coletadas?
+
+Apenas data e horário?
+Também o tipo de serviço?
+Nome do cliente?
+Atendente específico?
+
+
+4. Quais Relatórios o Sistema Deve Emitir?
+
+Agendamentos do dia, semana ou mês?
+Taxa de cancelamento?
+Taxa de comparecimento?
+Análise de desempenho por período?
+
+
+5. Quais São as Regras de Negócio?
+
+Como evitar conflitos de horário?
+Como lidar com dias não úteis?
+Quanto tempo de antecedência é necessário?
+É possível remarcar ou cancelar?
+
+
+(-----------------------O Processo Iterativo de Refinamento-----------------------)
+
+
+O levantamento de requisitos não é um processo linear. Ele é iterativo e incremental:
+
+Primeira rodada: Faça as perguntas iniciais e documente
+Organização: Categorize as respostas de forma lógica
+Revisão: Leia o documento e identifique lacunas
+Novas perguntas: Faça perguntas adicionais para preencher lacunas
+Reorganização: Atualize o documento com as novas informações
+Repetição: Continue até atingir uma versão satisfatória
+
+Comentário:
+
+"Você vai fazendo essa prototipação até você chegar em uma versão que você considere satisfatória como um mapa de qual
+é o objetivo do sistema e como ele vai operar esse objetivo." - Tone
+
+
+(-----------------------Estrutura do Documento de Requisitos-----------------------)
+
+
+Embora não exista um formato único e obrigatório, um documento típico de levantamento de requisitos contém:
+
+5. Escopo do Sistema
+
+5.1. O que está dentro do escopo
+
+Funcionalidades que serão implementadas na versão 1.0.
+
+5.2. O que está fora do escopo
+
+Funcionalidades que NÃO serão implementadas (pelo menos inicialmente).
+
+Exemplo: Envio de notificações por SMS
+Exemplo: Integração com sistemas externos
+
+6. Requisitos Funcionais
+
+Lista de ações que o sistema deve executar:
+
+Cadastro de usuário (nome, e-mail, senha)
+Login no sistema
+Cadastro de tarefas (título, descrição, responsável, prazo)
+
+7. Requisitos Não Funcionais
+
+Características qualitativas do sistema:
+
+Usabilidade: interface intuitiva
+Segurança: criptografia de senhas
+Performance: tempo de resposta aceitável
+
+
+(-----------------------O Erro Mais Comum: Pular a Documentação-----------------------)
+
+
+Um dos erros mais frequentes, observado em 8 de cada 10 alunos, é:
+
+Comentário:
+
+"Vão para a geração de código, vão botar IA para trabalhar para eles, sem ter documentação nenhuma. Pô, é como eu 
+querer fazer uma casa sem ter nada, tipo." - Tone
+
+
+A analogia com as pirâmides do Egito é perfeita:
+
+
+"Todo mundo fala do faraó do Egito, né? Mas ninguém fala dos engenheiros que fizeram pirâmide. Com certeza eles 
+criaram algum esquemático lá para construir aquela estrutura toda." - Tone
+
+
+Não existe construção complexa sem planejamento prévio.
+
+
+(-----------------------Da Documentação ao Modelo de Dados-----------------------)
+
+O documento de requisitos não é apenas uma formalidade. Ele é a base para a próxima etapa: a criação do modelo de dados.
+
+
+Comentário:
+
+"A partir desses requisitos é de onde você vai tirar, por exemplo, depois a estrutura dos dados que você vai precisar,
+né? Porque, por exemplo, aqui tem cadastro de usuário, que ele fala, ó, novos usuários com nome, e-mail e senha. 
+Então, você já sabe que, pelo menos, esses três campos você vai ter que ter no seu banco de dados." - Eduardo
+
+
+Ao ler os requisitos, você consegue identificar:
+
+Quais tabelas serão necessárias (usuários, tarefas etc.)
+Quais campos cada tabela terá (nome, e-mail, senha)
+Quais relacionamentos existem entre as tabelas
+
+(-----------------------Conclusão: Documentação como Fundação-----------------------)
+
+
+Esta aula demonstrou que o levantamento de requisitos não é uma etapa opcional ou burocrática, mas a fundação sobre 
+a qual todo o sistema será construído. Sem ela, você estará construindo no escuro, desperdiçando tempo e recursos.
+
+A técnica de entrevistas estruturadas, combinada com um processo iterativo de refinamento, fornece um método 
+simples e eficaz para transformar ideias abstratas em especificações concretas.
+
+Na próxima aula, daremos o próximo passo: transformar os requisitos documentados em um modelo de dados estruturado,
+pronto para implementação.
+
+(-----------------------Próximos Passos-----------------------)
+
+Transformar requisitos em modelo de dados
+Identificar tabelas e campos a partir dos requisitos
+Estabelecer relacionamentos entre as entidades do sistema

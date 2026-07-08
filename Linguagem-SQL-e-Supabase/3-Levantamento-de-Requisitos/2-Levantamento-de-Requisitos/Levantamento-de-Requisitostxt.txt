@@ -1,0 +1,135 @@
+Levantamento-de-Requisitostxt
+
+Nesta segunda aula, abordamos uma questão fundamental para qualquer engenheiro de software: como transformar uma 
+ideia em um sistema real? Embora o modelo de dados do sistema de agendamento já esteja pronto, é essencial compreender
+o processo que nos levou até ele.
+
+O objetivo desta aula é apresentar o ciclo de desenvolvimento de software, com foco especial na etapa de levantamento 
+de requisitos, a ponte entre o mundo das ideias e o mundo da implementação técnica.
+
+
+--------------------(O Ciclo de Desenvolvimento: Do Abstrato ao Concreto--------------------)
+
+Todo sistema de software nasce como uma ideia. Pode ser sua ou de um cliente, mas inicialmente existe apenas no plano
+abstrato. O papel do engenheiro de software é tangibilizar essa ideia, transformá-la em um produto funcional.
+
+(--------------------As Três Fases Principais--------------------)
+
+exemplo:
+
+image.png
+
+Comentário:
+
+"Esse processo de você transformar um sistema que está no mundo das ideias para o mundo real, para o digital, 
+vamos dizer assim, ele tem todo um passo a passo, ele tem uma técnica." - Tone
+
+(--------------------Analogia: Construindo uma Casa--------------------)
+
+Para tornar o processo mais tangível, podemos compará-lo à construção de uma casa:
+
+Ideia: "Quero construir uma casa de 3 quartos com varanda"
+Documentação: Projeto arquitetônico no AutoCAD, feito por engenheiro/arquiteto
+Implementação: Construção física da casa
+
+Assim como ninguém constrói uma casa sem um projeto, não devemos desenvolver software sem uma especificação adequada.
+
+(--------------------Levantamento de Requisitos: O Primeiro Passo da Documentação--------------------)
+
+O levantamento de requisitos é a fase inicial do processo de documentação. Seu objetivo é mapear o escopo do sistema, definindo claramente:
+
+O que o sistema deve fazer (requisitos funcionais)
+O que o sistema NÃO deve fazer (o que fica de fora)
+Qual é o objetivo central do sistema
+
+(--------------------Por Que Definir Escopo é Crucial?--------------------)
+
+
+No desenvolvimento de software, diferentemente de construções físicas, os sistemas evoluem continuamente através de 
+versões. Windows, Linux, Netflix — todos estão sempre em evolução.
+
+Comentário:
+
+"Como a coisa é passível de ser evoluída, se você não definir um escopo, você pode se perder, porque você vai falar 
+o seguinte, cara, onde que acaba, onde que o meu sistema acaba?" - Tone
+
+Sem um escopo bem definido para a versão 1.0, o projeto pode sofrer de scope creep (crescimento infinito do escopo),
+onde novas ideias surgem constantemente e o sistema nunca é finalizado.
+
+
+(--------------------Scope Creep: O Inimigo da Entrega--------------------)
+
+Scope creep (ou "scope treatment", como mencionado na aula) é um fenômeno comum na área de gerência de produtos. 
+Acontece quando:
+
+Você define funcionalidades iniciais
+No dia seguinte, surgem novas ideias
+Alguém sugere mais funcionalidades
+O escopo cresce infinitamente
+O produto nunca é lançado
+
+A solução é estabelecer um objetivo central único e um conjunto limitado de funcionalidades para a primeira versão, 
+deixando melhorias para versões futuras.
+
+(--------------------Objetivo Central: A Estrela do Norte do Projeto--------------------)
+
+Todo sistema deve ter um objetivo central único. No caso do sistema de agendamento:
+
+Comentário:
+"Fazer a gestão de agendamentos de atendimentos futuros, esse é o objetivo central." - Tone
+
+Se o sistema tem dois objetivos centrais, há um problema: provavelmente é possível dividir em dois sistemas menores, 
+ou um dos objetivos não é realmente central.
+
+(Funcionalidades Adicionais vs. Objetivo Central)
+
+O sistema pode ter funcionalidades adicionais (enviar e-mails de lembrete, projeção de atendimentos futuros), 
+mas todas devem servir ao objetivo central, não competir com ele.
+
+
+(--------------------O Documento de Levantamento de Requisitos--------------------)
+
+Após definir o objetivo central, o próximo passo é produzir um documento de levantamento de requisitos, 
+que deve especificar:
+
+Objetivo central do sistema
+Ações que o sistema vai executar
+Usuários/personagens que vão interagir com o sistema
+Relatórios que o sistema vai emitir
+Integrações necessárias
+O que está fora do escopo (tão importante quanto o que está dentro)
+
+(--------------------Benefícios da Documentação--------------------)
+
+
+Com esse documento em mãos, você terá:
+
+Uma bússola: referência clara do que precisa ser feito
+Foco: evita desvios e funcionalidades desnecessárias
+Eficiência: sem prototipação infinita
+Comunicação: alinhamento entre equipe e cliente
+
+Comentário:
+"A partir desse mapa, você vai ter uma bússola, você vai ter uma referência daquilo que você precisa executar, sem 
+ficar à deriva, sem se perder." - Tone
+
+
+(--------------------Conclusão: A Importância do Planejamento--------------------)
+
+Esta aula demonstrou que o sucesso de um projeto de software depende fundamentalmente de um bom planejamento inicial.
+O levantamento de requisitos não é uma burocracia desnecessária, mas uma ferramenta estratégica que:
+
+Evita desperdício de tempo com funcionalidades desnecessárias
+Garante foco no objetivo central
+Facilita a implementação ao fornecer um mapa claro
+Previne o scope creep que impede a entrega
+
+Na próxima aula, exploraremos em detalhes como realizar o levantamento de requisitos, quais perguntas fazer e como 
+organizar as respostas em um documento útil.
+
+
+(--------------------Próximos Passos--------------------)
+
+Técnicas práticas de levantamento de requisitos
+Perguntas essenciais a serem feitas
+Estruturação do documento de requisitos
