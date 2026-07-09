@@ -1,0 +1,55 @@
+Tabela-Servicos.txt
+
+Nesta primeira aula do Curso 4, iniciamos a exploração detalhada do nosso modelo de dados do sistema de agendamento.
+Começamos pela tabela de serviços, uma das mais simples e fundamentais do sistema.
+
+O objetivo é entender a estrutura dessa tabela, o propósito de cada campo e como ela serve de base para outras partes 
+do sistema, como agendamentos e atendimentos.
+
+(----------------------A Estrutura da Tabela de Serviços----------------------)
+
+A tabela de serviços armazena o catálogo de todos os serviços oferecidos pelo estabelecimento. Sua estrutura é composta
+por quatro campos principais:
+
+exemplo:
+image.png
+
+(----------------------Chave Primária (id)----------------------)
+
+O campo id é a chave primária da tabela. Isso significa que ele é um identificador único e não pode se repetir. 
+É através do id que outras tabelas farão referência a um serviço específico.
+
+O ID é o que a gente chama de chave primária, é o que identifica unicamente aquele registro.
+
+(----------------------Outros Campos----------------------)
+
+nome: Descreve o serviço de forma clara para o cliente e para o gestor.
+
+preco: Essencial para cálculos de faturamento e para informar o cliente.
+
+duracao: Fundamental para o sistema de agendamento, pois permite calcular a disponibilidade dos profissionais e evitar
+conflitos de horário.
+
+(----------------------A Importância da Duração do Serviço----------------------)
+
+O campo duracao é particularmente importante para a lógica do sistema de agendamento. Ao saber que um 
+"Corte Masculino" dura 40 minutos, o sistema pode:
+
+Bloquear o horário do profissional por 40 minutos após o início do atendimento.
+Calcular o próximo horário disponível para aquele profissional.
+Evitar agendamentos sobrepostos.
+
+A duração é importante para a gente poder fazer o cálculo de quando aquele profissional vai estar livre de novo.
+
+(----------------------Conclusão: A Base do Sistema----------------------)
+
+A tabela de serviços, embora simples, é a base sobre a qual muitas outras funcionalidades são construídas. 
+Ela representa o catálogo de produtos do negócio e fornece informações essenciais para a operação do sistema de 
+agendamento.
+
+Nas próximas aulas, continuaremos a explorar as outras tabelas do nosso modelo, começando pela tabela de clientes.
+
+(----------------------Próximos Passos:----------------------)
+Analisar a tabela de clientes
+Entender a importância de armazenar dados dos clientes
+Ver como a tabela de clientes se relaciona com outras partes do sistema

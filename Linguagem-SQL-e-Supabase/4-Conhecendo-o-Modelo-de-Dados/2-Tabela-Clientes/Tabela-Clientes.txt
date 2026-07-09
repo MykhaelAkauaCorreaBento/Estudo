@@ -1,0 +1,59 @@
+Tabela-Clientes.txt
+
+Nesta segunda aula, continuamos nossa exploração do modelo de dados, focando na tabela de clientes. 
+Esta tabela é crucial para qualquer negócio, pois armazena informações sobre as pessoas que consomem os serviços.
+
+O objetivo é entender a estrutura da tabela de clientes, a importância de cada campo e como ela se conecta com o 
+restante do sistema para permitir um atendimento personalizado e uma gestão eficiente.
+
+(----------------------A Estrutura da Tabela de Clientes----------------------)
+
+A tabela de clientes armazena os dados cadastrais de cada pessoa que utiliza os serviços do estabelecimento. 
+Sua estrutura básica é:
+
+exemplo:
+image.png
+
+(----------------------Chave Primária (id)----------------------)
+Assim como na tabela de serviços, o campo id é a chave primária, garantindo que cada cliente tenha um identificador 
+único no sistema.
+
+(----------------------Outros Campos----------------------)
+nome: Essencial para um atendimento personalizado e para identificar o cliente nos agendamentos.
+telefone: Fundamental para comunicação, seja para confirmar agendamentos, enviar lembretes ou realizar ações de
+marketing.
+
+(----------------------A Importância de Armazenar Dados dos Clientes----------------------)
+Manter um cadastro de clientes oferece diversas vantagens estratégicas para o negócio:
+
+Personalização do Atendimento: Chamar o cliente pelo nome e conhecer seu histórico de serviços cria um relacionamento
+mais próximo.
+Comunicação Direta: Permite o envio de lembretes de agendamento, promoções e outras comunicações importantes.
+Análise de Comportamento: Possibilita a análise de quais clientes são mais recorrentes, quais serviços preferem, etc.
+Marketing Direcionado: Facilita a criação de campanhas de marketing para clientes específicos (ex: promoções para 
+clientes que não agendam há muito tempo).
+
+Obs.:
+A gente precisa saber quem são os nossos clientes, a gente precisa ter um cadastro deles para a gente poder entrar em
+ contato, para a gente poder fazer um marketing, para a gente poder mandar um lembrete.
+
+(----------------------Relacionamento com a Tabela de Agendamentos----------------------)
+A tabela de clientes tem um relacionamento direto com a tabela de agendamentos. Cada agendamento registrado no 
+sistema deve estar associado a um cliente específico.
+
+Isso é feito através de uma chave estrangeira na tabela de agendamentos, um campo chamado id_cliente, que armazena o 
+id do cliente que fez aquele agendamento.
+
+(----------------------Conclusão: Conhecendo o Seu Público----------------------)
+A tabela de clientes é mais do que um simples cadastro. É uma ferramenta poderosa para conhecer o público do negócio,
+personalizar o atendimento e criar estratégias de marketing mais eficientes.
+
+Ao conectar a tabela de clientes com a de agendamentos, o sistema ganha a capacidade de rastrear todo o histórico de
+relacionamento de cada cliente com a empresa.
+
+Nas próximas aulas, continuaremos a desvendar o modelo de dados, analisando a tabela de atendentes.
+
+(----------------------Próximos Passos:----------------------)
+Analisar a tabela de atendentes
+Entender o papel dos profissionais no sistema
+Ver como a tabela de atendentes se relaciona com agendamentos

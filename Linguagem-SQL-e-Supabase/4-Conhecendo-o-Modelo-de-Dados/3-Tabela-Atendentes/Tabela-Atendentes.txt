@@ -1,0 +1,56 @@
+Tabela-Atendentes.txt
+
+Nesta terceira aula, focamos na tabela de atendentes, que armazena as informações sobre os profissionais que prestam os 
+serviços no estabelecimento.
+
+O objetivo é entender a estrutura dessa tabela e sua importância para a organização dos agendamentos e a gestão 
+da equipe.
+
+(----------------------A Estrutura da Tabela de Atendentes----------------------)
+A tabela de atendentes é responsável por cadastrar todos os colaboradores que realizam os atendimentos. Sua estrutura 
+é simples e direta:
+
+exemplo:
+image.png
+
+(----------------------Chave Primária (id)----------------------)
+O campo id funciona como a chave primária, garantindo um identificador único para cada profissional no sistema.
+
+(Campo Nome)
+O campo nome é utilizado para identificar o profissional nos agendamentos e relatórios, permitindo que os clientes 
+escolham ser atendidos por um profissional específico.
+
+(----------------------A Importância da Tabela de Atendentes----------------------)
+Manter um cadastro de atendentes é fundamental para a lógica do sistema de agendamento:
+
+Escolha do Profissional: Permite que o cliente selecione seu profissional de preferência no momento do agendamento.
+
+Gestão da Agenda Individual: O sistema pode controlar a agenda de cada profissional separadamente, evitando conflitos.
+
+Análise de Desempenho: O gestor pode extrair relatórios sobre o número de atendimentos por profissional, a receita 
+gerada por cada um, etc.
+
+Obs.:
+A gente precisa saber quem são os profissionais que trabalham no nosso estabelecimento para a gente poder associar o
+agendamento a um profissional específico.
+
+(----------------------Relacionamento com a Tabela de Agendamentos----------------------)
+Assim como a tabela de clientes, a tabela de atendentes tem um relacionamento direto com a tabela de agendamentos. 
+Cada agendamento é associado a um atendente específico através de uma chave estrangeira id_atendente na tabela de 
+agendamentos.
+
+Isso garante que, para cada horário agendado, o sistema saiba exatamente qual profissional estará ocupado.
+
+(----------------------Conclusão: Organizando a Equipe----------------------)
+A tabela de atendentes é essencial para a organização da equipe e para a personalização do serviço oferecido 
+ao cliente. Ela permite uma gestão mais granular da agenda e fornece dados valiosos para a análise de desempenho 
+dos profissionais.
+
+Com as tabelas de serviços, clientes e atendentes compreendidas, temos os pilares básicos do nosso sistema. Na próxima 
+aula, começaremos a explorar as tabelas que registram as transações e os eventos do sistema, começando pela tabela de 
+agendamentos.
+
+(----------------------Próximos Passos:----------------------)
+Analisar a tabela de agendamentos
+Entender como ela conecta clientes, atendentes e serviços
+Ver a importância dos status de agendamento
