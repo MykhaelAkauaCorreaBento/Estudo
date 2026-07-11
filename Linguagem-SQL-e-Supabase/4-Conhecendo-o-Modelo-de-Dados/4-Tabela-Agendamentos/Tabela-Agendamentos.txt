@@ -1,0 +1,53 @@
+Tabela-Agendamentos.txt
+
+Nesta quarta aula, chegamos ao coração do nosso sistema: a tabela de agendamentos. Esta é a tabela que registra todas as
+marcações de serviços, conectando clientes, atendentes e os serviços a serem prestados.
+
+O objetivo é entender a estrutura complexa dessa tabela e como ela utiliza chaves estrangeiras para criar 
+relacionamentos e garantir a integridade dos dados.
+
+(-------------------------------A Estrutura da Tabela de Agendamentos-------------------------------)
+
+A tabela de agendamentos é mais complexa que as anteriores, pois precisa registrar todas as informações sobre cada 
+marcação:
+
+exemplo:
+image.png
+
+
+
+(-------------------------------Chaves Estrangeiras: Conectando as Tabelas-------------------------------)
+
+Os campos id_cliente e id_atendente são chaves estrangeiras. Eles não armazenam o nome do cliente ou do atendente,
+mas sim o id correspondente nas respectivas tabelas.
+
+Obs.:
+
+A gente não vai salvar o nome do cliente, a gente vai salvar o ID do cliente. A gente não vai salvar o nome do 
+atendente, a gente vai salvar o ID do atendente.
+
+Essa abordagem, chamada de normalização, oferece várias vantagens:
+
+Economia de Espaço: Armazenar um número (id) ocupa menos espaço que um texto (nome).
+Consistência dos Dados: Se o nome de um cliente mudar, a alteração é feita em um único lugar (na tabela de clientes),
+e todos os agendamentos associados a ele são automaticamente atualizados.
+
+Integridade Referencial: O banco de dados pode garantir que um agendamento só possa ser criado para um cliente e um 
+atendente que realmente existam no sistema.
+
+(-------------------------------Status do Agendamento-------------------------------)
+
+O campo status é fundamental para gerenciar o ciclo de vida de um agendamento. Ele pode assumir valores como:
+
+Agendado: O horário está reservado.
+Cancelado pelo Cliente: O cliente desistiu do serviço.
+Cancelado pelo Estabelecimento: O profissional precisou desmarcar.
+Realizado: O serviço foi prestado (veremos mais sobre isso na tabela de atendimentos).
+
+(-------------------------------Conclusão: O Centro do Sistema-------------------------------)
+A tabela de agendamentos é o centro do nosso sistema, conectando as entidades principais (clientes e atendentes) e 
+registrando os eventos futuros. O uso de chaves estrangeiras é um conceito fundamental em bancos de dados relacionais,
+garantindo a integridade e a eficiência do armazenamento de dados.
+
+Na próxima aula, vamos explorar a tabela de agendamento_servicos, uma tabela intermediária que resolve um problema 
+complexo: como associar múltiplos serviços a um único agendamento.
