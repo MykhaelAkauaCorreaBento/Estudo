@@ -17,6 +17,8 @@ image.png
 
 
 
+
+
 (-------------------------------Chaves Estrangeiras: Conectando as Tabelas-------------------------------)
 
 Os campos id_cliente e id_atendente são chaves estrangeiras. Eles não armazenam o nome do cliente ou do atendente,
