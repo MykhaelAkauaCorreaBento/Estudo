@@ -1,0 +1,64 @@
+Tabela-atendimento_servicos.txt
+
+
+Nesta nona aula, Tone e Eduardo detalham a tabela atendimento_servicos, uma tabela intermediária crucial que conecta 
+os atendimentos aos serviços que foram efetivamente realizados. A aula explica por que essa tabela é necessária e como 
+ela lida com a flexibilidade do mundo real, onde o que foi agendado nem sempre é o que é executado.
+
+
+Obs.:
+
+Essa tabela, ela vai ter o objetivo de registrar os serviços que foram efetivamente prestados em um atendimento. 
+(...) É possível o cliente mudar de ideia. Então, ele agendou ali dois serviços, mas na hora ele falou: não, não vou
+querer fazer esse outro, vou fazer só esse aqui.
+
+(---------------------Objetivos da Aula---------------------)
+
+Apresentar a tabela atendimento_servicos.
+Explicar seu papel como tabela intermediária.
+Demonstrar como ela reflete a diferença entre o agendado e o executado.
+Discutir a importância de registrar o preço no momento do atendimento.
+
+
+
+(---------------------A Estrutura da Tabela atendimento_servicos---------------------)
+Esta tabela cria um relacionamento N-para-N (muitos-para-muitos) entre atendimentos e servicos, permitindo que um 
+atendimento inclua múltiplos serviços.
+
+exemplo:
+image.png
+
+
+
+(---------------------A Diferença Crucial: Agendado vs. Executado---------------------)
+
+O sistema possui duas tabelas intermediárias semelhantes, mas com propósitos distintos:
+
+agendamento_servicos: Registra a intenção do cliente (o que ele planejou fazer).
+atendimento_servicos: Registra o fato (o que ele realmente fez).
+
+Essa separação é fundamental para lidar com situações em que o cliente muda de ideia na hora do atendimento,
+decidindo fazer mais ou menos serviços do que havia agendado.
+
+
+(---------------------Por que Registrar o Preço Novamente?---------------------)
+Assim como na tabela agendamento_servicos, o preço do serviço é registrado novamente aqui. Isso garante que o valor 
+cobrado seja o que estava em vigor no momento do atendimento, protegendo tanto o cliente quanto o negócio de
+futuras alterações de preço.
+
+
+Obs.:
+
+O preço aqui, replicando, que é o preço do momento em que esse atendimento foi feito. (...) Se houver qualquer mudança,
+a pessoa vai pagar o preço que estava lá registrado no momento do agendamento.
+
+(---------------------Conclusão: Flexibilidade e Precisão---------------------)
+A tabela atendimento_servicos é o coração do registro operacional do sistema. Ela oferece a flexibilidade necessária 
+para acomodar a dinâmica do mundo real, ao mesmo tempo em que garante a precisão dos registros financeiros e de serviços.
+
+Compreender a interação entre agendamento_servicos e atendimento_servicos é essencial para entender o fluxo completo 
+de informações do sistema, desde a intenção do cliente até a execução e faturamento do serviço.
+
+(---------------------Próximos Passos:---------------------)
+Na próxima e última aula deste curso, faremos uma revisão geral de todo o modelo de dados, consolidando o conhecimento 
+adquirido sobre todas as 8 tabelas e suas interconexões.

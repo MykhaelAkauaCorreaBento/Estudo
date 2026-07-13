@@ -1,0 +1,55 @@
+Estrutura-da-Tabela-de-Atendimentos.txt
+
+
+Nesta sétima aula, Tone e Eduardo apresentam a tabela de atendimentos, o coração operacional do sistema. Esta 
+tabela registra o fato de um serviço ter sido prestado, diferenciando-se da tabela de agendamentos, que 
+representa a intenção.
+
+Obs.:
+
+A tabela de atendimento, ela vai registrar o fato, o atendimento que foi executado. (...) O agendamento é 
+uma intenção, o atendimento é o fato
+
+(----------------------Objetivos da Aula----------------------)
+Apresentar a tabela de atendimentos e sua importância.
+Detalhar a estrutura da tabela e seus campos.
+Explicar a diferença entre agendamento e atendimento.
+Discutir a flexibilidade do modelo para atendimentos sem agendamento prévio (walk-ins).
+
+(----------------------A Estrutura da Tabela de Atendimentos----------------------)
+A tabela de atendimentos é projetada para registrar todos os detalhes de um serviço que foi efetivamente realizado.
+
+exemplo:
+image.png
+
+
+(----------------------Atendimentos Sem Agendamento (Walk-ins)----------------------)
+Uma das características mais importantes desta tabela é a opcionalidade do campo id_agendamento. Isso permite que o
+sistema registre atendimentos de clientes que chegam sem hora marcada.
+
+Obs.:
+
+Nem todo atendimento foi previamente agendado. É natural. Eu entrei na barbearia, estava passando na rua, olhei,
+tive um pensamento na hora, pô, vou cortar meu cabelo agora. (...) Fiz o atendimento sem ter agendado antes.
+
+Nesses casos, o campo id_agendamento fica com o valor NULL.
+
+
+(----------------------Redundância Controlada----------------------)
+
+A tabela repete os campos id_atendente e id_cliente, que também existem na tabela de agendamentos. Isso é intencional:
+
+id_atendente: O profissional que atende pode não ser o mesmo que foi agendado (ex: em caso de doença).
+id_cliente: É necessário para registrar atendimentos sem agendamento prévio.
+Essa redundância, ou desnormalização, simplifica o sistema e aumenta sua flexibilidade.
+
+(----------------------Conclusão: O Registro do Fato----------------------)
+A tabela de atendimentos é onde a operação do negócio realmente acontece e é registrada. Ela é a fonte da verdade
+sobre os serviços prestados, servindo de base para faturamento, comissões, e feedback dos clientes.
+
+A distinção clara entre a intenção (agendamento) e o fato (atendimento) é uma prática de modelagem de dados
+robusta que torna o sistema mais resiliente e adaptável à realidade de um negócio.
+
+(----------------------Próximos Passos:----------------------)
+Na próxima aula, faremos comentários adicionais sobre a tabela de atendimentos, aprofundando nos conceitos de 
+desnormalização e na estratégia para remarcações.

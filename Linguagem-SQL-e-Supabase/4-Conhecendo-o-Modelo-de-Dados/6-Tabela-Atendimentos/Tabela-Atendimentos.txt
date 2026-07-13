@@ -1,0 +1,52 @@
+Tabela-Atendimentos.txt
+
+
+Nesta sexta aula, exploramos a tabela de atendimentos, que registra os serviços que foram efetivamente prestados.
+É fundamental diferenciar agendamento (uma intenção futura) de atendimento (um fato ocorrido).
+
+O objetivo é entender a estrutura dessa tabela e seu papel crucial no controle financeiro e na geração de relatórios 
+gerenciais.
+
+(---------------------Agendamento vs. Atendimento---------------------)
+
+
+Conceito	  |  Descrição
+Agendamento	  |  Uma reserva de horário no futuro. É uma intenção. Pode ser cancelado ou não se concretizar.
+Atendimento	  |  O registro de um serviço que foi efetivamente realizado. É um fato. Gera faturamento.
+
+Obs.:
+O agendamento é uma intenção, o atendimento é um fato. O agendamento pode ser cancelado, o atendimento não.
+
+
+(---------------------A Estrutura da Tabela de Atendimentos---------------------)
+
+A tabela de atendimentos armazena os detalhes de cada serviço prestado:
+
+exemplo:
+image.png
+
+(---------------------Relacionamento com Agendamentos---------------------)
+Cada atendimento está ligado a um agendamento através da chave estrangeira id_agendamento. Isso permite rastrear a 
+origem de cada serviço prestado e comparar o que foi agendado com o que foi realizado.
+
+
+
+(Valor Cobrado)
+O campo valor_cobrado é importante porque o preço final pode ser diferente do preço de tabela do serviço. Pode haver 
+descontos, promoções ou cobranças adicionais.
+
+
+(---------------------Conclusão: O Registro da Realidade---------------------)
+A tabela de atendimentos é o registro da realidade operacional e financeira do negócio. É a partir dela que o
+gestor pode:
+
+Calcular o faturamento do dia, semana ou mês.
+Analisar quais serviços são mais rentáveis.
+Medir a produtividade de cada atendente.
+Gerar relatórios precisos sobre a performance do negócio.
+Na próxima aula, vamos analisar a tabela de notas, que permite aos clientes avaliarem os serviços prestados.
+
+(---------------------Próximos Passos:---------------------)
+Analisar a tabela de notas
+Entender a importância do feedback dos clientes
+Ver como as notas podem ser usadas para melhorar a qualidade do serviço

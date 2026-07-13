@@ -1,0 +1,61 @@
+Tabela-de-Notas.txt
+
+Nesta décima e última aula do Curso 4, Tone e Eduardo fazem uma revisão geral de todo o modelo de dados, consolidando
+o conhecimento sobre as 8 tabelas e seus relacionamentos. A aula serve como uma ponte para o próximo curso, 
+onde a implementação prática começará.
+
+Obs.:
+
+Isso aí olhando assim, às vezes quem não está acostumado, parece que a coisa dá um nó, é complicado. Mas isso depois 
+fica bem tranquilo. Quanto mais você for lidando com o teu banco de dados, com o teu modelo, quanto mais você for 
+manuseando ele, isso vai ficando cada vez mais natural.
+
+
+(Objetivos da Aula)
+Fazer uma revisão completa do modelo de dados.
+Reforçar a importância da prática para a naturalização dos conceitos.
+Apresentar os próximos passos na trilha de aprendizado.
+
+
+(Revisão Geral do Modelo de Dados)
+O curso explorou em detalhes as 8 tabelas que compõem o sistema de agendamento:
+
+servicos: Catálogo de serviços.
+clientes: Cadastro de clientes.
+atendentes: Cadastro de profissionais.
+agendamentos: Intenção de serviço.
+agendamento_servicos: Ligação N-para-N entre agendamentos e serviços.
+atendimentos: Fato do serviço prestado.
+atendimento_servicos: Ligação N-para-N entre atendimentos e serviços (o que foi realmente feito).
+notas: Feedback dos clientes.
+
+O fluxo de informações passa por todas essas tabelas, desde o agendamento até a avaliação, criando um sistema 
+robusto e completo.
+
+
+(A Curva de Aprendizagem)
+Tone enfatiza que, embora o modelo possa parecer complexo à primeira vista, a familiaridade vem com a prática.
+O manuseio constante do banco de dados torna a identificação de relacionamentos e o entendimento do fluxo de 
+dados uma segunda natureza.
+
+exemplo:
+image.png
+
+
+(Conclusão do Curso e Próximos Passos)
+O Curso 4 forneceu a base teórica completa do modelo de dados. Com este mapa em mãos, os alunos estão preparados para a
+próxima fase: a implementação.
+
+O que vem a seguir?
+
+(Curso 5: Criando o Banco de Dados no Supabase)
+Criação de um projeto do zero.
+Implementação de cada uma das 8 tabelas.
+Definição de campos, tipos de dados e relacionamentos.
+
+
+(Cursos Subsequentes)
+Inserção de dados (mockups).
+Consultas SQL para extrair informações (SELECT).
+Criação de uma aplicação front-end para interagir com o banco de dados.
+O conhecimento adquirido neste curso é o alicerce para toda a construção prática que virá a seguir.

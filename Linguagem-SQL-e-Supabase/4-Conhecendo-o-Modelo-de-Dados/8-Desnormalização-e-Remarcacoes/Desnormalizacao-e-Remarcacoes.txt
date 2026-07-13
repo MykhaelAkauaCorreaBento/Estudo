@@ -1,0 +1,71 @@
+Desnormalizacao-e-Remarcacoes.txt
+
+Nesta aula, aprofundamos a discussão sobre a tabela de atendimentos, abordando dois conceitos fundamentais no 
+design de bancos de dados modernos: a desnormalização de dados e a estratégia para lidar com remarcações de 
+agendamentos. Compreenderemos por que certas informações são repetidas e como a simplificação dos processos 
+pode tornar o sistema mais robusto e fácil de gerenciar.
+
+(-----------------------A Redundância Controlada na Tabela de Atendimentos-----------------------)
+Ao analisar a tabela de atendimentos, notamos que os campos id_atendente e id_cliente se repetem, mesmo já existindo 
+na tabela de agendamentos. Conforme explicado, essa repetição, ou redundância, é intencional e serve a propósitos 
+práticos que flexibilizam o sistema.
+
+id_atendente: Garante o registro de qual profissional efetivamente realizou o atendimento, que pode não ser o mesmo 
+que foi originalmente agendado.
+id_cliente: Facilita a consulta e a criação de relatórios, além de permitir o registro de atendimentos que não 
+tiveram um agendamento prévio (walk-ins).
+
+Obs.:
+
+Antigamente, se você mostrasse um modelo assim, um professor, um purista, ele ia falar assim, esse modelo está errado,
+porque você tem uma repetição de dados... mas hoje em dia, em tempos atuais, esse tipo de repetição de dados é normal
+e até é esperado.
+
+Essa prática nos leva ao conceito de desnormalização.
+
+
+(-----------------------Desnormalização: Uma Prática Moderna e Saudável-----------------------)
+A desnormalização é o processo de adicionar dados redundantes a um banco de dados para otimizar a performance de 
+leitura e simplificar as consultas. Embora a normalização (que busca eliminar a redundância) seja um princípio clássico,
+a desnormalização tornou-se uma prática comum e valiosa em sistemas contemporâneos.
+
+exemplo:
+image.png
+
+Obs.:
+Hoje em dia, a gente preza, os sistemas prezam pela simplificação, simplificação da leitura, simplificação dos 
+relatórios, então um grau de redundância, um grau de desnormalização é considerado uma coisa normal e saudável.
+
+Sistemas de grande escala, como o Facebook, utilizam a desnormalização extensivamente para gerenciar a complexidade 
+de seus microserviços e garantir a agilidade no acesso aos dados.
+
+
+(-----------------------Gestão de Remarcações: A Filosofia "Keep it Simple"-----------------------)
+Outro ponto importante do nosso modelo de dados é a forma como lidamos com as remarcações de agendamentos. O sistema 
+foi desenhado com base na filosofia "Keep it Simple" (Mantenha Simples).
+
+Em vez de criar uma lógica complexa para alterar um agendamento existente (o que poderia exigir tabelas de histórico
+e aumentar a complexidade do código), a abordagem é muito mais direta:
+
+Cancelar o Agendamento Antigo: O agendamento original é marcado com o status "cancelado".
+Criar um Novo Agendamento: Um registro completamente novo é criado com a nova data e hora.
+
+
+(-----------------------Essa estratégia oferece duas grandes vantagens:-----------------------)
+
+Mantém o Histórico: Preserva um registro de todas as intenções de agendamento, incluindo as que foram canceladas.
+Reduz a Complexidade: Evita a necessidade de gerenciar o estado de alterações, simplificando a gestão dos dados e 
+o desenvolvimento do sistema.
+
+Obs.:
+Ao invés de você ir lá e criar uma remarcação, uma alteração do agendamento, a ideia é simples, você cancela aquele
+ agendamento... e abre um novo agendamento, beleza? E aí com isso você mantém o histórico dos agendamentos e gera uma 
+ complexidade a menos no manejo, na gestão desses dados.
+
+
+
+(-----------------------Conclusão-----------------------)
+Nesta aula, vimos como a desnormalização é uma ferramenta poderosa para criar sistemas mais eficientes e fáceis de manter,
+mesmo que isso signifique introduzir uma redundância de dados controlada. Além disso, aprendemos que uma abordagem
+pragmática e simplificada para funcionalidades como a remarcação pode resultar em um sistema mais robusto e com menor
+complexidade de gestão. Esses conceitos são essenciais para a modelagem de bancos de dados no cenário tecnológico atual.
