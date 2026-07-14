@@ -1,0 +1,56 @@
+Criando-um-banco-de-dados-no-Supabase.txt
+
+Nesta primeira aula do Curso 5, damos o passo decisivo da teoria para a prática. Após compreendermos o modelo de dados
+em detalhes, nosso objetivo agora é criar o banco de dados no Supabase, a plataforma que servirá como base para
+nosso sistema de agendamento.
+
+O objetivo desta aula é guiar você pelo processo de criação de conta e de um novo projeto no Supabase, deixando tudo
+pronto para a criação das tabelas nas próximas etapas.
+
+
+
+(O Que é o Supabase?)
+O Supabase é uma plataforma de Backend as a Service (BaaS) que oferece uma suíte de ferramentas para acelerar o 
+desenvolvimento de aplicações. Para nossos propósitos, seu principal recurso é um banco de dados PostgreSQL online,
+de fácil configuração e gerenciamento.
+
+O Supabase, que é um banco de dados online, baseado ali no Postgre, e vou compartilhar aqui até a página dele, inicial,
+que é essa daqui, que é o site do Supabase.
+
+
+
+(Passo a Passo: Criando a Conta e o Projeto)
+
+1. Acessar o Site e Iniciar o Cadastro
+Acesse o site oficial do Supabase.
+Clique em "Start your project".
+
+2. Página de Login/Cadastro
+Se você já tem uma conta, faça o login.
+Se não, clique em "Sign up" para criar uma nova conta.
+
+3. Opções de Cadastro
+Você pode se cadastrar de duas formas:
+
+Método	Descrição
+GitHub	Se você tem uma conta no GitHub, pode usá-la para um cadastro rápido.
+E-mail	Você pode usar qualquer endereço de e-mail para se cadastrar.
+
+
+4. Cadastro com E-mail
+Preencha seu e-mail.
+Crie uma senha segura (mínimo 8 caracteres, com maiúscula, minúscula, número e caractere especial).
+Clique em "Sign up".
+
+5. Confirmação do E-mail
+Você receberá um e-mail de confirmação do Supabase.
+Abra o e-mail e clique no botão "Confirm your email address".
+Você será redirecionado para o painel do Supabase, já logado.
+
+6. Criação da Organização e do Projeto
+Organização: Mantenha o tipo "Personal" e o plano "Free" (gratuito).
+Clique em "Create organization".
+Nome do Projeto: Dê um nome claro, como "Agendamento".
+Senha do Banco de Dados: Crie uma senha forte especificamente para o banco de dados e anote-a em um local seguro.
+Região: Pode deixar a opção padrão.
+Clique em "Create new project".
