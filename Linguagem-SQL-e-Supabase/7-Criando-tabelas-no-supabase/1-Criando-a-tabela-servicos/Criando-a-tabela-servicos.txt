@@ -1,0 +1,66 @@
+Criando-a-tabela-servicos.txt
+
+Nesta primeira aula do Curso 6, iniciamos a fase de implementação do nosso banco de dados. Com o ambiente do Supabase 
+pronto, nosso objetivo agora é criar a primeira tabela do nosso modelo: a tabela de serviços.
+
+O objetivo desta aula é demonstrar o processo de criação de uma tabela usando a interface visual do Supabase 
+(o Table Editor), explicando os campos padrão e a importância da chave primária.
+
+(----------------------Acessando o Table Editor----------------------)
+Para começar, navegamos até o Table Editor no painel do Supabase. Este é o nosso ambiente de trabalho para a criação e 
+gerenciamento de tabelas.
+
+Caminho: Menu lateral esquerdo → Ícone de tabela (Table Editor)
+
+Criando a Primeira Tabela: servicos
+Clique em "Create a new table".
+Nome da Tabela: servicos
+Descrição: (Opcional) "Tabela para armazenar os serviços oferecidos"
+Campos Padrão: id e created_at
+Ao criar uma nova tabela, o Supabase já sugere dois campos padrão:
+
+Campo	    |Tipo de Dado	  |Descrição
+id	        |int8 (Inteiro)   |Chave Primária: Identificador único para cada registro.
+created_at	|timestamptz	  |Timestamp: Data e hora em que o registro foi criado.
+
+O ID é o que a gente chama de chave primária, é o que identifica unicamente aquele registro.
+
+Chave Primária (id): É essencial para garantir que cada serviço tenha um identificador único. O Supabase gerencia a 
+criação desses IDs automaticamente.
+
+Timestamp (created_at): É um campo útil para auditoria, pois registra exatamente quando cada serviço foi cadastrado no 
+sistema. Ele é preenchido automaticamente pelo banco de dados.
+
+
+(----------------------Tipos de Dados: A Base da Estrutura----------------------)
+
+Todo campo em um banco de dados relacional tem um tipo de dado específico. Isso garante a consistência e a integridade 
+das informações.
+
+Na aula, vimos alguns dos tipos mais comuns:
+
+Tipo de Dado	|Uso Comum
+int (Inteiro)	|Números inteiros (ex: IDs, quantidades)
+numeric	        |Números com casas decimais (ex: preços)
+text / varchar	|Textos de qualquer tamanho (ex: nomes, descrições)
+timestamp	    |Data e hora completas
+date	        |Apenas a data
+
+
+Todos os campos vão ter um tipo, principalmente aí no banco de dados relacional, que é fortemente tipado.
+
+
+(----------------------Conclusão: O Início da Construção----------------------)
+Nesta aula, demos o primeiro passo prático na construção do nosso banco de dados. Aprendemos a:
+
+Navegar até o Table Editor.
+Criar uma nova tabela.
+Entender os campos padrão id e created_at.
+Reconhecer a importância dos tipos de dados.
+
+Na próxima aula, continuaremos a construção da tabela servicos, adicionando os campos específicos do nosso modelo: nome, preco e duracao.
+
+(----------------------Próximos Passos----------------------)
+Adicionar os campos restantes à tabela servicos.
+Definir os tipos de dados corretos para cada campo.
+Salvar a tabela completa.

@@ -1,0 +1,67 @@
+Salvando-a-tabela.txt
+
+Nesta terceira e última aula do Curso 6, finalizamos o processo de criação da nossa primeira tabela, servicos. Após 
+adicionar todas as colunas necessárias, o último passo é salvar a estrutura no banco de dados.
+
+O objetivo é demonstrar como salvar a tabela, verificar o resultado final e entender como o processo pode ser replicado 
+para as outras tabelas do nosso modelo.
+
+(----------------------Salvando a Tabela----------------------)
+
+Com todos os campos (id, created_at, nome, preco, duracao) devidamente configurados, o processo de salvar é simples:
+
+Role a página para baixo até encontrar o botão "Save".
+Clique no botão.
+
+
+O Supabase processará a criação da tabela e, em poucos segundos, a estrutura estará pronta.
+
+(----------------------Verificando o Resultado----------------------)
+
+Após salvar, o Supabase nos leva diretamente para a visualização da tabela recém-criada. Podemos confirmar que a operação
+ foi um sucesso de várias maneiras:
+
+Menu Lateral: A tabela servicos agora aparece listada no menu lateral esquerdo do Table Editor.
+
+Visualização de Colunas: A tela principal exibe a estrutura da tabela com todas as colunas que definimos: id, created_at,
+nome, preco e duracao.
+
+Dashboard: Ao voltar para o dashboard principal do projeto, um indicador mostrará que agora temos 1 tabela criada.
+
+Obs.:
+A gente pode ver que agora já está informando aqui que tem uma tabela.
+
+
+(----------------------Como Replicar o Processo----------------------)
+
+O processo que realizamos para a tabela servicos é a base para a criação de todas as outras tabelas do nosso modelo.
+Para criar as 7 tabelas restantes, basta repetir os passos:
+
+Ir para o Table Editor.
+Clicar em "Create a new table".
+Definir o nome da tabela.
+Adicionar as colunas, definindo seus nomes e tipos de dados.
+Salvar.
+
+Obs.:
+Para você criar todas as oito tabelas no modo visual é só repetir os passos ali.
+
+(----------------------Alternativa: Criação via SQL----------------------)
+
+Além da interface visual (Table Editor), existe uma forma mais programática de criar tabelas: usando comandos SQL.
+
+No Supabase, há uma área chamada "SQL Editor" onde você pode escrever e executar scripts SQL para criar tabelas, 
+inserir dados, fazer consultas, etc.
+
+Essa abordagem alternativa será explorada em cursos futuros, oferecendo mais uma ferramenta para o seu arsenal de 
+desenvolvimento.
+
+
+(----------------------Conclusão: A Primeira Peça do Quebra-Cabeça----------------------)
+
+Com a criação da tabela servicos, colocamos a primeira peça do nosso quebra-cabeça. Concluímos o Curso 6 com um marco 
+importante: transformamos uma parte do nosso modelo de dados teórico em uma estrutura real e funcional dentro do banco 
+de dados.
+
+O processo de criação visual no Supabase se mostrou simples e intuitivo, permitindo que qualquer pessoa, mesmo sem 
+conhecimento profundo de SQL, possa construir a estrutura de um banco de dados de forma eficiente.

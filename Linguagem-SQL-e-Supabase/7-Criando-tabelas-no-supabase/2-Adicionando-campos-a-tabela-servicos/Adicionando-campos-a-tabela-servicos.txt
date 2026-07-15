@@ -1,0 +1,67 @@
+Adicionando-campos-a-tabela-servicos.txt
+
+Nesta segunda aula, continuamos a construção da nossa primeira tabela, servicos. Após entendermos os campos padrão, 
+nosso objetivo agora é adicionar os campos específicos do nosso modelo de dados: nome, preco e duracao.
+
+O objetivo é demonstrar como adicionar novas colunas, definir seus tipos de dados e compreender as propriedades de cada 
+campo na interface do Supabase.
+
+(----------------------Adicionando o Campo nome----------------------)
+O primeiro campo que adicionamos é o nome do serviço.
+
+Clique em "Add column".
+Name: nome
+Type: text. Este tipo é ideal para armazenar nomes e descrições, pois não tem um limite de caracteres fixo.
+
+obs.:
+O tipo texto, ele é um tipo que não tem um tamanho pré-definido, então ele é mais flexível para esse tipo de informação.
+
+(----------------------Adicionando o Campo preco----------------------)
+O segundo campo é o preco do serviço.
+
+Clique em "Add column".
+Name: preco
+Type: numeric. Este tipo é a escolha correta para valores monetários, pois lida com números decimais de forma precisa,
+evitando problemas de arredondamento que podem ocorrer com outros tipos (como float).
+
+Obs.:
+Para valor monetário, o ideal é sempre utilizar o tipo numérico.
+
+Regra geral: Se o número pode ter vírgula, use numeric.
+
+(----------------------Adicionando o Campo duracao----------------------)
+O último campo é a duracao do serviço, que será armazenada em minutos.
+
+Clique em "Add column".
+
+Name: duracao
+
+Type: int (inteiro). Embora numeric também funcione, usar int é mais específico e garante que apenas números inteiros
+sejam inseridos, o que faz sentido para uma contagem de minutos.
+
+
+Obs.:
+Eu recomendaria o inteiro aí, porque aí evita, força o sistema a aceitar só números em dois minutos.
+
+
+(----------------------Conclusão: Estrutura Completa----------------------)
+Com os três campos adicionados, a estrutura da nossa tabela servicos está completa, refletindo exatamente o que
+planejamos no nosso modelo de dados.
+
+Campo      |Tipo de Dado	|Descrição
+           |                |
+id	       |int8            |Chave Primária
+created_at |timestamptz	    |Data de Criação
+nome	   |text	        |Nome do Serviço
+preco	   |numeric	        |Preço do Serviço
+duracao    |int	            |Duração em Minutos
+
+
+Na próxima aula, vamos salvar a tabela e ver o resultado final no Table Editor, concluindo a criação da nossa primeira
+entidade no banco de dados.
+
+
+(----------------------Próximos Passos----------------------)
+Salvar a tabela servicos.
+Visualizar a estrutura final da tabela no Supabase.
+Entender como o processo se repete para as outras tabelas.
