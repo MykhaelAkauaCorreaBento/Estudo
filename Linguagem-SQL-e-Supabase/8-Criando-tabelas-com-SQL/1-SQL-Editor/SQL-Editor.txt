@@ -1,0 +1,86 @@
+
+
+Nesta primeira aula do Curso 7, exploramos uma nova maneira de criar tabelas no Supabase: através de comandos SQL. 
+No curso anterior, utilizamos a interface visual (Table Editor), que é intuitiva e ótima para começar. Agora, vamos 
+mergulhar em uma abordagem mais poderosa e universal: a linguagem SQL.
+
+O objetivo desta aula é apresentar o SQL Editor do Supabase e introduzir o comando CREATE TABLE, a instrução 
+fundamental para criar tabelas de forma programática.
+
+(-----------------------O SQL Editor: Sua Central de Comandos-----------------------)
+O SQL Editor é uma ferramenta integrada ao Supabase que permite escrever e executar scripts SQL diretamente no seu 
+banco de dados.
+
+Caminho: Menu lateral esquerdo -> Ícone de um documento com "SQL" (SQL Editor)
+
+Dentro do editor, você pode digitar seus comandos e executá-los, vendo os resultados em tempo real. É um ambiente 
+poderoso tanto para criar e modificar a estrutura do banco (DDL) quanto para manipular os dados (DML).
+
+
+(-----------------------O Comando CREATE TABLE-----------------------)
+
+O comando CREATE TABLE é a instrução SQL padrão para criar uma nova tabela. Sua sintaxe básica é a seguinte:
+
+CREATE TABLE nome_da_tabela (
+
+    nome_da_coluna1 tipo_de_dado,
+
+    nome_da_coluna2 tipo_de_dado,
+
+    ...
+
+);
+
+
+(-----------------------Exemplo Prático: Criando a Tabela atendentes-----------------------)
+
+Para colocar o comando em prática, criamos a tabela atendentes com o seguinte script:
+
+CREATE TABLE atendentes (
+
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+
+    nome VARCHAR NOT NULL
+
+);
+
+Vamos analisar cada parte deste comando:
+
+Exemplo:
+
+image.png
+
+
+Obs.:
+
+O NOT NULL é o que a gente chama de constraint, é uma regra que a gente está colocando no campo. A gente está dizendo
+que esse campo não pode ser nulo, ele tem que ser preenchido obrigatoriamente.
+
+
+(-----------------------Executando o Comando e Verificando o Resultado-----------------------)
+
+Após escrever o script no SQL Editor, clicamos em "Run" para executá-lo. Se a sintaxe estiver correta, o Supabase 
+retornará uma mensagem de sucesso.
+
+Para confirmar a criação, voltamos ao Table Editor e vemos que a tabela atendentes agora aparece na lista, com as 
+colunas id e nome devidamente configuradas.
+
+(-----------------------Conclusão: O Poder do SQL-----------------------)
+Nesta aula, demos o primeiro passo no mundo da criação de tabelas via SQL. Aprendemos a:
+
+Utilizar o SQL Editor do Supabase.
+Escrever um comando CREATE TABLE básico.
+Definir uma chave primária com geração automática de ID.
+Aplicar a restrição NOT NULL para garantir o preenchimento de campos obrigatórios.
+
+
+Embora a interface visual seja mais fácil no início, aprender SQL oferece uma flexibilidade e um poder muito maiores,
+ além de ser um conhecimento universal que pode ser aplicado em praticamente qualquer banco de dados relacional.
+
+Na próxima aula, continuaremos a usar o SQL para criar a tabela clientes, adicionando mais campos e reforçando nosso
+conhecimento da sintaxe.
+
+(-----------------------Próximos Passos:-----------------------)
+Criar a tabela clientes usando CREATE TABLE.
+Adicionar múltiplos campos (nome, e-mail, telefone).
+Reforçar o uso de VARCHAR e NOT NULL.

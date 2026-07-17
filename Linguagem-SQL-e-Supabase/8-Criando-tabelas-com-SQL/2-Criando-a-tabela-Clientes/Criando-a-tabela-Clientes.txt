@@ -1,0 +1,73 @@
+Criando-a-tabela-Clientes.txt
+Nesta segunda aula, continuamos nossa jornada com SQL, aplicando o conhecimento adquirido para criar a segunda tabela do nosso modelo: a tabela clientes. O processo é 
+semelhante ao da aula anterior, o que nos permite reforçar a sintaxe do CREATE TABLE e a importância das restrições.
+
+O objetivo é criar a tabela clientes via SQL, adicionando múltiplos campos de texto (VARCHAR) e aplicando a restrição
+NOT NULL para garantir a integridade dos dados essenciais.
+
+(-----------------------Criando a Tabela clientes-----------------------)
+Seguindo a mesma lógica da aula anterior, utilizamos o comando CREATE TABLE no SQL Editor para definir a estrutura da 
+tabela clientes.
+
+
+CREATE TABLE clientes (
+
+```
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+
+nome VARCHAR NOT NULL,
+
+email VARCHAR NOT NULL,
+
+telefone VARCHAR
+```
+
+);
+
+
+(-----------------------Análise do Comando-----------------------)
+
+CREATE TABLE clientes: Inicia a criação da tabela clientes.
+
+id BIGINT PRIMARY KEY...: Define a chave primária id, com geração automática, exatamente como na tabela atendentes.
+
+nome VARCHAR NOT NULL: Cria a coluna nome. A restrição NOT NULL garante que todo cliente deve ter um nome cadastrado.
+
+email VARCHAR NOT NULL: Cria a coluna email. A restrição NOT NULL é crucial aqui, pois o e-mail é o principal meio de
+ contato e identificação do cliente para marketing e comunicação.
+
+telefone VARCHAR: Cria a coluna telefone. Note que, neste caso, não utilizamos a restrição NOT NULL. Isso torna o 
+campo telefone opcional. Um cliente pode ser cadastrado sem fornecer um número de telefone.
+
+O telefone a gente não botou o NOT NULL, então ele é um campo opcional. O cliente pode se cadastrar sem 
+informar o telefone.
+
+
+(-----------------------A Importância da Sintaxe: Vírgulas e Ponto e Vírgula-----------------------)
+SQL é uma linguagem com uma sintaxe rigorosa. Um pequeno erro pode impedir a execução do comando. Durante a aula, 
+um ponto importante foi destacado:
+
+Vírgulas: Todas as definições de coluna, exceto a última, devem ser separadas por vírgula.
+Ponto e Vírgula: O comando inteiro deve terminar com um ponto e vírgula (;), embora alguns editores modernos 
+consigam executar o comando sem ele.
+Esquecer uma vírgula é um dos erros mais comuns para iniciantes e impede a criação da tabela.
+
+
+(-----------------------Conclusão: Consolidando a Base-----------------------)
+Com a criação da tabela clientes, consolidamos nosso entendimento sobre o comando CREATE TABLE. Reforçamos a 
+importância de:
+
+Definir uma chave primária com ID automático.
+Escolher o tipo de dado correto para cada coluna (VARCHAR para textos).
+Utilizar a restrição NOT NULL para campos obrigatórios e omiti-la para campos opcionais.
+Prestar atenção à sintaxe, especialmente ao uso de vírgulas.
+Agora temos duas das nossas tabelas de cadastro criadas via SQL. O processo para as demais tabelas seguirá uma 
+lógica muito semelhante.
+
+Na próxima aula, vamos aprender a modificar uma tabela já existente com o comando ALTER TABLE e explorar como as 
+ferramentas de IA podem nos ajudar a gerar esses scripts SQL.
+
+(-----------------------Próximos Passos:-----------------------)
+Aprender o comando ALTER TABLE para adicionar ou remover colunas.
+Utilizar uma IA para gerar o script CREATE TABLE da tabela clientes.
+Comparar o script gerado pela IA com o que fizemos manualmente.
