@@ -17,6 +17,8 @@ Dentro do editor, você pode digitar seus comandos e executá-los, vendo os resu
 poderoso tanto para criar e modificar a estrutura do banco (DDL) quanto para manipular os dados (DML).
 
 
+
+
 (-----------------------O Comando CREATE TABLE-----------------------)
 
 O comando CREATE TABLE é a instrução SQL padrão para criar uma nova tabela. Sua sintaxe básica é a seguinte:
