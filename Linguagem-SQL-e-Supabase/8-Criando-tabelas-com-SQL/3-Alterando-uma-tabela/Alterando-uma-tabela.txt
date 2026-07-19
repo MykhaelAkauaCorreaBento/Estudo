@@ -1,0 +1,80 @@
+Alterando-uma-tabela.txt
+
+
+Nesta terceira aula, expandimos nosso repertório de comandos SQL e exploramos como a Inteligência Artificial pode
+acelerar nosso trabalho. Aprendemos a modificar uma tabela já existente e a usar uma IA para gerar scripts SQL
+complexos a partir de uma simples descrição.
+
+Os objetivos são:
+
+Aprender o comando ALTER TABLE para adicionar uma nova coluna.
+Utilizar uma IA (como o ChatGPT ou Copilot) para gerar o script CREATE TABLE da tabela clientes.
+Comparar o resultado da IA com o nosso script manual e entender as diferenças.
+
+
+(-------------------------------Modificando uma Tabela com ALTER 
+TABLE-------------------------------)
+
+
+E se precisarmos adicionar uma coluna a uma tabela que já foi criada? Para isso, usamos o comando ALTER TABLE.
+
+Exemplo Prático: Adicionando a Coluna endereco
+
+Vamos adicionar a coluna endereco à nossa tabela clientes.
+
+ALTER TABLE clientes
+ADD COLUMN endereco VARCHAR;
+
+
+ALTER TABLE clientes: Especifica qual tabela queremos modificar.
+
+ADD COLUMN endereco VARCHAR: Define a ação (adicionar uma coluna) e especifica o nome (endereco) e o tipo 
+(VARCHAR) da nova coluna.
+
+
+Após executar o comando, podemos verificar no Table Editor que a coluna endereco foi adicionada com sucesso à tabela clientes.
+
+Comentário:
+“A gente vai utilizar o campo ALTER TABLE. Aí a gente vai informar o nome da tabela que a gente quer alterar, 
+que é CLIENTE. E aqui a gente vai utilizar um outro comando, que é o ADD COLUMN.” – Eduardo
+
+
+(-------------------------------Gerando SQL com Inteligência Artificial-------------------------------)
+Escrever scripts SQL manualmente pode ser demorado e propenso a erros. Ferramentas de IA podem otimizar esse processo. 
+Na aula, usamos um prompt simples para pedir à IA que gerasse o script para a tabela clientes.
+
+Prompt utilizado: “Gere o script SQL para criar a tabela clientes com os campos id, nome, email e telefone.”
+
+(Analisando o Script Gerado pela IA)
+
+A IA gerou um script muito semelhante ao que fizemos manualmente, mas com algumas diferenças interessantes:
+
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    telefone VARCHAR(20)
+);
+
+Exemplo:
+
+image.png
+
+(-------------------------------Conclusão: Ferramentas que se Complementam-------------------------------)
+Nesta aula, vimos que o SQL nos dá o poder de não apenas criar, mas também modificar tabelas. Além disso, aprendemos 
+que as IAs são assistentes poderosas que podem:
+
+Acelerar a escrita de código.
+Sugerir boas práticas (como a restrição UNIQUE).
+Ajudar a aprender a sintaxe correta.
+
+O ideal é combinar as abordagens: usar a IA para gerar o código base e, em seguida, usar nosso conhecimento para revisar,
+ajustar e validar o script antes de executá-lo.
+
+Na próxima aula, vamos aprender a deletar colunas e tabelas, completando o ciclo de vida da manipulação da estrutura 
+do banco de dados.
+
+Próximos Passos:
+
+Aprender os comandos DROP COLUMN e DROP TABLE.
+Entender os cuidados necessários ao deletar estruturas do banco de dados.
