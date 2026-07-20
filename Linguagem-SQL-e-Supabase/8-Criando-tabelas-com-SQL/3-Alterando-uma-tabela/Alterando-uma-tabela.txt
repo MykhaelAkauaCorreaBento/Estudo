@@ -12,6 +12,7 @@ Utilizar uma IA (como o ChatGPT ou Copilot) para gerar o script CREATE TABLE da 
 Comparar o resultado da IA com o nosso script manual e entender as diferenças.
 
 
+
 (-------------------------------Modificando uma Tabela com ALTER 
 TABLE-------------------------------)
 
