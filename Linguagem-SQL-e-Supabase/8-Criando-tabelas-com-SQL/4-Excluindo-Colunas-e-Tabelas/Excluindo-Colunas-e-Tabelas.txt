@@ -1,0 +1,68 @@
+Nesta quarta aula, completamos nosso conjunto de habilidades básicas de DDL (Data Definition Language) aprendendo a
+remover estruturas do banco de dados. Assim como criamos e alteramos, é essencial saber como deletar colunas e
+tabelas de forma controlada e segura.
+
+Os objetivos são:
+
+Aprender o comando ALTER TABLE ... DROP COLUMN para remover uma coluna específica.
+Aprender o comando DROP TABLE para deletar uma tabela inteira.
+Entender a importância de usar a cláusula IF EXISTS para evitar erros.
+
+
+(--------------------------Removendo uma Coluna com DROP COLUMN--------------------------)
+Para remover uma coluna de uma tabela existente, utilizamos uma variação do comando ALTER TABLE.
+
+Exemplo Prático: Removendo a Coluna teste
+
+Na aula anterior, criamos uma coluna teste na tabela clientes. Vamos removê-la.
+
+ALTER TABLE clientes
+DROP COLUMN teste;
+
+
+ALTER TABLE clientes: Especifica a tabela a ser modificada.
+DROP COLUMN teste: Define a ação (remover uma coluna) e o nome da coluna a ser deletada.
+
+Após a execução, podemos confirmar no Table Editor que a coluna teste não existe mais.
+
+(--------------------------Removendo uma Tabela com DROP TABLE--------------------------)
+Para remover uma tabela inteira, com todos os seus dados e sua estrutura, o comando é DROP TABLE.
+
+Atenção: O comando DROP TABLE é destrutivo e irreversível. Uma vez que uma tabela é deletada, todos os dados contidos
+nela são perdidos para sempre (a menos que você tenha um backup).
+
+Exemplo Prático: Removendo a Tabela atendentes
+
+DROP TABLE atendentes;
+
+Este comando simples deleta permanentemente a tabela atendentes.
+
+(--------------------------Evitando Erros com IF EXISTS--------------------------)
+O que acontece se você tentar deletar uma tabela que não existe? O banco de dados retornará um erro. Para evitar isso,
+especialmente em scripts automatizados, podemos usar a cláusula IF EXISTS.
+
+DROP TABLE IF EXISTS atendentes;
+
+IF EXISTS: O comando só será executado se a tabela atendentes existir. Se não existir, o comando é simplesmente 
+ignorado, sem gerar erro.
+
+O IF EXISTS é uma boa prática porque ele evita que o seu script dê erro. Se a tabela não existir, ele simplesmente 
+não faz nada.  Tone
+
+(--------------------------Conclusão: O Ciclo Completo de Gerenciamento--------------------------)
+Com os comandos DROP COLUMN e DROP TABLE, fechamos o ciclo básico de gerenciamento da estrutura do banco de dados (DDL):
+
+CREATE: Criar
+ALTER: Modificar
+DROP: Deletar
+Dominar esses três comandos é a base para qualquer trabalho com a estrutura de bancos de dados relacionais. Aprendemos
+também a importância de usar cláusulas como IF EXISTS para tornar nossos scripts mais robustos e à prova de falhas.
+
+Na próxima e última aula deste curso, vamos juntar tudo o que aprendemos para criar um script SQL completo, capaz de
+gerar todas as nossas tabelas de uma só vez, de forma automatizada.
+
+(--------------------------Próximos Passos:--------------------------)
+
+Consolidar o conhecimento dos comandos DDL.
+Preparar para criar um script SQL único para todo o modelo de dados.
+Entender como a ordem de criação das tabelas é importante quando há relacionamentos.
