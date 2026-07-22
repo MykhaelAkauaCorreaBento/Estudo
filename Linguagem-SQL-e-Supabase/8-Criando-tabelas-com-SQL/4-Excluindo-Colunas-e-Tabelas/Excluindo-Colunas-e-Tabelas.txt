@@ -25,6 +25,7 @@ DROP COLUMN teste: Define a ação (remover uma coluna) e o nome da coluna a ser
 
 Após a execução, podemos confirmar no Table Editor que a coluna teste não existe mais.
 
+
 (--------------------------Removendo uma Tabela com DROP TABLE--------------------------)
 Para remover uma tabela inteira, com todos os seus dados e sua estrutura, o comando é DROP TABLE.
 
