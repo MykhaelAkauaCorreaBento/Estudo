@@ -1,0 +1,88 @@
+Nesta quinta e última aula do Curso 7, consolidamos todo o nosso aprendizado em SQL para criar um script único e 
+completo, capaz de gerar todas as 8 tabelas do nosso modelo de dados de uma só vez. Esta é a abordagem mais 
+profissional e eficiente para configurar um novo ambiente de banco de dados.
+
+O objetivo é criar um script SQL que não apenas crie todas as tabelas, mas também estabeleça os relacionamentos 
+entre elas usando chaves estrangeiras (Foreign Keys).
+
+(------------------------A Importância da Ordem de Criação------------------------)
+
+Quando as tabelas têm relacionamentos entre si, a ordem em que elas são criadas é crucial. Uma tabela que contém uma 
+chave estrangeira só pode ser criada depois da tabela que ela referencia.
+
+Exemplo: A tabela agendamentos tem uma chave estrangeira que aponta para a tabela clientes. Portanto, a tabela 
+clientes deve ser criada antes da tabela agendamentos.
+
+Nossa ordem de criação foi:
+
+servicos
+clientes
+atendentes
+agendamentos (depende de clientes e atendentes)
+agendamento_servicos (depende de agendamentos e servicos)
+
+(------------------------Definindo Relacionamentos com Chaves Estrangeiras------------------------)
+
+Para criar um relacionamento, adicionamos uma restrição de chave estrangeira (Foreign Key Constraint) à definição da coluna.
+
+Exemplo Prático: A Tabela agendamentos
+
+CREATE TABLE agendamentos (
+
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+
+    id_cliente BIGINT NOT NULL,
+
+    id_atendente BIGINT NOT NULL,
+
+    data_agendamento TIMESTAMPTZ NOT NULL,
+
+    status VARCHAR(50) NOT NULL,
+
+    CONSTRAINT fk_cliente FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+
+    CONSTRAINT fk_atendente FOREIGN KEY (id_atendente) REFERENCES atendentes(id)
+
+);
+
+id_cliente BIGINT NOT NULL: Cria a coluna que armazenará o ID do cliente.
+CONSTRAINT fk_cliente: Dá um nome à restrição (boa prática).
+FOREIGN KEY (id_cliente): Define a coluna como chave estrangeira.
+REFERENCES clientes(id): Indica que a coluna referencia o id da tabela clientes.
+
+Essa sintaxe garante a integridade referencial: o banco de dados não permitirá a criação de um agendamento com um
+id_cliente que não exista na tabela clientes.
+
+O Script Completo
+O resultado final é um único arquivo .sql contendo todos os comandos CREATE TABLE, na ordem correta, com todas as 
+colunas, tipos de dados, chaves primárias e chaves estrangeiras definidas.
+
+Executar este script no SQL Editor de um projeto Supabase limpo cria toda a estrutura do nosso banco de dados em 
+segundos, de forma automatizada e à prova de erros.
+
+
+
+Comentário:
+
+Você pode pegar esse script, rodar ele de uma vez só, e ele vai criar todas as tabelas e todos os relacionamentos.
+Essa é a forma mais profissional de você trabalhar.
+
+(------------------------Conclusão: Domínio sobre a Estrutura do Banco de Dados------------------------)
+Com esta aula, concluímos nossa jornada de criação de tabelas com SQL. Passamos de criar tabelas uma a uma para 
+desenvolver um script completo e automatizado. Aprendemos a:
+
+Escrever comandos CREATE TABLE complexos.
+Definir chaves primárias e estrangeiras.
+Aplicar restrições como NOT NULL e UNIQUE.
+Entender a importância da ordem de criação.
+Criar um script único para provisionar todo o banco de dados.
+Este conhecimento é um pilar fundamental para qualquer desenvolvedor back-end ou full-stack, permitindo a criação de
+ sistemas robustos, escaláveis e com alta integridade de dados.
+
+Fim do Curso 7.
+
+Revisão: Aprendemos a criar um banco de dados completo, com todas as tabelas e relacionamentos, usando um único script SQL.
+
+Próximos Passos: Com a estrutura do banco de dados pronta, os próximos cursos focarão em como interagir com esses 
+dados: inserir, consultar, atualizar e deletar informações usando SQL (DML) e construir a API que permitirá 
+que o front-end se comunique com nosso banco de dados.
