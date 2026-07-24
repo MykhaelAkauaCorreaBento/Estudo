@@ -1,0 +1,97 @@
+Passo 1: Entender o que precisa ser instalado
+Aprendizado: Os componentes necessários
+Para programar em Python, o computador precisa estar preparado com dois componentes que trabalham juntos.
+
+O primeiro é o interpretador, o programa responsável por reconhecer e executar o código Python na máquina. Junto com ele, as bibliotecas nativas da linguagem são instaladas automaticamente.
+
+O segundo é o editor de código, onde o código será escrito, organizado e executado. Neste curso utilizaremos o Visual Studio Code, gratuito e com suporte a Python habilitado por uma extensão oficial instalada durante a configuração.
+
+Passo 2: Instalar o Python
+Aprendizado: Instalação do interpretador Python
+Com o ambiente de desenvolvimento a ser configurado, o primeiro passo é instalar o interpretador Python. No Windows, a instalação é feita pelo Python Manager, uma ferramenta oficial que gerencia o download e a instalação da linguagem diretamente pelo terminal.
+
+O primeiro passo é instalar o Python Install Manager pela Microsoft Store:
+
+1. Abra a Microsoft Store no Windows
+
+2. Pesquise por "Python Install Manager"
+
+3. Clique em "Adquirir" e aguarde a instalação
+
+Python Manager
+4. Com o Python Manager instalado, execute a aplicação:
+
+Python Manager - Tela de Configuração
+5. Na primeira execução, o Python Manager exibirá a tela de configuração inicial. Será solicitada a permissão para habilitar suporte a caminhos longos no Windows, necessário para que alguns pacotes funcionem corretamente:
+
+Python Manager - Configuração
+6. Digite Y para a pergunta “Update setting now? [y/N]” e pressione Enter. O terminal exibirá a confirmação:
+
+The setting has been successfully updated, and will take effect after the next reboot.
+7. Em seguida, o Python Manager verificará se há uma versão do Python instalada. Caso não haja, perguntará se deseja instalar a versão mais recente:
+
+Python Manager - Instalação
+8. Digite Y para a pergunta “Install CPython now? [Y/n]” e pressione Enter. A instalação será iniciada automaticamente:
+
+Installing Python 3.14.3.
+Aguarde a conclusão, o Python estará instalado e pronto para uso.
+
+9. Após a conclusão da instalação, o Python Manager exibirá um menu de ajuda com os comandos disponíveis e perguntará se deseja visualizar a ajuda online:
+
+Python Manager - Ajuda
+Digite N para a pergunta “View online help? [y/N]” e pressione Enter para concluir o processo.
+
+Aprendizado: Confirmando que o Python está funcionando
+Com a instalação concluída pelo Python Manager, é possível confirmar que o interpretador foi instalado corretamente. Abra o terminal e execute:
+
+python --version
+Python Version
+Se a instalação estiver correta, a versão instalada será exibida:
+
+Python Version
+Caso apareça a mensagem abaixo:
+
+'python' is not recognized as an internal or external command
+Reinicie o computador, a configuração do PATH realizada durante a instalação pode precisar ser aplicada após o reboot, e execute o comando novamente.
+
+Passo 3: Instalar o Visual Studio Code e a Extensão Python
+Aprendizado: Configurando o editor
+Com o Python instalado, o próximo passo é configurar o editor de código. Neste curso utilizaremos o Visual Studio Code, gratuito e com suporte a Python habilitado por extensão oficial.
+
+Acesse https://code.visualstudio.com e siga as instruções:
+
+Clique em "Download for Windows"
+
+Visual Studio Code - Download
+Abra o arquivo baixado
+
+Aceite os termos de licença e clique em "Avançar"
+
+Visual Studio Code - Instalação
+Marque a opção "Add to PATH" e clique em "Avançar"
+
+Visual Studio Code - Configuração
+Clique em "Instalar" e aguarde a conclusão
+
+Visual Studio Code - Instalação Concluída
+Clique em "Finalizar" para concluir
+
+Visual Studio Code - Finalização
+Aprendizado: Instalando a extensão Python
+Com o VS Code instalado, ainda é necessário um passo adicional, o editor não reconhece Python por padrão. A extensão oficial desenvolvida pela Microsoft habilita esse suporte diretamente no editor e é instalada pelo marketplace do próprio VS Code.
+
+Para instalá-la:
+
+Abra o VS Code
+
+Visual Studio Code - Extensão Python
+Clique no ícone Extensions na barra lateral esquerda
+
+Visual Studio Code - Extensão Python
+No campo de busca, digite "Python". Localize a extensão desenvolvida pela Microsoft, será a primeira da lista
+
+Visual Studio Code - Extensão Python
+Clique em "Install" e aguarde a conclusão
+
+Visual Studio Code - Extensão Python
+Com a extensão instalada, o ambiente estará pronto para escrever e executar código Python.
