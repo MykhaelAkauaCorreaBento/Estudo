@@ -21,6 +21,8 @@ atendentes
 agendamentos (depende de clientes e atendentes)
 agendamento_servicos (depende de agendamentos e servicos)
 
+
+
 (------------------------Definindo Relacionamentos com Chaves Estrangeiras------------------------)
 
 Para criar um relacionamento, adicionamos uma restrição de chave estrangeira (Foreign Key Constraint) à definição da coluna.
