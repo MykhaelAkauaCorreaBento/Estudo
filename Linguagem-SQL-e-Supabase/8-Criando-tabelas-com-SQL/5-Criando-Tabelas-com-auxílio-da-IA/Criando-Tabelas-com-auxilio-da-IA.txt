@@ -16,6 +16,8 @@ clientes deve ser criada antes da tabela agendamentos.
 
 Nossa ordem de criação foi:
 
+
+
 servicos
 clientes
 atendentes
