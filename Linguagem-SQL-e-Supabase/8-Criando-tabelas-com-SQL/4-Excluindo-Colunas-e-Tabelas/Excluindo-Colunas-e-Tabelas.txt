@@ -16,6 +16,8 @@ Exemplo Prático: Removendo a Coluna teste
 
 Na aula anterior, criamos uma coluna teste na tabela clientes. Vamos removê-la.
 
+
+
 ALTER TABLE clientes
 DROP COLUMN teste;
 
