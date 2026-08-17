@@ -29,6 +29,7 @@ Para criar um relacionamento, adicionamos uma restrição de chave estrangeira (
 
 Exemplo Prático: A Tabela agendamentos
 
+
 CREATE TABLE agendamentos (
 
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
