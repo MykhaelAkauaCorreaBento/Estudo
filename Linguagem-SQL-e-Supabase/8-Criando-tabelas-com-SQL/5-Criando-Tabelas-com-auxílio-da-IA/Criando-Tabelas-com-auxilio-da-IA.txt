@@ -8,6 +8,8 @@ entre elas usando chaves estrangeiras (Foreign Keys).
 (------------------------A Importância da Ordem de Criação------------------------)
 
 
+
+
 Quando as tabelas têm relacionamentos entre si, a ordem em que elas são criadas é crucial. Uma tabela que contém uma 
 chave estrangeira só pode ser criada depois da tabela que ela referencia.
 
