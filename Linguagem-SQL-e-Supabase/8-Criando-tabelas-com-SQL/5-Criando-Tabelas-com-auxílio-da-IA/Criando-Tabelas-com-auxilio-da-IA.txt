@@ -5,6 +5,7 @@ profissional e eficiente para configurar um novo ambiente de banco de dados.
 O objetivo é criar um script SQL que não apenas crie todas as tabelas, mas também estabeleça os relacionamentos 
 entre elas usando chaves estrangeiras (Foreign Keys).
 
+
 (------------------------A Importância da Ordem de Criação------------------------)
 
 
