@@ -6,12 +6,6 @@ O objetivo é criar um script SQL que não apenas crie todas as tabelas, mas tam
 entre elas usando chaves estrangeiras (Foreign Keys).
 
 
-
-
-
-
-
-
 (------------------------A Importância da Ordem de Criação------------------------)
 
 
