@@ -13,6 +13,8 @@ Comparar o resultado da IA com o nosso script manual e entender as diferenças.
 
 
 
+
+
 (-------------------------------Modificando uma Tabela com ALTER 
 TABLE-------------------------------)
 
