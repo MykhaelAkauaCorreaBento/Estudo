@@ -9,6 +9,10 @@ pronto para a criação das tabelas nas próximas etapas.
 
 
 
+
+
+
+
 (O Que é o Supabase?)
 O Supabase é uma plataforma de Backend as a Service (BaaS) que oferece uma suíte de ferramentas para acelerar o 
 desenvolvimento de aplicações. Para nossos propósitos, seu principal recurso é um banco de dados PostgreSQL online,
