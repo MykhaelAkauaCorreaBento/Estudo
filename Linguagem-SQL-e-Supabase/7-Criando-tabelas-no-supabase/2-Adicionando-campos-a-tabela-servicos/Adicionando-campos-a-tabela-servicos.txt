@@ -6,6 +6,9 @@ nosso objetivo agora é adicionar os campos específicos do nosso modelo de dado
 O objetivo é demonstrar como adicionar novas colunas, definir seus tipos de dados e compreender as propriedades de cada 
 campo na interface do Supabase.
 
+
+
+
 (----------------------Adicionando o Campo nome----------------------)
 O primeiro campo que adicionamos é o nome do serviço.
 
