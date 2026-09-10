@@ -7,3 +7,5 @@ para começar a criar nossas tabelas. O objetivo é entender que o processo de c
 criação de um banco de dados funcional, e saber onde encontrar as ferramentas para começar a criar nossas tabelas. 
 O objetivo é entender que o processo de criação de conta no Supabase já inclui a criação de um banco de dados funcional,
 e saber onde encontrar as ferramentas para começar a criar nossas tabelas.
+
+
