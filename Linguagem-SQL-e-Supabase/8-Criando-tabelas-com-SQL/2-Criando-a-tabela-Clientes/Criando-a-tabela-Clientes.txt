@@ -5,6 +5,8 @@ semelhante ao da aula anterior, o que nos permite reforçar a sintaxe do CREATE 
 O objetivo é criar a tabela clientes via SQL, adicionando múltiplos campos de texto (VARCHAR) e aplicando a restrição
 NOT NULL para garantir a integridade dos dados essenciais.
 
+
+
 (-----------------------Criando a Tabela clientes-----------------------)
 Seguindo a mesma lógica da aula anterior, utilizamos o comando CREATE TABLE no SQL Editor para definir a estrutura da 
 tabela clientes.
