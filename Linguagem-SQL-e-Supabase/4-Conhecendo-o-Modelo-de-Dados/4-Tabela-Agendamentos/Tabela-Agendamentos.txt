@@ -8,9 +8,6 @@ relacionamentos e garantir a integridade dos dados.
 
 
 
-
-
-
 (-------------------------------A Estrutura da Tabela de Agendamentos-------------------------------)
 
 A tabela de agendamentos é mais complexa que as anteriores, pois precisa registrar todas as informações sobre cada 
