@@ -9,3 +9,6 @@ O objetivo é entender que o processo de criação de conta no Supabase já incl
 e saber onde encontrar as ferramentas para começar a criar nossas tabelas.
 
 
+
+
+
