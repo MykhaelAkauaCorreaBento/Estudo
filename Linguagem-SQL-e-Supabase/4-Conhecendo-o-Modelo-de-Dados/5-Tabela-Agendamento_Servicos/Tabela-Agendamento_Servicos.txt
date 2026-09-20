@@ -3,6 +3,8 @@ Tabela-Agendamento_Servicos.txt
 Nesta quinta aula, abordamos um dos conceitos mais importantes e poderosos em modelagem de dados: o relacionamento 
 N-para-N (muitos-para-muitos) e como resolvê-lo com uma tabela intermediária.
 
+
+
 O objetivo é entender por que não podemos simplesmente adicionar uma coluna id_servico na tabela de agendamentos e 
 como a tabela agendamento_servicos permite que um único agendamento contenha múltiplos serviços.
 
