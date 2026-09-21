@@ -6,8 +6,6 @@ marcações de serviços, conectando clientes, atendentes e os serviços a serem
 O objetivo é entender a estrutura complexa dessa tabela e como ela utiliza chaves estrangeiras para criar 
 relacionamentos e garantir a integridade dos dados.
 
-
-
 (-------------------------------A Estrutura da Tabela de Agendamentos-------------------------------)
 
 A tabela de agendamentos é mais complexa que as anteriores, pois precisa registrar todas as informações sobre cada 
