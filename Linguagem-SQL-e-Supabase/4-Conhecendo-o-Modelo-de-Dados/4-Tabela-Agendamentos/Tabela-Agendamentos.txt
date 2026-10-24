@@ -3,6 +3,8 @@ Tabela-Agendamentos.txt
 Nesta quarta aula, chegamos ao coração do nosso sistema: a tabela de agendamentos. Esta é a tabela que registra todas as
 marcações de serviços, conectando clientes, atendentes e os serviços a serem prestados.
 
+
+
 O objetivo é entender a estrutura complexa dessa tabela e como ela utiliza chaves estrangeiras para criar 
 relacionamentos e garantir a integridade dos dados.
 
