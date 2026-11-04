@@ -4,6 +4,7 @@ Nesta quarta aula, chegamos ao coração do nosso sistema: a tabela de agendamen
 marcações de serviços, conectando clientes, atendentes e os serviços a serem prestados.
 
 
+estudos
 
 estudos
 estudos
