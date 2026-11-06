@@ -14,6 +14,7 @@ estudos
 
 
 
+
 O objetivo é entender a estrutura complexa dessa tabela e como ela utiliza chaves estrangeiras para criar 
 relacionamentos e garantir a integridade dos dados.
 
