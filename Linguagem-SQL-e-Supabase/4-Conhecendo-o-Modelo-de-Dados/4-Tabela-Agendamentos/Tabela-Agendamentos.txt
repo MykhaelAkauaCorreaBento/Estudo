@@ -12,7 +12,7 @@ estudos
 estudos
 estudos
 Estudos
-
+Estudos
 
 
 O objetivo é entender a estrutura complexa dessa tabela e como ela utiliza chaves estrangeiras para criar 
